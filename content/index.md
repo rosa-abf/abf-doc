@@ -149,7 +149,7 @@ The possible `rel` values are:
 
 ## Rate Limiting
 
-We limit requests to API v3 to 5000 per hour.  This is keyed off either your
+We limit requests to API v1 to 500 per hour. This is keyed off either your
 login, your OAuth token, or request IP.  You can check the returned HTTP
 headers of any API request to see your current status:
 
