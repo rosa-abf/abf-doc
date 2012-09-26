@@ -13,4 +13,6 @@ gem 'builder'
 group :development do
   gem 'adsf'
   gem 'fssm'
+  gem 'capistrano', :require => false
+  gem 'rvm-capistrano', :require => false
 end

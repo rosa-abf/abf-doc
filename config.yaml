@@ -6,7 +6,7 @@ text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown'
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
 # relative to the site directory.
-output_dir: output
+output_dir: public
 
 # A list of index filenames, i.e. names of files that will be served by a web
 # server when a directory is requested. Usually, index files are named
@@ -45,7 +45,7 @@ data_sources:
     items_root: /static
 
 # For the atom feed.
-base_url: http://abf-developer.rosalinux.ru
+base_url: http://abf-doc.rosalinux.ru
 
 # Array of [version, released_at] Array tuples.
 api_versions:
