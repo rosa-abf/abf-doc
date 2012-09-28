@@ -14,7 +14,7 @@ title: Build lists | ABF API
 
 ## Get a single build list
 
-    GET /api/v1/buils_lists/:id.json
+    GET /api/v1/build_lists/:id.json
 
 ### Parameters:
 id
@@ -83,7 +83,7 @@ arch_id
 
 By this request you can cancel build list.
 
-    PUT /api/v1/buils_lists/:id/cancel.json
+    PUT /api/v1/build_lists/:id/cancel.json
 
 ### Parameters:
 id
@@ -105,7 +105,7 @@ id
 
 By this request you can publish build list.
 
-    PUT /api/v1/buils_lists/:id/publish.json
+    PUT /api/v1/build_lists/:id/publish.json
 
 ### Parameters:
 id
@@ -127,7 +127,7 @@ id
 
 By this request you can reject publish build list.
 
-    PUT /api/v1/buils_lists/:id/reject_publish.json
+    PUT /api/v1/build_lists/:id/reject_publish.json
 
 ### Parameters:
 id
