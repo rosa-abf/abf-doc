@@ -635,6 +635,34 @@ module GitHub
         }
     }
 
+    PLATFORM_MEMBERS_RESPONSE = {
+      "platform" =>
+        {
+          "members" => [
+            {
+              "id" => "member id",
+              "type" => "User or Group type of member"
+            }
+          ]
+        }
+    }
+
+    PLATFORM_MEMBERS_RESPONSE_EXAMPLE = {
+      "platform" =>
+        {
+          "members" => [
+            {
+              "id" => 31,
+              "type" => "User"
+            },
+            {
+              "id" => 22,
+              "type" => "Group"
+            }
+          ]
+        }
+    }
+
     PLATFORM_LIST_RESPONSE = {
       "platforms" => [
         {

@@ -6,6 +6,7 @@ title: Platforms | ABF API
 
 * <a href="#get-a-single-platform">Get a single platform</a>
 * <a href="#update-a-single-platform">Update a single platform</a>
+* <a href="#members-of-a-single-platform">Members of a single platform</a>
 * <a href="#list-platforms">List platforms</a>
 
 ## Get a single platform
@@ -56,6 +57,27 @@ owner_id:
 ### Example:
 
 <%= json(:platform_update_response_example) %>
+
+## Members of a single platform
+
+	GET /api/v1/platforms/:id/members.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current platform
+
+### Request example:
+
+    /api/v1/platforms/53/members.json
+
+### Response:
+
+<%= json(:platform_members_response) %>
+
+### Example:
+
+<%= json(:platform_members_response_example) %>
 
 ## List platforms
 
