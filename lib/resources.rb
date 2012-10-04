@@ -556,62 +556,66 @@ module GitHub
     }
 
     PLATFORM_DATA_RESPONSE = {
-      "id" => "platform id",
-      "name" => "platform name",
-      "description" => "platform description",
-      "parent_platform_id" => "parent platform id",
-      "created_at" => "platform created at",
-      "updated_at" => "platform updated_at",
-      "released" => "platform released",
-      "visibility" => "platform visibility",
-      "platform_type" => "platform type",
-      "distrib_type" => "platform distribution type",
-      "owner" => {
-        "id" => "owner id",
-        "name" => "owner name",
-        "type" => "owner type",
-        "url" => "owner data path"
-      },
-      "repositories" => [
-        {
-          "id" => "repository for package storage id",
-          "name" => "repository for package storage name",
-          "url" => "path to repository data page"
-        }
-      ],
-      "url" => "platform path"
+      "platform" => {
+        "id" => "platform id",
+        "name" => "platform name",
+        "description" => "platform description",
+        "parent_platform_id" => "parent platform id",
+        "created_at" => "platform created at",
+        "updated_at" => "platform updated_at",
+        "released" => "platform released",
+        "visibility" => "platform visibility",
+        "platform_type" => "platform type",
+        "distrib_type" => "platform distribution type",
+        "owner" => {
+          "id" => "owner id",
+          "name" => "owner name",
+          "type" => "owner type",
+          "url" => "owner data path"
+        },
+        "repositories" => [
+          {
+            "id" => "repository for package storage id",
+            "name" => "repository for package storage name",
+            "url" => "path to repository data page"
+          }
+        ],
+        "url" => "platform path"
+      }
     }
 
     PLATFORM_DATA_RESPONSE_EXAMPLE = {
-      "id" => 1,
-      "name" => "mdv_main",
-      "description" => "mdv_main",
-      "parent_platform_id" => nil,
-      "created_at" => "1326990586" ,
-      "updated_at" => "1337171843",
-      "released" => "platform released",
-      "visibility" => "open",
-      "platform_type" => "main",
-      "distrib_type" => "mdv",
-      "owner" => {
-        "id" => 5,
-        "name" => "Timothy Bobrov",
-        "type" => "User",
-        "url" => "/users/5.json"
-      },
-      "repositories" => [
-        {
-          "id" => 1,
-          "name" => "main",
-          "url" => "/api/v1/repositories/1.json"
+      "platform" => {
+        "id" => 1,
+        "name" => "mdv_main",
+        "description" => "mdv_main",
+        "parent_platform_id" => nil,
+        "created_at" => "1326990586" ,
+        "updated_at" => "1337171843",
+        "released" => "platform released",
+        "visibility" => "open",
+        "platform_type" => "main",
+        "distrib_type" => "mdv",
+        "owner" => {
+          "id" => 5,
+          "name" => "Timothy Bobrov",
+          "type" => "User",
+          "url" => "/users/5.json"
         },
-        {
-          "id" => 2, 
-          "name" => "release",
-          "url" => "/api/v1/repositories/2.json"
-        }
-      ],
-      "url" => "/api/v1/platforms/1.json"
+        "repositories" => [
+          {
+            "id" => 1,
+            "name" => "main",
+            "url" => "/api/v1/repositories/1.json"
+          },
+          {
+            "id" => 2, 
+            "name" => "release",
+            "url" => "/api/v1/repositories/2.json"
+          }
+        ],
+        "url" => "/api/v1/platforms/1.json"
+      }
     }
 
     PLATFORM_LIST_RESPONSE = {
