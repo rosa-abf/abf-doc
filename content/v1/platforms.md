@@ -7,6 +7,7 @@ title: Platforms | ABF API
 * <a href="#get-a-single-platform">Get a single platform</a>
 * <a href="#update-a-single-platform">Update a single platform</a>
 * <a href="#members-of-a-single-platform">Members of a single platform</a>
+* <a href="#add-member-to-a-single-platform">Add member to a single platform</a>
 * <a href="#list-platforms">List platforms</a>
 
 ## Get a single platform
@@ -78,6 +79,36 @@ id
 ### Example:
 
 <%= json(:platform_members_response_example) %>
+
+## Add member to a single platform
+
+	GET /api/v1/platforms/:id/add_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current platform
+
+member_id
+: _Required_ **Integer** identifier of new member
+
+type
+: _Required_ **String** Group or User type of new member
+
+### Request examples:
+
+    /api/v1/platforms/53/add_member.json?member_id=22&type=User
+    /api/v1/platforms/53/add_member.json?member_id=52&type=Group
+
+### Response:
+
+<%= json(:platform_add_member_response) %>
+
+### Examples:
+
+<%= json(:platform_add_member_response_example) %>
+
+<%= json(:platform_add_member_response_example2) %>
 
 ## List platforms
 

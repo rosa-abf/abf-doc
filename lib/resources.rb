@@ -638,6 +638,7 @@ module GitHub
     PLATFORM_MEMBERS_RESPONSE = {
       "platform" =>
         {
+          "id" => "platform id",
           "members" => [
             {
               "id" => "member id",
@@ -650,6 +651,7 @@ module GitHub
     PLATFORM_MEMBERS_RESPONSE_EXAMPLE = {
       "platform" =>
         {
+          "id" => 77,
           "members" => [
             {
               "id" => 31,
@@ -660,6 +662,30 @@ module GitHub
               "type" => "Group"
             }
           ]
+        }
+    }
+
+    PLATFORM_ADD_MEMBER_RESPONSE = {
+      "platform" =>
+        {
+          "id" => "platform id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
+
+    PLATFORM_ADD_MEMBER_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been added successfully"
+        }
+    }
+
+    PLATFORM_ADD_MEMBER_RESPONSE_EXAMPLE2 = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been added successfully"
         }
     }
 
