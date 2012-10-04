@@ -619,6 +619,22 @@ module GitHub
       }
     }
 
+    PLATFORM_UPDATE_RESPONSE = {
+      "platform" =>
+        {
+          "id" => "platform id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
+
+    PLATFORM_UPDATE_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been updated successfully"
+        }
+    }
+
     PLATFORM_LIST_RESPONSE = {
       "platforms" => [
         {

@@ -5,6 +5,7 @@ title: Platforms | ABF API
 # Platforms API
 
 * <a href="#get-a-single-platform">Get a single platform</a>
+* <a href="#update-a-single-platform">Update a single platform</a>
 * <a href="#list-platforms">List platforms</a>
 
 ## Get a single platform
@@ -23,6 +24,38 @@ id
 ### Example:
 
 <%= json(:platform_data_response_example) %>
+
+## Update a single platform
+
+	PUT /api/v1/platforms/:id.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current platform
+
+description:
+: _Optional_ **String** platform description
+
+released:
+: _Optional_ **Boolean** realise status of platform
+
+owner_id:
+: _Optional_ **Integer** identifier of platform owner
+
+### Request examples:
+
+
+    /api/v1/platforms/:id.json?description=new_description
+    /api/v1/platforms/:id.json?released=true&owner_id=2
+
+### Response:
+
+<%= json(:platform_update_response) %>
+
+### Example:
+
+<%= json(:platform_update_response_example) %>
 
 ## List platforms
 
