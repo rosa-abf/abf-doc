@@ -95,8 +95,7 @@ module GitHub
           "name" => "evil_tools",
           "container_path" => "/rosa2012/container/evil_tools",
           "status" => 6000,
-          "project_version" => "latest_rosa2012",
-          "package_version" => "latest_rosa2012",
+          "package_version" => "rosa2012.1-0.1.309-1",
           "project" => {
             "id" => 666,
             "name" => "evil_tools",
@@ -122,7 +121,8 @@ module GitHub
             "id" => 1,
             "name" => "x84_64" 
           },
-          "notifed_at" => 1348168905,
+          "created_at" => 1349357795,
+          "updated_at" => 1349358084,
           "is_circle" => false,
           "update_type" => "bugfix",
           "build_requires" => false,
@@ -170,7 +170,6 @@ module GitHub
           "name" => "name",
           "container_path" => "Container path",
           "status" => "status code",
-          "project_version" => "parent project version",
           "package_version" => "package version",
           "project" => {
             "id" => "project id",
@@ -205,6 +204,8 @@ module GitHub
           "priority" => "build priority",
           "duration" => "build duration in seconds",
           "build_log_url" => "build list log url",
+          "created_at" => "created at date and time",
+          "updated_at" => "updated at date and time",
           "advisory" => {
             "id" => "advisory id",
             "name" => "advisory name",
