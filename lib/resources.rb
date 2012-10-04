@@ -275,7 +275,7 @@ module GitHub
       "build_list" =>
         {
           "id" => "build list id (null if failed)",
-          "message" => "success of fail message"
+          "message" => "success or fail message"
         }
     }
 
@@ -290,7 +290,7 @@ module GitHub
     BUILD_LIST_CANCEL_RESPONSE = {
       "is_canceled"=> "true or false",
       "url"=> "url to build list page",
-      "message"=> "success of fail message"
+      "message"=> "success or fail message"
     }
 
     BUILD_LIST_CANCEL_RESPONSE_EXAMPLE = {
@@ -308,7 +308,7 @@ module GitHub
     BUILD_LIST_PUBLISH_RESPONSE = {
       "is_published"=> "true or false", # May be just result name will be better
       "url"=> "url to build list page",
-      "message"=> "success of fail message"
+      "message"=> "success or fail message"
     }
 
     BUILD_LIST_PUBLISH_RESPONSE_EXAMPLE = {
@@ -587,12 +587,12 @@ module GitHub
     PLATFORM_DATA_RESPONSE_EXAMPLE = {
       "platform" => {
         "id" => 1,
-        "name" => "mdv_main",
+        "name" => "mdv",
         "description" => "mdv_main",
         "parent_platform_id" => nil,
         "created_at" => "1326990586" ,
         "updated_at" => "1337171843",
-        "released" => "platform released",
+        "released" => "true",
         "visibility" => "open",
         "platform_type" => "main",
         "distrib_type" => "mdv",
@@ -623,7 +623,7 @@ module GitHub
         {
           "id" => "platform id",
           "name" => "platform name",
-          "platform_type" => "platform type",
+          "platform_type" => "platform type(main/personal)",
           "visibility" => "platform visibility (hidden/open)",
           "owner" =>{
             "id" => "owner id",
@@ -646,10 +646,10 @@ module GitHub
     PLATFORM_LIST_RESPONSE_EXAMPLE = {
       "platforms" => [
         {
-          "id" => 26,
-          "name" => "fucktest",
-          "platform_type" => "mail",
-          "visibility" => "hidden",
+          "id" => 16,
+          "name" => "rosa2012",
+          "platform_type" => "main",
+          "visibility" => "open",
           "owner" => {
             "id" => 5,
             "name" => "Timothy Bobrov1",
@@ -664,7 +664,7 @@ module GitHub
             },
             {
               "id" => 27, 
-              "name" => "release",
+              "name" => "contrib",
               "url" => "/api/v1/repositories/27.json"
             }
           ],
@@ -672,9 +672,9 @@ module GitHub
         },
         {
           "id" => 17,
-          "name" => "aaa",
-          "platform_type" => "main",
-          "visibility" => "hidden",
+          "name" => "timothy_bobrov_personal",
+          "platform_type" => "personal",
+          "visibility" => "open",
           "owner" => {
             "id" => 5,
             "name" => "Timothy Bobrov",
@@ -687,11 +687,6 @@ module GitHub
               "name" => "main",
               "url" => "/api/v1/repositories/28.json"
             },
-            {
-              "id" => 29, 
-              "name" => "release",
-              "url" => "/api/v1/repositories/29.json"
-            }
           ],
           "url" => "/api/v1/platforms/17.json"
         },
@@ -699,7 +694,7 @@ module GitHub
           "id" => 18,
           "name" => "timothy_tsvetkov",
           "platform_type" => "main",
-          "visibility" => "hidden",
+          "visibility" => "open",
           "owner" => {
             "id" => 4,
             "name" => "Yaroslav Garkin",
@@ -714,7 +709,7 @@ module GitHub
             },
             {
               "id" => 31, 
-              "name" => "release",
+              "name" => "non-free",
               "url" => "/api/v1/repositories/31.json"
             }
           ],
