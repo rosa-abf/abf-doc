@@ -619,6 +619,15 @@ module GitHub
       }
     }
 
+    PLATFORM_UPDATE_REQUEST = {
+      "platform" =>
+        {
+          "description" => "new description",
+          "released" => true,
+          "owner_id" => 1
+        }
+    }
+
     PLATFORM_UPDATE_RESPONSE = {
       "platform" =>
         {
@@ -663,6 +672,11 @@ module GitHub
             }
           ]
         }
+    }
+
+    PLATFORM_ADD_MEMBER_REQUEST = {
+      "member_id" => 34,
+      "type" => "User"
     }
 
     PLATFORM_ADD_MEMBER_RESPONSE = {

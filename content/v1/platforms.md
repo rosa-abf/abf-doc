@@ -45,11 +45,9 @@ released:
 owner_id:
 : _Optional_ **Integer** identifier of platform owner
 
-### Request examples:
+### Request:
 
-
-    /api/v1/platforms/:id.json?description=new_description
-    /api/v1/platforms/:id.json?released=true&owner_id=2
+<%= json(:platform_update_request) %>
 
 ### Response:
 
@@ -93,12 +91,11 @@ member_id
 : _Required_ **Integer** identifier of new member
 
 type
-: _Required_ **String** Group or User type of new member
+: _Required_ **String** `Group` or `User` type of new member
 
-### Request examples:
+### Request:
 
-    /api/v1/platforms/53/add_member.json?member_id=22&type=User
-    /api/v1/platforms/53/add_member.json?member_id=52&type=Group
+<%= json(:platform_add_member_request) %>
 
 ### Response:
 
@@ -107,6 +104,8 @@ type
 ### Examples:
 
 <%= json(:platform_add_member_response_example) %>
+
+&nbsp;
 
 <%= json(:platform_add_member_response_example2) %>
 
