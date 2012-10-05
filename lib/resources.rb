@@ -735,6 +735,16 @@ module GitHub
         }
     }
 
+    PLATFORM_CLEAR_RESPONSE = PLATFORM_UPDATE_RESPONSE
+
+    PLATFORM_CLEAR_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been cleared successfully"
+        }
+    }
+
     PLATFORM_LIST_RESPONSE = {
       "platforms" => [
         {
