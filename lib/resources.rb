@@ -440,7 +440,7 @@ module GitHub
               }
             }
           ],
-          "url" => "url to build list page"
+          "url" => "url to project resourse"
         }
     }
 
