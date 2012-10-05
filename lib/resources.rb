@@ -679,19 +679,13 @@ module GitHub
       "type" => "User"
     }
 
-    PLATFORM_ADD_MEMBER_RESPONSE = {
-      "platform" =>
-        {
-          "id" => "platform id (null if failed)",
-          "message" => "success or fail message"
-        }
-    }
+    PLATFORM_ADD_MEMBER_RESPONSE = PLATFORM_UPDATE_RESPONSE
 
     PLATFORM_ADD_MEMBER_RESPONSE_EXAMPLE = {
       "platform"=>
         {
           "id"=> 56,
-          "message"=> "User '32' has been added successfully"
+          "message"=> "User '32' has been added to platform successfully"
         }
     }
 
@@ -699,7 +693,27 @@ module GitHub
       "platform"=>
         {
           "id"=> 56,
-          "message"=> "Group '31' has been added successfully"
+          "message"=> "Group '31' has been added to platmorm successfully"
+        }
+    }
+
+    PLATFORM_REMOVE_MEMBER_REQUEST = PLATFORM_ADD_MEMBER_REQUEST
+
+    PLATFORM_REMOVE_MEMBER_RESPONSE = PLATFORM_UPDATE_RESPONSE
+
+    PLATFORM_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been removed from platform successfully"
+        }
+    }
+
+    PLATFORM_REMOVE_MEMBER_RESPONSE_EXAMPLE2 = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been removed from platform successfully"
         }
     }
 

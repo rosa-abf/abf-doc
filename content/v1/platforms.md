@@ -8,6 +8,7 @@ title: Platforms | ABF API
 * <a href="#update-a-single-platform">Update a single platform</a>
 * <a href="#members-of-a-single-platform">Members of a single platform</a>
 * <a href="#add-member-to-a-single-platform">Add member to a single platform</a>
+* <a href="#remove-member-from-a-single-platform">Remove member from a single platform</a>
 * <a href="#list-platforms">List platforms</a>
 
 ## Get a single platform
@@ -108,6 +109,37 @@ type
 &nbsp;
 
 <%= json(:platform_add_member_response_example2) %>
+
+## Remove member from a single platform
+
+    GET /api/v1/platforms/:id/remove_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current platform
+
+member_id
+: _Required_ **Integer** identifier of member
+
+type
+: _Required_ **String** `Group` or `User` type of member
+
+### Request:
+
+<%= json(:platform_remove_member_request) %>
+
+### Response:
+
+<%= json(:platform_remove_member_response) %>
+
+### Examples:
+
+<%= json(:platform_remove_member_response_example) %>
+
+&nbsp;
+
+<%= json(:platform_remove_member_response_example2) %>
 
 ## List platforms
 
