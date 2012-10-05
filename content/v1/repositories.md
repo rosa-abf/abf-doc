@@ -7,6 +7,7 @@ title: Repositories | ABF API
 * <a href="#get-a-single-repository">Get a single repository</a>
 * <a href="#list-repositories">List repositories</a>
 * <a href="#update-a-single-repository">Update a single repository</a>
+* <a href="#create-repository">Create repository</a>
 
 ## Get a single repository
 
@@ -15,7 +16,7 @@ title: Repositories | ABF API
 ### Parameters:
 
 id
-: _Required_ **Integer** identifier of current repository
+: _Required_ **Integer** identifier of current repository.
 
 ### Response:
 
@@ -32,7 +33,7 @@ id
 ### Parameters:
 
 platform_id
-: _Required_ **Integer** identifier of platform
+: _Required_ **Integer** identifier of platform.
 
 ### Request:
 
@@ -53,13 +54,13 @@ platform_id
 ### Parameters:
 
 id
-: _Required_ **Integer** identifier of current repository
+: _Required_ **Integer** identifier of current repository.
 
 description:
-: _Optional_ **String** repository description
+: _Optional_ **String** repository description.
 
 publish_without_qa:
-: _Optional_ **Boolean** status of publication without QA
+: _Optional_ **Boolean** status of publication without QA.
 
 ### Request:
 
@@ -72,3 +73,33 @@ publish_without_qa:
 ### Example:
 
 <%= json(:repository_update_response_example) %>
+
+## Create repository
+
+    POST /api/v1/repositories/:id.json
+
+### Parameters:
+
+platform_id
+: _Required_ **Integer** identifier of platform.
+
+description:
+: _Required_ **String** repository description.
+
+name:
+: _Required_ **String** repository name.
+
+publish_without_qa:
+: _Optional_ **Boolean** status of publication without QA. Default: `true`.
+
+### Request:
+
+<%= json(:repository_create_request) %>
+
+### Response:
+
+<%= json(:repository_create_response) %>
+
+### Example:
+
+<%= json(:repository_create_response_example) %>

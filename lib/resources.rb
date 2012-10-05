@@ -604,6 +604,22 @@ module GitHub
       }
     }
 
+    REPOSITORY_CREATE_REQUEST = {
+      "repository" => REPOSITORY_UPDATE_EXAMPLE.merge({
+        "platform_id" => 15,
+        "name" => "repository name"
+      })
+    }
+
+    REPOSITORY_CREATE_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_CREATE_RESPONSE_EXAMPLE = {
+      "repository" =>
+      {
+        "id" => 12,
+        "message" => "Repository has been created successfully"
+      }
+    }
+
     PLATFORM_DATA_RESPONSE = {
       "platform" => {
         "id" => "platform id",
