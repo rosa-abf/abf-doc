@@ -8,6 +8,7 @@ title: Repositories | ABF API
 * <a href="#list-repositories">List repositories</a>
 * <a href="#update-a-single-repository">Update a single repository</a>
 * <a href="#create-repository">Create repository</a>
+* <a href="#destroy-repository">Destroy repository</a>
 
 ## Get a single repository
 
@@ -103,3 +104,20 @@ publish_without_qa:
 ### Example:
 
 <%= json(:repository_create_response_example) %>
+
+## Destroy repository
+
+    DELETE /api/v1/repositories/:id.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository.
+
+### Response:
+
+<%= json(:repository_destroy_response) %>
+
+### Example:
+
+<%= json(:repository_destroy_response_example) %>

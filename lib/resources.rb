@@ -620,6 +620,15 @@ module GitHub
       }
     }
 
+    REPOSITORY_DESTROY_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_DESTROY_RESPONSE_EXAMPLE = {
+      "repository" =>
+      {
+        "id" => 12,
+        "message" => "Repository has been destroyed successfully"
+      }
+    }
+
     PLATFORM_DATA_RESPONSE = {
       "platform" => {
         "id" => "platform id",
