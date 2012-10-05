@@ -717,6 +717,24 @@ module GitHub
         }
     }
 
+    PLATFORM_CLONE_REQUEST = {
+      "platform" =>
+        {
+          "description" => "platform description",
+          "name" => "platform name"
+        }
+    }
+
+    PLATFORM_CLONE_RESPONSE = PLATFORM_UPDATE_RESPONSE
+
+    PLATFORM_CLONE_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been cloned successfully"
+        }
+    }
+
     PLATFORM_LIST_RESPONSE = {
       "platforms" => [
         {

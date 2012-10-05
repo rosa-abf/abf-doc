@@ -9,6 +9,7 @@ title: Platforms | ABF API
 * <a href="#members-of-a-single-platform">Members of a single platform</a>
 * <a href="#add-member-to-a-single-platform">Add member to a single platform</a>
 * <a href="#remove-member-from-a-single-platform">Remove member from a single platform</a>
+* <a href="#clone-of-a-single-platform">Clone of a single platform</a>
 * <a href="#list-platforms">List platforms</a>
 
 ## Get a single platform
@@ -140,6 +141,33 @@ type
 &nbsp;
 
 <%= json(:platform_remove_member_response_example2) %>
+
+## Clone of a single platform
+
+    POST /api/v1/platforms/:id/clone.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current platform
+
+description:
+: _Required_ **String** platform description
+
+name:
+: _Required_ **String** platform name
+
+### Request:
+
+<%= json(:platform_clone_request) %>
+
+### Response:
+
+<%= json(:platform_clone_response) %>
+
+### Examples:
+
+<%= json(:platform_clone_response_example) %>
 
 ## List platforms
 
