@@ -527,20 +527,22 @@ module GitHub
       "name" => "name",
       "created_at" => "created at date and time",
       "updated_at" => "updated at date and time",
+      "url" => "url to repository resource",
       "description" => "description",
-      "publish_without_qa" => "publication without QA",
-      "url" => "url to repository resource"
+      "publish_without_qa" => "publication without QA"
     }
 
+    REPOSITORY_UPDATE_EXAMPLE = {
+      "description" => "description",
+      "publish_without_qa" => true
+    }
     REPOSITORY_EXAMPLE = {
       "id" => 30,
       "name" => "main",
       "created_at" => 1346762587,
       "updated_at" => 1346841731,
-      "description" => "description",
-      "publish_without_qa" => true,
       "url" => "/api/v1/repositories/30.json"
-    }
+    }.merge(REPOSITORY_UPDATE_EXAMPLE)
 
     PLATFORM_OF_REPOSITORY = {
       "platform" => {
@@ -580,6 +582,26 @@ module GitHub
     REPOSITORY_DATA_RESPONSE_EXAMPLE = {
       "repository" => REPOSITORY_EXAMPLE.merge(PLATFORM_OF_REPOSITORY_EXAMPLE),
       "url" => "/api/v1/repositories/30.json"
+    }
+
+    REPOSITORY_UPDATE_REQUEST = {
+      "repository" => REPOSITORY_UPDATE_EXAMPLE
+    }
+
+    REPOSITORY_UPDATE_RESPONSE = {
+      "repository" =>
+        {
+          "id" => "repository id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
+
+    REPOSITORY_UPDATE_RESPONSE_EXAMPLE = {
+      "repository" =>
+      {
+        "id" => 12,
+        "message" => "Repository has been updated successfully"
+      }
     }
 
     PLATFORM_DATA_RESPONSE = {

@@ -6,6 +6,7 @@ title: Repositories | ABF API
 
 * <a href="#get-a-single-repository">Get a single repository</a>
 * <a href="#list-repositories">List repositories</a>
+* <a href="#update-a-single-repository">Update a single repository</a>
 
 ## Get a single repository
 
@@ -14,7 +15,7 @@ title: Repositories | ABF API
 ### Parameters:
 
 id
-: _Integer_ identifier of current repository
+: _Required_ **Integer** identifier of current repository
 
 ### Response:
 
@@ -31,9 +32,9 @@ id
 ### Parameters:
 
 platform_id
-: _Required_ **integer** identifier of platform
+: _Required_ **Integer** identifier of platform
 
-### Request
+### Request:
 
 <%= json(:repository_list_request) %>
 
@@ -44,3 +45,30 @@ platform_id
 ### Example:
 
 <%= json(:repository_list_response_example) %>
+
+## Update a single repository
+
+    PUT /api/v1/repositories/:id.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository
+
+description:
+: _Optional_ **String** repository description
+
+publish_without_qa:
+: _Optional_ **Boolean** status of publication without QA
+
+### Request:
+
+<%= json(:repository_update_request) %>
+
+### Response:
+
+<%= json(:repository_update_response) %>
+
+### Example:
+
+<%= json(:repository_update_response_example) %>
