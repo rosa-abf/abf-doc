@@ -695,6 +695,22 @@ module GitHub
         }
     }
 
+    REPOSITORY_SIGNATURES_REQUEST = {
+      "repository"=>
+        {
+          "public"=> "public key",
+          "secret"=> "secret key"
+        }
+    }
+    REPOSITORY_SIGNATURES_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_SIGNATURES_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Signatures have been updated for repository successfully"
+        }
+    }
+
     PLATFORM_DATA_RESPONSE = {
       "platform" => {
         "id" => "platform id",

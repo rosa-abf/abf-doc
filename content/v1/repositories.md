@@ -13,6 +13,7 @@ title: Repositories | ABF API
 * <a href="#remove-member-from-a-single-repository">Remove member from a single repository</a>
 * <a href="#add-project-to-a-single-repository">Add project to a single repository</a>
 * <a href="#remove-project-from-a-single-repository">Remove project from a single repository</a>
+* <a href="#update-signatures-for-a-single-repository">Update signatures for a single repository</a>
 
 ## Get a single repository
 
@@ -128,7 +129,7 @@ id
 
 ## Add member to a single repository
 
-	GET /api/v1/repositories/:id/add_member.json
+	PUT /api/v1/repositories/:id/add_member.json
 
 ### Parameters:
 
@@ -159,7 +160,7 @@ type
 
 ## Remove member from a single repository
 
-    GET /api/v1/repositories/:id/remove_member.json
+    DELETE /api/v1/repositories/:id/remove_member.json
 
 ### Parameters:
 
@@ -190,7 +191,7 @@ type
 
 ## Add project to a single repository
 
-	GET /api/v1/repositories/:id/add_project.json
+	PUT /api/v1/repositories/:id/add_project.json
 
 ### Parameters:
 
@@ -214,7 +215,7 @@ project_id
 
 ## Remove project from a single repository
 
-    GET /api/v1/repositories/:id/remove_project.json
+    DELETE /api/v1/repositories/:id/remove_project.json
 
 ### Parameters:
 
@@ -235,3 +236,30 @@ project_id
 ### Examples:
 
 <%= json(:repository_remove_project_response_example) %>
+
+## Update signatures for a single repository
+
+    PUT /api/v1/repositories/:id/signatures.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository
+
+public
+: _Required_ **String** public key
+
+secret
+: _Required_ **String** secret key
+
+### Request:
+
+<%= json(:repository_signatures_request) %>
+
+### Response:
+
+<%= json(:repository_signatures_response) %>
+
+### Examples:
+
+<%= json(:repository_signatures_response_example) %>

@@ -83,7 +83,7 @@ id
 
 ## Add member to a single platform
 
-	GET /api/v1/platforms/:id/add_member.json
+	PUT /api/v1/platforms/:id/add_member.json
 
 ### Parameters:
 
@@ -114,7 +114,7 @@ type
 
 ## Remove member from a single platform
 
-    GET /api/v1/platforms/:id/remove_member.json
+    DELETE /api/v1/platforms/:id/remove_member.json
 
 ### Parameters:
 
