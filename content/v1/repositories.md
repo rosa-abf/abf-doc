@@ -9,6 +9,8 @@ title: Repositories | ABF API
 * <a href="#update-a-single-repository">Update a single repository</a>
 * <a href="#create-repository">Create repository</a>
 * <a href="#destroy-repository">Destroy repository</a>
+* <a href="#add-member-to-a-single-repository">Add member to a single repository</a>
+* <a href="#remove-member-from-a-single-repository">Remove member from a single repository</a>
 
 ## Get a single repository
 
@@ -121,3 +123,65 @@ id
 ### Example:
 
 <%= json(:repository_destroy_response_example) %>
+
+## Add member to a single repository
+
+	GET /api/v1/repositories/:id/add_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository
+
+member_id
+: _Required_ **Integer** identifier of new member
+
+type
+: _Required_ **String** `Group` or `User` type of new member
+
+### Request:
+
+<%= json(:repository_add_member_request) %>
+
+### Response:
+
+<%= json(:repository_add_member_response) %>
+
+### Examples:
+
+<%= json(:repository_add_member_response_example) %>
+
+&nbsp;
+
+<%= json(:repository_add_member_response_example2) %>
+
+## Remove member from a single repository
+
+    GET /api/v1/repositories/:id/remove_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository
+
+member_id
+: _Required_ **Integer** identifier of member
+
+type
+: _Required_ **String** `Group` or `User` type of member
+
+### Request:
+
+<%= json(:repository_remove_member_request) %>
+
+### Response:
+
+<%= json(:repository_remove_member_response) %>
+
+### Examples:
+
+<%= json(:repository_remove_member_response_example) %>
+
+&nbsp;
+
+<%= json(:repository_remove_member_response_example2) %>

@@ -88,6 +88,11 @@ module GitHub
     # ABF constants
     #==============================================================================
 
+    ADD_MEMBER_REQUEST = {
+      "member_id" => 34,
+      "type" => "User"
+    }
+
     BUILD_LIST_SHOW_EXAMPLE = {
       "build_list" =>
         {
@@ -635,6 +640,40 @@ module GitHub
       }
     }
 
+    REPOSITORY_ADD_MEMBER_REQUEST = ADD_MEMBER_REQUEST
+    REPOSITORY_ADD_MEMBER_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_ADD_MEMBER_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been added to repository successfully"
+        }
+    }
+    REPOSITORY_ADD_MEMBER_RESPONSE_EXAMPLE2 = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been added to repository successfully"
+        }
+    }
+
+    REPOSITORY_REMOVE_MEMBER_REQUEST = ADD_MEMBER_REQUEST
+    REPOSITORY_REMOVE_MEMBER_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been removed from repository successfully"
+        }
+    }
+    REPOSITORY_REMOVE_MEMBER_RESPONSE_EXAMPLE2 = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been removed from repository successfully"
+        }
+    }
+
     PLATFORM_DATA_RESPONSE = {
       "platform" => {
         "id" => "platform id",
@@ -753,10 +792,7 @@ module GitHub
         }
     }
 
-    PLATFORM_ADD_MEMBER_REQUEST = {
-      "member_id" => 34,
-      "type" => "User"
-    }
+    PLATFORM_ADD_MEMBER_REQUEST = ADD_MEMBER_REQUEST
 
     PLATFORM_ADD_MEMBER_RESPONSE = PLATFORM_UPDATE_RESPONSE
 
@@ -776,7 +812,7 @@ module GitHub
         }
     }
 
-    PLATFORM_REMOVE_MEMBER_REQUEST = PLATFORM_ADD_MEMBER_REQUEST
+    PLATFORM_REMOVE_MEMBER_REQUEST = ADD_MEMBER_REQUEST
 
     PLATFORM_REMOVE_MEMBER_RESPONSE = PLATFORM_UPDATE_RESPONSE
 
