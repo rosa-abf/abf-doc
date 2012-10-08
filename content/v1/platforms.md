@@ -12,6 +12,7 @@ title: Platforms | ABF API
 * <a href="#clone-a-single-platform">Clone a single platform</a>
 * <a href="#clear-a-single-platform">Clear a single platform</a>
 * <a href="#list-platforms">List platforms</a>
+* <a href="#list-of-platforms-for-creating-build-task">List of platforms for creating "build task"</a>
 
 ## Get a single platform
 
@@ -214,3 +215,18 @@ type
 
 <%= json(:platform_list_response_example) %>
 
+## List of platforms for creating "build task"
+
+    GET /api/v1/platforms/platforms_for_build.json
+
+### Request examples:
+
+    /api/v1/platforms/platforms_for_build.json
+
+### Response:
+
+<%= json(:platform_for_build_response) %>
+
+### Example:
+
+<%= json(:platform_for_build_response_example) %>

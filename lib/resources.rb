@@ -991,6 +991,87 @@ module GitHub
       ],"url" => "/api/v1/platforms.json"
     }
 
+
+    PLATFORM_FOR_BUILD_RESPONSE = {
+      "platforms" => [
+        {
+          "id" => "platform id",
+          "name" => "platform name",
+          "platform_type" => "platform type(only main for build task)",
+          "visibility" => "platform visibility (only open for build task)",
+          "owner" =>{
+            "id" => "owner id",
+            "name" => "owner name",
+            "type" => "owner type",
+            "url" => "path to owner data"
+          },
+          "repositories" => [
+            {
+              "id" => "repository for package storage id",
+              "name" => "repository for package storage name",
+              "url" => "path to repository data page"
+            }
+          ],
+          "url" => "path to platform data"
+        }
+      ]
+    }
+
+    PLATFORM_FOR_BUILD_RESPONSE_EXAMPLE = {
+      "platforms" => [
+        {
+          "id" => 16,
+          "name" => "rosa2012",
+          "platform_type" => "main",
+          "visibility" => "open",
+          "owner" => {
+            "id" => 5,
+            "name" => "Timothy Bobrov1",
+            "type" => "User",
+            "url" => "/users/5.json"
+          },
+          "repositories" => [
+            {
+              "id" => 26,
+              "name" => "main",
+              "url" => "/api/v1/repositories/26.json"
+            },
+            {
+              "id" => 27, 
+              "name" => "contrib",
+              "url" => "/api/v1/repositories/27.json"
+            }
+          ],
+          "url" => "/api/v1/platforms/26.json"
+        },
+        {
+          "id" => 18,
+          "name" => "timothy_tsvetkov",
+          "platform_type" => "main",
+          "visibility" => "open",
+          "owner" => {
+            "id" => 4,
+            "name" => "Yaroslav Garkin",
+            "type" => "User",
+            "url" => "/users/4.json"
+          },
+          "repositories" => [
+            {
+              "id" => 30,
+              "name" => "main",
+              "url" => "/api/v1/repositories/30.json"
+            },
+            {
+              "id" => 31, 
+              "name" => "non-free",
+              "url" => "/api/v1/repositories/31.json"
+            }
+          ],
+        "url" => "/api/v1/platforms/18.json"
+        },
+      ],"url" => "/api/v1/platforms.json"
+    }
+
     ARCHITECTURE_LIST_RESPONSE = {
       "architectures" => [
         {
