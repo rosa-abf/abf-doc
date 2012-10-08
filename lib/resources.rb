@@ -719,12 +719,6 @@ module GitHub
       ],"url" => "/api/v1/platforms.json"
     }
 
-
-
-
-
-
-
     PLATFORM_FOR_BUILD_RESPONSE = {
       "platforms" => [
         {
@@ -804,10 +798,6 @@ module GitHub
         },
       ],"url" => "/api/v1/platforms.json"
     }
-
-
-
-
 
     ARCHITECTURE_LIST_RESPONSE = {
       "architectures" => [
