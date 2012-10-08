@@ -413,21 +413,6 @@ module GitHub
       "message" => "403 Forbidden | Rate Limit Exceeded"
     }
 
-    PROJECT_REPOSITORIES = {
-      "repositories" => [
-        {
-          "id" => "repository for package storage id",
-          "name" => "repository for package storage name",
-          "url" => "path to repository data page",
-          "platform" => {
-            "id" => "repository platform id",
-            "name" => "repository platform name",
-            "url" => "path to repository platform data page"
-          }
-        }
-      ]
-    }
-
     PROJECT_DATA_RESPONSE = {
       "project"=>
         {
@@ -448,33 +433,20 @@ module GitHub
             "name" => "parent owner name",
             "url" => "url to owner profile"
           },
-        }.merge(PROJECT_REPOSITORIES),
-      "url" => "url to project resourse"
-    }
-
-    PROJECT_REPOSITORIES_EXAMPLE = {
-      "repositories" => [
-        {
-          "id" => 1,
-          "name" => "main",
-          "url" => "/api/v1/repositories/1.json",
-          "platform" => {
-            "id" => 1, 
-            "name" => "mdv_main",
-            "url" => "/api/v1/platforms/1.json"
-          }
+          "repositories" => [
+            {
+              "id" => "repository for package storage id",
+              "name" => "repository for package storage name",
+              "url" => "path to repository data page",
+              "platform" => {
+                "id" => "repository platform id",
+                "name" => "repository platform name",
+                "url" => "path to repository platform data page"
+              }
+            }
+          ]
         },
-        {
-          "id" => 3, 
-          "name" => "main",
-          "url" => "/api/v1/repositories/3.json",
-          "platform" => {
-            "id" => 3, 
-            "name" => "warpc_personal",
-            "url" => "/api/v1/platforms/3.json"
-          }
-        }
-      ]
+      "url" => "url to project resourse"
     }
 
     PROJECT_DATA_RESPONSE_EXAMPLE = {
@@ -497,8 +469,30 @@ module GitHub
             "name" => "Yaroslav Garkin",
             "type" => "User",
             "url" => "/users/4.json"
-          }
-        }.merge(PROJECT_REPOSITORIES_EXAMPLE),
+          },
+          "repositories" => [
+            {
+              "id" => 1,
+              "name" => "main",
+              "url" => "/api/v1/repositories/1.json",
+              "platform" => {
+                "id" => 1, 
+                "name" => "mdv_main",
+                "url" => "/api/v1/platforms/1.json"
+              }
+            },
+            {
+              "id" => 3, 
+              "name" => "main",
+              "url" => "/api/v1/repositories/3.json",
+              "platform" => {
+                "id" => 3, 
+                "name" => "warpc_personal",
+                "url" => "/api/v1/platforms/3.json"
+              }
+            }
+          ]
+        },
       "url" => "/api/v1/projects/4661.json"
     }
 
@@ -514,7 +508,7 @@ module GitHub
             "url" => "url to owner profile"
           },
           "url" => "url to project data page"
-        }.merge(PROJECT_REPOSITORIES)
+        }
     }
 
     PROJECT_GET_ID_RESPONSE_EXAMPLE = {
@@ -530,7 +524,7 @@ module GitHub
             "url" => "/users/4.json"
           },
           "url" => "/api/v1/projects/4661.json"
-        }.merge(PROJECT_REPOSITORIES_EXAMPLE)
+        }
     }
 
     REPOSITORY = {
