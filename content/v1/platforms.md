@@ -6,6 +6,7 @@ title: Platforms | ABF API
 
 * <a href="#get-a-single-platform">Get a single platform</a>
 * <a href="#list-platforms">List platforms</a>
+* <a href="#list-of-platforms-for-which-you-can-create-build-list">List of platforms for which you can create build list</a>
 
 ## Get a single platform
 
@@ -47,3 +48,20 @@ type
 
 <%= json(:platform_list_response_example) %>
 
+## List of platforms for which you can create build list.
+This data required for api
+<a href="/v1/buildlists/#create-build-list">Сreate build list.</a>
+
+    GET /api/v1/platforms/platforms_for_build.json
+
+### Request examples:
+
+    /api/v1/platforms/platforms_for_build.json
+
+### Response:
+
+<%= json(:platform_for_build_response) %>
+
+### Example:
+
+<%= json(:platform_for_build_response_example) %>
