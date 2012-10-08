@@ -674,6 +674,27 @@ module GitHub
         }
     }
 
+    ADD_PROJECT_REQUEST = { "project_id" => 34 }
+    REPOSITORY_ADD_PROJECT_REQUEST = ADD_PROJECT_REQUEST
+    REPOSITORY_ADD_PROJECT_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_ADD_PROJECT_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Project '32' has been added to repository successfully"
+        }
+    }
+
+    REPOSITORY_REMOVE_PROJECT_REQUEST = ADD_PROJECT_REQUEST
+    REPOSITORY_REMOVE_PROJECT_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_REMOVE_PROJECT_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Project '32' has been removed from repository successfully"
+        }
+    }
+
     PLATFORM_DATA_RESPONSE = {
       "platform" => {
         "id" => "platform id",

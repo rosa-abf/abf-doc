@@ -11,6 +11,8 @@ title: Repositories | ABF API
 * <a href="#destroy-repository">Destroy repository</a>
 * <a href="#add-member-to-a-single-repository">Add member to a single repository</a>
 * <a href="#remove-member-from-a-single-repository">Remove member from a single repository</a>
+* <a href="#add-project-to-a-single-repository">Add project to a single repository</a>
+* <a href="#remove-project-from-a-single-repository">Remove project from a single repository</a>
 
 ## Get a single repository
 
@@ -185,3 +187,51 @@ type
 &nbsp;
 
 <%= json(:repository_remove_member_response_example2) %>
+
+## Add project to a single repository
+
+	GET /api/v1/repositories/:id/add_project.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository
+
+project_id
+: _Required_ **Integer** identifier of project
+
+### Request:
+
+<%= json(:repository_add_project_request) %>
+
+### Response:
+
+<%= json(:repository_add_project_response) %>
+
+### Examples:
+
+<%= json(:repository_add_project_response_example) %>
+
+## Remove project from a single repository
+
+    GET /api/v1/repositories/:id/remove_project.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository
+
+project_id
+: _Required_ **Integer** identifier of project
+
+### Request:
+
+<%= json(:repository_remove_project_request) %>
+
+### Response:
+
+<%= json(:repository_remove_project_response) %>
+
+### Examples:
+
+<%= json(:repository_remove_project_response_example) %>
