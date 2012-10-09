@@ -11,6 +11,7 @@ title: Platforms | ABF API
 * <a href="#remove-member-from-a-single-platform">Remove member from a single platform</a>
 * <a href="#clone-a-single-platform">Clone a single platform</a>
 * <a href="#clear-a-single-platform">Clear a single platform</a>
+* <a href="#destroy-platform">Destroy platform</a>
 * <a href="#list-platforms">List platforms</a>
 * <a href="#list-of-platforms-for-which-you-can-create-build-list">List of platforms for which you can create build list</a>
 
@@ -172,8 +173,9 @@ name:
 <%= json(:platform_clone_response_example) %>
 
 ## Clear a single platform
+Only for `personal` platforms!
 
-    DELETE /api/v1/platforms/:id/clear.json
+    PUT /api/v1/platforms/:id/clear.json
 
 ### Parameters:
 
@@ -191,6 +193,28 @@ id
 ### Examples:
 
 <%= json(:platform_clear_response_example) %>
+
+## Destroy platform
+Only for `main` platforms!
+
+    DELETE /api/v1/platforms/:id.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current platform
+
+### Request example:
+
+    /api/v1/platforms/54.json
+
+### Response:
+
+<%= json(:platform_destroy_response) %>
+
+### Examples:
+
+<%= json(:platform_destroy_response_example) %>
 
 ## List platforms
 

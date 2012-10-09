@@ -872,7 +872,6 @@ module GitHub
     }
 
     PLATFORM_CLONE_RESPONSE = PLATFORM_UPDATE_RESPONSE
-
     PLATFORM_CLONE_RESPONSE_EXAMPLE = {
       "platform"=>
         {
@@ -881,8 +880,16 @@ module GitHub
         }
     }
 
-    PLATFORM_CLEAR_RESPONSE = PLATFORM_UPDATE_RESPONSE
+    PLATFORM_DESTROY_RESPONSE = PLATFORM_UPDATE_RESPONSE
+    PLATFORM_DESTROY_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been destroyed successfully"
+        }
+    }
 
+    PLATFORM_CLEAR_RESPONSE = PLATFORM_UPDATE_RESPONSE
     PLATFORM_CLEAR_RESPONSE_EXAMPLE = {
       "platform"=>
         {
