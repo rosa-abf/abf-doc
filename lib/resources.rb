@@ -527,65 +527,42 @@ module GitHub
         }
     }
 
-    REPOSITORY = {
-      "id" => "resource id",
-      "name" => "name",
-      "created_at" => "created at date and time",
-      "updated_at" => "updated at date and time",
-      "url" => "url to repository resource",
-      "description" => "description",
-      "publish_without_qa" => "publication without QA"
-    }
-
     REPOSITORY_UPDATE_EXAMPLE = {
       "description" => "description",
       "publish_without_qa" => true
     }
-    REPOSITORY_EXAMPLE = {
-      "id" => 30,
-      "name" => "main",
-      "created_at" => 1346762587,
-      "updated_at" => 1346841731,
-      "url" => "/api/v1/repositories/30.json"
-    }.merge(REPOSITORY_UPDATE_EXAMPLE)
-
-    PLATFORM_OF_REPOSITORY = {
-      "platform" => {
-        "id" => "platform id",
-        "name" => "platform name",
-        "url" => "url to platform"
-      }
-    }
-
-    PLATFORM_OF_REPOSITORY_EXAMPLE = {
-      "platform" => {
-        "id" => 41,
-        "name" => "my_personal",
-        "url" => "/api/v1/platforms/41.json"
-      }
-    }
-
-    REPOSITORY_LIST_REQUEST = {
-      "platform_id" => "platform id"
-    }
-
-    REPOSITORY_LIST_RESPONSE = {
-      "repositories" => [REPOSITORY],
-      "url" => "url to repositories resource"
-    }.merge(PLATFORM_OF_REPOSITORY)
-
-    REPOSITORY_LIST_RESPONSE_EXAMPLE = {
-      "repositories" => [REPOSITORY_EXAMPLE],
-      "url" => "/api/v1/repositories.json"
-    }.merge(PLATFORM_OF_REPOSITORY_EXAMPLE)
 
     REPOSITORY_DATA_RESPONSE = {
-      "repository" => REPOSITORY.merge(PLATFORM_OF_REPOSITORY),
+      "repository" => {
+        "id" => "resource id",
+        "name" => "name",
+        "created_at" => "created at date and time",
+        "updated_at" => "updated at date and time",
+        "url" => "url to repository resource",
+        "description" => "description",
+        "publish_without_qa" => "publication without QA",
+        "platform" => {
+          "id" => "platform id",
+          "name" => "platform name",
+          "url" => "url to platform"
+        }
+      },
       "url" => "url to repository resource"
     }
 
     REPOSITORY_DATA_RESPONSE_EXAMPLE = {
-      "repository" => REPOSITORY_EXAMPLE.merge(PLATFORM_OF_REPOSITORY_EXAMPLE),
+      "repository" => {
+        "id" => 30,
+        "name" => "main",
+        "created_at" => 1346762587,
+        "updated_at" => 1346841731,
+        "url" => "/api/v1/repositories/30.json",
+        "platform" => {
+          "id" => 41,
+          "name" => "my_personal",
+          "url" => "/api/v1/platforms/41.json"
+        }
+      }.merge(REPOSITORY_UPDATE_EXAMPLE),
       "url" => "/api/v1/repositories/30.json"
     }
 

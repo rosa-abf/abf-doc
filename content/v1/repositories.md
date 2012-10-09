@@ -5,7 +5,6 @@ title: Repositories | ABF API
 # Repositories API
 
 * <a href="#get-a-single-repository">Get a single repository</a>
-* <a href="#list-repositories">List repositories</a>
 * <a href="#update-a-single-repository">Update a single repository</a>
 * <a href="#create-repository">Create repository</a>
 * <a href="#destroy-repository">Destroy repository</a>
@@ -31,27 +30,6 @@ id
 ### Example:
 
 <%= json(:repository_data_response_example) %>
-
-## List repositories
-
-    GET /api/v1/repositories.json
-
-### Parameters:
-
-platform_id
-: _Required_ **Integer** identifier of platform.
-
-### Request:
-
-<%= json(:repository_list_request) %>
-
-### Response:
-
-<%= json(:repository_list_response) %>
-
-### Example:
-
-<%= json(:repository_list_response_example) %>
 
 ## Update a single repository
 
