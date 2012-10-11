@@ -932,4 +932,8 @@ div.expandable > ul h3 > a.expanded:hover {
   background-position: -38px -43px;
 }
 
+.in-progress, .ps {
+   color: #D14;
+}
+
 /* @end */

@@ -88,6 +88,11 @@ module GitHub
     # ABF constants
     #==============================================================================
 
+    ADD_MEMBER_REQUEST = {
+      "member_id" => 34,
+      "type" => "User"
+    }
+
     BUILD_LIST_SHOW_EXAMPLE = {
       "build_list" =>
         {
@@ -439,55 +444,55 @@ module GitHub
                 "url" => "path to repository platform data page"
               }
             }
-          ],
-          "url" => "url to build list page"
-        }
+          ]
+        },
+      "url" => "url to project resourse"
     }
 
     PROJECT_DATA_RESPONSE_EXAMPLE = {
       "project" =>
-      {
-        "id" => 4661,
-        "name" => "hwinfo",
-        "created_at" => 1348168705,
-        "updated_at" => 1348168905,
-        "visibility" => "open",
-        "description" => "asfsafafsfasf fas fasfsa fas  fasfa s",
-        "ancestry" => nil,
-        "has_issues" => true,
-        "has_wiki" => false,
-        "default_branch" => "master",
-        "is_package" => true,
-        "average_build_time" => 0,
-        "owner" => {
-          "id" => 4,
-          "name" => "Yaroslav Garkin",
-          "type" => "User",
-          "url" => "/users/4.json"
-        },
-        "repositories" => [
-          {
-            "id" => 1,
-            "name" => "main",
-            "url" => "/api/v1/repositories/1.json",
-            "platform" => {
-              "id" => 1, 
-              "name" => "mdv_main",
-              "url" => "/api/v1/platforms/1.json"
-            }
+        {
+          "id" => 4661,
+          "name" => "hwinfo",
+          "created_at" => 1348168705,
+          "updated_at" => 1348168905,
+          "visibility" => "open",
+          "description" => "asfsafafsfasf fas fasfsa fas  fasfa s",
+          "ancestry" => nil,
+          "has_issues" => true,
+          "has_wiki" => false,
+          "default_branch" => "master",
+          "is_package" => true,
+          "average_build_time" => 0,
+          "owner" => {
+            "id" => 4,
+            "name" => "Yaroslav Garkin",
+            "type" => "User",
+            "url" => "/users/4.json"
           },
-          {
-            "id" => 3, 
-            "name" => "main",
-            "url" => "/api/v1/repositories/3.json",
-            "platform" => {
+          "repositories" => [
+            {
+              "id" => 1,
+              "name" => "main",
+              "url" => "/api/v1/repositories/1.json",
+              "platform" => {
+                "id" => 1, 
+                "name" => "mdv_main",
+                "url" => "/api/v1/platforms/1.json"
+              }
+            },
+            {
               "id" => 3, 
-              "name" => "warpc_personal",
-              "url" => "/api/v1/platforms/3.json"
+              "name" => "main",
+              "url" => "/api/v1/repositories/3.json",
+              "platform" => {
+                "id" => 3, 
+                "name" => "warpc_personal",
+                "url" => "/api/v1/platforms/3.json"
+              }
             }
-          }
-        ],
-      },
+          ]
+        },
       "url" => "/api/v1/projects/4661.json"
     }
 
@@ -522,38 +527,159 @@ module GitHub
         }
     }
 
+    REPOSITORY_UPDATE_EXAMPLE = {
+      "description" => "description",
+      "publish_without_qa" => true
+    }
+
     REPOSITORY_DATA_RESPONSE = {
-      "repository" =>
-        {
-          "id" => "resource id",
-          "name" => "name",
-          "created_at" => "created at date and time",
-          "updated_at" => "updated at date and time",
-          "description" => "description",
-          "publish_without_qa" => "publication without QA",
-          "platform" => {
-            "id" => "platform id",
-            "name" => "platform name",
-            "url" => "url to platform"
-          },
-          "url" => "url to platform page"
-        },
-      "url" => "url to platforms list page"
+      "repository" => {
+        "id" => "resource id",
+        "name" => "name",
+        "created_at" => "created at date and time",
+        "updated_at" => "updated at date and time",
+        "url" => "url to repository resource",
+        "description" => "description",
+        "publish_without_qa" => "publication without QA",
+        "platform" => {
+          "id" => "platform id",
+          "name" => "platform name",
+          "url" => "url to platform"
+        }
+      },
+      "url" => "url to repository resource"
     }
 
     REPOSITORY_DATA_RESPONSE_EXAMPLE = {
+      "repository" => {
+        "id" => 30,
+        "name" => "main",
+        "created_at" => 1346762587,
+        "updated_at" => 1346841731,
+        "url" => "/api/v1/repositories/30.json",
+        "platform" => {
+          "id" => 41,
+          "name" => "my_personal",
+          "url" => "/api/v1/platforms/41.json"
+        }
+      }.merge(REPOSITORY_UPDATE_EXAMPLE),
+      "url" => "/api/v1/repositories/30.json"
+    }
+
+    REPOSITORY_UPDATE_REQUEST = {
+      "repository" => REPOSITORY_UPDATE_EXAMPLE
+    }
+
+    REPOSITORY_UPDATE_RESPONSE = {
       "repository" =>
         {
-          "id" => 30,
-          "name" => "main",
-          "publish_without_qa" => true,
-          "platform" => {
-            "id" => 41,
-            "name" => "my_personal",
-            "url" => "/api/v1/platforms/41.json"
-          },
-        },
-      "url" => "/api/v1/repositories/30.json"
+          "id" => "repository id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
+
+    REPOSITORY_UPDATE_RESPONSE_EXAMPLE = {
+      "repository" =>
+      {
+        "id" => 12,
+        "message" => "Repository has been updated successfully"
+      }
+    }
+
+    REPOSITORY_CREATE_REQUEST = {
+      "repository" => REPOSITORY_UPDATE_EXAMPLE.merge({
+        "platform_id" => 15,
+        "name" => "repository name"
+      })
+    }
+
+    REPOSITORY_CREATE_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_CREATE_RESPONSE_EXAMPLE = {
+      "repository" =>
+      {
+        "id" => 12,
+        "message" => "Repository has been created successfully"
+      }
+    }
+
+    REPOSITORY_DESTROY_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_DESTROY_RESPONSE_EXAMPLE = {
+      "repository" =>
+      {
+        "id" => 12,
+        "message" => "Repository has been destroyed successfully"
+      }
+    }
+
+    REPOSITORY_ADD_MEMBER_REQUEST = ADD_MEMBER_REQUEST
+    REPOSITORY_ADD_MEMBER_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_ADD_MEMBER_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been added to repository successfully"
+        }
+    }
+    REPOSITORY_ADD_MEMBER_RESPONSE_EXAMPLE2 = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been added to repository successfully"
+        }
+    }
+
+    REPOSITORY_REMOVE_MEMBER_REQUEST = ADD_MEMBER_REQUEST
+    REPOSITORY_REMOVE_MEMBER_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been removed from repository successfully"
+        }
+    }
+    REPOSITORY_REMOVE_MEMBER_RESPONSE_EXAMPLE2 = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been removed from repository successfully"
+        }
+    }
+
+    ADD_PROJECT_REQUEST = { "project_id" => 34 }
+    REPOSITORY_ADD_PROJECT_REQUEST = ADD_PROJECT_REQUEST
+    REPOSITORY_ADD_PROJECT_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_ADD_PROJECT_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Project '32' has been added to repository successfully"
+        }
+    }
+
+    REPOSITORY_REMOVE_PROJECT_REQUEST = ADD_PROJECT_REQUEST
+    REPOSITORY_REMOVE_PROJECT_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_REMOVE_PROJECT_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Project '32' has been removed from repository successfully"
+        }
+    }
+
+    REPOSITORY_SIGNATURES_REQUEST = {
+      "repository"=>
+        {
+          "public"=> "public key",
+          "secret"=> "secret key"
+        }
+    }
+    REPOSITORY_SIGNATURES_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_SIGNATURES_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "Signatures have been updated for repository successfully"
+        }
     }
 
     PLATFORM_DATA_RESPONSE = {
@@ -619,184 +745,265 @@ module GitHub
       }
     }
 
-    PLATFORM_LIST_RESPONSE = {
-      "platforms" => [
+    PLATFORM_OPTIONS_FOR_UPDATE = {
+      "description" => "new description",
+      "released" => true,
+      "owner_id" => 1
+    }
+    PLATFORM_UPDATE_REQUEST = {
+      "platform" => PLATFORM_OPTIONS_FOR_UPDATE
+    }
+
+    PLATFORM_UPDATE_RESPONSE = {
+      "platform" =>
+        {
+          "id" => "platform id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
+
+    PLATFORM_UPDATE_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been updated successfully"
+        }
+    }
+
+    PLATFORM_CREATE_REQUEST = {
+      "platform" => PLATFORM_OPTIONS_FOR_UPDATE.merge({
+        "name" => "distrib_type",
+        "distrib_type" => "mdv"
+      })
+    }
+    PLATFORM_CREATE_RESPONSE = PLATFORM_UPDATE_RESPONSE
+    PLATFORM_CREATE_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been created successfully"
+        }
+    }
+
+    PLATFORM_MEMBERS_RESPONSE = {
+      "platform" =>
         {
           "id" => "platform id",
-          "name" => "platform name",
-          "platform_type" => "platform type(main/personal)",
-          "visibility" => "platform visibility (hidden/open)",
-          "owner" =>{
-            "id" => "owner id",
-            "name" => "owner name",
-            "type" => "owner type",
-            "url" => "path to owner data"
-          },
-          "repositories" => [
+          "members" => [
             {
-              "id" => "repository for package storage id",
-              "name" => "repository for package storage name",
-              "url" => "path to repository data page"
+              "id" => "member id",
+              "type" => "User or Group type of member"
             }
-          ],
-          "url" => "path to platform data"
+          ]
         }
-      ]
+    }
+
+    PLATFORM_MEMBERS_RESPONSE_EXAMPLE = {
+      "platform" =>
+        {
+          "id" => 77,
+          "members" => [
+            {
+              "id" => 31,
+              "type" => "User"
+            },
+            {
+              "id" => 22,
+              "type" => "Group"
+            }
+          ]
+        }
+    }
+
+    PLATFORM_ADD_MEMBER_REQUEST = ADD_MEMBER_REQUEST
+
+    PLATFORM_ADD_MEMBER_RESPONSE = PLATFORM_UPDATE_RESPONSE
+
+    PLATFORM_ADD_MEMBER_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been added to platform successfully"
+        }
+    }
+
+    PLATFORM_ADD_MEMBER_RESPONSE_EXAMPLE2 = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been added to platmorm successfully"
+        }
+    }
+
+    PLATFORM_REMOVE_MEMBER_REQUEST = ADD_MEMBER_REQUEST
+
+    PLATFORM_REMOVE_MEMBER_RESPONSE = PLATFORM_UPDATE_RESPONSE
+
+    PLATFORM_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been removed from platform successfully"
+        }
+    }
+
+    PLATFORM_REMOVE_MEMBER_RESPONSE_EXAMPLE2 = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been removed from platform successfully"
+        }
+    }
+
+    PLATFORM_CLONE_REQUEST = {
+      "platform" =>
+        {
+          "description" => "platform description",
+          "name" => "platform name"
+        }
+    }
+
+    PLATFORM_CLONE_RESPONSE = PLATFORM_UPDATE_RESPONSE
+    PLATFORM_CLONE_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been cloned successfully"
+        }
+    }
+
+    PLATFORM_DESTROY_RESPONSE = PLATFORM_UPDATE_RESPONSE
+    PLATFORM_DESTROY_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been destroyed successfully"
+        }
+    }
+
+    PLATFORM_CLEAR_RESPONSE = PLATFORM_UPDATE_RESPONSE
+    PLATFORM_CLEAR_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been cleared successfully"
+        }
+    }
+
+    PLATFORM_FOR_LIST_OR_FOR_BUILD = {
+      "id" => "platform id",
+      "name" => "platform name",
+      "platform_type" => "platform type(main/personal)",
+      "visibility" => "platform visibility (hidden/open)",
+      "owner" =>{
+        "id" => "owner id",
+        "name" => "owner name",
+        "type" => "owner type",
+        "url" => "path to owner data"
+      },
+      "repositories" => [
+        {
+          "id" => "repository for package storage id",
+          "name" => "repository for package storage name",
+          "url" => "path to repository data page"
+        }
+      ],
+      "url" => "path to platform data"
+    }
+
+    PLATFORMS_FOR_LIST_OR_FOR_BUILD_EXAMPLE = [
+      {
+        "id" => 16,
+        "name" => "rosa2012",
+        "platform_type" => "main",
+        "visibility" => "open",
+        "owner" => {
+          "id" => 5,
+          "name" => "Timothy Bobrov1",
+          "type" => "User",
+          "url" => "/users/5.json"
+        },
+        "repositories" => [
+          {
+            "id" => 26,
+            "name" => "main",
+            "url" => "/api/v1/repositories/26.json"
+          },
+          {
+            "id" => 27, 
+            "name" => "contrib",
+            "url" => "/api/v1/repositories/27.json"
+          }
+        ],
+        "url" => "/api/v1/platforms/26.json"
+      },
+      {
+        "id" => 18,
+        "name" => "timothy_tsvetkov",
+        "platform_type" => "main",
+        "visibility" => "open",
+        "owner" => {
+          "id" => 4,
+          "name" => "Yaroslav Garkin",
+          "type" => "User",
+          "url" => "/users/4.json"
+        },
+        "repositories" => [
+          {
+            "id" => 30,
+            "name" => "main",
+            "url" => "/api/v1/repositories/30.json"
+          },
+          {
+            "id" => 31, 
+            "name" => "non-free",
+            "url" => "/api/v1/repositories/31.json"
+          }
+        ],
+      "url" => "/api/v1/platforms/18.json"
+      }
+    ]
+
+    PLATFORM_LIST_RESPONSE = {
+      "platforms" => [PLATFORM_FOR_LIST_OR_FOR_BUILD],
+      "url" => "path to platforms data"
     }
 
     PLATFORM_LIST_RESPONSE_EXAMPLE = {
-      "platforms" => [
-        {
-          "id" => 16,
-          "name" => "rosa2012",
-          "platform_type" => "main",
-          "visibility" => "open",
-          "owner" => {
-            "id" => 5,
-            "name" => "Timothy Bobrov1",
-            "type" => "User",
-            "url" => "/users/5.json"
-          },
-          "repositories" => [
-            {
-              "id" => 26,
-              "name" => "main",
-              "url" => "/api/v1/repositories/26.json"
-            },
-            {
-              "id" => 27, 
-              "name" => "contrib",
-              "url" => "/api/v1/repositories/27.json"
-            }
-          ],
-          "url" => "/api/v1/platforms/26.json"
+      "platforms" => (PLATFORMS_FOR_LIST_OR_FOR_BUILD_EXAMPLE.clone <<   {
+        "id" => 17,
+        "name" => "timothy_bobrov_personal",
+        "platform_type" => "personal",
+        "visibility" => "open",
+        "owner" => {
+          "id" => 5,
+          "name" => "Timothy Bobrov",
+          "type" => "User",
+          "url" => "/timothy_bobrov.json"
         },
-        {
-          "id" => 17,
-          "name" => "timothy_bobrov_personal",
-          "platform_type" => "personal",
-          "visibility" => "open",
-          "owner" => {
-            "id" => 5,
-            "name" => "Timothy Bobrov",
-            "type" => "User",
-            "url" => "/timothy_bobrov.json"
+        "repositories" => [
+          {
+            "id" => 28,
+            "name" => "main",
+            "url" => "/api/v1/repositories/28.json"
           },
-          "repositories" => [
-            {
-              "id" => 28,
-              "name" => "main",
-              "url" => "/api/v1/repositories/28.json"
-            },
-          ],
-          "url" => "/api/v1/platforms/17.json"
-        },
-        {
-          "id" => 18,
-          "name" => "timothy_tsvetkov",
-          "platform_type" => "main",
-          "visibility" => "open",
-          "owner" => {
-            "id" => 4,
-            "name" => "Yaroslav Garkin",
-            "type" => "User",
-            "url" => "/users/4.json"
-          },
-          "repositories" => [
-            {
-              "id" => 30,
-              "name" => "main",
-              "url" => "/api/v1/repositories/30.json"
-            },
-            {
-              "id" => 31, 
-              "name" => "non-free",
-              "url" => "/api/v1/repositories/31.json"
-            }
-          ],
-        "url" => "/api/v1/platforms/18.json"
-        },
-      ],"url" => "/api/v1/platforms.json"
+        ],
+        "url" => "/api/v1/platforms/17.json"
+      }),
+      "url" => "/api/v1/platforms.json"
     }
 
     PLATFORM_FOR_BUILD_RESPONSE = {
-      "platforms" => [
-        {
-          "id" => "platform id",
-          "name" => "platform name",
-          "platform_type" => "platform type(only main for build task)",
-          "visibility" => "platform visibility (only open for build task)",
-          "owner" =>{
-            "id" => "owner id",
-            "name" => "owner name",
-            "type" => "owner type",
-            "url" => "path to owner data"
-          },
-          "repositories" => [
-            {
-              "id" => "repository for package storage id",
-              "name" => "repository for package storage name",
-              "url" => "path to repository data page"
-            }
-          ],
-          "url" => "path to platform data"
-        }
-      ]
+      "platforms" => [PLATFORM_FOR_LIST_OR_FOR_BUILD.merge({
+        "platform_type" => "platform type(only main for build task)",
+        "visibility" => "platform visibility (only open for build task)"
+      })],
+      "url" => "path to platforms data"
     }
 
     PLATFORM_FOR_BUILD_RESPONSE_EXAMPLE = {
-      "platforms" => [
-        {
-          "id" => 16,
-          "name" => "rosa2012",
-          "platform_type" => "main",
-          "visibility" => "open",
-          "owner" => {
-            "id" => 5,
-            "name" => "Timothy Bobrov1",
-            "type" => "User",
-            "url" => "/users/5.json"
-          },
-          "repositories" => [
-            {
-              "id" => 26,
-              "name" => "main",
-              "url" => "/api/v1/repositories/26.json"
-            },
-            {
-              "id" => 27, 
-              "name" => "contrib",
-              "url" => "/api/v1/repositories/27.json"
-            }
-          ],
-          "url" => "/api/v1/platforms/26.json"
-        },
-        {
-          "id" => 18,
-          "name" => "timothy_tsvetkov",
-          "platform_type" => "main",
-          "visibility" => "open",
-          "owner" => {
-            "id" => 4,
-            "name" => "Yaroslav Garkin",
-            "type" => "User",
-            "url" => "/users/4.json"
-          },
-          "repositories" => [
-            {
-              "id" => 30,
-              "name" => "main",
-              "url" => "/api/v1/repositories/30.json"
-            },
-            {
-              "id" => 31, 
-              "name" => "non-free",
-              "url" => "/api/v1/repositories/31.json"
-            }
-          ],
-        "url" => "/api/v1/platforms/18.json"
-        },
-      ],"url" => "/api/v1/platforms.json"
+      "platforms" => PLATFORMS_FOR_LIST_OR_FOR_BUILD_EXAMPLE,
+      "url" => "/api/v1/platforms/platforms_for_build.json"
     }
 
     ARCHITECTURE_LIST_RESPONSE = {
