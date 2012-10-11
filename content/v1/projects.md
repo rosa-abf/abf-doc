@@ -6,6 +6,7 @@ title: Projects | ABF API
 
 * <a href="#get-a-single-project">Get a single project</a>
 * <a href="#get-project-id">Get project id</a>
+* <a href="#get-all-references-of-project">Get all references of project</a>
 
 ## Get a single project
 
@@ -14,7 +15,7 @@ title: Projects | ABF API
 ### Parameters:
 
 id
-: _Integer_ identifier of current project
+: _Required_ **Integer** identifier of current project
 
 ### Response:
 
@@ -48,3 +49,19 @@ owner_name:
 
 <%= json(:project_get_id_response_example) %>
 
+## Get all references of project
+
+    GET /api/v1/projects/:id/refs_list.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project
+
+### Response:
+
+<%= json(:project_refs_list_response) %>
+
+### Example:
+
+<%= json(:project_refs_list_response_example) %>
