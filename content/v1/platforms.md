@@ -5,20 +5,16 @@ title: Platforms | ABF API
 # Platforms API
 
 * <a href="#get-a-single-platform">Get a single platform</a>
-* <a href="#update-a-single-platform" class="in-progress">Update a single platform</a>
-* <a href="#members-of-a-single-platform" class="in-progress">Members of a single platform</a>
-* <a href="#add-member-to-a-single-platform" class="in-progress">Add member to a single platform</a>
-* <a href="#remove-member-from-a-single-platform" class="in-progress">Remove member from a single platform</a>
-* <a href="#clone-a-single-platform" class="in-progress">Clone a single platform</a>
-* <a href="#clear-a-single-platform" class="in-progress">Clear a single platform</a>
-* <a href="#create-platform" class="in-progress">Create platform</a>
-* <a href="#destroy-platform" class="in-progress">Destroy platform</a>
+* <a href="#update-a-single-platform">Update a single platform</a>
+* <a href="#members-of-a-single-platform">Members of a single platform</a>
+* <a href="#add-member-to-a-single-platform">Add member to a single platform</a>
+* <a href="#remove-member-from-a-single-platform">Remove member from a single platform</a>
+* <a href="#clone-a-single-platform">Clone a single platform</a>
+* <a href="#clear-a-single-platform">Clear a single platform</a>
+* <a href="#create-platform">Create platform</a>
+* <a href="#destroy-platform">Destroy platform</a>
 * <a href="#list-platforms">List platforms</a>
 * <a href="#list-of-platforms-for-which-you-can-create-build-list">List of platforms for which you can create build list</a>
-
-<div class="ps">
-    * - In progress...
-</div>
 
 ## Get a single platform
 
