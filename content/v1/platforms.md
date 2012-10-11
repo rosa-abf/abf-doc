@@ -5,15 +5,20 @@ title: Platforms | ABF API
 # Platforms API
 
 * <a href="#get-a-single-platform">Get a single platform</a>
-* <a href="#update-a-single-platform">Update a single platform</a>
-* <a href="#members-of-a-single-platform">Members of a single platform</a>
-* <a href="#add-member-to-a-single-platform">Add member to a single platform</a>
-* <a href="#remove-member-from-a-single-platform">Remove member from a single platform</a>
-* <a href="#clone-a-single-platform">Clone a single platform</a>
-* <a href="#clear-a-single-platform">Clear a single platform</a>
-* <a href="#destroy-platform">Destroy platform</a>
+* <a href="#update-a-single-platform" class="in-progress">Update a single platform</a>
+* <a href="#members-of-a-single-platform" class="in-progress">Members of a single platform</a>
+* <a href="#add-member-to-a-single-platform" class="in-progress">Add member to a single platform</a>
+* <a href="#remove-member-from-a-single-platform" class="in-progress">Remove member from a single platform</a>
+* <a href="#clone-a-single-platform" class="in-progress">Clone a single platform</a>
+* <a href="#clear-a-single-platform" class="in-progress">Clear a single platform</a>
+* <a href="#create-platform" class="in-progress">Create platform</a>
+* <a href="#destroy-platform" class="in-progress">Destroy platform</a>
 * <a href="#list-platforms">List platforms</a>
 * <a href="#list-of-platforms-for-which-you-can-create-build-list">List of platforms for which you can create build list</a>
+
+<div class="ps">
+    * - In progress...
+</div>
 
 ## Get a single platform
 
@@ -193,6 +198,39 @@ id
 ### Examples:
 
 <%= json(:platform_clear_response_example) %>
+
+## Create platform
+
+    POST /api/v1/platforms.json
+
+### Parameters:
+
+name:
+: _Required_ **String** platform name
+
+description:
+: _Required_ **String** platform description
+
+distrib_type:
+: _Required_ **String** distrib_type of platform (`mdv` or `nau5`)
+
+released:
+: _Optional_ **Boolean** realise status of platform
+
+owner_id:
+: _Optional_ **Integer** identifier of platform owner
+
+### Request:
+
+<%= json(:platform_create_request) %>
+
+### Response:
+
+<%= json(:platform_create_response) %>
+
+### Examples:
+
+<%= json(:platform_create_response_example) %>
 
 ## Destroy platform
 Only for `main` platforms!

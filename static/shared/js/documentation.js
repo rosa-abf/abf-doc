@@ -75,4 +75,12 @@ $(function() {
   var currentYear = (new Date).getFullYear();
   $("#year").text( (new Date).getFullYear() );
 
+
+  $(function() {
+    $('.in-progress').each(function() {
+      var id = $(this).attr('hash');
+      $(id + ':not(.in-progress)').addClass('in-progress');
+    });
+    $('.in-progress').append('*').attr('title', 'In progress...');
+  });
 });

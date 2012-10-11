@@ -745,13 +745,13 @@ module GitHub
       }
     }
 
+    PLATFORM_OPTIONS_FOR_UPDATE = {
+      "description" => "new description",
+      "released" => true,
+      "owner_id" => 1
+    }
     PLATFORM_UPDATE_REQUEST = {
-      "platform" =>
-        {
-          "description" => "new description",
-          "released" => true,
-          "owner_id" => 1
-        }
+      "platform" => PLATFORM_OPTIONS_FOR_UPDATE
     }
 
     PLATFORM_UPDATE_RESPONSE = {
@@ -767,6 +767,21 @@ module GitHub
         {
           "id"=> 56,
           "message"=> "Platform has been updated successfully"
+        }
+    }
+
+    PLATFORM_CREATE_REQUEST = {
+      "platform" => PLATFORM_OPTIONS_FOR_UPDATE.merge({
+        "name" => "distrib_type",
+        "distrib_type" => "mdv"
+      })
+    }
+    PLATFORM_CREATE_RESPONSE = PLATFORM_UPDATE_RESPONSE
+    PLATFORM_CREATE_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Platform has been created successfully"
         }
     }
 
