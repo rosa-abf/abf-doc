@@ -44,6 +44,8 @@ id
 id
 : _Required_ **Integer** identifier of current repository.
 
+### Inputs:
+
 description:
 : _Optional_ **String** repository description.
 
@@ -65,9 +67,9 @@ publish_without_qa:
 ## Create repository
 Only for repositories from `main` platform.
 
-    POST /api/v1/repositories/:id.json
+    POST /api/v1/repositories.json
 
-### Parameters:
+### Inputs:
 
 platform_id
 : _Required_ **Integer** identifier of platform.
@@ -121,6 +123,8 @@ Only for repositories from `main` platform.
 id
 : _Required_ **Integer** identifier of current repository
 
+### Inputs:
+
 member_id
 : _Required_ **Integer** identifier of new member
 
@@ -152,6 +156,8 @@ Only for repositories from `main` platform.
 
 id
 : _Required_ **Integer** identifier of current repository
+
+### Inputs:
 
 member_id
 : _Required_ **Integer** identifier of member
@@ -185,6 +191,8 @@ Only for repositories from `main` platform.
 id
 : _Required_ **Integer** identifier of current repository
 
+### Inputs:
+
 project_id
 : _Required_ **Integer** identifier of project
 
@@ -210,6 +218,8 @@ Only for repositories from `main` platform.
 id
 : _Required_ **Integer** identifier of current repository
 
+### Inputs:
+
 project_id
 : _Required_ **Integer** identifier of project
 
@@ -234,6 +244,8 @@ Only for repositories from `main` platform.
 
 id
 : _Required_ **Integer** identifier of current repository
+
+### Inputs:
 
 public
 : _Required_ **String** public key

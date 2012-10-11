@@ -46,6 +46,8 @@ id
 id
 : _Required_ **Integer** identifier of current platform
 
+### Inputs:
+
 description:
 : _Optional_ **String** platform description
 
@@ -97,6 +99,8 @@ id
 id
 : _Required_ **Integer** identifier of current platform
 
+### Inputs:
+
 member_id
 : _Required_ **Integer** identifier of new member
 
@@ -128,6 +132,8 @@ type
 id
 : _Required_ **Integer** identifier of current platform
 
+### Inputs:
+
 member_id
 : _Required_ **Integer** identifier of member
 
@@ -158,6 +164,8 @@ type
 
 id
 : _Required_ **Integer** identifier of current platform
+
+### Inputs:
 
 description:
 : _Required_ **String** platform description
@@ -203,7 +211,7 @@ id
 
     POST /api/v1/platforms.json
 
-### Parameters:
+### Inputs:
 
 name:
 : _Required_ **String** platform name
@@ -212,7 +220,7 @@ description:
 : _Required_ **String** platform description
 
 distrib_type:
-: _Required_ **String** distrib_type of platform (`mdv` or `nau5`)
+: _Required_ **String** distrib_type of platform (`mdv` or `rhel`)
 
 released:
 : _Optional_ **Boolean** realise status of platform

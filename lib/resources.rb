@@ -527,6 +527,39 @@ module GitHub
         }
     }
 
+
+    PROJECT_REFS_LIST_RESPONSE = {
+      "refs_list" => [
+        {
+          "ref" => "reference",
+          "object" => {
+            "type" => "type of reference (tag or commit)",
+            "sha" => "sha"
+          }
+        }
+      ],
+      "url" => "url to project refs_list page"
+    }
+    PROJECT_REFS_LIST_RESPONSE_EXAMPLE = {
+      "refs_list" => [
+        {
+          "ref" => "master",
+          "object" => {
+            "type" => "commit",
+            "sha" => "3d1468bbb339c8b59234a5bbc35dedf3d89c2043"
+          }
+        },
+        {
+          "ref" => "v.0.0.1",
+          "object" => {
+            "type" => "tag",
+            "sha" => "3d5d7af0e429ecad2b0b1b752235cdd0f9d51a6f"
+          }
+        },
+      ],
+      "url" => "/api/v1/projects/667/refs_list.json"
+    }
+
     REPOSITORY_UPDATE_EXAMPLE = {
       "description" => "description",
       "publish_without_qa" => true
