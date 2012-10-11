@@ -44,7 +44,7 @@ id
 id
 : _Required_ **Integer** identifier of current repository.
 
-### Inputs:
+### Input:
 
 description:
 : _Optional_ **String** repository description.
@@ -69,7 +69,7 @@ Only for repositories from `main` platform.
 
     POST /api/v1/repositories.json
 
-### Inputs:
+### Input:
 
 platform_id
 : _Required_ **Integer** identifier of platform.
@@ -123,7 +123,7 @@ Only for repositories from `main` platform.
 id
 : _Required_ **Integer** identifier of current repository
 
-### Inputs:
+### Input:
 
 member_id
 : _Required_ **Integer** identifier of new member
@@ -157,7 +157,7 @@ Only for repositories from `main` platform.
 id
 : _Required_ **Integer** identifier of current repository
 
-### Inputs:
+### Input:
 
 member_id
 : _Required_ **Integer** identifier of member
@@ -191,7 +191,7 @@ Only for repositories from `main` platform.
 id
 : _Required_ **Integer** identifier of current repository
 
-### Inputs:
+### Input:
 
 project_id
 : _Required_ **Integer** identifier of project
@@ -218,7 +218,7 @@ Only for repositories from `main` platform.
 id
 : _Required_ **Integer** identifier of current repository
 
-### Inputs:
+### Input:
 
 project_id
 : _Required_ **Integer** identifier of project
@@ -245,7 +245,7 @@ Only for repositories from `main` platform.
 id
 : _Required_ **Integer** identifier of current repository
 
-### Inputs:
+### Input:
 
 public
 : _Required_ **String** public key

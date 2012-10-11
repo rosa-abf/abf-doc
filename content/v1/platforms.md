@@ -42,7 +42,7 @@ id
 id
 : _Required_ **Integer** identifier of current platform
 
-### Inputs:
+### Input:
 
 description:
 : _Optional_ **String** platform description
@@ -95,7 +95,7 @@ id
 id
 : _Required_ **Integer** identifier of current platform
 
-### Inputs:
+### Input:
 
 member_id
 : _Required_ **Integer** identifier of new member
@@ -128,7 +128,7 @@ type
 id
 : _Required_ **Integer** identifier of current platform
 
-### Inputs:
+### Input:
 
 member_id
 : _Required_ **Integer** identifier of member
@@ -161,7 +161,7 @@ type
 id
 : _Required_ **Integer** identifier of current platform
 
-### Inputs:
+### Input:
 
 description:
 : _Required_ **String** platform description
@@ -207,7 +207,7 @@ id
 
     POST /api/v1/platforms.json
 
-### Inputs:
+### Input:
 
 name:
 : _Required_ **String** platform name
