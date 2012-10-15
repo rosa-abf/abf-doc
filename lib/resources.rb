@@ -150,7 +150,7 @@ module GitHub
           "owner" => {
             "id" => 49,
             "name" => "Mr. Evil",
-            "url" => "/users/49.json"
+            "url" => "/api/v1/users/49.json"
           },
           "include_repos" => [
             {
@@ -468,7 +468,7 @@ module GitHub
             "id" => 4,
             "name" => "Yaroslav Garkin",
             "type" => "User",
-            "url" => "/users/4.json"
+            "url" => "/api/v1/users/4.json"
           },
           "repositories" => [
             {
@@ -521,7 +521,7 @@ module GitHub
             "id" => 4,
             "name" => "Yaroslav Garkin",
             "type" => "User",
-            "url" => "/users/4.json"
+            "url" => "/api/v1/users/4.json"
           },
           "url" => "/api/v1/projects/4661.json"
         }
@@ -760,7 +760,7 @@ module GitHub
           "id" => 5,
           "name" => "Timothy Bobrov",
           "type" => "User",
-          "url" => "/users/5.json"
+          "url" => "/api/v1/users/5.json"
         },
         "repositories" => [
           {
@@ -954,7 +954,7 @@ module GitHub
           "id" => 5,
           "name" => "Timothy Bobrov1",
           "type" => "User",
-          "url" => "/users/5.json"
+          "url" => "/api/v1/users/5.json"
         },
         "repositories" => [
           {
@@ -979,7 +979,7 @@ module GitHub
           "id" => 4,
           "name" => "Yaroslav Garkin",
           "type" => "User",
-          "url" => "/users/4.json"
+          "url" => "/api/v1/users/4.json"
         },
         "repositories" => [
           {
@@ -1059,6 +1059,129 @@ module GitHub
           "name" => "i586"
         }
       ]
+    }
+
+    USER_UPDATE_PARAMS = {
+      "name" => "user name",
+      "email" => "user email",
+      "language" => "user language",
+      "professional_experience" => "user professional experience",
+      "site" => "user site",
+      "company" => "user company",
+      "location" => "user location"
+    }
+
+    USER_DATA_RESPONSE = {
+      "user" => USER_UPDATE_PARAMS.merge({
+        "id" => "user id",
+        "uname" => "user uname",
+        "own_projects_count" => "count of own projects",
+        "build_priority" => "build priority",
+        "created_at" => "user created at",
+        "updated_at" => "user updated_at",
+        "avatar_url" => "avatar url",
+        "html_url"=> "html user path",
+        "url" => "api user path"
+      })
+    }
+
+    USER_DATA_RESPONSE_EXAMPLE = {
+      "user" =>  {
+        "id" => 1,
+        "name" => "Ivan Aivazovsky",
+        "uname" => "ivan_aivazovsky",
+        "email" => "ivan_aivazovsky@test.com",
+        "language" => "ru",
+        "own_projects_count" => 3,
+        "professional_experience" => "software developer",
+        "site" => "http://abf.rosalinux.ru/",
+        "company" => "ROSA, CJSC",
+        "location" => "Saint Petersburg",
+        "avatar_url" => "avatar url",
+        "build_priority" => 50,
+        "created_at" => 1349357795,
+        "updated_at" => 1349358084,
+        "html_url"=> "/ivan_aivazovsky",
+        "url" => "/api/v1/users/1.json"
+      }
+    }
+
+    USER_UPDATE_REQUEST = {
+      "user" => USER_UPDATE_PARAMS
+    }
+
+    USER_UPDATE_RESPONSE = {
+      "user" =>
+        {
+          "id" => "user id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
+
+    USER_UPDATE_RESPONSE_EXAMPLE = {
+      "user"=>
+        {
+          "id"=> 56,
+          "message"=> "User has been updated successfully"
+        }
+    }
+
+    NOTIFIERS_EXAMPLE = {
+      "notifiers" => {
+        "can_notify" => true,
+        "new_comment_commit_owner" => true,
+        "new_comment_commit_repo_owner" => false,
+        "new_comment_commit_commentor" => true,
+        "new_comment"=> true,
+        "new_comment_reply" => true,
+        "new_issue" => true,
+        "issue_assign" => true,
+        "new_build" => true,
+        "new_associated_build" => false
+      }
+    }
+
+    USER_UPDATE_NOTIFIERS_REQUEST = NOTIFIERS_EXAMPLE
+    USER_UPDATE_NOTIFIERS_RESPONSE = {
+      "user" =>
+        {
+          "id" => "user id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
+
+    USER_UPDATE_NOTIFIERS_RESPONSE_EXAMPLE = {
+      "user"=>
+        {
+          "id"=> 56,
+          "message"=> "User notification settings have been updated successfully"
+        }
+    }
+
+    USER_NOTIFIERS_RESPONSE = {
+      "user" => {
+        "id" => "user id",
+        "notifiers" => {
+          "can_notify" => "notifications by email",
+          "new_comment_commit_owner" => "notify about comments to my commit",
+          "new_comment_commit_repo_owner" => "notify about comments to my repository commits",
+          "new_comment_commit_commentor" => "notify about comments after my commit",
+          "new_comment"=> "new task comment notifications",
+          "new_comment_reply" => "new reply of comment notifications",
+          "new_issue" => "new task notifications",
+          "issue_assign" => "new task assignment notifications",
+          "new_build" => "notify about my build tasks",
+          "new_associated_build" => "notify about associated with me build tasks"
+        }
+      },
+      "url" => "user notification settings path"
+    }
+
+    USER_NOTIFIERS_RESPONSE_EXAMPLE = {
+      "user" => {
+        "id" => 5,
+      }.merge(NOTIFIERS_EXAMPLE),
+      "url" => "/api/v1/user/notifiers.json"
     }
 
   end
