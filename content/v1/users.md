@@ -5,7 +5,7 @@ title: Users | ABF API
 # Users API
 
 * <a href="#get-a-single-user">Get a single user</a>
-* <a href="#update-a-single-user">Update a single user</a>
+* <a href="#update-a-current-user">Update a current user</a>
 * <a href="#get-a-notification-settings-of-a-current-user">Get a notification settings of a current user</a>
 * <a href="#update-a-notification-settings-for-a-current-user">Update a notification settings for a current user</a>
 
@@ -26,14 +26,9 @@ id
 
 <%= json(:user_data_response_example) %>
 
-## Update a single user
+## Update a current user
 
-    PUT /api/v1/users/:id.json
-
-### Parameters:
-
-id
-: _Required_ **Integer** identifier of current user.
+    PUT /api/v1/user.json
 
 ### Input:
 
