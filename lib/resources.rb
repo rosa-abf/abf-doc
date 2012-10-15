@@ -1061,40 +1061,25 @@ module GitHub
       ]
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     USER_UPDATE_PARAMS = {
       "name" => "user name",
-      "uname" => "user uname",
       "email" => "user email",
       "language" => "user language",
       "professional_experience" => "user professional experience",
       "site" => "user site",
       "company" => "user company",
-      "location" => "user location",
-      "avatar_url" => "avatar url"
+      "location" => "user location"
     }
 
     USER_DATA_RESPONSE = {
       "user" => USER_UPDATE_PARAMS.merge({
         "id" => "user id",
+        "uname" => "user uname",
         "own_projects_count" => "count of own projects",
         "build_priority" => "build priority",
         "created_at" => "user created at",
         "updated_at" => "user updated_at",
+        "avatar_url" => "avatar url",
         "html_url"=> "html user path",
         "url" => "api user path"
       })
@@ -1141,15 +1126,63 @@ module GitHub
         }
     }
 
+    NOTIFIERS_EXAMPLE = {
+      "notifiers" => {
+        "can_notify" => true,
+        "new_comment_commit_owner" => true,
+        "new_comment_commit_repo_owner" => false,
+        "new_comment_commit_commentor" => true,
+        "new_comment"=> true,
+        "new_comment_reply" => true,
+        "new_issue" => true,
+        "issue_assign" => true,
+        "new_build" => true,
+        "new_associated_build" => false
+      }
+    }
 
+    USER_UPDATE_NOTIFIERS_REQUEST = NOTIFIERS_EXAMPLE
+    USER_UPDATE_NOTIFIERS_RESPONSE = {
+      "user" =>
+        {
+          "id" => "user id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
 
+    USER_UPDATE_NOTIFIERS_RESPONSE_EXAMPLE = {
+      "user"=>
+        {
+          "id"=> 56,
+          "message"=> "User notification settings have been updated successfully"
+        }
+    }
 
+    USER_NOTIFIERS_RESPONSE = {
+      "user" => {
+        "id" => "user id",
+        "notifiers" => {
+          "can_notify" => "notifications by email",
+          "new_comment_commit_owner" => "notify about comments to my commit",
+          "new_comment_commit_repo_owner" => "notify about comments to my repository commits",
+          "new_comment_commit_commentor" => "notify about comments after my commit",
+          "new_comment"=> "new task comment notifications",
+          "new_comment_reply" => "new reply of comment notifications",
+          "new_issue" => "new task notifications",
+          "issue_assign" => "new task assignment notifications",
+          "new_build" => "notify about my build tasks",
+          "new_associated_build" => "notify about associated with me build tasks"
+        }
+      },
+      "url" => "user notification settings path"
+    }
 
-
-
-
-
-
+    USER_NOTIFIERS_RESPONSE_EXAMPLE = {
+      "user" => {
+        "id" => 5,
+      }.merge(NOTIFIERS_EXAMPLE),
+      "url" => "/api/v1/user/notifiers.json"
+    }
 
   end
 end
