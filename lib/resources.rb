@@ -150,7 +150,7 @@ module GitHub
           "owner" => {
             "id" => 49,
             "name" => "Mr. Evil",
-            "url" => "/users/49.json"
+            "url" => "/api/v1/users/49.json"
           },
           "include_repos" => [
             {
@@ -468,7 +468,7 @@ module GitHub
             "id" => 4,
             "name" => "Yaroslav Garkin",
             "type" => "User",
-            "url" => "/users/4.json"
+            "url" => "/api/v1/users/4.json"
           },
           "repositories" => [
             {
@@ -521,7 +521,7 @@ module GitHub
             "id" => 4,
             "name" => "Yaroslav Garkin",
             "type" => "User",
-            "url" => "/users/4.json"
+            "url" => "/api/v1/users/4.json"
           },
           "url" => "/api/v1/projects/4661.json"
         }
@@ -760,7 +760,7 @@ module GitHub
           "id" => 5,
           "name" => "Timothy Bobrov",
           "type" => "User",
-          "url" => "/users/5.json"
+          "url" => "/api/v1/users/5.json"
         },
         "repositories" => [
           {
@@ -954,7 +954,7 @@ module GitHub
           "id" => 5,
           "name" => "Timothy Bobrov1",
           "type" => "User",
-          "url" => "/users/5.json"
+          "url" => "/api/v1/users/5.json"
         },
         "repositories" => [
           {
@@ -979,7 +979,7 @@ module GitHub
           "id" => 4,
           "name" => "Yaroslav Garkin",
           "type" => "User",
-          "url" => "/users/4.json"
+          "url" => "/api/v1/users/4.json"
         },
         "repositories" => [
           {
