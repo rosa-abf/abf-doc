@@ -1061,6 +1061,96 @@ module GitHub
       ]
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    USER_UPDATE_PARAMS = {
+      "name" => "user name",
+      "uname" => "user uname",
+      "email" => "user email",
+      "language" => "user language",
+      "professional_experience" => "user professional experience",
+      "site" => "user site",
+      "company" => "user company",
+      "location" => "user location",
+      "avatar_url" => "avatar url"
+    }
+
+    USER_DATA_RESPONSE = {
+      "user" => USER_UPDATE_PARAMS.merge({
+        "id" => "user id",
+        "own_projects_count" => "count of own projects",
+        "build_priority" => "build priority",
+        "created_at" => "user created at",
+        "updated_at" => "user updated_at",
+        "html_url"=> "html user path",
+        "url" => "api user path"
+      })
+    }
+
+    USER_DATA_RESPONSE_EXAMPLE = {
+      "user" =>  {
+        "id" => 1,
+        "name" => "Ivan Aivazovsky",
+        "uname" => "ivan_aivazovsky",
+        "email" => "ivan_aivazovsky@test.com",
+        "language" => "ru",
+        "own_projects_count" => 3,
+        "professional_experience" => "software developer",
+        "site" => "http://abf.rosalinux.ru/",
+        "company" => "ROSA, CJSC",
+        "location" => "Saint Petersburg",
+        "avatar_url" => "avatar url",
+        "build_priority" => 50,
+        "created_at" => 1349357795,
+        "updated_at" => 1349358084,
+        "html_url"=> "/ivan_aivazovsky",
+        "url" => "/api/v1/users/1.json"
+      }
+    }
+
+    USER_UPDATE_REQUEST = {
+      "user" => USER_UPDATE_PARAMS
+    }
+
+    USER_UPDATE_RESPONSE = {
+      "user" =>
+        {
+          "id" => "user id (null if failed)",
+          "message" => "success or fail message"
+        }
+    }
+
+    USER_UPDATE_RESPONSE_EXAMPLE = {
+      "user"=>
+        {
+          "id"=> 56,
+          "message"=> "User has been updated successfully"
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
   end
 end
 
