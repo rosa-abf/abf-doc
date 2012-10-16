@@ -825,7 +825,8 @@ module GitHub
           "members" => [
             {
               "id" => "member id",
-              "type" => "User or Group type of member"
+              "type" => "User or Group type of member",
+              "url" => "member path"
             }
           ]
         }
@@ -838,11 +839,13 @@ module GitHub
           "members" => [
             {
               "id" => 31,
-              "type" => "User"
+              "type" => "User",
+              "url" => "/api/v1/users/31.json"
             },
             {
               "id" => 22,
-              "type" => "Group"
+              "type" => "Group",
+              "url" => "/api/v1/groups/31.json"
             }
           ]
         }
@@ -1191,9 +1194,15 @@ module GitHub
       "created_at" => "group created at",
       "updated_at" => "group updated_at",
       "description" => "group description",
+      "owner" => {
+        "id" => "owner id",
+        "name" => "owner name",
+        "type" => "owner type",
+        "url" => "path to owner data"
+      },
       "avatar_url" => "avatar url",
       "html_url"=> "html group path",
-      "url" => "api group path"
+      "url" => "api group path",
     }
 
     GROUP_PARAMS_EXAMPLE = {
@@ -1203,6 +1212,12 @@ module GitHub
       "created_at" => 1349357795,
       "updated_at" => 1349358084,
       "description" => "public group",
+      "owner" => {
+        "id" => 5,
+        "name" => "Timothy Bobrov1",
+        "type" => "User",
+        "url" => "/api/v1/users/5.json"
+      },
       "avatar_url" => "avatar url",
       "html_url"=> "/rosa",
       "url" => "/api/v1/groups/1.json"
@@ -1243,6 +1258,59 @@ module GitHub
       "group"=> {
         "id"=> 56,
         "message"=> "Group has been updated successfully"
+      }
+    }
+
+    GROUP_CREATE_REQUEST = {
+      "group" => {
+        "uname" => "group uname",
+        "description" => "group description"
+      }
+    }
+    GROUP_CREATE_RESPONSE = GROUP_UPDATE_RESPONSE
+    GROUP_CREATE_RESPONSE_EXAMPLE = {
+      "group"=> {
+        "id"=> 56,
+        "message"=> "Group has been created successfully"
+      }
+    }
+
+    GROUP_DESTROY_RESPONSE = GROUP_UPDATE_RESPONSE
+    GROUP_DESTROY_RESPONSE_EXAMPLE = {
+      "group"=> {
+        "id"=> 56,
+        "message"=> "Group has been destroyed successfully"
+      }
+    }
+
+    GROUP_MEMBERS_RESPONSE = {
+      "group" => {
+        "id" => "group id",
+        "members" => [
+          {
+            "id" => "member id",
+            "type" => "only User may be member of group",
+            "url" => "user path"
+          }
+        ]
+      }
+    }
+
+    GROUP_MEMBERS_RESPONSE_EXAMPLE = {
+      "platform" => {
+        "id" => 77,
+        "members" => [
+          {
+            "id" => 31,
+            "type" => "User",
+            "url" => "/api/v1/users/31.json"
+          },
+          {
+            "id" => 22,
+            "type" => "User",
+            "url" => "/api/v1/users/22.json"
+          }
+        ]
       }
     }
 
