@@ -130,3 +130,58 @@ id
 ### Example:
 
 <%= json(:group_members_response_example) %>
+
+## Add member to a single group
+
+  PUT /api/v1/groups/:id/add_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current group.
+
+### Input:
+
+member_id
+: _Required_ **Integer** identifier of new member (may be added only `User`).
+
+role
+: _Optional_ **String** role for new member (`reader`, `writer`, `admin`), by default `admin`.
+
+### Request:
+
+<%= json(:group_add_member_request) %>
+
+### Response:
+
+<%= json(:group_add_member_response) %>
+
+### Examples:
+
+<%= json(:group_add_member_response_example) %>
+
+## Remove member from a single group
+
+    DELETE /api/v1/groups/:id/remove_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current group.
+
+### Input:
+
+member_id
+: _Required_ **Integer** identifier of member (may be removed only `User`).
+
+### Request:
+
+<%= json(:group_remove_member_request) %>
+
+### Response:
+
+<%= json(:group_remove_member_response) %>
+
+### Examples:
+
+<%= json(:group_remove_member_response_example) %>

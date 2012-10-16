@@ -1297,7 +1297,7 @@ module GitHub
     }
 
     GROUP_MEMBERS_RESPONSE_EXAMPLE = {
-      "platform" => {
+      "group" => {
         "id" => 77,
         "members" => [
           {
@@ -1312,6 +1312,34 @@ module GitHub
           }
         ]
       }
+    }
+
+    GROUP_ADD_MEMBER_REQUEST = {
+      "member_id" => 34,
+      "role" => "admin"
+    }
+
+    GROUP_ADD_MEMBER_RESPONSE = GROUP_UPDATE_RESPONSE
+    GROUP_ADD_MEMBER_RESPONSE_EXAMPLE = {
+      "group"=>
+        {
+          "id"=> 56,
+          "message"=> "User '34' has been added to group successfully"
+        }
+    }
+
+    GROUP_REMOVE_MEMBER_REQUEST = {
+      "member_id" => 34
+    }
+
+    GROUP_REMOVE_MEMBER_RESPONSE = GROUP_UPDATE_RESPONSE
+
+    GROUP_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
+      "group"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been removed from group successfully"
+        }
     }
 
   end
