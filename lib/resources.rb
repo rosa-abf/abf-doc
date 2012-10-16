@@ -825,10 +825,12 @@ module GitHub
           "members" => [
             {
               "id" => "member id",
-              "type" => "User or Group type of member"
+              "type" => "User or Group type of member",
+              "url" => "member path"
             }
           ]
-        }
+        },
+      "url" => "members path"
     }
 
     PLATFORM_MEMBERS_RESPONSE_EXAMPLE = {
@@ -838,14 +840,17 @@ module GitHub
           "members" => [
             {
               "id" => 31,
-              "type" => "User"
+              "type" => "User",
+              "url" => "/api/v1/users/31.json"
             },
             {
               "id" => 22,
-              "type" => "Group"
+              "type" => "Group",
+              "url" => "/api/v1/groups/31.json"
             }
           ]
-        }
+        },
+      "url" => "/api/v1/platforms/77/members.json"
     }
 
     PLATFORM_ADD_MEMBER_REQUEST = ADD_MEMBER_REQUEST
@@ -1182,6 +1187,173 @@ module GitHub
         "id" => 5,
       }.merge(NOTIFIERS_EXAMPLE),
       "url" => "/api/v1/user/notifiers.json"
+    }
+
+    GROUP_PARAMS = {
+      "id" => "group id",
+      "uname" => "group uname",
+      "own_projects_count" => "count of own projects",
+      "created_at" => "group created at",
+      "updated_at" => "group updated_at",
+      "description" => "group description",
+      "owner" => {
+        "id" => "owner id",
+        "name" => "owner name",
+        "type" => "owner type",
+        "url" => "path to owner data"
+      },
+      "avatar_url" => "avatar url",
+      "html_url"=> "html group path",
+      "url" => "api group path",
+    }
+
+    GROUP_PARAMS_EXAMPLE = {
+      "id" => 1,
+      "uname" => "rosa",
+      "own_projects_count" => 5,
+      "created_at" => 1349357795,
+      "updated_at" => 1349358084,
+      "description" => "public group",
+      "owner" => {
+        "id" => 5,
+        "name" => "Timothy Bobrov1",
+        "type" => "User",
+        "url" => "/api/v1/users/5.json"
+      },
+      "avatar_url" => "avatar url",
+      "html_url"=> "/rosa",
+      "url" => "/api/v1/groups/1.json"
+    }
+
+    GROUP_LIST_RESPONSE = {
+      "groups" => [GROUP_PARAMS],
+      "url" => "path to groups data"
+    }
+
+    GROUP_LIST_RESPONSE_EXAMPLE = {
+      "groups" => [GROUP_PARAMS_EXAMPLE],
+      "url" => "/api/v1/groups.json"
+    }
+
+    GROUP_DATA_RESPONSE = {
+      "group" => GROUP_PARAMS
+    }
+
+    GROUP_DATA_RESPONSE_EXAMPLE = {
+      "group" => GROUP_PARAMS_EXAMPLE
+    }
+
+    GROUP_UPDATE_REQUEST = {
+      "group" => {
+        "description" => "group description"
+      }
+    }
+
+    GROUP_UPDATE_RESPONSE = {
+      "group" => {
+        "id" => "group id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+
+    GROUP_UPDATE_RESPONSE_EXAMPLE = {
+      "group"=> {
+        "id"=> 56,
+        "message"=> "Group has been updated successfully"
+      }
+    }
+
+    GROUP_CREATE_REQUEST = {
+      "group" => {
+        "uname" => "group uname",
+        "description" => "group description"
+      }
+    }
+    GROUP_CREATE_RESPONSE = GROUP_UPDATE_RESPONSE
+    GROUP_CREATE_RESPONSE_EXAMPLE = {
+      "group"=> {
+        "id"=> 56,
+        "message"=> "Group has been created successfully"
+      }
+    }
+
+    GROUP_DESTROY_RESPONSE = GROUP_UPDATE_RESPONSE
+    GROUP_DESTROY_RESPONSE_EXAMPLE = {
+      "group"=> {
+        "id"=> 56,
+        "message"=> "Group has been destroyed successfully"
+      }
+    }
+
+    GROUP_MEMBERS_RESPONSE = {
+      "group" => {
+        "id" => "group id",
+        "members" => [
+          {
+            "id" => "member id",
+            "type" => "only User may be member of group",
+            "url" => "user path"
+          }
+        ]
+      },
+      "url" => "members path"
+    }
+
+    GROUP_MEMBERS_RESPONSE_EXAMPLE = {
+      "group" => {
+        "id" => 77,
+        "members" => [
+          {
+            "id" => 31,
+            "type" => "User",
+            "url" => "/api/v1/users/31.json"
+          },
+          {
+            "id" => 22,
+            "type" => "User",
+            "url" => "/api/v1/users/22.json"
+          }
+        ]
+      },
+      "url" => "/api/v1/groups/77/members.json"
+    }
+
+    GROUP_ADD_MEMBER_REQUEST = {
+      "member_id" => 34,
+      "role" => "admin"
+    }
+
+    GROUP_ADD_MEMBER_RESPONSE = GROUP_UPDATE_RESPONSE
+    GROUP_ADD_MEMBER_RESPONSE_EXAMPLE = {
+      "group"=>
+        {
+          "id"=> 56,
+          "message"=> "User '34' has been added to group successfully"
+        }
+    }
+
+    GROUP_REMOVE_MEMBER_REQUEST = {
+      "member_id" => 34
+    }
+
+    GROUP_REMOVE_MEMBER_RESPONSE = GROUP_UPDATE_RESPONSE
+
+    GROUP_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
+      "group"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been removed from group successfully"
+        }
+    }
+
+    GROUP_UPDATE_MEMBER_REQUEST = GROUP_ADD_MEMBER_REQUEST
+    GROUP_UPDATE_MEMBER_RESPONSE = GROUP_UPDATE_RESPONSE
+    GROUP_UPDATE_MEMBER_RESPONSE_EXAMPLE = {
+      "group"=>
+        {
+          "id"=> 56,
+          "message"=> "Role for user '34' has been updated in group successfully"
+        }
     }
 
   end
