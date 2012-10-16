@@ -1226,6 +1226,26 @@ module GitHub
       "group" => GROUP_PARAMS_EXAMPLE
     }
 
+    GROUP_UPDATE_REQUEST = {
+      "group" => {
+        "description" => "group description"
+      }
+    }
+
+    GROUP_UPDATE_RESPONSE = {
+      "group" => {
+        "id" => "group id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+
+    GROUP_UPDATE_RESPONSE_EXAMPLE = {
+      "group"=> {
+        "id"=> 56,
+        "message"=> "Group has been updated successfully"
+      }
+    }
+
   end
 end
 
