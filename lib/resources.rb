@@ -1184,6 +1184,48 @@ module GitHub
       "url" => "/api/v1/user/notifiers.json"
     }
 
+    GROUP_PARAMS = {
+      "id" => "group id",
+      "uname" => "group uname",
+      "own_projects_count" => "count of own projects",
+      "created_at" => "group created at",
+      "updated_at" => "group updated_at",
+      "description" => "group description",
+      "avatar_url" => "avatar url",
+      "html_url"=> "html group path",
+      "url" => "api group path"
+    }
+
+    GROUP_PARAMS_EXAMPLE = {
+      "id" => 1,
+      "uname" => "rosa",
+      "own_projects_count" => 5,
+      "created_at" => 1349357795,
+      "updated_at" => 1349358084,
+      "description" => "public group",
+      "avatar_url" => "avatar url",
+      "html_url"=> "/rosa",
+      "url" => "/api/v1/groups/1.json"
+    }
+
+    GROUP_LIST_RESPONSE = {
+      "groups" => [GROUP_PARAMS],
+      "url" => "path to groups data"
+    }
+
+    GROUP_LIST_RESPONSE_EXAMPLE = {
+      "groups" => [GROUP_PARAMS_EXAMPLE],
+      "url" => "/api/v1/groups.json"
+    }
+
+    GROUP_DATA_RESPONSE = {
+      "group" => GROUP_PARAMS
+    }
+
+    GROUP_DATA_RESPONSE_EXAMPLE = {
+      "group" => GROUP_PARAMS_EXAMPLE
+    }
+
   end
 end
 
