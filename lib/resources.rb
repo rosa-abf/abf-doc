@@ -829,7 +829,8 @@ module GitHub
               "url" => "member path"
             }
           ]
-        }
+        },
+      "url" => "members path"
     }
 
     PLATFORM_MEMBERS_RESPONSE_EXAMPLE = {
@@ -848,7 +849,8 @@ module GitHub
               "url" => "/api/v1/groups/31.json"
             }
           ]
-        }
+        },
+      "url" => "/api/v1/platforms/77/members.json"
     }
 
     PLATFORM_ADD_MEMBER_REQUEST = ADD_MEMBER_REQUEST
@@ -1293,7 +1295,8 @@ module GitHub
             "url" => "user path"
           }
         ]
-      }
+      },
+      "url" => "members path"
     }
 
     GROUP_MEMBERS_RESPONSE_EXAMPLE = {
@@ -1311,7 +1314,8 @@ module GitHub
             "url" => "/api/v1/users/22.json"
           }
         ]
-      }
+      },
+      "url" => "/api/v1/groups/77/members.json"
     }
 
     GROUP_ADD_MEMBER_REQUEST = {

@@ -9,7 +9,7 @@ title: Groups | ABF API
 * <a href="#update-a-single-group">Update a single group</a>
 * <a href="#create-group">Create group</a>
 * <a href="#destroy-group">Destroy group</a>
-* <a href="#users-of-a-single-group">Members of a single group</a>
+* <a href="#members-of-a-single-group">Members of a single group</a>
 * <a href="#add-member-to-a-single-group">Add member to a single group</a>
 * <a href="#remove-member-from-a-single-group">Remove member from a single group</a>
 * <a href="#update-member-role-for-a-single-group">Update member role for a single group</a>
