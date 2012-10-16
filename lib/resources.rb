@@ -1342,6 +1342,16 @@ module GitHub
         }
     }
 
+    GROUP_UPDATE_MEMBER_REQUEST = GROUP_ADD_MEMBER_REQUEST
+    GROUP_UPDATE_MEMBER_RESPONSE = GROUP_UPDATE_RESPONSE
+    GROUP_UPDATE_MEMBER_RESPONSE_EXAMPLE = {
+      "group"=>
+        {
+          "id"=> 56,
+          "message"=> "Role for user '34' has been updated in group successfully"
+        }
+    }
+
   end
 end
 

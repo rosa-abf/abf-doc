@@ -185,3 +185,32 @@ member_id
 ### Examples:
 
 <%= json(:group_remove_member_response_example) %>
+
+## Update member role for a single group
+
+  PUT /api/v1/groups/:id/update_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current group.
+
+### Input:
+
+member_id
+: _Required_ **Integer** identifier of member.
+
+role
+: _Required_ **String** role for new member (`reader`, `writer`, `admin`).
+
+### Request:
+
+<%= json(:group_update_member_request) %>
+
+### Response:
+
+<%= json(:group_update_member_response) %>
+
+### Examples:
+
+<%= json(:group_update_member_response_example) %>
