@@ -427,8 +427,9 @@ module GitHub
       "is_package" => "true if project is package",
       "average_build_time" => "average build time for this project",
       "owner" => {
-        "id" => "parent owner id",
-        "name" => "parent owner name",
+        "id" => "owner id",
+        "name" => "owner name",
+        "type" => "owner type",
         "url" => "path to owner data"
       },
       "url" => "path to project data"
@@ -468,6 +469,12 @@ module GitHub
 
     PROJECT_DATA_RESPONSE = {
       "project"=> PROJECT_PARAMS.merge({
+        "maintainer" => {
+          "id" => "maintainer id",
+          "name" => "maintainer name",
+          "type" => "maintainer type",
+          "url" => "path to owner data"
+        },
         "repositories" => [
           {
             "id" => "repository for package storage id",
@@ -485,6 +492,12 @@ module GitHub
 
     PROJECT_DATA_RESPONSE_EXAMPLE = {
       "project" => PROJECT_PARAMS_EXAMPLE.merge({
+        "maintainer" => {
+          "id" => 4,
+          "name" => "Yaroslav Garkin",
+          "type" => "User",
+          "url" => "/api/v1/users/4.json"
+        },
         "repositories" => [
           {
             "id" => 1,
@@ -572,6 +585,32 @@ module GitHub
         },
       ],
       "url" => "/api/v1/projects/667/refs_list.json"
+    }
+
+    PROJECT_UPDATE_REQUEST = {
+      "project" => {
+        "description" => "description",
+        "has_issues" => true,
+        "has_wiki" => false,
+        "maintainer_id" => 15,
+        "visibility" => "open",
+        "is_package" => true,
+        "default_branch" => "master"
+      }
+    }
+
+    PROJECT_UPDATE_RESPONSE = {
+      "project" => {
+        "id" => "project id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+
+    PROJECT_UPDATE_RESPONSE_EXAMPLE = {
+      "project" => {
+        "id" => 12,
+        "message" => "Project has been updated successfully"
+      }
     }
 
     REPOSITORY_UPDATE_EXAMPLE = {

@@ -36,7 +36,7 @@ title: Projects | ABF API
 ### Parameters:
 
 id
-: _Required_ **Integer** identifier of current project
+: _Required_ **Integer** identifier of current project.
 
 ### Response:
 
@@ -53,10 +53,10 @@ id
 ### Parameters:
 
 project_name
-: _String_ project name
+: _String_ project name.
 
 owner_name: 
-: _String_ project owner name
+: _String_ project owner name.
 
 ### Request examples:
 
@@ -77,7 +77,7 @@ owner_name:
 ### Parameters:
 
 id
-: _Required_ **Integer** identifier of current project
+: _Required_ **Integer** identifier of current project.
 
 ### Response:
 
@@ -86,3 +86,47 @@ id
 ### Example:
 
 <%= json(:project_refs_list_response_example) %>
+
+## Update a single project
+
+  PUT /api/v1/projects/:id.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project.
+
+### Input:
+
+description:
+: _Optional_ **String** project description.
+
+visibility:
+: _Optional_ **String** project visibility (`open`/`hidden`).
+
+is_package:
+: _Optional_ **Boolean** `true` if project is package.
+
+default_branch:
+: _Optional_ **String** project default branch.
+
+has_issues:
+: _Optional_ **Boolean** enable/disable project Issues tracker.
+
+has_wiki:
+: _Optional_ **Boolean** enable/disable project wiki.
+
+maintainer_id:
+: _Optional_ **Integer** identifier of project maintainer (can not be blank).
+
+### Request:
+
+<%= json(:project_update_request) %>
+
+### Response:
+
+<%= json(:project_update_response) %>
+
+### Example:
+
+<%= json(:project_update_response_example) %>
