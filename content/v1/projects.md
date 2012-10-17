@@ -117,7 +117,7 @@ has_wiki:
 : _Optional_ **Boolean** enable/disable project wiki.
 
 maintainer_id:
-: _Optional_ **Integer** identifier of project maintainer (can not be blank).
+: _Optional_ **Integer** identifier of project maintainer.
 
 ### Request:
 
@@ -130,3 +130,51 @@ maintainer_id:
 ### Example:
 
 <%= json(:project_update_response_example) %>
+
+## Create project
+
+    POST /api/v1/projects.json
+
+### Input:
+
+name:
+: _Required_ **String** project name.
+
+owner_id:
+: _Required_ **Integer** identifier of project owner.
+
+owner_type:
+: _Required_ **String** type of project owner.
+
+visibility:
+: _Required_ **String** project visibility (`open`/`hidden`).
+
+description:
+: _Optional_ **String** project description.
+
+is_package:
+: _Optional_ **Boolean** `true` if project is package.
+
+default_branch:
+: _Optional_ **String** project default branch.
+
+has_issues:
+: _Optional_ **Boolean** enable/disable project Issues tracker.
+
+has_wiki:
+: _Optional_ **Boolean** enable/disable project wiki.
+
+maintainer_id:
+: _Optional_ **Integer** identifier of project maintainer.
+
+### Request:
+
+<%= json(:project_create_request) %>
+
+### Response:
+
+<%= json(:project_create_response) %>
+
+### Examples:
+
+<%= json(:project_create_response_example) %>

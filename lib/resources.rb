@@ -587,16 +587,18 @@ module GitHub
       "url" => "/api/v1/projects/667/refs_list.json"
     }
 
+    PROJECT_UPDATE_EXAMPLE = {
+      "description" => "description",
+      "has_issues" => true,
+      "has_wiki" => false,
+      "maintainer_id" => 15,
+      "visibility" => "open",
+      "is_package" => true,
+      "default_branch" => "master"
+    }
+
     PROJECT_UPDATE_REQUEST = {
-      "project" => {
-        "description" => "description",
-        "has_issues" => true,
-        "has_wiki" => false,
-        "maintainer_id" => 15,
-        "visibility" => "open",
-        "is_package" => true,
-        "default_branch" => "master"
-      }
+      "project" => PROJECT_UPDATE_EXAMPLE
     }
 
     PROJECT_UPDATE_RESPONSE = {
@@ -610,6 +612,21 @@ module GitHub
       "project" => {
         "id" => 12,
         "message" => "Project has been updated successfully"
+      }
+    }
+
+    PROJECT_CREATE_REQUEST = {
+      "project" => PROJECT_UPDATE_EXAMPLE.merge({
+        "owner_id" => 56,
+        "owner_type" => "Group",
+        "name" => "project_name"
+      })
+    }
+    PROJECT_CREATE_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_CREATE_RESPONSE_EXAMPLE = {
+      "project" => {
+        "id" => 12,
+        "message" => "Project has been created successfully"
       }
     }
 
