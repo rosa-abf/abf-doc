@@ -689,14 +689,14 @@ module GitHub
     })
     PROJECT_ADD_MEMBER_RESPONSE = PROJECT_UPDATE_RESPONSE
     PROJECT_ADD_MEMBER_RESPONSE_EXAMPLE = {
-      "platform"=>
+      "project"=>
         {
           "id"=> 56,
           "message"=> "User '32' has been added to project successfully"
         }
     }
     PROJECT_ADD_MEMBER_RESPONSE_EXAMPLE2 = {
-      "platform"=>
+      "project"=>
         {
           "id"=> 56,
           "message"=> "Group '31' has been added to project successfully"
@@ -706,17 +706,34 @@ module GitHub
     PROJECT_REMOVE_MEMBER_REQUEST = ADD_MEMBER_REQUEST
     PROJECT_REMOVE_MEMBER_RESPONSE = PROJECT_UPDATE_RESPONSE
     PROJECT_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
-      "platform"=>
+      "project"=>
         {
           "id"=> 56,
           "message"=> "User '32' has been removed from project successfully"
         }
     }
     PROJECT_REMOVE_MEMBER_RESPONSE_EXAMPLE2 = {
-      "platform"=>
+      "project"=>
         {
           "id"=> 56,
           "message"=> "Group '31' has been removed from project successfully"
+        }
+    }
+
+    PROJECT_UPDATE_MEMBER_REQUEST = PROJECT_ADD_MEMBER_REQUEST
+    PROJECT_UPDATE_MEMBER_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_UPDATE_MEMBER_RESPONSE_EXAMPLE = {
+      "project"=>
+        {
+          "id"=> 56,
+          "message"=> "Role for user '34' has been updated in project successfully"
+        }
+    }
+    PROJECT_UPDATE_MEMBER_RESPONSE_EXAMPLE2 = {
+      "project"=>
+        {
+          "id"=> 56,
+          "message"=> "Role for group '31' has been updated in project successfully"
         }
     }
 

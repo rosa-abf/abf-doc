@@ -316,3 +316,39 @@ type
 &nbsp;
 
 <%= json(:project_remove_member_response_example2) %>
+
+## Update member role for a single project
+
+    PUT /api/v1/projects/:id/update_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project.
+
+### Input:
+
+member_id
+: _Required_ **Integer** identifier of member.
+
+type
+: _Required_ **String** `Group` or `User` type of member.
+
+role
+: _Required_ **String** new role for member (`reader`, `writer`, `admin`).
+
+### Request:
+
+<%= json(:project_update_member_request) %>
+
+### Response:
+
+<%= json(:project_update_member_response) %>
+
+### Examples:
+
+<%= json(:project_update_member_response_example) %>
+
+&nbsp;
+
+<%= json(:project_update_member_response_example2) %>

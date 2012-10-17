@@ -201,7 +201,7 @@ member_id
 : _Required_ **Integer** identifier of member.
 
 role
-: _Required_ **String** role for new member (`reader`, `writer`, `admin`).
+: _Required_ **String** new role for member (`reader`, `writer`, `admin`).
 
 ### Request:
 
