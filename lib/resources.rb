@@ -630,6 +630,14 @@ module GitHub
       }
     }
 
+    PROJECT_DESTROY_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_DESTROY_RESPONSE_EXAMPLE = {
+      "project" => {
+        "id" => 12,
+        "message" => "Project has been destroyed successfully"
+      }
+    }
+
     REPOSITORY_UPDATE_EXAMPLE = {
       "description" => "description",
       "publish_without_qa" => true

@@ -178,3 +178,24 @@ maintainer_id:
 ### Examples:
 
 <%= json(:project_create_response_example) %>
+
+## Destroy project
+
+    DELETE /api/v1/projects/:id.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project.
+
+### Request example:
+
+    /api/v1/projects/54.json
+
+### Response:
+
+<%= json(:project_destroy_response) %>
+
+### Examples:
+
+<%= json(:project_destroy_response_example) %>
