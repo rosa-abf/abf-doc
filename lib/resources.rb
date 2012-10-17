@@ -638,6 +638,17 @@ module GitHub
       }
     }
 
+    PROJECT_FORK_REQUEST = {
+      "group_id" => 15
+    }
+    PROJECT_FORK_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_FORK_RESPONSE_EXAMPLE = {
+      "project" => {
+        "id" => 12,
+        "message" => "Project has been forked successfully"
+      }
+    }
+
     REPOSITORY_UPDATE_EXAMPLE = {
       "description" => "description",
       "publish_without_qa" => true

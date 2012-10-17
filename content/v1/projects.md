@@ -199,3 +199,29 @@ id
 ### Examples:
 
 <%= json(:project_destroy_response_example) %>
+
+## Fork project
+
+    POST /api/v1/projects/:id/fork.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project.
+
+### Input:
+
+group_id:
+: _Optional_ **Integer** identifier of group which will be project owner.
+
+### Request:
+
+<%= json(:project_fork_request) %>
+
+### Response:
+
+<%= json(:project_fork_response) %>
+
+### Examples:
+
+<%= json(:project_fork_response_example) %>
