@@ -684,6 +684,42 @@ module GitHub
       "url" => "/api/v1/projects/77/members.json"
     }
 
+    PROJECT_ADD_MEMBER_REQUEST = ADD_MEMBER_REQUEST.merge({
+      "role" => "admin"
+    })
+    PROJECT_ADD_MEMBER_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_ADD_MEMBER_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been added to project successfully"
+        }
+    }
+    PROJECT_ADD_MEMBER_RESPONSE_EXAMPLE2 = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been added to project successfully"
+        }
+    }
+
+    PROJECT_REMOVE_MEMBER_REQUEST = ADD_MEMBER_REQUEST
+    PROJECT_REMOVE_MEMBER_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been removed from project successfully"
+        }
+    }
+    PROJECT_REMOVE_MEMBER_RESPONSE_EXAMPLE2 = {
+      "platform"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been removed from project successfully"
+        }
+    }
+
     REPOSITORY_UPDATE_EXAMPLE = {
       "description" => "description",
       "publish_without_qa" => true

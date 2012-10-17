@@ -89,7 +89,7 @@ id
 
 ## Update a single project
 
-  PUT /api/v1/projects/:id.json
+    PUT /api/v1/projects/:id.json
 
 ### Parameters:
 
@@ -246,3 +246,73 @@ id
 ### Example:
 
 <%= json(:project_members_response_example) %>
+
+## Add member to a single project
+
+    PUT /api/v1/projects/:id/add_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project.
+
+### Input:
+
+member_id
+: _Required_ **Integer** identifier of new member.
+
+type
+: _Required_ **String** `Group` or `User` type of new member.
+
+role
+: _Required_ **String** role for new member (`reader`/`writer`/`admin`).
+
+
+### Request:
+
+<%= json(:project_add_member_request) %>
+
+### Response:
+
+<%= json(:project_add_member_response) %>
+
+### Examples:
+
+<%= json(:project_add_member_response_example) %>
+
+&nbsp;
+
+<%= json(:project_add_member_response_example2) %>
+
+## Remove member from a single project
+
+    DELETE /api/v1/projects/:id/remove_member.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project.
+
+### Input:
+
+member_id
+: _Required_ **Integer** identifier of member.
+
+type
+: _Required_ **String** `Group` or `User` type of member.
+
+### Request:
+
+<%= json(:project_remove_member_request) %>
+
+### Response:
+
+<%= json(:project_remove_member_response) %>
+
+### Examples:
+
+<%= json(:project_remove_member_response_example) %>
+
+&nbsp;
+
+<%= json(:project_remove_member_response_example2) %>

@@ -45,7 +45,7 @@ id
 
 ## Update a single group
 
-  PUT /api/v1/groups/:id.json
+    PUT /api/v1/groups/:id.json
 
 ### Parameters:
 
@@ -133,7 +133,7 @@ id
 
 ## Add member to a single group
 
-  PUT /api/v1/groups/:id/add_member.json
+    PUT /api/v1/groups/:id/add_member.json
 
 ### Parameters:
 
@@ -146,7 +146,7 @@ member_id
 : _Required_ **Integer** identifier of new member (may be added only `User`).
 
 role
-: _Optional_ **String** role for new member (`reader`, `writer`, `admin`), by default `admin`.
+: _Optional_ **String** role for new member (`reader`/`writer`/`admin`), by default `admin`.
 
 ### Request:
 
@@ -188,7 +188,7 @@ member_id
 
 ## Update member role for a single group
 
-  PUT /api/v1/groups/:id/update_member.json
+    PUT /api/v1/groups/:id/update_member.json
 
 ### Parameters:
 
