@@ -17,6 +17,18 @@ title: Projects | ABF API
 * <a href="#remove-member-from-a-single-project">Remove member from a single project</a>
 * <a href="#update-member-role-for-a-single-project">Update member role for a single project</a>
 
+## List projects
+
+    GET /api/v1/projects.json
+
+### Response:
+
+<%= json(:project_list_response) %>
+
+### Example:
+
+<%= json(:project_list_response_example) %>
+
 ## Get a single project
 
     GET /api/v1/projects/:id.json
