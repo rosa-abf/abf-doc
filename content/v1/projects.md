@@ -153,19 +153,19 @@ description:
 : _Optional_ **String** project description.
 
 is_package:
-: _Optional_ **Boolean** `true` if project is package.
+: _Optional_ **Boolean** `true` if project is package. Default value: `true`.
 
 default_branch:
-: _Optional_ **String** project default branch.
+: _Optional_ **String** project default branch. Default value: `master`.
 
 has_issues:
-: _Optional_ **Boolean** enable/disable project Issues tracker.
+: _Optional_ **Boolean** enable/disable project Issues tracker. Default value: `true`.
 
 has_wiki:
-: _Optional_ **Boolean** enable/disable project wiki.
+: _Optional_ **Boolean** enable/disable project wiki. Default value: `false`.
 
 maintainer_id:
-: _Optional_ **Integer** identifier of project maintainer.
+: _Optional_ **Integer** identifier of project maintainer. Default value: current user.
 
 ### Request:
 
