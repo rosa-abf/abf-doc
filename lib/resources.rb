@@ -649,6 +649,41 @@ module GitHub
       }
     }
 
+    PROJECT_MEMBERS_RESPONSE = {
+      "project" =>
+        {
+          "id" => "project id",
+          "members" => [
+            {
+              "id" => "member id",
+              "type" => "User or Group type of member",
+              "url" => "member path"
+            }
+          ]
+        },
+      "url" => "members path"
+    }
+
+    PROJECT_MEMBERS_RESPONSE_EXAMPLE = {
+      "project" =>
+        {
+          "id" => 77,
+          "members" => [
+            {
+              "id" => 31,
+              "type" => "User",
+              "url" => "/api/v1/users/31.json"
+            },
+            {
+              "id" => 22,
+              "type" => "Group",
+              "url" => "/api/v1/groups/31.json"
+            }
+          ]
+        },
+      "url" => "/api/v1/projects/77/members.json"
+    }
+
     REPOSITORY_UPDATE_EXAMPLE = {
       "description" => "description",
       "publish_without_qa" => true

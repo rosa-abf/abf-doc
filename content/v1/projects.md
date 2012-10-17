@@ -225,3 +225,24 @@ group_id:
 ### Examples:
 
 <%= json(:project_fork_response_example) %>
+
+## Members of a single project
+
+    GET /api/v1/projects/:id/members.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project.
+
+### Request example:
+
+    /api/v1/projects/53/members.json
+
+### Response:
+
+<%= json(:project_members_response) %>
+
+### Example:
+
+<%= json(:project_members_response_example) %>
