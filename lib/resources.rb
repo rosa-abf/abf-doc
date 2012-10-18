@@ -1472,9 +1472,9 @@ module GitHub
         "references" => [
           "www.test.net/test-0-97-5/",
           "http://www.test2.com/test2-0-97-5/"
-        ],
-        "build_list_id" => 15
-      }
+        ]
+      },
+      "build_list_id" => 15
     }
     ADVISORY_CREATE_RESPONSE = {
       "advisory" => {
@@ -1486,6 +1486,17 @@ module GitHub
       "advisory"=> {
         "id"=> 56,
         "message"=> "Advisory has been created successfully"
+      }
+    }
+
+    ADVISORY_ATTACH_REQUEST = {
+      "build_list_id" => 15
+    }
+    ADVISORY_ATTACH_RESPONSE = ADVISORY_CREATE_RESPONSE
+    ADVISORY_ATTACH_RESPONSE_EXAMPLE = {
+      "advisory"=> {
+        "id"=> 56,
+        "message"=> "Build list '15' has been attached to advisory successfully"
       }
     }
 

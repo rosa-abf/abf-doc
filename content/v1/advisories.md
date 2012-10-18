@@ -7,6 +7,7 @@ title: Advisories | ABF API
 * <a href="#list-advisories">List advisories</a>
 * <a href="#get-a-single-advisory">Get a single advisory</a>
 * <a href="#create-advisory">Create advisory</a>
+* <a href="#attach-to-advisory">Attach to advisory</a>
 
 ## List advisories
 
@@ -63,3 +64,28 @@ references:
 ### Examples:
 
 <%= json(:advisory_create_response_example) %>
+
+## Attach to advisory
+
+    PUT /api/v1/advisories/:id.json
+
+### Parameters:
+id
+: _Integer_ identifier of current advisory
+
+### Input:
+
+build_list_id:
+: _Required_ **Integer** identifier of build list.
+
+### Request:
+
+<%= json(:advisory_attach_request) %>
+
+### Response:
+
+<%= json(:advisory_attach_response) %>
+
+### Examples:
+
+<%= json(:advisory_attach_response_example) %>
