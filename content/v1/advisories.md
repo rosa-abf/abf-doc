@@ -1,8 +1,8 @@
 ---
-title: Groups | ABF API
+title: Advisories | ABF API
 ---
 
-# Groups API
+# Advisories API
 
 * <a href="#list-advisories">List advisories</a>
 * <a href="#get-a-single-advisory">Get a single advisory</a>
