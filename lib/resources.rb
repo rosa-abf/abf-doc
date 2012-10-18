@@ -1413,7 +1413,7 @@ module GitHub
         "created_at" => "advisory created at",
         "updated_at" => "advisory updated_at",
         "update_type" => "update type of advisory (security or bugfix)",
-        "references" => "advisory references",
+        "references" => ["advisory reference"],
         "build_lists" => [
           {
             "id" => "build_list id",
@@ -1442,7 +1442,10 @@ module GitHub
         "created_at" => 1348168705,
         "updated_at" => 1348168905,
         "update_type" => "security",
-        "references" => "http://www.clamav.net/lang/en/2012/06/15/clamav-0-97-5-has-been-released/",
+        "references" => [
+          "http://www.test.net/test-0-97-5/",
+          "http://www.test2.com/test2-0-97-5/"
+        ],
         "build_lists" => [
           {
             "id" => 739683,
