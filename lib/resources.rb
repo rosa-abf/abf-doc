@@ -1412,6 +1412,8 @@ module GitHub
       "advisories" => ADVISORY_PARAMS.merge({
         "created_at" => "advisory created at",
         "updated_at" => "advisory updated_at",
+        "update_type" => "update type of advisory (security or bugfix)",
+        "references" => "advisory references",
         "build_lists" => [
           {
             "id" => "build_list id",
@@ -1439,6 +1441,8 @@ module GitHub
       "advisory" => ADVISORY_PARAMS_EXAMPLE.merge({
         "created_at" => 1348168705,
         "updated_at" => 1348168905,
+        "update_type" => "security",
+        "references" => "http://www.clamav.net/lang/en/2012/06/15/clamav-0-97-5-has-been-released/",
         "build_lists" => [
           {
             "id" => 739683,
@@ -1460,6 +1464,29 @@ module GitHub
           }
         ]
       })
+    }
+
+    ADVISORY_CREATE_REQUEST = {
+      "advisory" => {
+        "description" => "Updated to new version",
+        "references" => [
+          "www.test.net/test-0-97-5/",
+          "http://www.test2.com/test2-0-97-5/"
+        ],
+        "build_list_id" => 15
+      }
+    }
+    ADVISORY_CREATE_RESPONSE = {
+      "advisory" => {
+        "id" => "advisory id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+    ADVISORY_CREATE_RESPONSE_EXAMPLE = {
+      "advisory"=> {
+        "id"=> 56,
+        "message"=> "Advisory has been created successfully"
+      }
     }
 
   end

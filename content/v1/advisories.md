@@ -6,6 +6,7 @@ title: Advisories | ABF API
 
 * <a href="#list-advisories">List advisories</a>
 * <a href="#get-a-single-advisory">Get a single advisory</a>
+* <a href="#create-advisory">Create advisory</a>
 
 ## List advisories
 
@@ -35,3 +36,30 @@ id
 ### Example:
 
 <%= json(:advisory_data_response_example) %>
+
+## Create advisory
+
+    POST /api/v1/advisories.json
+
+### Input:
+
+build_list_id:
+: _Required_ **Integer** identifier of build list.
+
+description:
+: _Required_ **String** advisory description.
+
+references:
+: _Optional_ **String** advisory references.
+
+### Request:
+
+<%= json(:advisory_create_request) %>
+
+### Response:
+
+<%= json(:advisory_create_response) %>
+
+### Examples:
+
+<%= json(:advisory_create_response_example) %>
