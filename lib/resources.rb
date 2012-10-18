@@ -413,87 +413,114 @@ module GitHub
       "message" => "403 Forbidden | Rate Limit Exceeded"
     }
 
+    PROJECT_PARAMS = {
+      "id" => "resource id",
+      "name" => "name",
+      "created_at" => "created at date and time",
+      "updated_at" => "updated at date and time",
+      "visibility" => "visibility (open/hidden)",
+      "description" => "description",
+      "ancestry" => "project ancestry",
+      "has_issues" => "true if issues enabled",
+      "has_wiki" => "true if wiki enabled",
+      "default_branch" => "git branch used by default",
+      "is_package" => "true if project is package",
+      "average_build_time" => "average build time for this project",
+      "owner" => {
+        "id" => "owner id",
+        "name" => "owner name",
+        "type" => "owner type",
+        "url" => "path to owner data"
+      },
+      "url" => "path to project data"
+    }
+
+    PROJECT_PARAMS_EXAMPLE = {
+      "id" => 4661,
+      "name" => "hwinfo",
+      "created_at" => 1348168705,
+      "updated_at" => 1348168905,
+      "visibility" => "open",
+      "description" => "asfsafafsfasf fas fasfsa fas  fasfa s",
+      "ancestry" => nil,
+      "has_issues" => true,
+      "has_wiki" => false,
+      "default_branch" => "master",
+      "is_package" => true,
+      "average_build_time" => 0,
+      "owner" => {
+        "id" => 4,
+        "name" => "Yaroslav Garkin",
+        "type" => "User",
+        "url" => "/api/v1/users/4.json"
+      },
+      "url" => "/api/v1/projects/4661.json"
+    }
+
+    PROJECT_LIST_RESPONSE = {
+      "groups" => [PROJECT_PARAMS],
+      "url" => "path to projects data"
+    }
+
+    PROJECT_LIST_RESPONSE_EXAMPLE = {
+      "groups" => [PROJECT_PARAMS_EXAMPLE],
+      "url" => "/api/v1/projects.json"
+    }
+
     PROJECT_DATA_RESPONSE = {
-      "project"=>
-        {
-          "id" => "resource id",
-          "name" => "name",
-          "created_at" => "created at date and time",
-          "updated_at" => "updated at date and time",
-          "visibility" => "visibility (open/hidden)",
-          "description" => "description",
-          "ancestry" => "project ancestry",
-          "has_issues" => "true if issues enabled",
-          "has_wiki" => "true if wiki enabled",
-          "default_branch" => "git branch used by default",
-          "is_package" => "true if project is package",
-          "average_build_time" => "average build time for this project",
-          "owner" => {
-            "id" => "parent owner id",
-            "name" => "parent owner name",
-            "url" => "url to owner profile"
-          },
-          "repositories" => [
-            {
-              "id" => "repository for package storage id",
-              "name" => "repository for package storage name",
-              "url" => "path to repository data page",
-              "platform" => {
-                "id" => "repository platform id",
-                "name" => "repository platform name",
-                "url" => "path to repository platform data page"
-              }
-            }
-          ]
+      "project"=> PROJECT_PARAMS.merge({
+        "maintainer" => {
+          "id" => "maintainer id",
+          "name" => "maintainer name",
+          "type" => "maintainer type",
+          "url" => "path to owner data"
         },
-      "url" => "url to project resourse"
+        "repositories" => [
+          {
+            "id" => "repository for package storage id",
+            "name" => "repository for package storage name",
+            "url" => "path to repository data page",
+            "platform" => {
+              "id" => "repository platform id",
+              "name" => "repository platform name",
+              "url" => "path to repository platform data page"
+            }
+          }
+        ]
+      })
     }
 
     PROJECT_DATA_RESPONSE_EXAMPLE = {
-      "project" =>
-        {
-          "id" => 4661,
-          "name" => "hwinfo",
-          "created_at" => 1348168705,
-          "updated_at" => 1348168905,
-          "visibility" => "open",
-          "description" => "asfsafafsfasf fas fasfsa fas  fasfa s",
-          "ancestry" => nil,
-          "has_issues" => true,
-          "has_wiki" => false,
-          "default_branch" => "master",
-          "is_package" => true,
-          "average_build_time" => 0,
-          "owner" => {
-            "id" => 4,
-            "name" => "Yaroslav Garkin",
-            "type" => "User",
-            "url" => "/api/v1/users/4.json"
-          },
-          "repositories" => [
-            {
-              "id" => 1,
-              "name" => "main",
-              "url" => "/api/v1/repositories/1.json",
-              "platform" => {
-                "id" => 1, 
-                "name" => "mdv_main",
-                "url" => "/api/v1/platforms/1.json"
-              }
-            },
-            {
-              "id" => 3, 
-              "name" => "main",
-              "url" => "/api/v1/repositories/3.json",
-              "platform" => {
-                "id" => 3, 
-                "name" => "warpc_personal",
-                "url" => "/api/v1/platforms/3.json"
-              }
-            }
-          ]
+      "project" => PROJECT_PARAMS_EXAMPLE.merge({
+        "maintainer" => {
+          "id" => 4,
+          "name" => "Yaroslav Garkin",
+          "type" => "User",
+          "url" => "/api/v1/users/4.json"
         },
-      "url" => "/api/v1/projects/4661.json"
+        "repositories" => [
+          {
+            "id" => 1,
+            "name" => "main",
+            "url" => "/api/v1/repositories/1.json",
+            "platform" => {
+              "id" => 1, 
+              "name" => "mdv_main",
+              "url" => "/api/v1/platforms/1.json"
+            }
+          },
+          {
+            "id" => 3, 
+            "name" => "main",
+            "url" => "/api/v1/repositories/3.json",
+            "platform" => {
+              "id" => 3, 
+              "name" => "warpc_personal",
+              "url" => "/api/v1/platforms/3.json"
+            }
+          }
+        ]
+      })
     }
 
     PROJECT_GET_ID_RESPONSE = {
@@ -558,6 +585,156 @@ module GitHub
         },
       ],
       "url" => "/api/v1/projects/667/refs_list.json"
+    }
+
+    PROJECT_UPDATE_EXAMPLE = {
+      "description" => "description",
+      "has_issues" => true,
+      "has_wiki" => false,
+      "maintainer_id" => 15,
+      "visibility" => "open",
+      "is_package" => true,
+      "default_branch" => "master"
+    }
+
+    PROJECT_UPDATE_REQUEST = {
+      "project" => PROJECT_UPDATE_EXAMPLE
+    }
+
+    PROJECT_UPDATE_RESPONSE = {
+      "project" => {
+        "id" => "project id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+
+    PROJECT_UPDATE_RESPONSE_EXAMPLE = {
+      "project" => {
+        "id" => 12,
+        "message" => "Project has been updated successfully"
+      }
+    }
+
+    PROJECT_CREATE_REQUEST = {
+      "project" => PROJECT_UPDATE_EXAMPLE.merge({
+        "owner_id" => 56,
+        "owner_type" => "Group",
+        "name" => "project_name"
+      })
+    }
+    PROJECT_CREATE_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_CREATE_RESPONSE_EXAMPLE = {
+      "project" => {
+        "id" => 12,
+        "message" => "Project has been created successfully"
+      }
+    }
+
+    PROJECT_DESTROY_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_DESTROY_RESPONSE_EXAMPLE = {
+      "project" => {
+        "id" => 12,
+        "message" => "Project has been destroyed successfully"
+      }
+    }
+
+    PROJECT_FORK_REQUEST = {
+      "group_id" => 15
+    }
+    PROJECT_FORK_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_FORK_RESPONSE_EXAMPLE = {
+      "project" => {
+        "id" => 12,
+        "message" => "Project has been forked successfully"
+      }
+    }
+
+    PROJECT_MEMBERS_RESPONSE = {
+      "project" =>
+        {
+          "id" => "project id",
+          "members" => [
+            {
+              "id" => "member id",
+              "type" => "User or Group type of member",
+              "url" => "member path"
+            }
+          ]
+        },
+      "url" => "members path"
+    }
+
+    PROJECT_MEMBERS_RESPONSE_EXAMPLE = {
+      "project" =>
+        {
+          "id" => 77,
+          "members" => [
+            {
+              "id" => 31,
+              "type" => "User",
+              "url" => "/api/v1/users/31.json"
+            },
+            {
+              "id" => 22,
+              "type" => "Group",
+              "url" => "/api/v1/groups/31.json"
+            }
+          ]
+        },
+      "url" => "/api/v1/projects/77/members.json"
+    }
+
+    PROJECT_ADD_MEMBER_REQUEST = ADD_MEMBER_REQUEST.merge({
+      "role" => "admin"
+    })
+    PROJECT_ADD_MEMBER_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_ADD_MEMBER_RESPONSE_EXAMPLE = {
+      "project"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been added to project successfully"
+        }
+    }
+    PROJECT_ADD_MEMBER_RESPONSE_EXAMPLE2 = {
+      "project"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been added to project successfully"
+        }
+    }
+
+    PROJECT_REMOVE_MEMBER_REQUEST = ADD_MEMBER_REQUEST
+    PROJECT_REMOVE_MEMBER_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_REMOVE_MEMBER_RESPONSE_EXAMPLE = {
+      "project"=>
+        {
+          "id"=> 56,
+          "message"=> "User '32' has been removed from project successfully"
+        }
+    }
+    PROJECT_REMOVE_MEMBER_RESPONSE_EXAMPLE2 = {
+      "project"=>
+        {
+          "id"=> 56,
+          "message"=> "Group '31' has been removed from project successfully"
+        }
+    }
+
+    PROJECT_UPDATE_MEMBER_REQUEST = PROJECT_ADD_MEMBER_REQUEST
+    PROJECT_UPDATE_MEMBER_RESPONSE = PROJECT_UPDATE_RESPONSE
+    PROJECT_UPDATE_MEMBER_RESPONSE_EXAMPLE = {
+      "project"=>
+        {
+          "id"=> 56,
+          "message"=> "Role for user '34' has been updated in project successfully"
+        }
+    }
+    PROJECT_UPDATE_MEMBER_RESPONSE_EXAMPLE2 = {
+      "project"=>
+        {
+          "id"=> 56,
+          "message"=> "Role for group '31' has been updated in project successfully"
+        }
     }
 
     REPOSITORY_UPDATE_EXAMPLE = {
