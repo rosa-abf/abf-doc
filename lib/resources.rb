@@ -104,22 +104,22 @@ module GitHub
           "project" => {
             "id" => 666,
             "name" => "evil_tools",
-            "fullname" => "",
-            "url" => "/api/v1/projects/1"
+            "fullname" => "abf/evil_tools",
+            "url" => "/api/v1/projects/666.json"
           },
           "build_for_platform" => {
             "id" => 1,
             "name" => "rosa2012",
-            "url" => "/api/v1/platforms/1"
+            "url" => "/api/v1/platforms/1.json"
           },
           "save_to_repository" => {
             "id" => 12, 
             "name" => "mr_evil/personal",
-            "url" =>  "/api/v1/repositories/12",
+            "url" =>  "/api/v1/repositories/12.json",
             "platform" => {
               "id" => 2, 
               "name" => "cocos_lts",
-              "url" => "/api/v1/platforms/2"
+              "url" => "/api/v1/platforms/2.json"
             }
           },
           "arch" => {
@@ -140,7 +140,7 @@ module GitHub
             "id" => 666,
             "name" => "at",
             "description" => "warpc/at",
-            "url" => "/api/v1/advisories/666"
+            "url" => "/api/v1/advisories/666.json"
           },
           "mass_build" => {
             "id" => 666,
@@ -750,9 +750,9 @@ module GitHub
           "id" => "platform id",
           "name" => "platform name",
           "url" => "url to platform"
-        }
-      },
-      "url" => "url to repository resource"
+        },
+        "url" => "url to repository resource"
+      }
     }
 
     REPOSITORY_DATA_RESPONSE_EXAMPLE = {
@@ -766,9 +766,43 @@ module GitHub
           "id" => 41,
           "name" => "my_personal",
           "url" => "/api/v1/platforms/41.json"
-        }
-      }.merge(REPOSITORY_UPDATE_EXAMPLE),
-      "url" => "/api/v1/repositories/30.json"
+        },
+        "url" => "/api/v1/repositories/30.json"
+      }.merge(REPOSITORY_UPDATE_EXAMPLE)
+    }
+
+    REPOSITORY_PROJECTS_RESPONSE = {
+      "repository" => {
+        "id" => "resource id",
+        "name" => "repository name",
+        "url" => "url to repository resource",
+        "projects" => [
+          {
+            "id" => "project id",
+            "name" => "project name",
+            "fullname" => "project fullname",
+            "url" => "url to project data page" 
+          }
+        ]
+      },
+      "url" => "url to projects data"
+    }
+
+    REPOSITORY_PROJECTS_RESPONSE_EXAMPLE = {
+      "repository" => {
+        "id" => 30,
+        "name" => "main",
+        "url" => "/api/v1/repositories/30.json",
+        "projects" => [
+          {
+            "id" => 666,
+            "name" => "evil_tools",
+            "fullname" => "abf/evil_tools",
+            "url" => "/api/v1/projects/666.json"
+          }
+        ]
+      },
+      "url" => "/api/v1/repositories/30/projects.json"
     }
 
     REPOSITORY_UPDATE_REQUEST = {
