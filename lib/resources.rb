@@ -924,7 +924,7 @@ module GitHub
         "parent_platform_id" => nil,
         "created_at" => "1326990586" ,
         "updated_at" => "1337171843",
-        "released" => "true",
+        "released" => true,
         "visibility" => "open",
         "platform_type" => "main",
         "distrib_type" => "mdv",
@@ -1526,6 +1526,153 @@ module GitHub
           "id"=> 56,
           "message"=> "Role for user '34' has been updated in group successfully"
         }
+    }
+
+    ADVISORY_PARAMS = {
+      "id" => "advisory id",
+      "description" => "advisory description",
+      "platforms" => [
+        {
+          "id" => "platform id",
+          "released" => "platform released",
+          "url" => "path to platform data"
+        }
+      ],
+      "projects" => [
+        {
+          "id" => "project id",
+          "name" => "project name",
+          "fullname" => "project fullname",
+          "url" => "path to project data"
+        }
+      ],
+      "url" => "path to advisory data"
+    }
+
+    ADVISORY_PARAMS_EXAMPLE = {
+      "id" => "ROSA-SA-2012:0188",
+      "description" => "hello world",
+      "platforms" => [
+        {
+          "id" => 22,
+          "released" => true,
+          "url" => "/api/v1/platforms/22.json"
+        }
+      ],
+      "projects" => [
+        {
+          "id" => 4661,
+          "name" => "hwinfo",
+          "fullname" => "test/hwinfo",
+          "url" => "/api/v1/projects/4661.json"
+        }
+      ],
+      "url" => "/api/v1/advisories/ROSA-SA-2012:0188.json"
+    }
+
+    ADVISORY_LIST_RESPONSE = {
+      "advisories" => [ADVISORY_PARAMS],
+      "url" => "path to advisories data"
+    }
+
+    ADVISORY_LIST_RESPONSE_EXAMPLE = {
+      "advisories" => [ADVISORY_PARAMS_EXAMPLE],
+      "url" => "/api/v1/advisories.json"
+    }
+
+    ADVISORY_DATA_RESPONSE = {
+      "advisories" => ADVISORY_PARAMS.merge({
+        "created_at" => "advisory created at",
+        "updated_at" => "advisory updated_at",
+        "update_type" => "update type of advisory (security or bugfix)",
+        "references" => ["advisory reference"],
+        "build_lists" => [
+          {
+            "id" => "build_list id",
+            "url" => "path to build_list data"
+          }
+        ],
+        "affected_in" => [
+          {
+            "id" => "platform id",
+            "url" => "path to platform data",
+            "projects" => [
+              {
+                "id" => "project id",
+                "url" => "path to project data",
+                "srpm" => "SRPM package",
+                "rpm" => ["RPM package"]
+              }
+            ]
+          }
+        ]
+      })
+    }
+
+    ADVISORY_DATA_RESPONSE_EXAMPLE = {
+      "advisory" => ADVISORY_PARAMS_EXAMPLE.merge({
+        "created_at" => 1348168705,
+        "updated_at" => 1348168905,
+        "update_type" => "security",
+        "references" => [
+          "http://www.test.net/test-0-97-5/",
+          "http://www.test2.com/test2-0-97-5/"
+        ],
+        "build_lists" => [
+          {
+            "id" => 739683,
+            "url" => "/api/v1/build_lists/739683.json"
+          }
+        ],
+        "affected_in" => [
+          {
+            "id" => 22,
+            "url" => "/api/v1/platforms/22.json",
+            "projects" => [
+              {
+                "id" => 4661,
+                "url" => "/api/v1/projects/4661.json",
+                "srpm" => "mozilla-thunderbird-l10n-10.0.7-0.1.src.rpm",
+                "rpm" => ["mozilla-thunderbird-zh_TW-10.0.7-0.1-rosa.lts2012.0.noarch.rpm", "mozilla-thunderbird-zh_CN-10.0.7-0.1-rosa.lts2012.0.noarch.rpm"]
+              }
+            ]
+          }
+        ]
+      })
+    }
+
+    ADVISORY_CREATE_REQUEST = {
+      "advisory" => {
+        "description" => "Updated to new version",
+        "references" => [
+          "www.test.net/test-0-97-5/",
+          "http://www.test2.com/test2-0-97-5/"
+        ]
+      },
+      "build_list_id" => 15
+    }
+    ADVISORY_CREATE_RESPONSE = {
+      "advisory" => {
+        "id" => "advisory id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+    ADVISORY_CREATE_RESPONSE_EXAMPLE = {
+      "advisory"=> {
+        "id"=> 56,
+        "message"=> "Advisory has been created successfully"
+      }
+    }
+
+    ADVISORY_ATTACH_REQUEST = {
+      "build_list_id" => 15
+    }
+    ADVISORY_ATTACH_RESPONSE = ADVISORY_CREATE_RESPONSE
+    ADVISORY_ATTACH_RESPONSE_EXAMPLE = {
+      "advisory"=> {
+        "id"=> 56,
+        "message"=> "Build list '15' has been attached to advisory successfully"
+      }
     }
 
   end
