@@ -104,8 +104,8 @@ module GitHub
           "project" => {
             "id" => 666,
             "name" => "evil_tools",
-            "fullname" => "",
-            "url" => "/api/v1/projects/1.json"
+            "fullname" => "abf/evil_tools",
+            "url" => "/api/v1/projects/666.json"
           },
           "build_for_platform" => {
             "id" => 1,
