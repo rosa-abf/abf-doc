@@ -379,7 +379,7 @@ module GitHub
 
     ERROR_404 = {
       "status"=> 404,
-      "message"=> "Page not found"
+      "message"=> "Error 404. Resource not found!"
     }
 
     ERROR_500 = {
@@ -392,21 +392,16 @@ module GitHub
       "message"=> "We update the site, it will take some time. We are really trying to do it fast. We apologize for any inconvenience.."
     }
 
-    ERROR_401 = {
-      "status"=> 401,
-      "message"=> "Requires authentication"
-    }
-
     ERROR_403 = {
-      "message"=> "Forbidden. Sorry, you don't have enough rights for this action!"
+      "message"=> "Access violation to this page!"
     }
 
     ERROR_AUTH = {
-      "message" => "You need to sign in or sign up before continuing."
+      "error" => "You need to sign in or sign up before continuing."
     }
 
     ERROR_WRONG_PASS = {
-      "message" => "Invalid email or password."
+      "error" => "Invalid email or password."
     }
 
     ERROR_RATE_LIMIT = {

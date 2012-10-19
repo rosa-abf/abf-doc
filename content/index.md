@@ -76,10 +76,6 @@ Some requests can cause cancer of 404, 500 and 503 errors. In these situatins yo
 
 <%= json(:error_503) %>
 
-&nbsp;
-
-<%= json(:error_401) %>
-
 If you don't have enough rights for requested action, you will receive
 error response such this:
 
