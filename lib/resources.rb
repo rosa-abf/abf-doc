@@ -750,9 +750,9 @@ module GitHub
           "id" => "platform id",
           "name" => "platform name",
           "url" => "url to platform"
-        }
-      },
-      "url" => "url to repository resource"
+        },
+        "url" => "url to repository resource"
+      }
     }
 
     REPOSITORY_DATA_RESPONSE_EXAMPLE = {
@@ -766,14 +766,15 @@ module GitHub
           "id" => 41,
           "name" => "my_personal",
           "url" => "/api/v1/platforms/41.json"
-        }
-      }.merge(REPOSITORY_UPDATE_EXAMPLE),
-      "url" => "/api/v1/repositories/30.json"
+        },
+        "url" => "/api/v1/repositories/30.json"
+      }.merge(REPOSITORY_UPDATE_EXAMPLE)
     }
 
     REPOSITORY_PROJECTS_RESPONSE = {
       "repository" => {
         "id" => "resource id",
+        "name" => "repository name",
         "url" => "url to repository resource",
         "projects" => [
           {
@@ -790,6 +791,7 @@ module GitHub
     REPOSITORY_PROJECTS_RESPONSE_EXAMPLE = {
       "repository" => {
         "id" => 30,
+        "name" => "main",
         "url" => "/api/v1/repositories/30.json",
         "projects" => [
           {
