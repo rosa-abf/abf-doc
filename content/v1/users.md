@@ -5,6 +5,7 @@ title: Users | ABF API
 # Users API
 
 * <a href="#get-a-single-user">Get a single user</a>
+* <a href="#get-a-current-user">Get a current user</a>
 * <a href="#update-a-current-user">Update a current user</a>
 * <a href="#get-a-notification-settings-of-a-current-user">Get a notification settings of a current user</a>
 * <a href="#update-a-notification-settings-for-a-current-user">Update a notification settings for a current user</a>
@@ -16,7 +17,19 @@ title: Users | ABF API
 ### Parameters:
 
 id
-: _Required_ **Integer** identifier of current user.
+: _Required_ **Integer** identifier of user.
+
+### Response:
+
+<%= json(:user_data_response) %>
+
+### Example:
+
+<%= json(:user_data_response_example) %>
+
+## Get a current user
+
+    GET /api/v1/user.json
 
 ### Response:
 

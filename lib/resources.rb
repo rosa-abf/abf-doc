@@ -113,18 +113,18 @@ module GitHub
             "url" => "/api/v1/platforms/1.json"
           },
           "save_to_repository" => {
-            "id" => 12, 
+            "id" => 12,
             "name" => "mr_evil/personal",
             "url" =>  "/api/v1/repositories/12.json",
             "platform" => {
-              "id" => 2, 
+              "id" => 2,
               "name" => "cocos_lts",
               "url" => "/api/v1/platforms/2.json"
             }
           },
           "arch" => {
             "id" => 1,
-            "name" => "x84_64" 
+            "name" => "x84_64"
           },
           "created_at" => 1349357795,
           "updated_at" => 1349358084,
@@ -154,11 +154,11 @@ module GitHub
           },
           "include_repos" => [
             {
-              "id" => 16, 
+              "id" => 16,
               "name" => "main",
               "url" => "/api/v1/repositories/16.json",
               "platform" => {
-                "id" => 16, 
+                "id" => 16,
                 "name" => "warpc_personal",
                 "url" => "/api/v1/platforms/16.json"
               }
@@ -180,7 +180,7 @@ module GitHub
             "id" => "project id",
             "name" => "project name",
             "fullname" => "project fullname",
-            "url" => "url to project data page" 
+            "url" => "url to project data page"
           },
           "build_for_platform" => {
             "id" => "platform id",
@@ -188,18 +188,18 @@ module GitHub
             "url" => "platform data page path"
           },
           "save_to_repository" => {
-            "id" => "repository for package storage id", 
+            "id" => "repository for package storage id",
             "name" => "repository for package storage name",
             "url" =>  "path to repository data page",
             "platform" => {
-              "id" => "repository platform id", 
+              "id" => "repository platform id",
               "name" => "repository platform name",
               "url" => "path to repository platform data page"
             }
           },
           "arch" => {
             "id" => "build architecture id",
-            "name" => "build architecture name" 
+            "name" => "build architecture name"
           },
           "is_circle" => "recurrent build",
           "update_type" => "update type",
@@ -215,12 +215,12 @@ module GitHub
             "id" => "advisory id",
             "name" => "advisory name",
             "description" => "advisory description",
-            "url" => "path to advisory data page" 
+            "url" => "path to advisory data page"
           },
           "mass_build" => {
             "id" => "mass_build id",
             "name" => "mass_build name",
-            "url" => "path to mass_build data page" 
+            "url" => "path to mass_build data page"
           },
           "owner" => {
             "id" => "project owner id",
@@ -229,11 +229,11 @@ module GitHub
           },
           "include_repos" => [
             {
-              "id" => "included repository id", 
+              "id" => "included repository id",
               "name" => "included repository name",
               "url" => "path to included repository data page",
               "platform" => {
-                "id" => "repository platform id", 
+                "id" => "repository platform id",
                 "name" => "repository platform name",
                 "url" => "path to repository platform data page"
               }
@@ -499,17 +499,17 @@ module GitHub
             "name" => "main",
             "url" => "/api/v1/repositories/1.json",
             "platform" => {
-              "id" => 1, 
+              "id" => 1,
               "name" => "mdv_main",
               "url" => "/api/v1/platforms/1.json"
             }
           },
           {
-            "id" => 3, 
+            "id" => 3,
             "name" => "main",
             "url" => "/api/v1/repositories/3.json",
             "platform" => {
-              "id" => 3, 
+              "id" => 3,
               "name" => "warpc_personal",
               "url" => "/api/v1/platforms/3.json"
             }
@@ -781,7 +781,7 @@ module GitHub
             "id" => "project id",
             "name" => "project name",
             "fullname" => "project fullname",
-            "url" => "url to project data page" 
+            "url" => "url to project data page"
           }
         ]
       },
@@ -975,7 +975,7 @@ module GitHub
             "url" => "/api/v1/repositories/1.json"
           },
           {
-            "id" => 2, 
+            "id" => 2,
             "name" => "release",
             "url" => "/api/v1/repositories/2.json"
           }
@@ -1174,7 +1174,7 @@ module GitHub
             "url" => "/api/v1/repositories/26.json"
           },
           {
-            "id" => 27, 
+            "id" => 27,
             "name" => "contrib",
             "url" => "/api/v1/repositories/27.json"
           }
@@ -1199,7 +1199,7 @@ module GitHub
             "url" => "/api/v1/repositories/30.json"
           },
           {
-            "id" => 31, 
+            "id" => 31,
             "name" => "non-free",
             "url" => "/api/v1/repositories/31.json"
           }
@@ -1291,8 +1291,8 @@ module GitHub
         "created_at" => "user created at",
         "updated_at" => "user updated_at",
         "avatar_url" => "avatar url",
-        "html_url"=> "html user path",
-        "url" => "api user path"
+        "url" => "api user path",
+        "html_url"=> "html user path"
       })
     }
 
@@ -1312,8 +1312,8 @@ module GitHub
         "build_priority" => 50,
         "created_at" => 1349357795,
         "updated_at" => 1349358084,
-        "html_url"=> "/ivan_aivazovsky",
-        "url" => "/api/v1/users/1.json"
+        "url" => "/api/v1/users/1.json",
+        "html_url"=> "/ivan_aivazovsky"
       }
     }
 
@@ -1707,6 +1707,27 @@ module GitHub
         "id"=> 56,
         "message"=> "Build list '15' has been attached to advisory successfully"
       }
+    }
+
+    FILE_STORE_CREATE= {
+      "file_store" => "Content of the file"
+    }
+    FILE_STORE_CREATE_RESPONSE = {
+      "sha" => "File SHA1"
+    }
+    FILE_STORE_CREATE_RESPONSE_EXAMPLE = {
+      "sha" => "3a93e5553490e39b4cd50269d51ad8438b7e20b8"
+    }
+
+    FILE_STORE_FIND_RESPONSE = {
+      "sha" => "File SHA1",
+      "name" => "File name",
+      "size" => "File size in bytes"
+    }
+    FILE_STORE_FIND_RESPONSE_EXAMPLE = {
+      "sha" => "3a93e5553490e39b4cd50269d51ad8438b7e20b8",
+      "name" => "kernel.tar.gz2",
+      "size" => "38448414"
     }
 
   end
