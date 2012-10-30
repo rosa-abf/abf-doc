@@ -1291,8 +1291,8 @@ module GitHub
         "created_at" => "user created at",
         "updated_at" => "user updated_at",
         "avatar_url" => "avatar url",
-        "html_url"=> "html user path",
-        "url" => "api user path"
+        "url" => "api user path",
+        "html_url"=> "html user path"
       })
     }
 
@@ -1312,8 +1312,8 @@ module GitHub
         "build_priority" => 50,
         "created_at" => 1349357795,
         "updated_at" => 1349358084,
-        "html_url"=> "/ivan_aivazovsky",
-        "url" => "/api/v1/users/1.json"
+        "url" => "/api/v1/users/1.json",
+        "html_url"=> "/ivan_aivazovsky"
       }
     }
 
