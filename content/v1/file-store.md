@@ -15,7 +15,7 @@ title: File Store | ABF API
 ### Input:
 
 file_store:
-: _Required_ **???** file content.
+: _Required_ **base64** file content.
 
 file_name:
 : _Required_ **String** file name.
@@ -49,7 +49,7 @@ hash
 
 <%= json(:file_store_find_response_example) %>
 
-## Find a File
+## Get a File
 
     GET /api/v1/file-stores/:hash
 
