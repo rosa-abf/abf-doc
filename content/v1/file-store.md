@@ -10,7 +10,7 @@ title: File Store | ABF API
 
 ## Create file
 
-    POST http://file-store.rosalinux.ru/api/v1/file-stores.json
+<pre>POST <strong>http://file-store.rosalinux.ru</strong>/api/v1/file-stores.json</pre>
 
 ### Input:
 
@@ -34,7 +34,7 @@ file_name:
 
 ## Find a File
 
-    GET http://file-store.rosalinux.ru/api/v1/file-stores.json?hash=:hash
+<pre>GET <strong>http://file-store.rosalinux.ru</strong>/api/v1/file-stores.json?hash=:hash</pre>
 
 ### Parameters:
 
@@ -51,7 +51,7 @@ hash
 
 ## Get a File
 
-    GET http://file-store.rosalinux.ru/api/v1/file-stores/:hash
+<pre>GET <strong>http://file-store.rosalinux.ru</strong>/api/v1/file-stores/:hash</pre>
 
 ### Parameters:
 
