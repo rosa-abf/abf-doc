@@ -4,9 +4,9 @@ title: File Store | ABF API
 
 # File Store API
 
-* <a href="#create">Create a File </a>
-* <a href="#get">Find a File</a>
-* <a href="#send">Get a File</a>
+* <a href="#create-file">Create a File </a>
+* <a href="#find-a-file">Find a File</a>
+* <a href="#get-a-file">Get a File</a>
 
 ## Create file
 
