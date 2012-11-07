@@ -10,19 +10,18 @@ title: File Store | ABF API
 
 ## Create file
 
-<pre>POST <strong>http://file-store.rosalinux.ru</strong>/api/v1/file-stores.json</pre>
+<pre>POST <strong>http://file-store.rosalinux.ru</strong>/api/v1/file_stores.json</pre>
 
 ### Input:
 
-file_store:
-: _Required_ **base64** file content.
-
-file_name:
-: _Required_ **String** file name.
+file_store[file]:
+: _Required_ file.
 
 ### Request:
 
-<%= json(:file_store_create) %>
+<pre class="terminal">
+$ curl --user myuser@gmail.com:mypass -POST -F "file_store[file]=@files/archive.zip" http://file-store.rosalinux.ru/api/v1/file_stores.json
+</pre>
 
 ### Response:
 
@@ -34,7 +33,7 @@ file_name:
 
 ## Find a File
 
-<pre>GET <strong>http://file-store.rosalinux.ru</strong>/api/v1/file-stores.json?hash=:hash</pre>
+<pre>GET <strong>http://file-store.rosalinux.ru</strong>/api/v1/file_stores.json?hash=:hash</pre>
 
 ### Parameters:
 
@@ -51,7 +50,7 @@ hash
 
 ## Get a File
 
-<pre>GET <strong>http://file-store.rosalinux.ru</strong>/api/v1/file-stores/:hash</pre>
+<pre>GET <strong>http://file-store.rosalinux.ru</strong>/api/v1/file_stores/:hash</pre>
 
 ### Parameters:
 

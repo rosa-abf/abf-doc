@@ -1709,9 +1709,6 @@ module GitHub
       }
     }
 
-    FILE_STORE_CREATE= {
-      "file_store" => "Content of the file"
-    }
     FILE_STORE_CREATE_RESPONSE = {
       "sha1_hash" => "File SHA1"
     }
