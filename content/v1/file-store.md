@@ -20,7 +20,7 @@ file_store[file]:
 ### Request:
 
 <pre class="terminal">
-$ curl --user myuser@gmail.com:mypass -POST -F "file_store[file]=@files/archive.zip" http://file-store.rosalinux.ru/api/v1/file_stores.json
+$ curl --user myuser@gmail.com:mypass -POST -F "file_store[file]=@/path/to/file/archive.zip" http://file-store.rosalinux.ru/api/v1/file_stores.json
 </pre>
 
 ### Response:
