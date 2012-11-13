@@ -1716,14 +1716,19 @@ module GitHub
       "sha1_hash" => "3a93e5553490e39b4cd50269d51ad8438b7e20b8"
     }
 
-    FILE_STORE_FIND_RESPONSE = {
-      "sha1_hash" => "File SHA1",
-      "file" => "File name",
-    }
-    FILE_STORE_FIND_RESPONSE_EXAMPLE = {
-      "sha1_hash" => "3a93e5553490e39b4cd50269d51ad8438b7e20b8",
-      "file" => "kernel.tar.gz2",
-    }
+    FILE_STORE_FIND_RESPONSE = [
+      {
+        "sha1_hash" => "File SHA1",
+        "file" => "File name"
+      }
+    ]
+
+    FILE_STORE_FIND_RESPONSE_EXAMPLE = [
+      {
+        "sha1_hash" => "3a93e5553490e39b4cd50269d51ad8438b7e20b8",
+        "file" => "kernel.tar.gz2"
+      }
+    ]
 
   end
 end
