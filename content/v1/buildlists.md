@@ -46,10 +46,12 @@ update_type
 : _Required_ **string** — Informing customers about the priority and character of updates: `security`, `bugfix`, `enhancement`,`recommended` or `newpackage`.
 
 save_to_repository_id
-: _Required_ **integer** — Repository identifier for package storage.
+: _Required_ **integer** — Repository identifier for package storage. List of repositories can be find in api call:
+<a href="/v1/projects/#get-a-single-project">see repositories section.</a>
 
 build_for_platform_id
-: _Required_ **integer** — Identifier of platform for which need to run assembly.
+: _Required_ **integer** — Identifier of platform for which need to run assembly. List of platforms can be find in api call:
+<a href="/v1/platforms/#list-of-platforms-for-which-you-can-create-build-list">list of platforms.</a>
 
 auto_publish
 : _Required_ **boolean** — `true` to enable automatic publiction build list if the build succeeds, `false` allow manually publication. If in repository for package storage disabled publication without QA, parameter auto_publish automatically will be set to false. 
