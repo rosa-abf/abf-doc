@@ -253,7 +253,7 @@ module GitHub
         "build_for_platform_id"=> "platform identifier of platform for build",
         "auto_publish"=> "automated publising",
         "build_requires"=> "true if build with all the required packages",
-        "include_repos[]"=> [
+        "include_repos"=> [
           "included repository id for each selected platform"
         ],
         "arch_id"=> "architecture identifier"
@@ -269,7 +269,7 @@ module GitHub
         "build_for_platform_id"=> 2,
         "auto_publish"=> true,
         "build_requires"=> true,
-        "include_repos[]"=> [
+        "include_repos"=> [
           54,
           53
         ],
