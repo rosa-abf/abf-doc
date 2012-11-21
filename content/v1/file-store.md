@@ -10,7 +10,7 @@ title: File Store | ABF API
 
 ## Create file
 
-<pre>POST <strong>http://file-store.rosalinux.ru</strong>/api/v1/file_stores.json</pre>
+<pre>POST <strong>http://file-store.rosalinux.ru</strong>/api/v1/upload</pre>
 
 ### Input:
 
@@ -20,7 +20,7 @@ file_store[file]:
 ### Request:
 
 <pre class="terminal">
-$ curl --user myuser@gmail.com:mypass -POST -F "file_store[file]=@/path/to/file/archive.zip" http://file-store.rosalinux.ru/api/v1/file_stores.json
+$ curl --user myuser@gmail.com:mypass -POST -F "file_store[file]=@/path/to/file/archive.zip" http://file-store.rosalinux.ru/api/v1/upload
 </pre>
 
 ### Response:
