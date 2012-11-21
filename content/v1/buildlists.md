@@ -32,7 +32,7 @@ id
 
 Create new build list for project.
 
-    POST /api/v1/api/v1/build_lists.json
+    POST /api/v1/build_lists.json
 
 ### Input:
 
@@ -54,7 +54,7 @@ build_for_platform_id
 <a href="/v1/platforms/#list-of-platforms-for-which-you-can-create-build-list">list of platforms.</a>
 
 auto_publish
-: _Required_ **boolean** — `true` to enable automatic publiction build list if the build succeeds, `false` allow manually publication. If in repository for package storage disabled publication without QA, parameter auto_publish automatically will be set to false. 
+: _Required_ **boolean** — `true` to enable automatic publiction build list if the build succeeds, `false` allow manually publication. If in repository for package storage disabled publication without QA, parameter auto_publish automatically will be set to false.
 
 build_requires
 : _Required_ **boolean** — `true` enable to rebuild a package with all its reverse dependencies, `false` build as usial. Default is `false`.
@@ -178,13 +178,13 @@ filter[status]
     * `8000` — publishing error;
     * `9000` — publishing rejected.
 
-filter[arch_id] 
+filter[arch_id]
 : _Optional_ **integer** - identifier of the architecture.
 
-filter[is_circle] 
+filter[is_circle]
 : _Optional_ **boolean** - recurrent build (true or false). Default: `false`
 
-filter[project_name] 
+filter[project_name]
 : _Optional_ **string** — project name.
 
 filter[updated_at_start / updated_at_end]
@@ -193,7 +193,7 @@ filter[updated_at_start / updated_at_end]
 filter[ownership]
 : _Optional_ `owned`, `related` or `index` - ownership type. Default: `owned`.
 
-filter[mass_build_id] 
+filter[mass_build_id]
 : _Optional_ **integer** — mass build identifier.
 
 filter[save_to_platform_id]
