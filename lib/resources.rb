@@ -1710,7 +1710,7 @@ module GitHub
     SEARCH_REQUEST_EXAMPLE = {
       "query" => "test",
       "type" => "users"
-    }  
+    }
 
     SEARCH_RESPONSE = {
       "results" => [
@@ -1757,6 +1757,65 @@ module GitHub
       },
       "url" => "/api/v1/search.json"
     }
+
+
+    MAINTAINER_LIST_RESPONSE = {
+      'maintainers' => [
+        {
+          'package' => {
+            'name'       => 'package name',
+            'type'       => 'package type (source/binary)',
+            'version'    => 'package version',
+            'release'    => 'package release',
+            'updated_at' => 'package last updated date'
+          },
+
+          'maintainer' => {
+            'id'        => 'user id',
+            'uname'     => 'user login',
+            'fullname'  => 'user full name',
+            'email'     => 'user email'
+          }
+        }
+      ]
+    }
+
+    MAINTAINER_LIST_RESPONSE_EXAMPLE = [
+      'maintainers' => [
+        {
+         'package' => {
+            'name'       => 'alpine',
+            'type'       => 'binary',
+            'version'    => '2.02',
+            'release'    => '1',
+            'updated_at' => 1348060890
+          },
+
+          'maintainer' => {
+            'id'        => 1,
+            'uname'     => 'grendizer',
+            'fullname'  => 'Alex Burmashev',
+            'email'     => 'alex.burmashev@rosalab.ru '
+          }
+        },
+        {
+         'package' => {
+            'name'       => 'alpine',
+            'type'       => 'source',
+            'version'    => '2.02',
+            'release'    => '1',
+            'updated_at' => 1348060890
+          },
+
+          'maintainer' => {
+            'id'        => 1,
+            'uname'     => 'grendizer',
+            'fullname'  => 'Alex Burmashev',
+            'email'     => 'alex.burmashev@rosalab.ru '
+          }
+        }
+      ]
+    ]
 
   end
 end
