@@ -88,6 +88,32 @@ module GitHub
     # ABF constants
     #==============================================================================
 
+    PLATFORM_PARTIAL = {
+      "id" => "platform id",
+      "name" => "platform name",
+      "url" => "platform data page path"
+    }
+
+    PLATFORM_PARTIAL_EXAMPLE = {
+      "id" => 1,
+      "name" => "rosa2012",
+      "url" => "/api/v1/platforms/1.json"
+    }
+
+    PROJECT_PARTIAL = {
+      "id" => "project id",
+      "name" => "project name",
+      "fullname" => "project fullname",
+      "url" => "url to project data page"
+    }
+
+    PROJECT_PARTIAL_EXAMPLE = {
+      "id" => 666,
+      "name" => "evil_tools",
+      "fullname" => "abf/evil_tools",
+      "url" => "/api/v1/projects/666.json"
+    }
+
     ADD_MEMBER_REQUEST = {
       "member_id" => 34,
       "type" => "User"
@@ -101,17 +127,8 @@ module GitHub
           "container_path" => "/rosa2012/container/evil_tools",
           "status" => 6000,
           "package_version" => "rosa2012.1-0.1.309-1",
-          "project" => {
-            "id" => 666,
-            "name" => "evil_tools",
-            "fullname" => "abf/evil_tools",
-            "url" => "/api/v1/projects/666.json"
-          },
-          "build_for_platform" => {
-            "id" => 1,
-            "name" => "rosa2012",
-            "url" => "/api/v1/platforms/1.json"
-          },
+          "project" => PROJECT_PARTIAL_EXAMPLE,
+          "build_for_platform" => PLATFORM_PARTIAL_EXAMPLE,
           "save_to_repository" => {
             "id" => 12,
             "name" => "mr_evil/personal",
@@ -176,17 +193,8 @@ module GitHub
           "container_path" => "Container path",
           "status" => "status code",
           "package_version" => "package version",
-          "project" => {
-            "id" => "project id",
-            "name" => "project name",
-            "fullname" => "project fullname",
-            "url" => "url to project data page"
-          },
-          "build_for_platform" => {
-            "id" => "platform id",
-            "name" => "platform name",
-            "url" => "platform data page path"
-          },
+          "project" => PROJECT_PARTIAL,
+          "build_for_platform" => PLATFORM_PARTIAL,
           "save_to_repository" => {
             "id" => "repository for package storage id",
             "name" => "repository for package storage name",
@@ -746,11 +754,7 @@ module GitHub
         "url" => "url to repository resource",
         "description" => "description",
         "publish_without_qa" => "publication without QA",
-        "platform" => {
-          "id" => "platform id",
-          "name" => "platform name",
-          "url" => "url to platform"
-        },
+        "platform" => PLATFORM_PARTIAL,
         "url" => "url to repository resource"
       }
     }
@@ -762,11 +766,7 @@ module GitHub
         "created_at" => 1346762587,
         "updated_at" => 1346841731,
         "url" => "/api/v1/repositories/30.json",
-        "platform" => {
-          "id" => 41,
-          "name" => "my_personal",
-          "url" => "/api/v1/platforms/41.json"
-        },
+        "platform" => PLATFORM_PARTIAL_EXAMPLE,
         "url" => "/api/v1/repositories/30.json"
       }.merge(REPOSITORY_UPDATE_EXAMPLE)
     }
@@ -776,14 +776,7 @@ module GitHub
         "id" => "resource id",
         "name" => "repository name",
         "url" => "url to repository resource",
-        "projects" => [
-          {
-            "id" => "project id",
-            "name" => "project name",
-            "fullname" => "project fullname",
-            "url" => "url to project data page"
-          }
-        ]
+        "projects" => [PROJECT_PARTIAL]
       },
       "url" => "url to projects data"
     }
@@ -793,14 +786,7 @@ module GitHub
         "id" => 30,
         "name" => "main",
         "url" => "/api/v1/repositories/30.json",
-        "projects" => [
-          {
-            "id" => 666,
-            "name" => "evil_tools",
-            "fullname" => "abf/evil_tools",
-            "url" => "/api/v1/projects/666.json"
-          }
-        ]
+        "projects" => [PROJECT_PARTIAL_EXAMPLE]
       },
       "url" => "/api/v1/repositories/30/projects.json"
     }
@@ -1572,14 +1558,7 @@ module GitHub
           "url" => "path to platform data"
         }
       ],
-      "projects" => [
-        {
-          "id" => "project id",
-          "name" => "project name",
-          "fullname" => "project fullname",
-          "url" => "path to project data"
-        }
-      ],
+      "projects" => [PROJECT_PARTIAL],
       "url" => "path to advisory data"
     }
 
@@ -1593,14 +1572,7 @@ module GitHub
           "url" => "/api/v1/platforms/22.json"
         }
       ],
-      "projects" => [
-        {
-          "id" => 4661,
-          "name" => "hwinfo",
-          "fullname" => "test/hwinfo",
-          "url" => "/api/v1/projects/4661.json"
-        }
-      ],
+      "projects" => [PROJECT_PARTIAL_EXAMPLE],
       "url" => "/api/v1/advisories/ROSA-SA-2012:0188.json"
     }
 
@@ -1729,6 +1701,62 @@ module GitHub
         "file" => "kernel.tar.gz2"
       }
     ]
+
+    SEARCH_REQUEST = {
+      "query" => "search term",
+      "type" => "type of search results"
+    }
+
+    SEARCH_REQUEST_EXAMPLE = {
+      "query" => "test",
+      "type" => "users"
+    }  
+
+    SEARCH_RESPONSE = {
+      "results" => [
+        "users" => [
+          {
+            "id" => "user id",
+            "uname" => "user uname",
+            "name" => "user name",
+            "url" => "api user path"
+          }
+        ],
+        "groups" => [
+          {
+            "id" => "group id",
+            "uname" => "group uname",
+            "url" => "api group path"
+          }
+        ],
+        "projects" => [PROJECT_PARTIAL],
+        "platforms" => [PLATFORM_PARTIAL]
+      ],
+      "url" => "path to search request"
+    }
+
+    SEARCH_RESPONSE_EXAMPLE = {
+      "results" => {
+        "users" => [
+          {
+            "id" => 1,
+            "name" => "Ivan Aivazovsky",
+            "uname" => "ivan_aivazovsky",
+            "url" => "/api/v1/users/1.json",
+          }
+        ],
+        "groups" => [
+          {
+            "id" => 1,
+            "uname" => "rosa",
+            "url" => "/api/v1/groups/1.json"
+          }
+        ],
+        "projects" => [PROJECT_PARTIAL_EXAMPLE],
+        "platforms" => [PLATFORM_PARTIAL_EXAMPLE]
+      },
+      "url" => "/api/v1/search.json"
+    }
 
   end
 end
