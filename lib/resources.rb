@@ -1702,6 +1702,20 @@ module GitHub
       }
     ]
 
+    USER_PARTIAL =  {
+      "id" => "user id",
+      "uname" => "user uname",
+      "name" => "user name",
+      "url" => "api user path"
+    }
+
+    USER_PARTIAL_EXAMPLE = {
+      "id" => 1,
+      "name" => "Ivan Aivazovsky",
+      "uname" => "ivan_aivazovsky",
+      "url" => "/api/v1/users/1.json"
+    }
+
     SEARCH_REQUEST = {
       "query" => "search term",
       "type" => "type of search results"
@@ -1714,14 +1728,7 @@ module GitHub
 
     SEARCH_RESPONSE = {
       "results" => [
-        "users" => [
-          {
-            "id" => "user id",
-            "uname" => "user uname",
-            "name" => "user name",
-            "url" => "api user path"
-          }
-        ],
+        "users" => [ USER_PARTIAL ],
         "groups" => [
           {
             "id" => "group id",
@@ -1737,14 +1744,7 @@ module GitHub
 
     SEARCH_RESPONSE_EXAMPLE = {
       "results" => {
-        "users" => [
-          {
-            "id" => 1,
-            "name" => "Ivan Aivazovsky",
-            "uname" => "ivan_aivazovsky",
-            "url" => "/api/v1/users/1.json",
-          }
-        ],
+        "users" => [ USER_PARTIAL_EXAMPLE ],
         "groups" => [
           {
             "id" => 1,
@@ -1762,6 +1762,8 @@ module GitHub
     MAINTAINER_LIST_RESPONSE = {
       'maintainers' => [
         {
+          'project' => PROJECT_PARTIAL,
+
           'package' => {
             'name'       => 'package name',
             'type'       => 'package type (source/binary)',
@@ -1770,12 +1772,7 @@ module GitHub
             'updated_at' => 'package last updated date'
           },
 
-          'maintainer' => {
-            'id'        => 'user id',
-            'uname'     => 'user login',
-            'fullname'  => 'user full name',
-            'email'     => 'user email'
-          }
+          'maintainer' => USER_PARTIAL.merge('email' => 'user email')
         }
       ]
     }
@@ -1783,7 +1780,9 @@ module GitHub
     MAINTAINER_LIST_RESPONSE_EXAMPLE = [
       'maintainers' => [
         {
-         'package' => {
+          'project' => PROJECT_PARTIAL_EXAMPLE,
+
+          'package' => {
             'name'       => 'alpine',
             'type'       => 'binary',
             'version'    => '2.02',
@@ -1791,28 +1790,7 @@ module GitHub
             'updated_at' => 1348060890
           },
 
-          'maintainer' => {
-            'id'        => 1,
-            'uname'     => 'grendizer',
-            'fullname'  => 'Alex Burmashev',
-            'email'     => 'alex.burmashev@rosalab.ru '
-          }
-        },
-        {
-         'package' => {
-            'name'       => 'alpine',
-            'type'       => 'source',
-            'version'    => '2.02',
-            'release'    => '1',
-            'updated_at' => 1348060890
-          },
-
-          'maintainer' => {
-            'id'        => 1,
-            'uname'     => 'grendizer',
-            'fullname'  => 'Alex Burmashev',
-            'email'     => 'alex.burmashev@rosalab.ru '
-          }
+          'maintainer' => USER_PARTIAL_EXAMPLE.merge('email' => 'ivan.aivazovsky@email.ru ')
         }
       ]
     ]
