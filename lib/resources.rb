@@ -1702,6 +1702,20 @@ module GitHub
       }
     ]
 
+    USER_PARTIAL =  {
+      "id" => "user id",
+      "uname" => "user uname",
+      "name" => "user name",
+      "url" => "api user path"
+    }
+
+    USER_PARTIAL_EXAMPLE = {
+      "id" => 1,
+      "name" => "Ivan Aivazovsky",
+      "uname" => "ivan_aivazovsky",
+      "url" => "/api/v1/users/1.json"
+    }
+
     SEARCH_REQUEST = {
       "query" => "search term",
       "type" => "type of search results"
@@ -1710,18 +1724,11 @@ module GitHub
     SEARCH_REQUEST_EXAMPLE = {
       "query" => "test",
       "type" => "users"
-    }  
+    }
 
     SEARCH_RESPONSE = {
       "results" => [
-        "users" => [
-          {
-            "id" => "user id",
-            "uname" => "user uname",
-            "name" => "user name",
-            "url" => "api user path"
-          }
-        ],
+        "users" => [ USER_PARTIAL ],
         "groups" => [
           {
             "id" => "group id",
@@ -1737,14 +1744,7 @@ module GitHub
 
     SEARCH_RESPONSE_EXAMPLE = {
       "results" => {
-        "users" => [
-          {
-            "id" => 1,
-            "name" => "Ivan Aivazovsky",
-            "uname" => "ivan_aivazovsky",
-            "url" => "/api/v1/users/1.json",
-          }
-        ],
+        "users" => [ USER_PARTIAL_EXAMPLE ],
         "groups" => [
           {
             "id" => 1,
@@ -1757,6 +1757,43 @@ module GitHub
       },
       "url" => "/api/v1/search.json"
     }
+
+
+    MAINTAINER_LIST_RESPONSE = {
+      'maintainers' => [
+        {
+          'project' => PROJECT_PARTIAL,
+
+          'package' => {
+            'name'       => 'package name',
+            'type'       => 'package type (source/binary)',
+            'version'    => 'package version',
+            'release'    => 'package release',
+            'updated_at' => 'package last updated date'
+          },
+
+          'maintainer' => USER_PARTIAL.merge('email' => 'user email')
+        }
+      ]
+    }
+
+    MAINTAINER_LIST_RESPONSE_EXAMPLE = [
+      'maintainers' => [
+        {
+          'project' => PROJECT_PARTIAL_EXAMPLE,
+
+          'package' => {
+            'name'       => 'alpine',
+            'type'       => 'binary',
+            'version'    => '2.02',
+            'release'    => '1',
+            'updated_at' => 1348060890
+          },
+
+          'maintainer' => USER_PARTIAL_EXAMPLE.merge('email' => 'ivan.aivazovsky@email.ru ')
+        }
+      ]
+    ]
 
   end
 end
