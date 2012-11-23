@@ -159,7 +159,7 @@ page
 : _Optional_ **Integer** - page number of build lists results list.
 
 per_page
-: _Optional_ **Integer** - amount of build list per one page. Default 30, maximum 100.
+: _Optional_ **Integer** - amount of build list per one page. Default 20, maximum 100.
 
 filter[status]
 : _Optional_ **integer** - code of the build status
