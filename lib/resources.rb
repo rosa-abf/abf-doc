@@ -1777,7 +1777,7 @@ module GitHub
       ]
     }
 
-    MAINTAINER_LIST_RESPONSE_EXAMPLE = [
+    MAINTAINER_LIST_RESPONSE_EXAMPLE = {
       'maintainers' => [
         {
           'project' => PROJECT_PARTIAL_EXAMPLE,
@@ -1793,7 +1793,7 @@ module GitHub
           'maintainer' => USER_PARTIAL_EXAMPLE.merge('email' => 'ivan.aivazovsky@email.ru ')
         }
       ]
-    ]
+    }
 
   end
 end
