@@ -1765,6 +1765,7 @@ module GitHub
           'project' => PROJECT_PARTIAL,
 
           'package' => {
+            'id'         => 'package id',
             'name'       => 'package name',
             'type'       => 'package type (source/binary)',
             'version'    => 'package version',
@@ -1783,6 +1784,7 @@ module GitHub
           'project' => PROJECT_PARTIAL_EXAMPLE,
 
           'package' => {
+            'id'         => 1,
             'name'       => 'alpine',
             'type'       => 'binary',
             'version'    => '2.02',
