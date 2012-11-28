@@ -84,6 +84,7 @@ arch_id
 ## Cancel build list
 
 By this request you can cancel build list.
+Only build list with status build pending (2000) or platform pending (2) and filed bs_id field can be canceled.
 
     PUT /api/v1/build_lists/:id/cancel.json
 
@@ -106,6 +107,7 @@ id
 ## Publish build list
 
 By this request you can publish build list.
+Only build list with status build complete (0) or publishing error (8000) can be published.
 
     PUT /api/v1/build_lists/:id/publish.json
 
@@ -128,6 +130,7 @@ id
 ## Reject publish build list
 
 By this request you can reject publish build list.
+Only build list with status build complete (0) or publishing error (8000) and saved to repository with turn on QA check can be rejected.
 
     PUT /api/v1/build_lists/:id/reject_publish.json
 

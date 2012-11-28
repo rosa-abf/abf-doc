@@ -4,7 +4,7 @@ title: Groups | ABF API
 
 # Groups API
 
-* <a href="#list-groups">List groups</a>
+* <a href="#list-your-groups">List your groups</a>
 * <a href="#get-a-single-group">Get a single group</a>
 * <a href="#update-a-single-group">Update a single group</a>
 * <a href="#create-group">Create group</a>
@@ -14,7 +14,7 @@ title: Groups | ABF API
 * <a href="#remove-member-from-a-single-group">Remove member from a single group</a>
 * <a href="#update-member-role-for-a-single-group">Update member role for a single group</a>
 
-## List groups
+## List your groups
 
     GET /api/v1/groups.json
 

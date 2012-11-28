@@ -13,7 +13,7 @@ title: Platforms | ABF API
 * <a href="#clear-a-single-platform">Clear a single platform</a>
 * <a href="#create-platform">Create platform</a>
 * <a href="#destroy-platform">Destroy platform</a>
-* <a href="#list-platforms">List platforms</a>
+* <a href="#list-your-platforms">List your platforms</a>
 * <a href="#list-of-platforms-for-which-you-can-create-build-list">List of platforms for which you can create build list</a>
 
 ## Get a single platform
@@ -258,7 +258,7 @@ id
 
 <%= json(:platform_destroy_response_example) %>
 
-## List platforms
+## List your platforms
 
     GET /api/v1/platforms.json
 
