@@ -4,7 +4,7 @@ title: Projects | ABF API
 
 # Projects API
 
-* <a href="#list-projects">List projects</a>
+* <a href="#list-your-projects">List your projects</a>
 * <a href="#get-a-single-project">Get a single project</a>
 * <a href="#get-project-id">Get project id</a>
 * <a href="#get-all-references-of-project">Get all references of project</a>
@@ -17,7 +17,7 @@ title: Projects | ABF API
 * <a href="#remove-member-from-a-single-project">Remove member from a single project</a>
 * <a href="#update-member-role-for-a-single-project">Update member role for a single project</a>
 
-## List projects
+## List your projects
 
     GET /api/v1/projects.json
 
@@ -55,7 +55,7 @@ id
 project_name
 : _String_ project name.
 
-owner_name: 
+owner_name:
 : _String_ project owner name.
 
 ### Request examples:
