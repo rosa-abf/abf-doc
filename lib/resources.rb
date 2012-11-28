@@ -435,7 +435,8 @@ module GitHub
         "type" => "owner type",
         "url" => "path to owner data"
       },
-      "url" => "path to project data"
+      "url" => "path to project data",
+      "git_url" => "path to project git"
     }
 
     PROJECT_PARAMS_EXAMPLE = {
@@ -444,7 +445,7 @@ module GitHub
       "created_at" => 1348168705,
       "updated_at" => 1348168905,
       "visibility" => "open",
-      "description" => "asfsafafsfasf fas fasfsa fas  fasfa s",
+      "description" => "bla-bla-bla",
       "ancestry" => nil,
       "has_issues" => true,
       "has_wiki" => false,
@@ -457,7 +458,8 @@ module GitHub
         "type" => "User",
         "url" => "/api/v1/users/4.json"
       },
-      "url" => "/api/v1/projects/4661.json"
+      "url" => "/api/v1/projects/4661.json",
+      "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git"
     }
 
     PROJECT_LIST_RESPONSE = {
@@ -537,7 +539,8 @@ module GitHub
             "name" => "owner name",
             "url" => "url to owner profile"
           },
-          "url" => "url to project data page"
+          "url" => "url to project data page",
+          "git_url" => "path to project git"
         }
     }
 
@@ -553,7 +556,8 @@ module GitHub
             "type" => "User",
             "url" => "/api/v1/users/4.json"
           },
-          "url" => "/api/v1/projects/4661.json"
+          "url" => "/api/v1/projects/4661.json",
+          "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git"
         }
     }
 
