@@ -419,6 +419,7 @@ module GitHub
     PROJECT_PARAMS = {
       "id" => "resource id",
       "name" => "name",
+      "fullname" => "fullname",
       "created_at" => "created at date and time",
       "updated_at" => "updated at date and time",
       "visibility" => "visibility (open/hidden)",
@@ -442,6 +443,7 @@ module GitHub
     PROJECT_PARAMS_EXAMPLE = {
       "id" => 4661,
       "name" => "hwinfo",
+      "fullname" => "jaroslav_garkin/hwinfo",
       "created_at" => 1348168705,
       "updated_at" => 1348168905,
       "visibility" => "open",
@@ -533,6 +535,7 @@ module GitHub
         {
           "id" => "resource id",
           "name" => "name",
+          "fullname" => "fullname",
           "visibility" => "visibility (open/hidden)",
           "owner" => {
             "id" => "owner id",
@@ -549,6 +552,7 @@ module GitHub
         {
           "id" => 4661,
           "name" => "hwinfo",
+          "fullname" => "jaroslav_garkin/hwinfo",
           "visibility" => "open",
           "owner" => {
             "id" => 4,
