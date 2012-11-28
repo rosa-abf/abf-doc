@@ -16,6 +16,8 @@ title: Groups | ABF API
 
 ## List your groups
 
+List all the authenticated user’s groups including owned groups and member groups.
+
     GET /api/v1/groups.json
 
 ### Response:

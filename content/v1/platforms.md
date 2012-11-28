@@ -260,6 +260,8 @@ id
 
 ## List your platforms
 
+List all platforms across all the authenticated user’s platforms including owned platforms, member platforms, and group platforms.
+
     GET /api/v1/platforms.json
 
 ### Parameters:

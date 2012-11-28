@@ -19,6 +19,8 @@ title: Projects | ABF API
 
 ## List your projects
 
+List all projects across all the authenticated user’s projects including owned projects, member projects, and group projects.
+
     GET /api/v1/projects.json
 
 ### Response:
