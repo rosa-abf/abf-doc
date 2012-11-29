@@ -457,12 +457,12 @@ module GitHub
     })
 
     PROJECT_LIST_RESPONSE = {
-      "groups" => [PROJECT_PARAMS],
+      "projects" => [PROJECT_PARAMS],
       "url" => "path to projects data"
     }
 
     PROJECT_LIST_RESPONSE_EXAMPLE = {
-      "groups" => [PROJECT_PARAMS_EXAMPLE],
+      "projects" => [PROJECT_PARAMS_EXAMPLE],
       "url" => "/api/v1/projects.json"
     }
 
