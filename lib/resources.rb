@@ -104,14 +104,16 @@ module GitHub
       "id" => "project id",
       "name" => "project name",
       "fullname" => "project fullname",
-      "url" => "url to project data page"
+      "url" => "url to project data page",
+      "git_url" => "path to project git"
     }
 
     PROJECT_PARTIAL_EXAMPLE = {
       "id" => 666,
       "name" => "evil_tools",
       "fullname" => "abf/evil_tools",
-      "url" => "/api/v1/projects/666.json"
+      "url" => "/api/v1/projects/666.json",
+      "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git"
     }
 
     ADD_MEMBER_REQUEST = {
@@ -416,12 +418,7 @@ module GitHub
       "message" => "403 Forbidden | Rate Limit Exceeded"
     }
 
-    PROJECT_PARAMS = {
-      "id" => "resource id",
-      "name" => "name",
-      "fullname" => "fullname",
-      "created_at" => "created at date and time",
-      "updated_at" => "updated at date and time",
+    PROJECT_PARAMS = PROJECT_PARTIAL.merge({
       "visibility" => "visibility (open/hidden)",
       "description" => "description",
       "ancestry" => "project ancestry",
@@ -430,22 +427,17 @@ module GitHub
       "default_branch" => "git branch used by default",
       "is_package" => "true if project is package",
       "average_build_time" => "average build time for this project",
+      "created_at" => "created at date and time",
+      "updated_at" => "updated at date and time",
       "owner" => {
         "id" => "owner id",
         "name" => "owner name",
         "type" => "owner type",
         "url" => "path to owner data"
-      },
-      "url" => "path to project data",
-      "git_url" => "path to project git"
-    }
+      }
+    })
 
-    PROJECT_PARAMS_EXAMPLE = {
-      "id" => 4661,
-      "name" => "hwinfo",
-      "fullname" => "jaroslav_garkin/hwinfo",
-      "created_at" => 1348168705,
-      "updated_at" => 1348168905,
+    PROJECT_PARAMS_EXAMPLE = PROJECT_PARTIAL.merge({
       "visibility" => "open",
       "description" => "bla-bla-bla",
       "ancestry" => nil,
@@ -454,23 +446,23 @@ module GitHub
       "default_branch" => "master",
       "is_package" => true,
       "average_build_time" => 0,
+      "created_at" => 1348168705,
+      "updated_at" => 1348168905,
       "owner" => {
         "id" => 4,
         "name" => "Yaroslav Garkin",
         "type" => "User",
         "url" => "/api/v1/users/4.json"
-      },
-      "url" => "/api/v1/projects/4661.json",
-      "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git"
-    }
+      }
+    })
 
     PROJECT_LIST_RESPONSE = {
-      "groups" => [PROJECT_PARAMS],
+      "projects" => [PROJECT_PARAMS],
       "url" => "path to projects data"
     }
 
     PROJECT_LIST_RESPONSE_EXAMPLE = {
-      "groups" => [PROJECT_PARAMS_EXAMPLE],
+      "projects" => [PROJECT_PARAMS_EXAMPLE],
       "url" => "/api/v1/projects.json"
     }
 
