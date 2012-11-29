@@ -104,14 +104,16 @@ module GitHub
       "id" => "project id",
       "name" => "project name",
       "fullname" => "project fullname",
-      "url" => "url to project data page"
+      "url" => "url to project data page",
+      "git_url" => "path to project git"
     }
 
     PROJECT_PARTIAL_EXAMPLE = {
       "id" => 666,
       "name" => "evil_tools",
       "fullname" => "abf/evil_tools",
-      "url" => "/api/v1/projects/666.json"
+      "url" => "/api/v1/projects/666.json",
+      "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git"
     }
 
     ADD_MEMBER_REQUEST = {
