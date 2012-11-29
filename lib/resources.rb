@@ -418,10 +418,7 @@ module GitHub
       "message" => "403 Forbidden | Rate Limit Exceeded"
     }
 
-    PROJECT_PARAMS = {
-      "id" => "resource id",
-      "name" => "name",
-      "fullname" => "fullname",
+    PROJECT_PARAMS = PROJECT_PARTIAL.merge({
       "created_at" => "created at date and time",
       "updated_at" => "updated at date and time",
       "visibility" => "visibility (open/hidden)",
@@ -437,15 +434,10 @@ module GitHub
         "name" => "owner name",
         "type" => "owner type",
         "url" => "path to owner data"
-      },
-      "url" => "path to project data",
-      "git_url" => "path to project git"
-    }
+      }
+    })
 
-    PROJECT_PARAMS_EXAMPLE = {
-      "id" => 4661,
-      "name" => "hwinfo",
-      "fullname" => "jaroslav_garkin/hwinfo",
+    PROJECT_PARAMS_EXAMPLE = PROJECT_PARTIAL.merge({
       "created_at" => 1348168705,
       "updated_at" => 1348168905,
       "visibility" => "open",
@@ -461,10 +453,8 @@ module GitHub
         "name" => "Yaroslav Garkin",
         "type" => "User",
         "url" => "/api/v1/users/4.json"
-      },
-      "url" => "/api/v1/projects/4661.json",
-      "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git"
-    }
+      }
+    })
 
     PROJECT_LIST_RESPONSE = {
       "groups" => [PROJECT_PARAMS],
