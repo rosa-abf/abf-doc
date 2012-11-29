@@ -419,8 +419,6 @@ module GitHub
     }
 
     PROJECT_PARAMS = PROJECT_PARTIAL.merge({
-      "created_at" => "created at date and time",
-      "updated_at" => "updated at date and time",
       "visibility" => "visibility (open/hidden)",
       "description" => "description",
       "ancestry" => "project ancestry",
@@ -429,6 +427,8 @@ module GitHub
       "default_branch" => "git branch used by default",
       "is_package" => "true if project is package",
       "average_build_time" => "average build time for this project",
+      "created_at" => "created at date and time",
+      "updated_at" => "updated at date and time",
       "owner" => {
         "id" => "owner id",
         "name" => "owner name",
@@ -438,8 +438,6 @@ module GitHub
     })
 
     PROJECT_PARAMS_EXAMPLE = PROJECT_PARTIAL.merge({
-      "created_at" => 1348168705,
-      "updated_at" => 1348168905,
       "visibility" => "open",
       "description" => "bla-bla-bla",
       "ancestry" => nil,
@@ -448,6 +446,8 @@ module GitHub
       "default_branch" => "master",
       "is_package" => true,
       "average_build_time" => 0,
+      "created_at" => 1348168705,
+      "updated_at" => 1348168905,
       "owner" => {
         "id" => 4,
         "name" => "Yaroslav Garkin",
