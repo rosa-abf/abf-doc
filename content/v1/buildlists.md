@@ -10,6 +10,7 @@ title: Build lists | ABF API
 * <a href="#publish-build-list">Publish build list</a>
 * <a href="#reject-publish-build-list">Reject publish build list</a>
 * <a href="#list-build-lists">List build lists</a>
+* <a href="#list-build-lists-for-a-project">List build lists for a project</a>
 * <a href="#destroy-build-list">Destroy build list</a>
 
 ## Get a single build list
@@ -215,6 +216,27 @@ filter[save_to_platform_id]
 ### Examples of responses:
 
 <%= json(:build_list_search_response_example) %>
+
+## List build lists for a project
+
+    GET /api/v1/projects/:project_id/build_lists.json?<search params>
+
+### Parameters:
+
+Look at <a href="#list-build-lists">List build lists</a>
+
+### Response:
+
+<%= json(:build_list_search_response) %>
+
+### Example of request url:
+
+> /api/v1/projects/42/build_lists.json?filter[status]=6000
+
+### Examples of responses:
+
+<%= json(:build_list_search_response_example) %>
+
 
 ## Destroy build list
 
