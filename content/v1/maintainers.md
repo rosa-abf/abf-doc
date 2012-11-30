@@ -15,9 +15,14 @@ title: Maintainers | ABF API
 id
 : _Required_ **Integer** identifier of current platform
 
+package_name
+: _Optional_ **string** — package name. You can use this parameters for searching data about specific package or group of packages.
+
 ### Request examples:
 
     /api/v1/platforms/64/maintainers.json
+
+    /api/v1/platforms/64/maintainers.json?package_name=alpine
 
 ### Response:
 
