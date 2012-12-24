@@ -147,7 +147,6 @@ module GitHub
           "updated_at" => 1349358084,
           "is_circle" => false,
           "update_type" => "bugfix",
-          "build_requires" => false,
           "auto_publish" => true,
           "commit_hash" => "4edafbe69632173a1800c4d7582b60b46bc1fb55",
           "priority" => 0,
@@ -211,7 +210,6 @@ module GitHub
           },
           "is_circle" => "recurrent build",
           "update_type" => "update type",
-          "build_requires" => "build with all the required packages",
           "auto_publish" => "automated publising",
           "commit_hash" => "last commit hash of project source",
           "priority" => "build priority",
@@ -260,7 +258,6 @@ module GitHub
         "save_to_repository_id"=> "repository identifier for package storage",
         "build_for_platform_id"=> "platform identifier of platform for build",
         "auto_publish"=> "automated publising",
-        "build_requires"=> "true if build with all the required packages",
         "include_repos"=> [
           "included repository id for each selected platform"
         ],
@@ -276,7 +273,6 @@ module GitHub
         "save_to_repository_id"=> 12,
         "build_for_platform_id"=> 2,
         "auto_publish"=> true,
-        "build_requires"=> true,
         "include_repos"=> [
           54,
           53
