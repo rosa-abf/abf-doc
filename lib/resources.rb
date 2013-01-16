@@ -1301,6 +1301,14 @@ module GitHub
       }
     }
 
+    CURRENT_USER_DATA_RESPONSE = {
+      'user' => USER_DATA_RESPONSE.merge({'role' => 'user role'})
+    }
+
+    CURRENT_USER_DATA_RESPONSE_EXAMPLE = {
+      'user' => USER_DATA_RESPONSE_EXAMPLE.merge({'role' => ''})
+    }
+
     USER_UPDATE_REQUEST = {
       "user" => USER_UPDATE_PARAMS
     }
