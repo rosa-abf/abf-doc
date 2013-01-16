@@ -33,11 +33,11 @@ id
 
 ### Response:
 
-<%= json(:user_data_response) %>
+<%= json(:current_user_data_response) %>
 
 ### Example:
 
-<%= json(:user_data_response_example) %>
+<%= json(:current_user_data_response_example) %>
 
 ## Update a current user
 
