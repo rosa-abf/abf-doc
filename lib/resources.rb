@@ -1302,7 +1302,7 @@ module GitHub
     }
 
     CURRENT_USER_DATA_RESPONSE = {
-      'user' => USER_DATA_RESPONSE.merge({'role' => 'user role'})
+      'user' => USER_DATA_RESPONSE.merge({'role' => 'user role (nil/admin/tester/system)'})
     }
 
     CURRENT_USER_DATA_RESPONSE_EXAMPLE = {
