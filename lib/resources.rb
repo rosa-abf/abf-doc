@@ -1697,7 +1697,7 @@ module GitHub
     FILE_STORE_FIND_RESPONSE = [
       {
         "sha1_hash" => "File SHA1",
-        "file" => "File name",
+        "file_name" => "File name",
         "user" => {
           "id" => "User id in ABF",
           "uname" => "User uname in ABF"
@@ -1708,7 +1708,7 @@ module GitHub
     FILE_STORE_FIND_RESPONSE_EXAMPLE = [
       {
         "sha1_hash" => "3a93e5553490e39b4cd50269d51ad8438b7e20b8",
-        "file" => "kernel.tar.gz2",
+        "file_name" => "kernel.tar.gz2",
         "user" => {
           "id" => "1",
           "uname" => "ivan_aivazovsky"
