@@ -1784,7 +1784,8 @@ module GitHub
             'type'       => 'package type (source/binary)',
             'version'    => 'package version',
             'release'    => 'package release',
-            'updated_at' => 'package last updated date'
+            'updated_at' => 'package last updated date',
+            'url'        => 'package url'
           },
 
           'maintainer' => USER_PARTIAL.merge('email' => 'user email')
@@ -1803,7 +1804,8 @@ module GitHub
             'type'       => 'binary',
             'version'    => '2.02',
             'release'    => '1',
-            'updated_at' => 1348060890
+            'updated_at' => 1348060890,
+            'url'        => 'http://file-store.rosalinux.ru/api/v1/file_stores/675bfe070075abd5b7b49ecf213e830ff2f56ae3'
           },
 
           'maintainer' => USER_PARTIAL_EXAMPLE.merge('email' => 'ivan.aivazovsky@email.ru ')
