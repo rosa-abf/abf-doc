@@ -203,7 +203,7 @@ module GitHub
               }
             }
           ],
-          'package' => PACKAGE_PARTIAL_EXAMPLE,
+          'packages' => [PACKAGE_PARTIAL_EXAMPLE],
           "url" => "/api/v1/build_lists/10.json"
         }
     }
@@ -270,7 +270,7 @@ module GitHub
               }
             }
           ],
-          'package' => PACKAGE_PARTIAL,
+          'packages' => [PACKAGE_PARTIAL],
           "url" => "url to build list page"
         }
     }
