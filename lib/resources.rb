@@ -204,6 +204,11 @@ module GitHub
             }
           ],
           'packages' => [PACKAGE_PARTIAL_EXAMPLE],
+          'results'  => [{
+            'file_name' => 'kernel.src.rpm',
+            'size'      => '20014310',
+            'url'       => 'http://file-store.rosalinux.ru/api/v1/file_stores/3a93e5553490e39b4cd50269d51ad8438b7e20b8'
+          }],
           "url" => "/api/v1/build_lists/10.json"
         }
     }
@@ -271,6 +276,11 @@ module GitHub
             }
           ],
           'packages' => [PACKAGE_PARTIAL],
+          'results'  => [{
+            'file_name' => 'file name',
+            'size'      => 'file size',
+            'url'       => 'file url'
+          }],
           "url" => "url to build list page"
         }
     }
