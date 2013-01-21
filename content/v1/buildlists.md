@@ -63,9 +63,6 @@ include_repos
 arch_id
 : _Required_ **integer** — Identifier architecture for which need to run assembly.
 
-new_core:
-: _Optional_ **boolean** — `false` to disable new core for building. Default: `true`.
-
 ### Request
 
 <%= json(:build_list_create_parameters) %>
