@@ -264,7 +264,6 @@ module GitHub
         "save_to_repository_id"=> "repository identifier for package storage",
         "build_for_platform_id"=> "platform identifier of platform for build",
         "auto_publish"=> "automated publising",
-        "new_core" => "using new core",
         "include_repos"=> [
           "included repository id for each selected platform"
         ],
@@ -277,7 +276,6 @@ module GitHub
         "project_id"=> "10",
         "commit_hash"=> "751b0cad9cd1467e735d8c3334ea3cf988995fab",
         "update_type"=> "bugfix",
-        "new_core" => false,
         "save_to_repository_id"=> 12,
         "build_for_platform_id"=> 2,
         "auto_publish"=> true,
