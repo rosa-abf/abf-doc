@@ -121,6 +121,26 @@ module GitHub
       "type" => "User"
     }
 
+    PACKAGE_PARTIAL = {
+      'id'         => 'package id',
+      'name'       => 'package name',
+      'type'       => 'package type (source/binary)',
+      'version'    => 'package version',
+      'release'    => 'package release',
+      'updated_at' => 'package last updated date',
+      'url'        => 'package url'
+    }
+
+    PACKAGE_PARTIAL_EXAMPLE = {
+        'id'         => 1,
+        'name'       => 'alpine',
+        'type'       => 'binary',
+        'version'    => '2.02',
+        'release'    => '1',
+        'updated_at' => 1348060890,
+        'url'        => 'http://file-store.rosalinux.ru/api/v1/file_stores/675bfe070075abd5b7b49ecf213e830ff2f56ae3'
+    }
+
     BUILD_LIST_SHOW_EXAMPLE = {
       "build_list" =>
         {
@@ -184,6 +204,12 @@ module GitHub
               }
             }
           ],
+          'packages' => [PACKAGE_PARTIAL_EXAMPLE],
+          'results'  => [{
+            'file_name' => 'abfworker::rpm-worker-859694.log',
+            'size'      => '20014310',
+            'url'       => 'http://file-store.rosalinux.ru/api/v1/file_stores/3a93e5553490e39b4cd50269d51ad8438b7e20b8'
+          }],
           "url" => "/api/v1/build_lists/10.json"
         }
     }
@@ -251,6 +277,12 @@ module GitHub
               }
             }
           ],
+          'packages' => [PACKAGE_PARTIAL],
+          'results'  => [{
+            'file_name' => 'file name',
+            'size'      => 'file size',
+            'url'       => 'file url'
+          }],
           "url" => "url to build list page"
         }
     }
@@ -1779,16 +1811,7 @@ module GitHub
       'maintainers' => [
         {
           'project' => PROJECT_PARTIAL,
-
-          'package' => {
-            'id'         => 'package id',
-            'name'       => 'package name',
-            'type'       => 'package type (source/binary)',
-            'version'    => 'package version',
-            'release'    => 'package release',
-            'updated_at' => 'package last updated date'
-          },
-
+          'package' => PACKAGE_PARTIAL,
           'maintainer' => USER_PARTIAL.merge('email' => 'user email')
         }
       ]
@@ -1798,16 +1821,7 @@ module GitHub
       'maintainers' => [
         {
           'project' => PROJECT_PARTIAL_EXAMPLE,
-
-          'package' => {
-            'id'         => 1,
-            'name'       => 'alpine',
-            'type'       => 'binary',
-            'version'    => '2.02',
-            'release'    => '1',
-            'updated_at' => 1348060890
-          },
-
+          'package' => PACKAGE_PARTIAL_EXAMPLE,
           'maintainer' => USER_PARTIAL_EXAMPLE.merge('email' => 'ivan.aivazovsky@email.ru ')
         }
       ]

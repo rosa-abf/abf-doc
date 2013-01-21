@@ -7,6 +7,7 @@ title: Maintainers | ABF API
 * <a href="#list-maintainers">List maintainers</a>
 
 ## List maintainers
+  Parameter "url" in block "Package" is available only for new core.
 
     GET /api/v1/platforms/:id/maintainers.json
 

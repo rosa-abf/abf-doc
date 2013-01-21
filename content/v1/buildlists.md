@@ -14,6 +14,7 @@ title: Build lists | ABF API
 * <a href="#destroy-build-list">Destroy build list</a>
 
 ## Get a single build list
+  Block "Results" and parameter "url" in block "Packages" is available only for new core.
 
     GET /api/v1/build_lists/:id.json
 
