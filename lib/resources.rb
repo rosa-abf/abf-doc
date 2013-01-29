@@ -322,124 +322,110 @@ module GitHub
     BUILD_LIST_CREATE_RESPONSE = {
       "build_list" => {
         "id"      => "build list id (null if failed)",
-        "message" => "success or fail message",
-        "url"     => "url to build list page (null if failed)"
+        "message" => "success or fail message"
       }
     }
 
     BUILD_LIST_CREATE_RESPONSE_EXAMPLE = {
       "build_list"=> {
         "id"      => 56,
-        "message" => "Build list for project version 'beta_2012', platform 'rosa2012' and architecture 'i586' has been created successfully",
-        "url"     => "/api/v1/build_lists/56.json"
+        "message" => "Build list for project version 'beta_2012', platform 'rosa2012' and architecture 'i586' has been created successfully"
       }
     }
 
     BUILD_LIST_CANCEL_RESPONSE = {
       "build_list"=> {
-        "id"          => "build list id",
-        "is_canceled" => "true or false",
-        "message"     => "success or fail message",
-        "url"         => "url to build list page"
+        "id"      => "build list id",
+        "success" => "true or false",
+        "message" => "success or fail message"
       }
     }
 
     BUILD_LIST_CANCEL_RESPONSE_EXAMPLE = {
       "build_list" => {
-        "id"          => 10,
-        "is_canceled" => true,
-        "message"     => "Build canceled",
-        "url"         => "/api/v1/build_lists/10.json"
+        "id"      => 10,
+        "success" => true,
+        "message" => "Build canceled"
       }
     }
 
     BUILD_LIST_CANCEL_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"          => 10,
-        "is_canceled" => false,
-        "message"     => "Errors during build cancelation!",
-        "url"         => "/api/v1/build_lists/10.json"
+        "id"      => 10,
+        "success" => false,
+        "message" => "Errors during build cancelation!"
       }
     }
 
     BUILD_LIST_PUBLISH_RESPONSE = {
       "build_list" => {
-        "id"            => "build list id",
-        "is_published"  => "true or false", # May be just result name will be better
-        "message"       => "success or fail message",
-        "url"           => "url to build list page"
+        "id"      => "build list id",
+        "success" => "true or false", # May be just result name will be better
+        "message" => "success or fail message"
       }
     }
 
     BUILD_LIST_PUBLISH_RESPONSE_EXAMPLE = {
       "build_list" => {
-        "id"            => 10,
-        "is_published"  => true,
-        "message"       => "Build is queued for publishing",
-        "url"           => "/api/v1/build_lists/10.json"
+        "id"      => 10,
+        "success" => true,
+        "message" => "Build is queued for publishing"
       }
     }
 
     BUILD_LIST_PUBLISH_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"            => 10,
-        "is_published"  => false,
-        "message"       => "Errors during build publishing!",
-        "url"           => "/api/v1/build_lists/10.json"
+        "id"      => 10,
+        "success" => false,
+        "message" => "Errors during build publishing!"
       }
     }
 
     BUILD_LIST_CREATE_CONTAINER_RESPONSE = {
       "build_list" => {
-        "id"                    => "build list id",
-        "is_created_container"  => "true or false",
-        "message"               => "success or fail message",
-        "url"                   => "url to build list page"
+        "id"      => "build list id",
+        "success" => "true or false",
+        "message" => "success or fail message"
       }
     }
 
     BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE = {
       "build_list" => {
-        "id"                    => 10,
-        "is_created_container"  => true,
-        "message"               => "Container is queued for creating",
-        "url"                   => "/api/v1/build_lists/10.json"
+        "id"      => 10,
+        "success" => true,
+        "message" => "Container is queued for creating"
       }
     }
 
     BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"                    => 10,
-        "is_created_container"  => false,
-        "message"               => "Errors during container creating!",
-        "url"                   => "/api/v1/build_lists/10.json"
+        "id"      => 10,
+        "success" => false,
+        "message" => "Errors during container creating!"
       }
     }
 
     BUILD_LIST_REJECT_RESPONSE = {
       "build_list" => {
-        "id"            => "build list id",
-        "is_rejected"   => "true or false", # May be just result name will be better
-        "message"       => "success or fail message",
-        "url"           => "url to build list page"
+        "id"      => "build list id",
+        "success" => "true or false", # May be just result name will be better
+        "message" => "success or fail message"
       }
     }
 
     BUILD_LIST_REJECT_RESPONSE_EXAMPLE = {
       "build_list" => {
-        "id"            => 10,
-        "is_rejected"   => true,
-        "message"       => "Build is rejected",
-        "url"           => "/api/v1/build_lists/10.json"
+        "id"      => 10,
+        "success" => true,
+        "message" => "Build is rejected"
       }
     }
 
     BUILD_LIST_REJECT_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"            => 10,
-        "is_rejected"   => false,
-        "message"       => "Errors during build rejecting!",
-        "url"           => "/api/v1/build_lists/10.json"
+        "id"      => 10,
+        "success" => false,
+        "message" => "Errors during build rejecting!"
       }
     }
 
