@@ -90,7 +90,7 @@ arch_id
 ## Cancel build list
 
 By this request you can cancel build list.
-Only build list with status build pending (2000) or platform pending (2) and filed bs_id field can be canceled.
+Only build list with status build pending (2000) or build started (3000) can be canceled.
 
     PUT /api/v1/build_lists/:id/cancel.json
 
