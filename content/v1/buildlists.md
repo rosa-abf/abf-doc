@@ -14,7 +14,8 @@ title: Build lists | ABF API
 * <a href="#destroy-build-list">Destroy build list</a>
 
 ## Get a single build list
-  Block "Results" and parameter "url" in block "Packages" is available only for new core.
+  Block "Logs" is available only for new core.<br/>
+  Parameter "url" in block "Packages" is empty for old core.<br/>
   Parameter "container_status" has the same definition of codes that parameter "status". Available codes: `4000/6000/7000/8000`.
 
     GET /api/v1/build_lists/:id.json
