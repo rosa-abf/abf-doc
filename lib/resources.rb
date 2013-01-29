@@ -221,7 +221,7 @@ module GitHub
           "id" => "resource id",
           "name" => "name",
           "status" => "status code",
-          "container_status" => "container status code(been published/is being published/publishing error/waiting for response)",
+          "container_status" => "container status code",
           "container_path" => "container path",
           "new_core" => "using new core",
           "package_version" => "package version",
