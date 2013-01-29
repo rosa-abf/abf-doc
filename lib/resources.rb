@@ -146,8 +146,9 @@ module GitHub
         {
           "id" => 10,
           "name" => "evil_tools",
-          "container_path" => "/rosa2012/container/evil_tools",
           "status" => 6000,
+          "container_path" => "/rosa2012/container/10",
+          "container_status" => 6000,
           "new_core" => true,
           "package_version" => "rosa2012.1-0.1.309-1",
           "project" => PROJECT_PARTIAL_EXAMPLE,
@@ -219,8 +220,9 @@ module GitHub
         {
           "id" => "resource id",
           "name" => "name",
-          "container_path" => "Container path",
           "status" => "status code",
+          "container_status" => "container status code",
+          "container_path" => "container path",
           "new_core" => "using new core",
           "package_version" => "package version",
           "project" => PROJECT_PARTIAL,

@@ -14,9 +14,16 @@ title: Build lists | ABF API
 * <a href="#destroy-build-list">Destroy build list</a>
 
 ## Get a single build list
-  Block "Results" and parameter "url" in block "Packages" is available only for new core.
+  Block "Logs" is available only for new core.<br/>
+  The value of parameter "url" in block "Packages" is empty for old core.
 
     GET /api/v1/build_lists/:id.json
+
+### Available statuses for parameter "container_status":
+* `4000` — waiting for request for publishing container;
+* `6000` — container has been published;
+* `7000` — container is being published;
+* `8000` — publishing error.
 
 ### Parameters:
 id
