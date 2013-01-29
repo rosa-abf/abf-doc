@@ -176,7 +176,6 @@ module GitHub
           "last_published_commit_hash" => "59f606578d21683bbbf4152bcdc2ebf1dd1e2e37",
           "priority" => 0,
           "duration" => nil,
-          "build_log_url" => "/downloads/warpc_personal/container/evil_tools-680163/log/evil_tools/build.log",
           "advisory" => {
             "id" => 666,
             "name" => "at",
@@ -248,7 +247,6 @@ module GitHub
           "last_published_commit_hash" => "last published commit hash of project source",
           "priority" => "build priority",
           "duration" => "build duration in seconds",
-          "build_log_url" => "build list log url",
           "created_at" => "created at date and time",
           "updated_at" => "updated at date and time",
           "advisory" => {
@@ -322,73 +320,127 @@ module GitHub
     }
 
     BUILD_LIST_CREATE_RESPONSE = {
-      "build_list" =>
-        {
-          "id" => "build list id (null if failed)",
-          "message" => "success or fail message"
-        }
+      "build_list" => {
+        "id"      => "build list id (null if failed)",
+        "message" => "success or fail message",
+        "url"     => "url to build list page (null if failed)"
+      }
     }
 
     BUILD_LIST_CREATE_RESPONSE_EXAMPLE = {
-      "build_list"=>
-        {
-          "id"=> 56,
-          "message"=> "Build list for project version 'beta_2012', platform 'rosa2012' and architecture 'i586' has been created successfully"
-        }
+      "build_list"=> {
+        "id"      => 56,
+        "message" => "Build list for project version 'beta_2012', platform 'rosa2012' and architecture 'i586' has been created successfully",
+        "url"     => "/api/v1/build_lists/56.json"
+      }
     }
 
     BUILD_LIST_CANCEL_RESPONSE = {
-      "is_canceled"=> "true or false",
-      "url"=> "url to build list page",
-      "message"=> "success or fail message"
+      "build_list"=> {
+        "id"          => "build list id",
+        "is_canceled" => "true or false",
+        "message"     => "success or fail message",
+        "url"         => "url to build list page"
+      }
     }
 
     BUILD_LIST_CANCEL_RESPONSE_EXAMPLE = {
-      "is_canceled"=> true,
-      "url"=> "/api/v1/build_lists/10.json",
-      "message"=> "Build canceled"
+      "build_list" => {
+        "id"          => 10,
+        "is_canceled" => true,
+        "message"     => "Build canceled",
+        "url"         => "/api/v1/build_lists/10.json"
+      }
     }
 
     BUILD_LIST_CANCEL_RESPONSE_EXAMPLE2 = {
-      "is_canceled"=> false,
-      "url"=> "/api/v1/build_lists/10.json",
-      "message"=> "Errors during build cancelation!"
+      "build_list" => {
+        "id"          => 10,
+        "is_canceled" => false,
+        "message"     => "Errors during build cancelation!",
+        "url"         => "/api/v1/build_lists/10.json"
+      }
     }
 
     BUILD_LIST_PUBLISH_RESPONSE = {
-      "is_published"=> "true or false", # May be just result name will be better
-      "url"=> "url to build list page",
-      "message"=> "success or fail message"
+      "build_list" => {
+        "id"            => "build list id",
+        "is_published"  => "true or false", # May be just result name will be better
+        "message"       => "success or fail message",
+        "url"           => "url to build list page"
+      }
     }
 
     BUILD_LIST_PUBLISH_RESPONSE_EXAMPLE = {
-      "is_published"=> true,
-      "url"=> "/api/v1/build_lists/10.json",
-      "message"=> "Build is queued for publishing"
+      "build_list" => {
+        "id"            => 10,
+        "is_published"  => true,
+        "message"       => "Build is queued for publishing",
+        "url"           => "/api/v1/build_lists/10.json"
+      }
     }
 
     BUILD_LIST_PUBLISH_RESPONSE_EXAMPLE2 = {
-      "is_published"=> false,
-      "url"=> "/api/v1/build_lists/10.json",
-      "message"=> "Errors during build publishing!"
+      "build_list" => {
+        "id"            => 10,
+        "is_published"  => false,
+        "message"       => "Errors during build publishing!",
+        "url"           => "/api/v1/build_lists/10.json"
+      }
+    }
+
+    BUILD_LIST_CREATE_CONTAINER_RESPONSE = {
+      "build_list" => {
+        "id"                => "build list id",
+        "container_status"  => "container status code",
+        "message"           => "success or fail message",
+        "url"               => "url to build list page"
+      }
+    }
+
+    BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE = {
+      "build_list" => {
+        "id"                => 10,
+        "container_status"  => 7000,
+        "message"           => "Container is queued for creating",
+        "url"               => "/api/v1/build_lists/10.json"
+      }
+    }
+
+    BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE2 = {
+      "build_list" => {
+        "id"                => 10,
+        "container_status"  => 4000,
+        "message"           => "Errors during container creating!",
+        "url"               => "/api/v1/build_lists/10.json"
+      }
     }
 
     BUILD_LIST_REJECT_RESPONSE = {
-      "is_rejected"=> "true or false", # May be just result name will be better
-      "url"=> "url to build list page",
-      "message"=> "success or fail message"
+      "build_list" => {
+        "id"            => "build list id",
+        "is_rejected"   => "true or false", # May be just result name will be better
+        "message"       => "success or fail message",
+        "url"           => "url to build list page"
+      }
     }
 
     BUILD_LIST_REJECT_RESPONSE_EXAMPLE = {
-      "is_rejected"=> true,
-      "url"=> "/api/v1/build_lists/10.json",
-      "message"=> "Build is rejected"
+      "build_list" => {
+        "id"            => 10,
+        "is_rejected"   => true,
+        "message"       => "Build is rejected",
+        "url"           => "/api/v1/build_lists/10.json"
+      }
     }
 
     BUILD_LIST_REJECT_RESPONSE_EXAMPLE2 = {
-      "is_rejected"=> false,
-      "url"=> "/api/v1/build_lists/10.json",
-      "message"=> "Errors during build rejecting!"
+      "build_list" => {
+        "id"            => 10,
+        "is_rejected"   => false,
+        "message"       => "Errors during build rejecting!",
+        "url"           => "/api/v1/build_lists/10.json"
+      }
     }
 
     BUILD_LIST_SEARCH_RESPONSE = {
