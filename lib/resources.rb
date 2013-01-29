@@ -391,28 +391,28 @@ module GitHub
 
     BUILD_LIST_CREATE_CONTAINER_RESPONSE = {
       "build_list" => {
-        "id"                => "build list id",
-        "container_status"  => "container status code",
-        "message"           => "success or fail message",
-        "url"               => "url to build list page"
+        "id"                    => "build list id",
+        "is_created_container"  => "true or false",
+        "message"               => "success or fail message",
+        "url"                   => "url to build list page"
       }
     }
 
     BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE = {
       "build_list" => {
-        "id"                => 10,
-        "container_status"  => 7000,
-        "message"           => "Container is queued for creating",
-        "url"               => "/api/v1/build_lists/10.json"
+        "id"                    => 10,
+        "is_created_container"  => true,
+        "message"               => "Container is queued for creating",
+        "url"                   => "/api/v1/build_lists/10.json"
       }
     }
 
     BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"                => 10,
-        "container_status"  => 4000,
-        "message"           => "Errors during container creating!",
-        "url"               => "/api/v1/build_lists/10.json"
+        "id"                    => 10,
+        "is_created_container"  => false,
+        "message"               => "Errors during container creating!",
+        "url"                   => "/api/v1/build_lists/10.json"
       }
     }
 
