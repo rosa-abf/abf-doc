@@ -16,7 +16,7 @@ title: Build lists | ABF API
 ## Get a single build list
   Block "Logs" is available only for new core.<br/>
   The value of parameter "url" in block "Packages" is empty for old core.<br/>
-  Parameter "container_status" has the same definition of codes that parameter "status". Available codes: `4000/6000/7000/8000`.
+  Parameter "container_status" has the same definition of codes that parameter <a href="#list-build-lists">"status"</a>. Available codes: `4000/6000/7000/8000`.
 
     GET /api/v1/build_lists/:id.json
 
