@@ -336,7 +336,6 @@ module GitHub
     BUILD_LIST_CANCEL_RESPONSE = {
       "build_list"=> {
         "id"      => "build list id",
-        "success" => "true or false",
         "message" => "success or fail message"
       }
     }
@@ -344,7 +343,6 @@ module GitHub
     BUILD_LIST_CANCEL_RESPONSE_EXAMPLE = {
       "build_list" => {
         "id"      => 10,
-        "success" => true,
         "message" => "Build canceled"
       }
     }
@@ -352,7 +350,6 @@ module GitHub
     BUILD_LIST_CANCEL_RESPONSE_EXAMPLE2 = {
       "build_list" => {
         "id"      => 10,
-        "success" => false,
         "message" => "Errors during build cancelation!"
       }
     }
@@ -360,7 +357,6 @@ module GitHub
     BUILD_LIST_PUBLISH_RESPONSE = {
       "build_list" => {
         "id"      => "build list id",
-        "success" => "true or false", # May be just result name will be better
         "message" => "success or fail message"
       }
     }
@@ -368,7 +364,6 @@ module GitHub
     BUILD_LIST_PUBLISH_RESPONSE_EXAMPLE = {
       "build_list" => {
         "id"      => 10,
-        "success" => true,
         "message" => "Build is queued for publishing"
       }
     }
@@ -376,7 +371,6 @@ module GitHub
     BUILD_LIST_PUBLISH_RESPONSE_EXAMPLE2 = {
       "build_list" => {
         "id"      => 10,
-        "success" => false,
         "message" => "Errors during build publishing!"
       }
     }
@@ -384,7 +378,6 @@ module GitHub
     BUILD_LIST_CREATE_CONTAINER_RESPONSE = {
       "build_list" => {
         "id"      => "build list id",
-        "success" => "true or false",
         "message" => "success or fail message"
       }
     }
@@ -392,7 +385,6 @@ module GitHub
     BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE = {
       "build_list" => {
         "id"      => 10,
-        "success" => true,
         "message" => "Container is queued for creating"
       }
     }
@@ -400,7 +392,6 @@ module GitHub
     BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE2 = {
       "build_list" => {
         "id"      => 10,
-        "success" => false,
         "message" => "Errors during container creating!"
       }
     }
@@ -408,7 +399,6 @@ module GitHub
     BUILD_LIST_REJECT_RESPONSE = {
       "build_list" => {
         "id"      => "build list id",
-        "success" => "true or false", # May be just result name will be better
         "message" => "success or fail message"
       }
     }
@@ -416,7 +406,6 @@ module GitHub
     BUILD_LIST_REJECT_RESPONSE_EXAMPLE = {
       "build_list" => {
         "id"      => 10,
-        "success" => true,
         "message" => "Build is rejected"
       }
     }
@@ -424,7 +413,6 @@ module GitHub
     BUILD_LIST_REJECT_RESPONSE_EXAMPLE2 = {
       "build_list" => {
         "id"      => 10,
-        "success" => false,
         "message" => "Errors during build rejecting!"
       }
     }
