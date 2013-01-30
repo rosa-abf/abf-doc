@@ -8,6 +8,7 @@ title: Build lists | ABF API
 * <a href="#create-build-list">Create build list</a>
 * <a href="#cancel-build-list">Cancel build list</a>
 * <a href="#publish-build-list">Publish build list</a>
+* <a href="#create-container">Create container</a>
 * <a href="#reject-publish-build-list">Reject publish build list</a>
 * <a href="#list-build-lists">List build lists</a>
 * <a href="#list-build-lists-for-a-project">List build lists for a project</a>
@@ -132,6 +133,29 @@ id
 &nbsp;
 
 <%= json(:build_list_publish_response_example2) %>
+
+## Create container
+
+By this request you can create container.
+Container can be created only for build list with status build complete (0).
+
+    PUT /api/v1/build_lists/:id/create_container.json
+
+### Parameters:
+id
+: _Integer_ identifier of current build list
+
+### Response:
+
+<%= json(:build_list_create_container_response) %>
+
+### Example:
+
+<%= json(:build_list_create_container_response_example) %>
+
+&nbsp;
+
+<%= json(:build_list_create_container_response_example2) %>
 
 ## Reject publish build list
 
