@@ -335,7 +335,7 @@ module GitHub
 
     BUILD_LIST_CANCEL_RESPONSE = {
       "build_list"=> {
-        "id"      => "build list id",
+        "id"      => "build list id (null if failed)",
         "message" => "success or fail message"
       }
     }
@@ -349,14 +349,14 @@ module GitHub
 
     BUILD_LIST_CANCEL_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"      => 10,
+        "id"      => nil,
         "message" => "Errors during build cancelation!"
       }
     }
 
     BUILD_LIST_PUBLISH_RESPONSE = {
       "build_list" => {
-        "id"      => "build list id",
+        "id"      => "build list id (null if failed)",
         "message" => "success or fail message"
       }
     }
@@ -370,14 +370,14 @@ module GitHub
 
     BUILD_LIST_PUBLISH_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"      => 10,
+        "id"      => nil,
         "message" => "Errors during build publishing!"
       }
     }
 
     BUILD_LIST_CREATE_CONTAINER_RESPONSE = {
       "build_list" => {
-        "id"      => "build list id",
+        "id"      => "build list id (null if failed)",
         "message" => "success or fail message"
       }
     }
@@ -391,14 +391,14 @@ module GitHub
 
     BUILD_LIST_CREATE_CONTAINER_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"      => 10,
+        "id"      => nil,
         "message" => "Errors during container creating!"
       }
     }
 
     BUILD_LIST_REJECT_RESPONSE = {
       "build_list" => {
-        "id"      => "build list id",
+        "id"      => "build list id (null if failed)",
         "message" => "success or fail message"
       }
     }
@@ -412,7 +412,7 @@ module GitHub
 
     BUILD_LIST_REJECT_RESPONSE_EXAMPLE2 = {
       "build_list" => {
-        "id"      => 10,
+        "id"      => nil,
         "message" => "Errors during build rejecting!"
       }
     }
