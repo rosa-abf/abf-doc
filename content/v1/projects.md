@@ -214,7 +214,7 @@ id
 ### Input:
 
 group_id:
-: _Optional_ **Integer** identifier of group which will be project owner. By default current user will be project owner.
+: _Optional_ **Integer** identifier of group which will be project owner. By default (empty request) current user will be project owner.
 
 ### Request:
 
