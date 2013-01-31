@@ -31,7 +31,7 @@ Date: Mon, 20 Feb 2012 11:15:49 GMT
 Content-Type: text/html;charset=utf-8
 Connection: keep-alive
 Status: 302 Found
-X-RateLimit-Limit: 500
+X-RateLimit-Limit: 2000
 Location: http://abf.rosalinux.ru
 X-RateLimit-Remaining: 499
 Content-Length: 0
@@ -145,7 +145,7 @@ The possible `rel` values are:
 
 ## Rate Limiting
 
-We limit requests to API v1 to 500 per hour. This is keyed off either your
+We limit requests to API v1 to 2000 per hour. This is keyed off either your
 login, your OAuth token, or request IP.  You can check the returned HTTP
 headers of any API request to see your current status:
 
@@ -154,7 +154,7 @@ $ curl -i https://abf.rosalinux.ru/whatever
 
 HTTP/1.1 200 OK
 Status: 200 OK
-X-RateLimit-Limit: 500
+X-RateLimit-Limit: 2000
 X-RateLimit-Remaining: 496
 </pre>
 
