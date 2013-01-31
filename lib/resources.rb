@@ -54,7 +54,7 @@ module GitHub
           end
         end
 
-        lines << "X-RateLimit-Limit: 500"
+        lines << "X-RateLimit-Limit: 2000"
         lines << "X-RateLimit-Remaining: 499"
 
         %(<pre class="#{css_class}"><code>#{lines * "\n"}</code></pre>\n)
