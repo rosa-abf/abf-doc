@@ -95,13 +95,13 @@ id
 ### Input:
 
 project_id
-: _Required_ **Integer** identifier of project.
+: _Optional_ **Integer** identifier of project.
 
 description:
 : _Optional_ **String** product description.
 
 name:
-: _Required_ **String** product name.
+: _Optional_ **String** product name.
 
 main_script:
 : _Optional_ **String** main script.
