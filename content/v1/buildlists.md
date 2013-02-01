@@ -72,6 +72,9 @@ include_repos
 arch_id
 : _Required_ **integer** — Identifier architecture for which need to run assembly.
 
+use_save_to_repository
+: _Optional_ **boolean** Use repository for package storege on building. Only for personal platforms. Default value: `false`.
+
 ### Request
 
 <%= json(:build_list_create_parameters) %>
