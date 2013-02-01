@@ -992,6 +992,7 @@ module GitHub
             "url" => "path to repository data page"
           }
         ],
+        "products" => [PRODUCT_PARTIAL],
         "url" => "platform path"
       }
     }
@@ -1026,6 +1027,7 @@ module GitHub
             "url" => "/api/v1/repositories/2.json"
           }
         ],
+        "products" => [PRODUCT_PARTIAL_EXAMPLE],
         "url" => "/api/v1/platforms/1.json"
       }
     }
@@ -1855,6 +1857,89 @@ module GitHub
       ]
     }
 
+    PRODUCT_PARTIAL = {
+      'id' => 'resource id',
+      'name' => 'name',
+      'description' => 'description',
+      'main_script' => 'main script',
+      'params' => 'params for running script',
+      'time_living' => 'Max time for building (in minutes)',
+    }
+
+    PRODUCT_PARTIAL_EXAMPLE = {
+      'id' => '1',
+      'name' => 'rosa2012lts_ee',
+      'description' => 'Extended Edition ROSA 2012 Marathon with non-free and restricted',
+      'main_script' => 'MATRIX',
+      'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
+      'time_living' => '60',
+    }
+
+    PRODUCT_DATA_RESPONSE = {
+      'product' => PRODUCT_PARTIAL.merge({
+        'platform' => PLATFORM_PARTIAL,
+        'project' => PROJECT_PARTIAL,
+        'created_at' => 'created at date and time',
+        'updated_at' => 'updated at date and time',
+      })
+    }
+
+    PRODUCT_DATA_RESPONSE_EXAMPLE = {
+      'product' => PRODUCT_PARTIAL_EXAMPLE.merge({
+        'platform' => PLATFORM_PARTIAL_EXAMPLE,
+        'project' => PROJECT_PARTIAL,
+        'created_at' => '1348168705',
+        'updated_at' => '1348168705',
+      })
+    }
+
+    PRODUCT_CREATE_REQUEST = {
+      "product" => {
+        'platform_id' => '15',
+        'project_id'  => '100',
+        'name' => 'rosa2012lts_ee',
+        'description' => 'Extended Edition ROSA 2012 Marathon with non-free and restricted',
+        'main_script' => 'MATRIX',
+        'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
+        'time_living' => '60',
+      }
+    }
+
+    PRODUCT_CREATE_RESPONSE = {
+      "product" => {
+        "id"      => "product id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+
+    PRODUCT_CREATE_RESPONSE_EXAMPLE = {
+      "product" => {
+        "id" => 12,
+        "message" => "Product has been created successfully"
+      }
+    }
+
+    PRODUCT_UPDATE_REQUEST = {
+      'product' =>
+        PRODUCT_CREATE_REQUEST['product'].select {|key, value| key != 'platform_id'}
+    }
+
+    PRODUCT_UPDATE_RESPONSE = PRODUCT_CREATE_RESPONSE
+
+    PRODUCT_UPDATE_RESPONSE_EXAMPLE = {
+      "product" => {
+        "id" => 12,
+        "message" => "Product has been updated successfully"
+      }
+    }
+
+    PRODUCT_DESTROY_RESPONSE = PRODUCT_UPDATE_RESPONSE
+    PRODUCT_DESTROY_RESPONSE_EXAMPLE = {
+      "product"=> {
+        "id"=> 12,
+        "message"=> "Product has been destroyed successfully"
+      }
+    }
   end
 end
 
