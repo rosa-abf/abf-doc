@@ -5,7 +5,6 @@ title: Products | ABF API
 # Products API
 
 * <a href="#get-a-single-product">Get a single product</a>
-* <a href="#products-of-a-single-platform">List products of a single platform</a>
 * <a href="#create-product">Create product</a>
 * <a href="#update-a-single-product">Update a single product</a>
 * <a href="#destroy-product">Destroy product</a>
@@ -26,23 +25,6 @@ id
 ### Example:
 
 <%= json(:product_data_response_example) %>
-
-## Products of a single platform
-
-    GET /api/v1/platform/:id/products.json
-
-### Parameters:
-
-id
-: _Required_ **Integer** identifier of current platform.
-
-### Response:
-
-<%= json(:platform_products_response) %>
-
-### Example:
-
-<%= json(:platform_products_response_example) %>
 
 ## Create product
 

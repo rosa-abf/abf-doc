@@ -992,6 +992,7 @@ module GitHub
             "url" => "path to repository data page"
           }
         ],
+        "products" => [PRODUCT_PARTIAL],
         "url" => "platform path"
       }
     }
@@ -1026,6 +1027,7 @@ module GitHub
             "url" => "/api/v1/repositories/2.json"
           }
         ],
+        "products" => [PRODUCT_PARTIAL_EXAMPLE],
         "url" => "/api/v1/platforms/1.json"
       }
     }
@@ -1889,18 +1891,6 @@ module GitHub
         'created_at' => '1348168705',
         'updated_at' => '1348168705',
       })
-    }
-
-    PLATFORM_PRODUCTS_RESPONSE = {
-      "platform" => PLATFORM_PARTIAL,
-      "products" => [PRODUCT_PARTIAL],
-      "url" => "url to products data"
-    }
-
-    PLATFORM_PRODUCTS_RESPONSE_EXAMPLE = {
-      "repository" => PLATFORM_PARTIAL_EXAMPLE,
-        "projects" => [PRODUCT_PARTIAL_EXAMPLE],
-      "url" => "/api/v1/platform/1/products.json"
     }
 
     PRODUCT_CREATE_REQUEST = {
