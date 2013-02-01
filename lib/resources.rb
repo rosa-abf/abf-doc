@@ -1904,7 +1904,15 @@ module GitHub
     }
 
     PRODUCT_CREATE_REQUEST = {
-      "product" => PRODUCT_PARTIAL_EXAMPLE
+      "product" => {
+        'platform_id' => '15',
+        'project_id'  => '100',
+        'name' => 'rosa2012lts_ee',
+        'description' => 'Extended Edition ROSA 2012 Marathon with non-free and restricted',
+        'main_script' => 'MATRIX',
+        'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
+        'time_living' => '60',
+      }
     }
 
     PRODUCT_CREATE_RESPONSE = {
@@ -1921,7 +1929,11 @@ module GitHub
       }
     }
 
-    PRODUCT_UPDATE_REQUEST = PRODUCT_CREATE_REQUEST
+    PRODUCT_UPDATE_REQUEST = {
+      'product' =>
+        PRODUCT_CREATE_REQUEST['product'].select {|key, value| key != 'platform_id'}
+    }
+
     PRODUCT_UPDATE_RESPONSE = PRODUCT_CREATE_RESPONSE
 
     PRODUCT_UPDATE_RESPONSE_EXAMPLE = {
