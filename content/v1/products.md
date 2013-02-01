@@ -110,7 +110,7 @@ params:
 : _Optional_ **String** params for running script.
 
 time_living:
-: _Optional_ **Integer** Maximum time for building (in minutes).
+: _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
 
 ### Request:
 
