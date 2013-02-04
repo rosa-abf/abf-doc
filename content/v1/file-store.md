@@ -64,6 +64,8 @@ File content
 
 ## Destroy file
 
+Users are only able to delete their own files.
+
 <pre>DELETE <strong>http://file-store.rosalinux.ru</strong>/api/v1/file_stores/:id.json</pre>
 
 ### Parameters:
