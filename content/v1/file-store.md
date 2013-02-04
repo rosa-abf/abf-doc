@@ -7,6 +7,7 @@ title: File Store | ABF API
 * <a href="#create-file">Create a File </a>
 * <a href="#find-a-file">Find a File</a>
 * <a href="#get-a-file">Get a File</a>
+* <a href="#destroy-file">Destroy File</a>
 
 ## Create file
 
@@ -17,7 +18,7 @@ title: File Store | ABF API
 file_store[file]:
 : _Required_ file.
 
-### Request:
+### Request example:
 
 <pre class="terminal">
 $ curl --user myuser@gmail.com:mypass -POST -F "file_store[file]=@/path/to/file/archive.zip" http://file-store.rosalinux.ru/api/v1/upload
@@ -61,3 +62,23 @@ hash
 
 File content
 
+## Destroy file
+
+Users are only able to delete their own files.
+
+<pre>DELETE <strong>http://file-store.rosalinux.ru</strong>/api/v1/file_stores/:hash.json</pre>
+
+### Parameters:
+
+hash
+: _Required_ **String** SHA1 of the file.
+
+### Request example:
+
+<pre class="terminal">
+$ curl --user myuser@gmail.com:mypass -X DELETE http://file-store.rosalinux.ru/api/v1/file_stores/3a93e5553490e39b4cd50269d51ad8438b7e20b8.json
+</pre>
+
+## Response
+
+  Status: 204 No Content

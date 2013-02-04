@@ -971,6 +971,24 @@ module GitHub
         }
     }
 
+    PRODUCT_PARTIAL = {
+      'id' => 'resource id',
+      'name' => 'name',
+      'description' => 'description',
+      'main_script' => 'main script',
+      'params' => 'params for running script',
+      'time_living' => 'Max time for building (in minutes)',
+    }
+
+    PRODUCT_PARTIAL_EXAMPLE = {
+      'id' => '1',
+      'name' => 'rosa2012lts_ee',
+      'description' => 'Extended Edition ROSA 2012 Marathon with non-free and restricted',
+      'main_script' => 'MATRIX',
+      'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
+      'time_living' => '60',
+    }
+
     PLATFORM_DATA_RESPONSE = {
       "platform" => {
         "id" => "platform id",
@@ -1859,24 +1877,6 @@ module GitHub
           'maintainer' => USER_PARTIAL_EXAMPLE.merge('email' => 'ivan.aivazovsky@email.ru ')
         }
       ]
-    }
-
-    PRODUCT_PARTIAL = {
-      'id' => 'resource id',
-      'name' => 'name',
-      'description' => 'description',
-      'main_script' => 'main script',
-      'params' => 'params for running script',
-      'time_living' => 'Max time for building (in minutes)',
-    }
-
-    PRODUCT_PARTIAL_EXAMPLE = {
-      'id' => '1',
-      'name' => 'rosa2012lts_ee',
-      'description' => 'Extended Edition ROSA 2012 Marathon with non-free and restricted',
-      'main_script' => 'MATRIX',
-      'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
-      'time_living' => '60',
     }
 
     PRODUCT_DATA_RESPONSE = {
