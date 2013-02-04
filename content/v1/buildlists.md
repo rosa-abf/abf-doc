@@ -117,7 +117,9 @@ id
 ## Publish build list
 
 By this request you can publish build list.
-Only build list with status build complete (0) or publishing error (8000) can be published.
+Only build list with status build complete (0) or publishing error (8000) can be published.<br/>
+Admin of platform/repository has access to publish build list again with status published (6000).<br/>
+Be careful: secondary publication will be able to break relationships in the repository!
 
     PUT /api/v1/build_lists/:id/publish.json
 
