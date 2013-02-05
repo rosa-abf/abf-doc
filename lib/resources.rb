@@ -989,6 +989,32 @@ module GitHub
       'time_living' => '60',
     }
 
+    PRODUCT_BUILD_LIST_PARTIAL = {
+      'id' => 'resource id',
+      'project' => PROJECT_PARTIAL,
+      'arch' => {
+        'id' => 'build architecture id',
+        'name' => 'build architecture name'
+      },
+      'status' => 'status code',
+      'main_script' => 'main script',
+      'params' => 'params for running script',
+      'time_living' => 'Max time for building (in minutes)',
+    }
+
+    PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE = {
+      'id' => '1',
+      'project' => PROJECT_PARTIAL_EXAMPLE,
+      'arch' => {
+        'id' => '1',
+        'name' => 'x84_64'
+      },
+      'status' => '0',
+      'main_script' => 'MATRIX',
+      'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
+      'time_living' => '60',
+    }
+
     PLATFORM_DATA_RESPONSE = {
       "platform" => {
         "id" => "platform id",
@@ -1883,6 +1909,7 @@ module GitHub
       'product' => PRODUCT_PARTIAL.merge({
         'platform' => PLATFORM_PARTIAL,
         'project' => PROJECT_PARTIAL,
+        'product_build_lists' => [PRODUCT_BUILD_LIST_PARTIAL],
         'created_at' => 'created at date and time',
         'updated_at' => 'updated at date and time',
       })
@@ -1892,6 +1919,7 @@ module GitHub
       'product' => PRODUCT_PARTIAL_EXAMPLE.merge({
         'platform' => PLATFORM_PARTIAL_EXAMPLE,
         'project' => PROJECT_PARTIAL_EXAMPLE,
+        'product_build_lists' => [PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE],
         'created_at' => '1348168705',
         'updated_at' => '1348168705',
       })
@@ -1944,6 +1972,62 @@ module GitHub
         "message"=> "Product has been destroyed successfully"
       }
     }
+
+    PRODUCT_BUILD_LIST_DATA_RESPONSE = {
+      'product_build_list' => PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE.merge({
+        'created_at' => 'created at date and time',
+        'updated_at' => 'updated at date and time',
+      })
+    }
+
+    PRODUCT_BUILD_LIST_DATA_RESPONSE_EXAMPLE = {
+      'product_build_list' => PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE.merge({
+        'created_at' => '1348168705',
+        'updated_at' => '1348168705',
+      })
+    }
+
+    PRODUCT_BUILD_LIST_CREATE_REQUEST = {
+      "product_build_list" => {
+        'product_id' => '1',
+        'project_id'  => '100',
+        'arch_id' => '1',
+        'main_script' => 'MATRIX',
+        'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
+        'time_living' => '60',
+      }
+    }
+
+    PRODUCT_BUILD_LIST_CREATE_RESPONSE = {
+      "product_build_list" => {
+        "id"      => "product build list id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+
+    PRODUCT_BUILD_LIST_CREATE_RESPONSE_EXAMPLE = {
+      "product_build_list" => {
+        "id" => 12,
+        "message" => "Product build list has been created successfully"
+      }
+    }
+
+    PRODUCT_BUILD_LIST_DESTROY_RESPONSE = PRODUCT_BUILD_LIST_CREATE_RESPONSE
+    PRODUCT_BUILD_LIST_DESTROY_RESPONSE_EXAMPLE = {
+      "product_build_list"=> {
+        "id"=> 12,
+        "message"=> "Product build list has been destroyed successfully"
+      }
+    }
+
+    PRODUCT_BUILD_LIST_CANCEL_RESPONSE = PRODUCT_BUILD_LIST_CREATE_RESPONSE
+    PRODUCT_BUILD_LIST_CANCEL_RESPONSE_EXAMPLE = {
+      "product_build_list"=> {
+        "id"=> 12,
+        "message"=> "Product build list has been canceled successfully"
+      }
+    }
+
   end
 end
 
