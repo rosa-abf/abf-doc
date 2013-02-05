@@ -1891,7 +1891,7 @@ module GitHub
     PRODUCT_DATA_RESPONSE_EXAMPLE = {
       'product' => PRODUCT_PARTIAL_EXAMPLE.merge({
         'platform' => PLATFORM_PARTIAL_EXAMPLE,
-        'project' => PROJECT_PARTIAL,
+        'project' => PROJECT_PARTIAL_EXAMPLE,
         'created_at' => '1348168705',
         'updated_at' => '1348168705',
       })
