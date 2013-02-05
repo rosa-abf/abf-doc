@@ -2,8 +2,6 @@
 title: Product Build Lists | ABF API
 ---
 
-просмотр списка сборочных листов продукта;
-
 # Product Build Lists API
 
 * <a href="#get-a-single-product-build-list">Get a single product build list</a>
