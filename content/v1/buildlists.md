@@ -204,7 +204,7 @@ filter[status]
 :   * `0`    — build complete;
     * `1`    — platform not found;
     * `2`    — platform pending;
-    * `3`    - project not found;
+    * `3`    — project not found;
     * `4`    — project version not found;
     * `666`  — build error;
     * `2000` — build pending;
