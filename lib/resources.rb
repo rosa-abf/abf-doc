@@ -1964,6 +1964,7 @@ module GitHub
     }
 
     PRODUCT_BUILD_LIST_PARTIAL = PRODUCT_BUILD_LIST_IND.merge({
+      'product' => PRODUCT_PARTIAL,
       'project' => PROJECT_PARTIAL,
       'arch' => {
         'id' => 'build architecture id',
@@ -1980,6 +1981,7 @@ module GitHub
     })
 
     PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE = PRODUCT_BUILD_LIST_IND_EXAMPLE.merge({
+      'product' => PRODUCT_PARTIAL_EXAMPLE,
       'project' => PROJECT_PARTIAL_EXAMPLE,
       'arch' => {
         'id' => '1',
