@@ -1909,7 +1909,6 @@ module GitHub
       'product' => PRODUCT_PARTIAL.merge({
         'platform' => PLATFORM_PARTIAL,
         'project' => PROJECT_PARTIAL,
-        'product_build_lists' => [PRODUCT_BUILD_LIST_PARTIAL],
         'created_at' => 'created at date and time',
         'updated_at' => 'updated at date and time',
       })
@@ -1919,7 +1918,6 @@ module GitHub
       'product' => PRODUCT_PARTIAL_EXAMPLE.merge({
         'platform' => PLATFORM_PARTIAL_EXAMPLE,
         'project' => PROJECT_PARTIAL_EXAMPLE,
-        'product_build_lists' => [PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE],
         'created_at' => '1348168705',
         'updated_at' => '1348168705',
       })
