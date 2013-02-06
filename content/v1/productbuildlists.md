@@ -118,6 +118,9 @@ id
 
 ## Cancel product build list
 
+By this request you can cancel product build list.
+Only product build list with status build pending (2) or build started (3) can be canceled.
+
     PUT /api/v1/product_build_lists/:id/cancel.json
 
 ### Parameters:
