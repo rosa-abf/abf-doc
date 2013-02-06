@@ -1988,7 +1988,7 @@ module GitHub
     }
 
     PRODUCT_BUILD_LIST_CREATE_REQUEST = {
-      "product_build_list" => {
+      'product_build_list' => {
         'product_id' => '1',
         'project_id'  => '100',
         'arch_id' => '1',
@@ -1999,32 +1999,32 @@ module GitHub
     }
 
     PRODUCT_BUILD_LIST_CREATE_RESPONSE = {
-      "product_build_list" => {
-        "id"      => "product build list id (null if failed)",
-        "message" => "success or fail message"
+      'product_build_list' => {
+        'id'      => 'product build list id (null if failed)',
+        'message' => 'success or fail message'
       }
     }
 
     PRODUCT_BUILD_LIST_CREATE_RESPONSE_EXAMPLE = {
-      "product_build_list" => {
-        "id" => 12,
-        "message" => "Product build list has been created successfully"
+      'product_build_list' => {
+        'id' => 12,
+        'message' => 'Product build list has been created successfully'
       }
     }
 
     PRODUCT_BUILD_LIST_DESTROY_RESPONSE = PRODUCT_BUILD_LIST_CREATE_RESPONSE
     PRODUCT_BUILD_LIST_DESTROY_RESPONSE_EXAMPLE = {
-      "product_build_list"=> {
-        "id"=> 12,
-        "message"=> "Product build list has been destroyed successfully"
+      'product_build_list'=> {
+        'id'=> 12,
+        'message'=> 'Product build list has been destroyed successfully'
       }
     }
 
     PRODUCT_BUILD_LIST_CANCEL_RESPONSE = PRODUCT_BUILD_LIST_CREATE_RESPONSE
     PRODUCT_BUILD_LIST_CANCEL_RESPONSE_EXAMPLE = {
-      "product_build_list"=> {
-        "id"=> 12,
-        "message"=> "Product build list has been canceled successfully"
+      'product_build_list'=> {
+        'id'=> 12,
+        'message'=> 'Product build list has been canceled successfully'
       }
     }
 
