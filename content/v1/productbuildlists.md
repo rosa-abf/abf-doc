@@ -5,6 +5,8 @@ title: Product Build Lists | ABF API
 # Product Build Lists API
 
 * <a href="#get-a-single-product-build-list">Get a single product build list</a>
+* <a href="#list-product-build-lists">List product build lists</a>
+* <a href="#list-product-build-lists-for-a-product">List product build lists for a product</a>
 * <a href="#create-product-build-list">Create product build list</a>
 * <a href="#destroy-product-build-list">Destroy product build list</a>
 * <a href="#cancel-product-build-list">Cancel product build list</a>
@@ -25,6 +27,38 @@ id
 ### Example:
 
 <%= json(:product_build_list_data_response_example) %>
+
+## List product build lists
+
+    GET /api/v1/product_build_lists.json
+
+### Response:
+
+<%= json(:product_build_list_response) %>
+
+### Example of request url:
+
+> /api/v1/product_build_lists.json
+
+### Examples of responses:
+
+<%= json(:product_build_list_response_example) %>
+
+## List product build lists for a product
+
+    GET /api/v1/projects/:product_id/product_build_lists.json
+
+### Response:
+
+<%= json(:product_build_list_response) %>
+
+### Example of request url:
+
+> /api/v1/products/42/product_build_lists.json
+
+### Examples of responses:
+
+<%= json(:product_build_list_response_example) %>
 
 ## Create product build list
 

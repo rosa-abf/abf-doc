@@ -989,32 +989,6 @@ module GitHub
       'time_living' => '60',
     }
 
-    PRODUCT_BUILD_LIST_PARTIAL = {
-      'id' => 'resource id',
-      'project' => PROJECT_PARTIAL,
-      'arch' => {
-        'id' => 'build architecture id',
-        'name' => 'build architecture name'
-      },
-      'status' => 'status code',
-      'main_script' => 'main script',
-      'params' => 'params for running script',
-      'time_living' => 'Max time for building (in minutes)',
-    }
-
-    PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE = {
-      'id' => '1',
-      'project' => PROJECT_PARTIAL_EXAMPLE,
-      'arch' => {
-        'id' => '1',
-        'name' => 'x84_64'
-      },
-      'status' => '0',
-      'main_script' => 'MATRIX',
-      'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
-      'time_living' => '60',
-    }
-
     PLATFORM_DATA_RESPONSE = {
       "platform" => {
         "id" => "platform id",
@@ -1971,6 +1945,34 @@ module GitHub
       }
     }
 
+    PRODUCT_BUILD_LIST_PARTIAL = {
+      'id' => 'resource id',
+      'project' => PROJECT_PARTIAL,
+      'arch' => {
+        'id' => 'build architecture id',
+        'name' => 'build architecture name'
+      },
+      'status' => 'status code',
+      'main_script' => 'main script',
+      'params' => 'params for running script',
+      'time_living' => 'Max time for building (in minutes)',
+      'url' => 'product build lists page',
+    }
+
+    PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE = {
+      'id' => '1',
+      'project' => PROJECT_PARTIAL_EXAMPLE,
+      'arch' => {
+        'id' => '1',
+        'name' => 'x84_64'
+      },
+      'status' => '0',
+      'main_script' => 'MATRIX',
+      'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
+      'time_living' => '60',
+      'url' => '/api/v1/product_build_lists/26.json',
+    }
+
     PRODUCT_BUILD_LIST_DATA_RESPONSE = {
       'product_build_list' => PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE.merge({
         'created_at' => 'created at date and time',
@@ -2024,6 +2026,14 @@ module GitHub
         "id"=> 12,
         "message"=> "Product build list has been canceled successfully"
       }
+    }
+
+    PRODUCT_BUILD_LIST_RESPONSE = {
+      'product_build_lists' => [PRODUCT_BUILD_LIST_PARTIAL]
+    }
+
+    PRODUCT_BUILD_LIST_RESPONSE_EXAMPLE = {
+      'product_build_lists' => [PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE]
     }
 
   end
