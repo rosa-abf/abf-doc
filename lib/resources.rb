@@ -2054,11 +2054,13 @@ module GitHub
     }
 
     PRODUCT_BUILD_LIST_RESPONSE = {
-      'product_build_lists' => [PRODUCT_BUILD_LIST_IND]
+      'product_build_lists' => [PRODUCT_BUILD_LIST_IND],
+      'url' => 'current url for product build lists page',
     }
 
     PRODUCT_BUILD_LIST_RESPONSE_EXAMPLE = {
-      'product_build_lists' => [PRODUCT_BUILD_LIST_IND_EXAMPLE]
+      'product_build_lists' => [PRODUCT_BUILD_LIST_IND_EXAMPLE],
+      'url' => '/api/v1/product_build_lists.json',
     }
 
   end
