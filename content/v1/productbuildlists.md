@@ -13,6 +13,14 @@ title: Product Build Lists | ABF API
 
 ## Get a single product build list
 
+Available statuses for product build list:
+:   * `0`    — build complete;
+    * `1`    — build failed;
+    * `2`    — build pending;
+    * `3`    — build started;
+    * `4`    — build canceled;
+    * `5`    — build canceling;
+
     GET /api/v1/product_build_lists/:id.json
 
 ### Parameters:
@@ -30,6 +38,8 @@ id
 
 ## List product build lists
 
+Look at <a href="#get-a-single-product-build-list">Product build list status</a>.
+
     GET /api/v1/product_build_lists.json
 
 ### Response:
@@ -45,6 +55,8 @@ id
 <%= json(:product_build_list_response_example) %>
 
 ## List product build lists for a product
+
+Look at <a href="#get-a-single-product-build-list">Product build list status</a>.
 
     GET /api/v1/projects/:product_id/product_build_lists.json
 
