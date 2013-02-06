@@ -72,8 +72,8 @@ product_id
 project_id
 : _Optional_ **Integer** identifier of project.
 
-project_version:
-: _Required_ **String** branch or tag name.
+commit_hash:
+: _Required_ **String** SHA of project commit for which need to run assembly.
 
 arch_id:
 : _Required_ **integer** identifier architecture for which need to run assembly.

@@ -1945,36 +1945,60 @@ module GitHub
       }
     }
 
-    PRODUCT_BUILD_LIST_PARTIAL = {
+    PRODUCT_BUILD_LIST_IND = {
       'id' => 'resource id',
+      'status' => 'status code',
+      'notified_at' => 'updated at date and time',
+      'time_living' => 'Max time for building (in minutes)',
+      'url' => 'product build list page',
+    }
+
+    PRODUCT_BUILD_LIST_IND_EXAMPLE = {
+      'id' => '1',
+      'status' => '0',
+      'notified_at' => '1348168705',
+      'time_living' => '60',
+      'url' => '/api/v1/product_build_lists/26.json',
+    }
+
+    PRODUCT_BUILD_LIST_PARTIAL = PRODUCT_BUILD_LIST_IND.merge({
       'project' => PROJECT_PARTIAL,
       'arch' => {
         'id' => 'build architecture id',
         'name' => 'build architecture name'
       },
-      'status' => 'status code',
-      'main_script' => 'main script',
+     'main_script' => 'main script',
       'params' => 'params for running script',
-      'time_living' => 'Max time for building (in minutes)',
-      'url' => 'product build lists page',
-    }
+      'commit_hash' => 'commit hash to build',
+      'results'  => [{
+          'file_name' => 'file name',
+          'size'      => 'file size',
+          'url'       => 'file url'
+      }],
+    })
 
-    PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE = {
-      'id' => '1',
+    PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE = PRODUCT_BUILD_LIST_IND_EXAMPLE.merge({
       'project' => PROJECT_PARTIAL_EXAMPLE,
       'arch' => {
         'id' => '1',
         'name' => 'x84_64'
       },
-      'status' => '0',
-      'main_script' => 'MATRIX',
-      'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
-      'time_living' => '60',
-      'url' => '/api/v1/product_build_lists/26.json',
-    }
+     'main_script' => 'MATRIX',
+     'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
+     'commit_hash' => '751b0cad9cd1467e735d8c3334ea3cf988995fab',
+      'results'  => [{
+          'file_name' => 'abfworker::rpm-worker-859694.log',
+          'size'      => '214310',
+          'url'       => 'http://file-store.rosalinux.ru/api/v1/file_stores/3a93e5553490e39b4cd50269d51ad8438b7e20b8'},
+          {
+          'file_name' => 'archives.tar.gz',
+          'size'      => '2014310',
+          'url'       => 'http://file-store.rosalinux.ru/api/v1/file_stores/c28a1e69fe8543afd6977480c225c5243fdce2d5'}
+      ],
+    })
 
     PRODUCT_BUILD_LIST_DATA_RESPONSE = {
-      'product_build_list' => PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE.merge({
+      'product_build_list' => PRODUCT_BUILD_LIST_PARTIAL.merge({
         'created_at' => 'created at date and time',
         'updated_at' => 'updated at date and time',
       })
@@ -1988,9 +2012,10 @@ module GitHub
     }
 
     PRODUCT_BUILD_LIST_CREATE_REQUEST = {
-      'product_build_list' => {
+      "product_build_list" => {
         'product_id' => '1',
         'project_id'  => '100',
+        'commit_hash' => '751b0cad9cd1467e735d8c3334ea3cf988995fab',
         'arch_id' => '1',
         'main_script' => 'MATRIX',
         'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
@@ -1999,41 +2024,41 @@ module GitHub
     }
 
     PRODUCT_BUILD_LIST_CREATE_RESPONSE = {
-      'product_build_list' => {
-        'id'      => 'product build list id (null if failed)',
-        'message' => 'success or fail message'
+      "product_build_list" => {
+        "id"      => "product build list id (null if failed)",
+        "message" => "success or fail message"
       }
     }
 
     PRODUCT_BUILD_LIST_CREATE_RESPONSE_EXAMPLE = {
-      'product_build_list' => {
-        'id' => 12,
-        'message' => 'Product build list has been created successfully'
+      "product_build_list" => {
+        "id" => 12,
+        "message" => "Product build list has been created successfully"
       }
     }
 
     PRODUCT_BUILD_LIST_DESTROY_RESPONSE = PRODUCT_BUILD_LIST_CREATE_RESPONSE
     PRODUCT_BUILD_LIST_DESTROY_RESPONSE_EXAMPLE = {
-      'product_build_list'=> {
-        'id'=> 12,
-        'message'=> 'Product build list has been destroyed successfully'
+      "product_build_list"=> {
+        "id"=> 12,
+        "message"=> "Product build list has been destroyed successfully"
       }
     }
 
     PRODUCT_BUILD_LIST_CANCEL_RESPONSE = PRODUCT_BUILD_LIST_CREATE_RESPONSE
     PRODUCT_BUILD_LIST_CANCEL_RESPONSE_EXAMPLE = {
-      'product_build_list'=> {
-        'id'=> 12,
-        'message'=> 'Product build list has been canceled successfully'
+      "product_build_list"=> {
+        "id"=> 12,
+        "message"=> "Product build list has been canceled successfully"
       }
     }
 
     PRODUCT_BUILD_LIST_RESPONSE = {
-      'product_build_lists' => [PRODUCT_BUILD_LIST_PARTIAL]
+      'product_build_lists' => [PRODUCT_BUILD_LIST_IND]
     }
 
     PRODUCT_BUILD_LIST_RESPONSE_EXAMPLE = {
-      'product_build_lists' => [PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE]
+      'product_build_lists' => [PRODUCT_BUILD_LIST_IND_EXAMPLE]
     }
 
   end
