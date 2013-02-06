@@ -66,7 +66,7 @@ per_page
 
 Look at <a href="#get-a-single-product-build-list">Product build list status</a>.
 
-    GET /api/v1/projects/:product_id/product_build_lists.json
+    GET /api/v1/products/:product_id/product_build_lists.json
 
 ### Parameters:
 
