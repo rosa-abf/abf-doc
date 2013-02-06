@@ -42,6 +42,14 @@ Look at <a href="#get-a-single-product-build-list">Product build list status</a>
 
     GET /api/v1/product_build_lists.json
 
+### Parameters:
+
+page
+: _Optional_ **Integer** - page number of product build lists results list.
+
+per_page
+: _Optional_ **Integer** - amount of product build list per one page. Default 20, maximum 100.
+
 ### Response:
 
 <%= json(:product_build_list_response) %>
@@ -59,6 +67,14 @@ Look at <a href="#get-a-single-product-build-list">Product build list status</a>
 Look at <a href="#get-a-single-product-build-list">Product build list status</a>.
 
     GET /api/v1/projects/:product_id/product_build_lists.json
+
+### Parameters:
+
+page
+: _Optional_ **Integer** - page number of product build lists results list.
+
+per_page
+: _Optional_ **Integer** - amount of product build list per one page. Default 20, maximum 100.
 
 ### Response:
 
