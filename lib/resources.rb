@@ -978,6 +978,7 @@ module GitHub
       'main_script' => 'main script',
       'params' => 'params for running script',
       'time_living' => 'Max time for building (in minutes)',
+      'url' => 'url to product page',
     }
 
     PRODUCT_PARTIAL_EXAMPLE = {
@@ -987,6 +988,7 @@ module GitHub
       'main_script' => 'MATRIX',
       'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
       'time_living' => '60',
+      'url' => '/api/v1/products/10.json',
     }
 
     PLATFORM_DATA_RESPONSE = {
