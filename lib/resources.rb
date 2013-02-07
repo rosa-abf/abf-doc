@@ -490,7 +490,7 @@ module GitHub
       "has_wiki" => "true if wiki enabled",
       "default_branch" => "git branch used by default",
       "is_package" => "true if project is package",
-      "publish_i686_into_x86_64" => "true if i686 packages will be published into x86_64 repository",
+      "publish_i686_into_x86_64" => "true if i686 packages will be also published into x86_64 repository",
       "average_build_time" => "average build time for this project",
       "created_at" => "created at date and time",
       "updated_at" => "updated at date and time",
