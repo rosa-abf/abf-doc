@@ -117,7 +117,7 @@ id
 ## Publish build list
 
 By this request you can publish build list.
-Only build list with status build complete (0) or publishing error (8000) can be published.<br/>
+Only build list with status build complete (0), publishing error (8000) or tests failed (10000) can be published.<br/>
 Admin of platform/repository has access to publish build list again with status published (6000).<br/>
 Be careful: secondary publication will be able to break relationships in the repository!
 
@@ -142,7 +142,7 @@ id
 ## Create container
 
 By this request you can create container.
-Container can be created only for build list with status build complete (0).
+Container can be created only for build list with statuses build complete (0) and tests failed (10000).
 
     PUT /api/v1/build_lists/:id/create_container.json
 
@@ -201,20 +201,21 @@ per_page
 
 filter[status]
 : _Optional_ **integer** - code of the build status
-:   * `0`    — build complete;
-    * `1`    — platform not found;
-    * `2`    — platform pending;
-    * `3`    — project not found;
-    * `4`    — project version not found;
-    * `666`  — build error;
-    * `2000` — build pending;
-    * `3000` — build started;
-    * `4000` — waiting for response;
-    * `5000` — build canceled;
-    * `6000` — build has been published;
-    * `7000` — build is being published;
-    * `8000` — publishing error;
-    * `9000` — publishing rejected.
+:   * `0`     — build complete;
+    * `1`     — platform not found;
+    * `2`     — platform pending;
+    * `3`     — project not found;
+    * `4`     — project version not found;
+    * `666`   — build error;
+    * `2000`  — build pending;
+    * `3000`  — build started;
+    * `4000`  — waiting for response;
+    * `5000`  — build canceled;
+    * `6000`  — build has been published;
+    * `7000`  — build is being published;
+    * `8000`  — publishing error;
+    * `9000`  — publishing rejected.
+    * `10000` — tests failed.
 
 filter[arch_id]
 : _Optional_ **integer** - identifier of the architecture.
