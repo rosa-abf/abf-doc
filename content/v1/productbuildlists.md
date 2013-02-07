@@ -129,6 +129,9 @@ time_living:
 
 ## Destroy product build list
 
+By this request you can delete product build list.
+Only product build list with status build completed (0), build failed (1) or build canceled (4) can be deleted.
+
     DELETE /api/v1/product_build_lists/:id.json
 
 ### Parameters:
