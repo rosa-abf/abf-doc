@@ -121,6 +121,9 @@ has_wiki:
 maintainer_id:
 : _Optional_ **Integer** identifier of project maintainer.
 
+publish_i686_into_x86_64:
+: _Optional_ **Boolean** enable/disable publishing i686 packages into x86_64 repository (only for rhel).
+
 ### Request:
 
 <%= json(:project_update_request) %>
@@ -168,6 +171,9 @@ has_wiki:
 
 maintainer_id:
 : _Optional_ **Integer** identifier of project maintainer. Default value: current user.
+
+publish_i686_into_x86_64:
+: _Optional_ **Boolean** enable/disable publishing i686 packages into x86_64 repository (only for rhel).
 
 ### Request:
 

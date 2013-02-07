@@ -490,6 +490,7 @@ module GitHub
       "has_wiki" => "true if wiki enabled",
       "default_branch" => "git branch used by default",
       "is_package" => "true if project is package",
+      "publish_i686_into_x86_64" => "true if i686 packages will be published into x86_64 repository",
       "average_build_time" => "average build time for this project",
       "created_at" => "created at date and time",
       "updated_at" => "updated at date and time",
@@ -509,6 +510,7 @@ module GitHub
       "has_wiki" => false,
       "default_branch" => "master",
       "is_package" => true,
+      "publish_i686_into_x86_64" => false,
       "average_build_time" => 0,
       "created_at" => 1348168705,
       "updated_at" => 1348168905,
@@ -661,7 +663,8 @@ module GitHub
       "maintainer_id" => 15,
       "visibility" => "open",
       "is_package" => true,
-      "default_branch" => "master"
+      "default_branch" => "master",
+      "publish_i686_into_x86_64" => false
     }
 
     PROJECT_UPDATE_REQUEST = {
