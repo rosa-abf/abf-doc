@@ -165,7 +165,7 @@ id
 ## Reject publish build list
 
 By this request you can reject publish build list.
-Only build list with status build complete (0) or publishing error (8000) and saved to repository with turn on QA check can be rejected.
+Only build list with status build complete (0), publishing error (8000) or tests failed (11000) and saved to repository with turn on QA check can be rejected.
 
     PUT /api/v1/build_lists/:id/reject_publish.json
 
