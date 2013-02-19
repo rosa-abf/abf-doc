@@ -76,7 +76,7 @@ use_save_to_repository
 : _Optional_ **boolean** Use repository for package storage on building. Only for personal platforms. Default value: `true`.
 
 auto_create_container
-: _Optional_ **boolean** — `true` to enable automatic creating container of build list if the build succeeds, `false` allow manually creating. Default value: `nil`.
+: _Optional_ **boolean** — `true` to enable automatic creating container of build list if the build succeeds, `false` allow manually creating. Default value: `false`.
 
 extra_repos
 : _Optional_ **array** of **integers** — Repositories to connect for building this build list. Available only if `save_to_repository` - personal repository.
