@@ -151,7 +151,7 @@ id
 ## Create container
 
 By this request you can create container.
-Container can be created only for build list with statuses build complete (0) and tests failed (11000).
+Container can be created only for build list with statuses build complete (0), build published (6000), build publish (7000), publishing error (8000), publishing rejected (9000), tests failed (11000).
 
     PUT /api/v1/build_lists/:id/create_container.json
 
