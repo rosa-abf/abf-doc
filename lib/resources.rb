@@ -145,9 +145,8 @@ module GitHub
       "build_list" =>
         {
           "id" => 10,
-          "name" => "evil_tools",
           "status" => 6000,
-          "container_path" => "/rosa2012/container/10",
+          "container_path" => "/downloads/rosa2012/container/10",
           "container_status" => 6000,
           "new_core" => true,
           "package_version" => "rosa2012.1-0.1.309-1",
@@ -170,9 +169,9 @@ module GitHub
           },
           "created_at" => 1349357795,
           "updated_at" => 1349358084,
-          "is_circle" => false,
           "update_type" => "bugfix",
           "auto_publish" => true,
+          "auto_create_container" => true,
           "commit_hash" => "4edafbe69632173a1800c4d7582b60b46bc1fb55",
           "last_published_commit_hash" => "59f606578d21683bbbf4152bcdc2ebf1dd1e2e37",
           "priority" => 0,
@@ -205,6 +204,26 @@ module GitHub
               }
             }
           ],
+          "extra_repos" => [
+            {
+              "id" => 17,
+              "name" => "main",
+              "url" => "/api/v1/repositories/17.json",
+              "platform" => {
+                "id" => 17,
+                "name" => "avokhmin_personal",
+                "url" => "/api/v1/platforms/17.json"
+              }
+            }
+          ],
+          "extra_containers" => [
+            {
+              "id"=> 12345,
+              "status"=> 6000,
+              "container_path" => "/downloads/warpc_personal/container/12345",
+              "url" => "/api/v1/build_lists/12345.json"
+            }
+          ],
           'packages' => [PACKAGE_PARTIAL_EXAMPLE],
           'logs'  => [{
             'file_name' => 'abfworker::rpm-worker-859694.log',
@@ -219,7 +238,6 @@ module GitHub
       "build_list" =>
         {
           "id" => "resource id",
-          "name" => "name",
           "status" => "status code",
           "container_status" => "container status code",
           "container_path" => "container path",
@@ -242,9 +260,9 @@ module GitHub
             "id" => "build architecture id",
             "name" => "build architecture name"
           },
-          "is_circle" => "recurrent build",
           "update_type" => "update type",
           "auto_publish" => "automated publising",
+          "auto_create_container" => "automated creation of container",
           "commit_hash" => "last commit hash of project source",
           "last_published_commit_hash" => "last published commit hash of project source",
           "priority" => "build priority",
@@ -279,6 +297,26 @@ module GitHub
               }
             }
           ],
+          "extra_repos" => [
+            {
+              "id" => "extra repository id",
+              "name" => "extra repository name",
+              "url" => "path to extra repository data page",
+              "platform" => {
+                "id" => "repository platform id",
+                "name" => "repository platform name",
+                "url" => "path to repository platform data page"
+              }
+            }
+          ],
+          "extra_containers" => [
+            {
+              "id"=> "build list id",
+              "status"=> "build list status",
+              "container_path" => "container path",
+              "url" => "url to build list page"
+            }
+          ],
           'packages' => [PACKAGE_PARTIAL],
           'logs'  => [{
             'file_name' => 'file name',
@@ -299,8 +337,15 @@ module GitHub
         "use_save_to_repository" => "use repository for package storege on building",
         "build_for_platform_id"=> "platform identifier of platform for build",
         "auto_publish"=> "automated publising",
+        "auto_create_container" => "automated creation of container",
         "include_repos"=> [
           "included repository id for each selected platform"
+        ],
+        "extra_repos"=> [
+          "extra repository id for each selected platform"
+        ],
+        "extra_containers"=> [
+          "extra build list id with container for each selected platform"
         ],
         "arch_id"=> "architecture identifier"
       }
@@ -315,9 +360,18 @@ module GitHub
         "save_to_repository_id"=> 12,
         "build_for_platform_id"=> 2,
         "auto_publish"=> true,
+        "auto_create_container" => true,
         "include_repos"=> [
           54,
           53
+        ],
+        "extra_repos"=> [
+          56,
+          55
+        ],
+        "extra_containers" => [
+          12345,
+          12346
         ],
         "arch_id"=> 1
       }
@@ -425,7 +479,6 @@ module GitHub
       "build_lists"=> [
         {
           "id"=> "build list id",
-          "name"=> "build list name",
           "status"=> "build list status",
           "url"=> "build list page"
         }
@@ -437,13 +490,11 @@ module GitHub
       "build_lists"=> [
         {
           "id"=> 25,
-          "name"=> "evil_tools",
           "status"=> 6000,
           "url"=> "/api/v1/build_lists/25.json"
         },
         {
           "id"=> 26,
-          "name"=> "evil_tools",
           "status"=> 6000,
           "url"=> "/api/v1/build_lists/26.json"
         }

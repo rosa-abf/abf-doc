@@ -75,6 +75,15 @@ arch_id
 use_save_to_repository
 : _Optional_ **boolean** Use repository for package storage on building. Only for personal platforms. Default value: `true`.
 
+auto_create_container
+: _Optional_ **boolean** — `true` to enable automatic creating container of build list if the build succeeds, `false` allow manually creating. Default value: `false`.
+
+extra_repos
+: _Optional_ **array** of **integers** — Repositories to connect for building this build list. Available only if `save_to_repository` - personal repository.
+
+extra_containers
+: _Optional_ **array** of **integers** — Containers of build lists to connect for building this build list. Available only if `save_to_repository` - personal repository. Containers of build lists should be available (`container_status` should be `6000`).
+
 ### Request
 
 <%= json(:build_list_create_parameters) %>
@@ -142,7 +151,7 @@ id
 ## Create container
 
 By this request you can create container.
-Container can be created only for build list with statuses build complete (0) and tests failed (11000).
+Container can be created only for build list with statuses build complete (0), build published (6000), build publish (7000), publishing error (8000), publishing rejected (9000), tests failed (11000).
 
     PUT /api/v1/build_lists/:id/create_container.json
 
@@ -220,9 +229,6 @@ filter[status]
 
 filter[arch_id]
 : _Optional_ **integer** - identifier of the architecture.
-
-filter[is_circle]
-: _Optional_ **boolean** - recurrent build (true or false). Default: `false`
 
 filter[project_name]
 : _Optional_ **string** — project name.
