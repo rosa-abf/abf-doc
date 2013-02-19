@@ -75,6 +75,15 @@ arch_id
 use_save_to_repository
 : _Optional_ **boolean** Use repository for package storage on building. Only for personal platforms. Default value: `true`.
 
+auto_create_container
+: _Optional_ **boolean** — `true` to enable automatic creating container of build list if the build succeeds, `false` allow manually creating. Default value: `nil`.
+
+extra_repos
+: _Optional_ **array** of **integers** — Repositories to connect for building this build list. Available only if `save_to_repository` - personal repository.
+
+extra_containers
+: _Optional_ **array** of **integers** — Containers of build lists to connect for building this build list. Available only if `save_to_repository` - personal repository. Containers of build lists should be available (`container_status` should be `6000`).
+
 ### Request
 
 <%= json(:build_list_create_parameters) %>

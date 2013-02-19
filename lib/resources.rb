@@ -171,6 +171,7 @@ module GitHub
           "updated_at" => 1349358084,
           "update_type" => "bugfix",
           "auto_publish" => true,
+          "auto_create_container" => true,
           "commit_hash" => "4edafbe69632173a1800c4d7582b60b46bc1fb55",
           "last_published_commit_hash" => "59f606578d21683bbbf4152bcdc2ebf1dd1e2e37",
           "priority" => 0,
@@ -261,6 +262,7 @@ module GitHub
           },
           "update_type" => "update type",
           "auto_publish" => "automated publising",
+          "auto_create_container" => "automated creation of container",
           "commit_hash" => "last commit hash of project source",
           "last_published_commit_hash" => "last published commit hash of project source",
           "priority" => "build priority",
@@ -335,8 +337,15 @@ module GitHub
         "use_save_to_repository" => "use repository for package storege on building",
         "build_for_platform_id"=> "platform identifier of platform for build",
         "auto_publish"=> "automated publising",
+        "auto_create_container" => "automated creation of container",
         "include_repos"=> [
           "included repository id for each selected platform"
+        ],
+        "extra_repos"=> [
+          "extra repository id for each selected platform"
+        ],
+        "extra_containers"=> [
+          "extra build list id with container for each selected platform"
         ],
         "arch_id"=> "architecture identifier"
       }
@@ -351,9 +360,18 @@ module GitHub
         "save_to_repository_id"=> 12,
         "build_for_platform_id"=> 2,
         "auto_publish"=> true,
+        "auto_create_container" => true,
         "include_repos"=> [
           54,
           53
+        ],
+        "extra_repos"=> [
+          56,
+          55
+        ],
+        "extra_containers" => [
+          12345,
+          12346
         ],
         "arch_id"=> 1
       }
