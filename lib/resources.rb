@@ -145,9 +145,8 @@ module GitHub
       "build_list" =>
         {
           "id" => 10,
-          "name" => "evil_tools",
           "status" => 6000,
-          "container_path" => "/rosa2012/container/10",
+          "container_path" => "/downloads/rosa2012/container/10",
           "container_status" => 6000,
           "new_core" => true,
           "package_version" => "rosa2012.1-0.1.309-1",
@@ -170,7 +169,6 @@ module GitHub
           },
           "created_at" => 1349357795,
           "updated_at" => 1349358084,
-          "is_circle" => false,
           "update_type" => "bugfix",
           "auto_publish" => true,
           "commit_hash" => "4edafbe69632173a1800c4d7582b60b46bc1fb55",
@@ -205,6 +203,26 @@ module GitHub
               }
             }
           ],
+          "extra_repos" => [
+            {
+              "id" => 17,
+              "name" => "main",
+              "url" => "/api/v1/repositories/17.json",
+              "platform" => {
+                "id" => 17,
+                "name" => "avokhmin_personal",
+                "url" => "/api/v1/platforms/17.json"
+              }
+            }
+          ],
+          "extra_containers" => [
+            {
+              "id"=> 12345,
+              "status"=> 6000,
+              "container_path" => "/downloads/warpc_personal/container/12345",
+              "url" => "/api/v1/build_lists/12345.json"
+            }
+          ],
           'packages' => [PACKAGE_PARTIAL_EXAMPLE],
           'logs'  => [{
             'file_name' => 'abfworker::rpm-worker-859694.log',
@@ -219,7 +237,6 @@ module GitHub
       "build_list" =>
         {
           "id" => "resource id",
-          "name" => "name",
           "status" => "status code",
           "container_status" => "container status code",
           "container_path" => "container path",
@@ -242,7 +259,6 @@ module GitHub
             "id" => "build architecture id",
             "name" => "build architecture name"
           },
-          "is_circle" => "recurrent build",
           "update_type" => "update type",
           "auto_publish" => "automated publising",
           "commit_hash" => "last commit hash of project source",
@@ -277,6 +293,26 @@ module GitHub
                 "name" => "repository platform name",
                 "url" => "path to repository platform data page"
               }
+            }
+          ],
+          "extra_repos" => [
+            {
+              "id" => "extra repository id",
+              "name" => "extra repository name",
+              "url" => "path to extra repository data page",
+              "platform" => {
+                "id" => "repository platform id",
+                "name" => "repository platform name",
+                "url" => "path to repository platform data page"
+              }
+            }
+          ],
+          "extra_containers" => [
+            {
+              "id"=> "build list id",
+              "status"=> "build list status",
+              "container_path" => "container path",
+              "url" => "url to build list page"
             }
           ],
           'packages' => [PACKAGE_PARTIAL],
@@ -425,7 +461,6 @@ module GitHub
       "build_lists"=> [
         {
           "id"=> "build list id",
-          "name"=> "build list name",
           "status"=> "build list status",
           "url"=> "build list page"
         }
@@ -437,13 +472,11 @@ module GitHub
       "build_lists"=> [
         {
           "id"=> 25,
-          "name"=> "evil_tools",
           "status"=> 6000,
           "url"=> "/api/v1/build_lists/25.json"
         },
         {
           "id"=> 26,
-          "name"=> "evil_tools",
           "status"=> 6000,
           "url"=> "/api/v1/build_lists/26.json"
         }

@@ -221,9 +221,6 @@ filter[status]
 filter[arch_id]
 : _Optional_ **integer** - identifier of the architecture.
 
-filter[is_circle]
-: _Optional_ **boolean** - recurrent build (true or false). Default: `false`
-
 filter[project_name]
 : _Optional_ **string** — project name.
 
