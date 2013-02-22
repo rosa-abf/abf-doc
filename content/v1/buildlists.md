@@ -83,7 +83,8 @@ extra_repos
 
 extra_build_lists
 : _Optional_ **array** of **integers** — Build lists with containers (`container_status` should be `6000`) to connect for building this build list.<br/>
-All extra build lists with other architectures will be filtered If `save_to_platform` - main platform (an exception to the rule:  main platform has `distrib_type` - `rhel` and  project of extra build list has `publish_i686_into_x86_64 = true`).
+For main platform You can connect only build lists which have been saved into same platform. <br/>
+Only build lists with the same architecture will be connected or oriented to the both architectures (the property Publish i686 packages into x86_64 repository <i>only for rhel </i> in the settings of project is true).
 
 ### Request
 
@@ -129,7 +130,8 @@ id
 By this request you can publish build list.
 Only build list with status build complete (0), publishing error (8000) or tests failed (11000) can be published.<br/>
 Admin of platform/repository has access to publish build list again with status published (6000).<br/>
-Be careful: secondary publication will be able to break relationships in the repository!
+Be careful: secondary publication will be able to break relationships in the repository!<br/>
+All extra build lists should be published before publishing this build list!
 
     PUT /api/v1/build_lists/:id/publish.json
 
