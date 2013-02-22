@@ -81,8 +81,9 @@ auto_create_container
 extra_repos
 : _Optional_ **array** of **integers** — Repositories to connect for building this build list. Available only if `save_to_repository` - personal repository.
 
-extra_containers
-: _Optional_ **array** of **integers** — Containers of build lists to connect for building this build list. Available only if `save_to_repository` - personal repository. Containers of build lists should be available (`container_status` should be `6000`).
+extra_build_lists
+: _Optional_ **array** of **integers** — Build lists with containers (`container_status` should be `6000`) to connect for building this build list.<br/>
+All extra build lists with other architectures will be filtered If `save_to_platform` - main platform (an exception to the rule:  main platform has `distrib_type` - `rhel` and  project of extra build list has `publish_i686_into_x86_64 = true`).
 
 ### Request
 
