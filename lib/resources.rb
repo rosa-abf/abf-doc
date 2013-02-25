@@ -216,7 +216,7 @@ module GitHub
               }
             }
           ],
-          "extra_containers" => [
+          "extra_build_lists" => [
             {
               "id"=> 12345,
               "status"=> 6000,
@@ -309,7 +309,7 @@ module GitHub
               }
             }
           ],
-          "extra_containers" => [
+          "extra_build_lists" => [
             {
               "id"=> "build list id",
               "status"=> "build list status",
@@ -344,7 +344,7 @@ module GitHub
         "extra_repos"=> [
           "extra repository id for each selected platform"
         ],
-        "extra_containers"=> [
+        "extra_build_lists"=> [
           "extra build list id with container for each selected platform"
         ],
         "arch_id"=> "architecture identifier"
@@ -369,7 +369,7 @@ module GitHub
           56,
           55
         ],
-        "extra_containers" => [
+        "extra_build_lists" => [
           12345,
           12346
         ],
