@@ -1,0 +1,37 @@
+set :default_environment, {
+  'LANG' => 'en_US.UTF-8'
+}
+
+require 'rvm/capistrano'
+require 'bundler/capistrano'
+
+# main details
+ssh_options[:forward_agent] = true
+default_run_options[:pty] = true
+
+set :application, "abf-doc"
+set(:deploy_to) { "/srv/#{application}" }
+
+set :scm, :git
+set :deploy_via,  :remote_cache
+set :repository,  "git@github.com:uname/repository.git"
+set :branch, "master"
+
+set :user, "rosa"
+set :use_sudo, false
+set :keep_releases, 3
+
+set :domain, "0.0.0.0"
+
+role :app, domain
+role :web, domain
+role :db,  domain, :primary => true
+
+
+namespace :deploy do
+  task :generate_site do
+    run "cd #{fetch :release_path} && bundle exec nanoc compile"
+  end
+end
+
+after "deploy:finalize_update", "deploy:generate_site"

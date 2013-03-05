@@ -7,3 +7,4 @@ tmp
 bin
 crash.log
 *.swp
+config/deploy.rb
