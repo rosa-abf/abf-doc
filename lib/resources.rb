@@ -555,7 +555,7 @@ module GitHub
       }
     })
 
-    PROJECT_PARAMS_EXAMPLE = PROJECT_PARTIAL.merge({
+    PROJECT_PARAMS_EXAMPLE = PROJECT_PARTIAL_EXAMPLE.merge({
       "visibility" => "open",
       "description" => "bla-bla-bla",
       "ancestry" => nil,
