@@ -105,7 +105,8 @@ module GitHub
       "name" => "project name",
       "fullname" => "project fullname",
       "url" => "url to project data page",
-      "git_url" => "path to project git"
+      "git_url" => "path to project git",
+      "ssh_url" => "path to project git over ssh"
     }
 
     PROJECT_PARTIAL_EXAMPLE = {
@@ -113,7 +114,8 @@ module GitHub
       "name" => "evil_tools",
       "fullname" => "abf/evil_tools",
       "url" => "/api/v1/projects/666.json",
-      "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git"
+      "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git",
+      "ssh_url" => "git@abf.rosalinux.ru:jaroslav_garkin/hwinfo.git"
     }
 
     ADD_MEMBER_REQUEST = {
@@ -553,7 +555,7 @@ module GitHub
       }
     })
 
-    PROJECT_PARAMS_EXAMPLE = PROJECT_PARTIAL.merge({
+    PROJECT_PARAMS_EXAMPLE = PROJECT_PARTIAL_EXAMPLE.merge({
       "visibility" => "open",
       "description" => "bla-bla-bla",
       "ancestry" => nil,
