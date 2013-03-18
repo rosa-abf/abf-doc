@@ -290,6 +290,10 @@ div.sidebar-module ul ul li {
   color: #666;
 }
 
+div.sidebar-module ul ul li.submenu {
+  padding-left: 10px;
+}
+
 div.sidebar-module ul ul li:hover,
 div.sidebar-module li.disable {
   border-top: 1px solid #fafafb;
