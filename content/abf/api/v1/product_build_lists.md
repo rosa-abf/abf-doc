@@ -9,6 +9,7 @@ title: Product Build Lists | ABF API
 * <a href="#list-product-build-lists-for-a-product">List product build lists for a product</a>
 * <a href="#create-product-build-list">Create product build list</a>
 * <a href="#destroy-product-build-list">Destroy product build list</a>
+* <a href="#update-product-build-list">Update product build list</a>
 * <a href="#cancel-product-build-list">Cancel product build list</a>
 
 ## Get a single product build list
@@ -126,6 +127,30 @@ time_living:
 ### Example:
 
 <%= json(:product_build_list_create_response_example) %>
+
+## Update product build list
+
+By this request you can update product build list.
+Only `not_delete` field can be updated.
+
+    PUT /api/v1/product_build_lists/:id.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current product build list.
+
+### Request:
+
+<%= json(:product_build_list_update_request) %>
+
+### Response:
+
+<%= json(:product_build_list_update_response) %>
+
+### Example:
+
+<%= json(:product_build_list_update_response_example) %>
 
 ## Destroy product build list
 

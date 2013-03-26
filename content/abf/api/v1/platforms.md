@@ -285,7 +285,7 @@ type
 
 ## List of platforms for which you can create build list.
 This data required for api
-<a href="/v1/buildlists/#create-build-list">Сreate build list.</a>
+<a href="/abf/api/v1/build_lists/#create-build-list">Сreate build list.</a>
 
     GET /api/v1/platforms/platforms_for_build.json
 

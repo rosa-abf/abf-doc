@@ -11,6 +11,12 @@ title: Products | ABF API
 
 ## Get a single product
 
+Available statuses for parameter "autostart_status":
+:   * `nil` — none, default value;
+    * `0`   — once a 12 hours - at 4am and 4pm;
+    * `1`   — once a day - at 4am;
+    * `2`   — once a week - at 4am sunday;
+
     GET /api/v1/products/:id.json
 
 ### Parameters:
@@ -53,6 +59,9 @@ params:
 time_living:
 : _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
 
+<a href="#get-a-single-product">autostart_status:</a>
+: _Optional_ **Integer** Autostart ISO builds on a regular basis. Default value: `nil`.
+
 ### Request:
 
 <%= json(:product_create_request) %>
@@ -93,6 +102,9 @@ params:
 
 time_living:
 : _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
+
+<a href="#get-a-single-product">autostart_status:</a>
+: _Optional_ **Integer** Autostart ISO builds on a regular basis.
 
 ### Request:
 
