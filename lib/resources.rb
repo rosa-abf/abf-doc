@@ -1034,7 +1034,8 @@ module GitHub
       'main_script' => 'main script',
       'params' => 'params for running script',
       'time_living' => 'Max time for building (in minutes)',
-      'url' => 'url to product page',
+      'autostart_status' => 'status of autostart ISO builds',
+      'url' => 'url to product page'
     }
 
     PRODUCT_PARTIAL_EXAMPLE = {
@@ -1044,7 +1045,8 @@ module GitHub
       'main_script' => 'MATRIX',
       'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
       'time_living' => '60',
-      'url' => '/api/v1/products/10.json',
+      'autostart_status' => nil,
+      'url' => '/api/v1/products/10.json'
     }
 
     PLATFORM_DATA_RESPONSE = {
@@ -1942,7 +1944,7 @@ module GitHub
         'platform' => PLATFORM_PARTIAL,
         'project' => PROJECT_PARTIAL,
         'created_at' => 'created at date and time',
-        'updated_at' => 'updated at date and time',
+        'updated_at' => 'updated at date and time'
       })
     }
 
@@ -1951,19 +1953,20 @@ module GitHub
         'platform' => PLATFORM_PARTIAL_EXAMPLE,
         'project' => PROJECT_PARTIAL_EXAMPLE,
         'created_at' => '1348168705',
-        'updated_at' => '1348168705',
+        'updated_at' => '1348168705'
       })
     }
 
     PRODUCT_CREATE_REQUEST = {
       "product" => {
-        'platform_id' => '15',
-        'project_id'  => '100',
+        'platform_id' => 15,
+        'project_id'  => 100,
         'name' => 'rosa2012lts_ee',
         'description' => 'Extended Edition ROSA 2012 Marathon with non-free and restricted',
         'main_script' => 'MATRIX',
         'params' => 'lst=libs externalarch=\"x86_64\" PRODUCTNAME=ROSA.201...',
-        'time_living' => '60',
+        'time_living' => 60,
+        'autostart_status' => 0
       }
     }
 
@@ -2061,6 +2064,8 @@ module GitHub
       'product_build_list' => PRODUCT_BUILD_LIST_PARTIAL.merge({
         'created_at' => 'created at date and time',
         'updated_at' => 'updated at date and time',
+        'not_delete' => 'block deleting after finish lifetime',
+        'autostarted' => 'true - if build has been autostarted'
       })
     }
 
@@ -2068,6 +2073,8 @@ module GitHub
       'product_build_list' => PRODUCT_BUILD_LIST_PARTIAL_EXAMPLE.merge({
         'created_at' => '1348168705',
         'updated_at' => '1348168705',
+        'not_delete' => false,
+        'autostarted' => false
       })
     }
 
@@ -2094,6 +2101,20 @@ module GitHub
       "product_build_list" => {
         "id" => 12,
         "message" => "Product build list has been created successfully"
+      }
+    }
+
+    PRODUCT_BUILD_LIST_UPDATE_REQUEST = {
+      "product_build_list" => {
+        'not_delete' => true
+      }
+    }
+
+    PRODUCT_BUILD_LIST_UPDATE_RESPONSE = PRODUCT_BUILD_LIST_CREATE_RESPONSE
+    PRODUCT_BUILD_LIST_UPDATE_RESPONSE_EXAMPLE = {
+      "product_build_list"=> {
+        "id"=> 12,
+        "message"=> "Product build list has been updated successfully"
       }
     }
 
