@@ -60,7 +60,7 @@ time_living:
 : _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
 
 autostart_status:
-: _Optional_ **Integer** Autostart ISO builds on a regular basis (on the anvil). Default value: `nil`.
+: _Optional_ **Integer** Autostart ISO builds on a regular basis. Default value: `nil`.
 
 ### Request:
 
@@ -104,7 +104,7 @@ time_living:
 : _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
 
 autostart_status:
-: _Optional_ **Integer** Autostart ISO builds on a regular basis (on the anvil).
+: _Optional_ **Integer** Autostart ISO builds on a regular basis.
 
 ### Request:
 
