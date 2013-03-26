@@ -59,7 +59,7 @@ params:
 time_living:
 : _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
 
-autostart_status:
+<a href="#get-a-single-product">autostart_status:</a>
 : _Optional_ **Integer** Autostart ISO builds on a regular basis. Default value: `nil`.
 
 ### Request:
@@ -103,7 +103,7 @@ params:
 time_living:
 : _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
 
-autostart_status:
+<a href="#get-a-single-product">autostart_status:</a>
 : _Optional_ **Integer** Autostart ISO builds on a regular basis.
 
 ### Request:
