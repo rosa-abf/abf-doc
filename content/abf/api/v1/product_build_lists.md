@@ -131,7 +131,7 @@ time_living:
 ## Update product build list
 
 By this request you can update product build list.
-Only `not_delete` field can be updated.
+Only `not_delete` field can be updated and only if build has been completed.
 
     PUT /api/v1/product_build_lists/:id.json
 
