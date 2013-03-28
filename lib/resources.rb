@@ -189,10 +189,15 @@ module GitHub
             "name" => "rosa2012lts (main)",
             "url" => "/api/v1/mass_builds/666"
           },
-          "owner" => {
+          "user" => {
             "id" => 49,
             "name" => "Mr. Evil",
             "url" => "/api/v1/users/49.json"
+          },
+          "publisher" => {
+            "id" => 50,
+            "name" => "Mr. Good",
+            "url" => "/api/v1/users/50.json"
           },
           "include_repos" => [
             {
@@ -282,10 +287,15 @@ module GitHub
             "name" => "mass_build name",
             "url" => "path to mass_build data page"
           },
-          "owner" => {
-            "id" => "project owner id",
-            "name" => "project owner name",
-            "url" => "url to owner profile"
+          "user" => {
+            "id" => "id of user which created build",
+            "name" => "user name",
+            "url" => "url to user profile"
+          },
+          "publisher" => {
+            "id" => "publisher id",
+            "name" => "publisher name",
+            "url" => "url to publisher profile"
           },
           "include_repos" => [
             {
