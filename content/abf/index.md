@@ -10,3 +10,4 @@ This describes the resources that make up the official Rosa ABF Documentation. I
 
 * <a href="/abf/api/">API</a>
 <!-- * <a href="/abf/deployment/">Deployment</a> -->
+* <a href="/abf/file_store_integration/">Integration with FileStore (.abf.yml)</a>
