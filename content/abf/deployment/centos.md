@@ -4,6 +4,10 @@ title: RosaLab ABF Documentation - Deployment on CentOS
 
 # RosaLab ABF Documentation - Deployment on CentOS
 
+* <a href="#prepare-environment">Prepare environment</a>
+* <a href="#prepare-server-to-deployment">Prepare server to deployment</a>
+* <a href="#startup-abf">Startup ABF</a>
+
 ## Prepare environment
 
 ### First of all we should add new users.
@@ -186,27 +190,6 @@ Update `config.yml` as You like:
     # Repositories path (APP_CONFIG[‘git_path’] + ‘/git_projects’)
     repos_path: "/home/rosa/gitstore/git_projects"
 
-### Startup ABF
-
-On DEV machine:
-
-    cap production deploy:setup
-    cap production deploy:check
-    cap production deploy:update
-
-On server:
-
-    cd /srv/rosa_build/current && RAILS_ENV=production bundle exec rake db:seed
-
-Update all configuration files:
-
-    /srv/rosa_build/shared/config/application.yml
-    /srv/rosa_build/shared/config/newrelic.yml
-
-Startup:
-
-    cap production deploy:start
-
 ### Archivation of Logs
 
     sudo vi /etc/logrotate.d/redis
@@ -233,3 +216,23 @@ Startup:
       copytruncate
     }
 
+## Startup ABF
+
+On DEV machine:
+
+    cap production deploy:setup
+    cap production deploy:check
+    cap production deploy:update
+
+On server:
+
+    cd /srv/rosa_build/current && RAILS_ENV=production bundle exec rake db:seed
+
+Update all configuration files:
+
+    /srv/rosa_build/shared/config/application.yml
+    /srv/rosa_build/shared/config/newrelic.yml
+
+Startup:
+
+    cap production deploy:start
