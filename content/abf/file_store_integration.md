@@ -17,8 +17,6 @@ and it is great, because we have a light git repository with code and
 <a href="http://file-store.rosalinux.ru/">File-Store</a>
 with some BIG archives and files.
 
-Our ABF build services have ability to download all extra files by `.abf.yml`.
-
 `.abf.yml` has very easy format, <a href="http://en.wikipedia.org/wiki/YAML">YAML</a> format:
 
     sources:
@@ -26,6 +24,15 @@ Our ABF build services have ability to download all extra files by `.abf.yml`.
       "<file name 2>": <sha1 of file 2>  
       …
       "<file name n>": <sha1 of file n>
+
+Our ABF build services have ability to parse `.abf.yml` file and download all extra files from <a href="http://file-store.rosalinux.ru/">File-Store</a> by `sha1` (This uses only for build packages). Downloading looks as:
+
+    curl -L http://file-store.rosalinux.ru/api/v1/file_stores/<sha1> -o <file name>
+
+So, if file does not exist on File-Store, it will be contain:
+
+    {"Error 404":["Resource not found!"]}
+
 
 ## How it use?
 
