@@ -9,5 +9,6 @@ This describes the resources that make up the official Rosa ABF Documentation. I
 **Note: This Documentation is in a beta state. Breaking changes may occur.**
 
 * <a href="/abf/api/">API</a>
+* <a href="/abf/file_store_integration/">Integration with FileStore (.abf.yml)</a>
 * <a href="/abf/iso_build/">The ABF ISO build environment</a>
 <!-- * <a href="/abf/deployment/">Deployment</a> -->
