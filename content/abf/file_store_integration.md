@@ -37,6 +37,7 @@ After You should add `.abf.yml` file into repository. `.abf.yml` will look as:
 
     sources:
       "at_3.1.12.orig.tar.gz": 1cf47df152e9d119e083c11eefaf6368c993a8af
+      "gnome-control-center-2.32.1.tar.bz2": 1e5ba3117aba7f939de25dbed13e430b90968561
 
 ### Important:
 * we suggest to write filename in quotes;
