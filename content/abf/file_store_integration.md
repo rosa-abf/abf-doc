@@ -25,14 +25,19 @@ with some BIG archives and files.
       …
       "<file name n>": <sha1 of file n>
 
-Our ABF build services have ability to parse `.abf.yml` file and download all extra files from <a href="http://file-store.rosalinux.ru/">File-Store</a> by `sha1` (This uses only for build packages). Downloading looks as:
+Our ABF build services have ability to parse `.abf.yml` file and download all extra files from <a href="http://file-store.rosalinux.ru/">File-Store</a> by `sha1` (This uses only for build packages).
+When file will be downloaded it will be renamed to `file name` from YML file.
+Command for downloading looks like:
 
     curl -L http://file-store.rosalinux.ru/api/v1/file_stores/<sha1> -o <file name>
 
-So, if file does not exist on File-Store, it will be contain:
+### Important:
+* if file does not exist on File-Store, it will be contain:
+    `{"Error 404":["Resource not found!"]}`
 
-    {"Error 404":["Resource not found!"]}
-
+* build will be go next notwithstanding the fact that some files have not been downloaded;
+* information about downloading of files contains in the main log:
+    `abfworker::rpm-worker-<build id>.log`
 
 ## How it use?
 
