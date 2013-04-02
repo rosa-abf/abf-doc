@@ -35,6 +35,7 @@ Command for downloading looks like:
 * if file does not exist on File-Store, it will be contain:
     `{"Error 404":["Resource not found!"]}`
 
+* downloading of files occur before building the package (on spade-work);
 * build will be go next notwithstanding the fact that some files have not been downloaded;
 * information about downloading of files contains in the main log:
     `abfworker::rpm-worker-<build id>.log`
