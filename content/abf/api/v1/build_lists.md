@@ -83,7 +83,7 @@ extra_repos
 
 extra_build_lists
 : _Optional_ **array** of **integers** — Build lists with containers (`container_status` should be `6000`) to connect for building this build list.<br/>
-For main platform You can connect only build lists which have been saved into same platform. <br/>
+For main platform you can connect only build lists which have been saved into same platform. <br/>
 Only build lists with the same architecture will be connected or oriented to the both architectures (the property `publish_i686_into_x86_64` (only for `rhel`) in the settings of project is `true`).
 
 ### Request
