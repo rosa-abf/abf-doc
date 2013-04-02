@@ -17,8 +17,6 @@ and it is great, because we have a light git repository with code and
 <a href="http://file-store.rosalinux.ru/">File-Store</a>
 with some BIG archives and files.
 
-Our ABF build services have ability to download all extra files by `.abf.yml`.
-
 `.abf.yml` has very easy format, <a href="http://en.wikipedia.org/wiki/YAML">YAML</a> format:
 
     sources:
@@ -27,13 +25,28 @@ Our ABF build services have ability to download all extra files by `.abf.yml`.
       …
       "<file name n>": <sha1 of file n>
 
+Our ABF build services have ability to parse `.abf.yml` file and download all extra files from <a href="http://file-store.rosalinux.ru/">File-Store</a> by `sha1` (This uses only for build packages).
+When file will be downloaded it will be renamed to `file name` from YML file.
+Command for downloading looks like:
+
+    curl -L http://file-store.rosalinux.ru/api/v1/file_stores/<sha1> -o <file name>
+
+### Important:
+* if file does not exist on File-Store, it will be contain:
+    `{"Error 404":["Resource not found!"]}`
+
+* downloading of files occur before building the package (on spade-work);
+* build will be go next notwithstanding the fact that some files have not been downloaded;
+* information about downloading of files contains in the main log:
+    `abfworker::rpm-worker-<build id>.log`
+
 ## How it use?
 
 Your git repository contains some BIG files (archives, binary files and etc.).<br/>
-First of all You should upload big files into
+First of all you should upload big files into
 <a href="http://file-store.rosalinux.ru/">File-Store</a>.<br/>
-So, You have file names and sha1 of files.<br/>
-After You should add `.abf.yml` file into repository. `.abf.yml` will look as:
+So, you have file names and sha1 of files.<br/>
+After you should add `.abf.yml` file into repository. `.abf.yml` will look as:
 
     sources:
       "at_3.1.12.orig.tar.gz": 1cf47df152e9d119e083c11eefaf6368c993a8af
