@@ -30,10 +30,10 @@ Our ABF build services have ability to download all extra files by `.abf.yml`.
 ## How it use?
 
 Your git repository contains some BIG files (archives, binary files and etc.).<br/>
-First of all You should upload big files into
+First of all you should upload big files into
 <a href="http://file-store.rosalinux.ru/">File-Store</a>.<br/>
-So, You have file names and sha1 of files.<br/>
-After You should add `.abf.yml` file into repository. `.abf.yml` will look as:
+So, you have file names and sha1 of files.<br/>
+After you should add `.abf.yml` file into repository. `.abf.yml` will look as:
 
     sources:
       "at_3.1.12.orig.tar.gz": 1cf47df152e9d119e083c11eefaf6368c993a8af
