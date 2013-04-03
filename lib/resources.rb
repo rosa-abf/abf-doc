@@ -2154,6 +2154,93 @@ module GitHub
       'url' => '/api/v1/product_build_lists.json',
     }
 
+    ISSUE_PARTIAL = {
+      'number' => 'serial number',
+      'title' => 'title',
+      'status' => 'issue status',
+      'labels' => ['labels'],
+      'assignee' => USER_PARTIAL,
+      'url' => 'url to issue data page'
+    }
+
+    ISSUE_PARAMS = ISSUE_PARTIAL.merge({
+      'body' => 'body',
+      'creator' => USER_PARTIAL,
+      'created_at' => 'created at date and time',
+      'updated_at' => 'updated at date and time'
+    })
+
+    ISSUES_LIST_RESPONSE = {
+      'issues' => [ISSUE_PARAMS],
+      'url' => 'path to issues data'
+    }
+
+    ISSUE_PARTIAL_EXAMPLE = {
+      'number' => '11',
+      'title' => 'new feature',
+      'status' => 'open',
+      'labels' => ['Feature,Idea'],
+      'assignee' => USER_PARTIAL_EXAMPLE,
+      'url' => '/api/v1/projects/3/issues/11.json'
+    }
+
+    ISSUE_PARAMS_EXAMPLE = ISSUE_PARTIAL_EXAMPLE.merge({
+      'body' => 'new cool feature for us',
+      'creator' => USER_PARTIAL_EXAMPLE,
+      'created_at' => '1348168705',
+      'updated_at' => '1348168705'
+    })
+
+    ISSUES_LIST_RESPONSE_EXAMPLE = {
+      'issues' => [ISSUE_PARAMS_EXAMPLE],
+      'url' => '/api/v1/projects/3/issues.json'
+    }
+
+    ISSUE_DATA_RESPONSE = {
+      'issue'=> ISSUE_PARAMS
+    }
+
+    ISSUE_DATA_RESPONSE_EXAMPLE = {
+      'issue' => ISSUE_PARAMS_EXAMPLE
+    }
+
+    ISSUE_UPDATE_EXAMPLE = {
+      'title' => 'fix security bug',
+      'body' => 'fixed at 123456',
+      'status' => 'closed',
+      'assignee_id' => 15,
+      'labels' => ['Security', 'Bug']
+    }
+
+    ISSUE_UPDATE_REQUEST = {
+      'issue' => ISSUE_UPDATE_EXAMPLE
+    }
+
+    ISSUE_UPDATE_RESPONSE = {
+      'issue' => {
+        'number' => 'issue number (null if failed)',
+        'message' => 'success or fail message'
+      }
+    }
+
+    ISSUE_UPDATE_RESPONSE_EXAMPLE = {
+      'issue' => {
+        'number' => 12,
+        'message' => 'Issue has been updated successfully'
+      }
+    }
+
+    ISSUE_CREATE_REQUEST = {
+      'issue' => ISSUE_UPDATE_EXAMPLE
+    }
+    ISSUE_CREATE_RESPONSE = ISSUE_UPDATE_RESPONSE
+    ISSUE_CREATE_RESPONSE_EXAMPLE = {
+      'issue' => {
+        'number' => 12,
+        'message' => 'Issue has been created successfully'
+      }
+    }
+
   end
 end
 
