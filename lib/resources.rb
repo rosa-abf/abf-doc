@@ -2166,6 +2166,8 @@ module GitHub
     ISSUE_PARAMS = ISSUE_PARTIAL.merge({
       'body' => 'body',
       'creator' => USER_PARTIAL,
+      'closed_at' => 'closed at date and time',
+      'closed_by' => USER_PARTIAL,
       'created_at' => 'created at date and time',
       'updated_at' => 'updated at date and time'
     })
@@ -2187,6 +2189,8 @@ module GitHub
     ISSUE_PARAMS_EXAMPLE = ISSUE_PARTIAL_EXAMPLE.merge({
       'body' => 'new cool feature for us',
       'creator' => USER_PARTIAL_EXAMPLE,
+      'closed_at' => '1348170705',
+      'closed_by' => USER_PARTIAL_EXAMPLE,
       'created_at' => '1348168705',
       'updated_at' => '1348168705'
     })
