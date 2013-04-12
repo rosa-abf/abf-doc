@@ -1,5 +1,5 @@
 ---
-title: Projects | ABF API
+title: Issues | ABF API
 ---
 
 # Projects API
@@ -57,8 +57,6 @@ since
 <%= json(:issues_list_response_example) %>
 
 ## List issues for a project
-
-List all issues across all the authenticated user’s projects including owned projects, member projects, and group projects.
 
     GET /api/v1/projects/:id/issues.json
 

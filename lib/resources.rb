@@ -2154,18 +2154,39 @@ module GitHub
       'url' => '/api/v1/product_build_lists.json',
     }
 
+    LABEL_PARTIAL = {
+      'name' => 'name',
+      'color' => 'color'
+    }
+
+    LABEL_PARTIAL_EXAMPLE = {
+      'name' => 'Feature',
+      'color' => '02e10c'
+    }
+
+    LABEL_DATA_RESPONSE = LABEL_PARTIAL
+    LABEL_DATA_RESPONSE_EXAMPLE = LABEL_PARTIAL_EXAMPLE
+
+    LABELS_LIST_RESPONSE = {
+      'labels' => [LABEL_DATA_RESPONSE]
+    }
+
+    LABELS_LIST_RESPONSE_EXAMPLE = {
+      'labels' => [LABEL_DATA_RESPONSE_EXAMPLE]
+    }
+
     ISSUE_PARTIAL = {
       'number' => 'serial number',
       'title' => 'title',
       'status' => 'issue status',
-      'labels' => ['labels'],
+      'labels' => [LABEL_DATA_RESPONSE],
       'assignee' => USER_PARTIAL,
       'url' => 'url to issue data page'
     }
 
     ISSUE_PARAMS = ISSUE_PARTIAL.merge({
       'body' => 'body',
-      'creator' => USER_PARTIAL,
+      'owner' => USER_PARTIAL,
       'closed_at' => 'closed at date and time',
       'closed_by' => USER_PARTIAL,
       'created_at' => 'created at date and time',
@@ -2181,17 +2202,17 @@ module GitHub
       'number' => '11',
       'title' => 'new feature',
       'status' => 'open',
-      'labels' => ['Feature,Idea'],
+      'labels' => [LABEL_DATA_RESPONSE_EXAMPLE],
       'assignee' => USER_PARTIAL_EXAMPLE,
       'url' => '/api/v1/projects/3/issues/11.json'
     }
 
     ISSUE_PARAMS_EXAMPLE = ISSUE_PARTIAL_EXAMPLE.merge({
       'body' => 'new cool feature for us',
-      'creator' => USER_PARTIAL_EXAMPLE,
+      'owner' => USER_PARTIAL_EXAMPLE,
       'closed_at' => '1348170705',
       'closed_by' => USER_PARTIAL_EXAMPLE,
-      'created_at' => '1348168705',
+      'created_at' => '1348170705',
       'updated_at' => '1348168705'
     })
 
