@@ -1,8 +1,8 @@
 ---
-title: RosaLab ABF Documentation - Deployment on CentOS
+title: RosaLab ABF Documentation - Deployment on RELS/CentOS
 ---
 
-# RosaLab ABF Documentation - Deployment on CentOS
+# RosaLab ABF Documentation - Deployment on RELS/CentOS
 
 * <a href="#prepare-environment">Prepare environment</a>
 * <a href="#prepare-server-to-deployment">Prepare server to deployment</a>
