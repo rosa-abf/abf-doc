@@ -1,10 +1,10 @@
 ---
-title: RosaLab ABF Scripts Documentation
+title: RosaLab ABF Package build environment
 ---
 
-# RosaLab ABF Scripts Documentation
+# RosaLab ABF Package build environment
 
-This describes the resources that make up the official Rosa ABF Scripts Documentation. If you have any problems or requests please contact support.
+This describes the resources that make up the official Rosa ABF Package build environment. If you have any problems or requests please contact support.
 
 **Note: This Documentation is in a beta state. Breaking changes may occur.**
 
