@@ -1,8 +1,5 @@
----
-title: RosaLab Documentation
----
-
-# RosaLab Documentation
+RosaLab Documentation
+=====================
 
 This describes the resources that make up the official Rosa Documentation. If you have any problems or requests please contact [support](https://abf.rosalinux.ru/contact).
 
