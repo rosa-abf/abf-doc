@@ -109,7 +109,7 @@ publish_without_qa:
 <%= json(:repository_create_response_example) %>
 
 ## Destroy repository
-Repository with name `main` of `personal` platform cannot be deleted.
+A repository with `main` name can't be deleted from `personal` platform.
 
     DELETE /api/v1/repositories/:id.json
 
