@@ -79,7 +79,6 @@ publish_without_qa:
 <%= json(:repository_update_response_example) %>
 
 ## Create repository
-Only for repositories from `main` platform.
 
     POST /api/v1/repositories.json
 
@@ -110,7 +109,7 @@ publish_without_qa:
 <%= json(:repository_create_response_example) %>
 
 ## Destroy repository
-Only for repositories from `main` platform.
+A repository with `main` name can't be deleted from `personal` platform.
 
     DELETE /api/v1/repositories/:id.json
 
@@ -196,7 +195,6 @@ type
 <%= json(:repository_remove_member_response_example2) %>
 
 ## Add project to a single repository
-Only for repositories from `main` platform.
 
 	PUT /api/v1/repositories/:id/add_project.json
 
@@ -223,7 +221,6 @@ project_id
 <%= json(:repository_add_project_response_example) %>
 
 ## Remove project from a single repository
-Only for repositories from `main` platform.
 
     DELETE /api/v1/repositories/:id/remove_project.json
 
