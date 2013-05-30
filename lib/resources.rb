@@ -2266,6 +2266,224 @@ module GitHub
       }
     }
 
+    TO_REF_PARTIAL = {
+      'ref' => 'reference',
+      'sha' => 'sha',
+      'user' => USER_PARTIAL,
+      'project' => PROJECT_PARTIAL
+    }
+
+    TO_REF_PARTIAL_EXAMPLE = {
+      'ref' => 'update-version',
+      'sha' => '3d1468bbb339c8b59234a5bbc35dedf3d89c2043',
+      'user' => USER_PARTIAL_EXAMPLE,
+      'project' => PROJECT_PARTIAL_EXAMPLE
+    }
+
+    FROM_REF_PARTIAL = {
+      'ref' => 'reference',
+      'sha' => 'sha',
+      'user' => USER_PARTIAL,
+      'project' => PROJECT_PARTIAL
+    }
+
+    FROM_REF_PARTIAL_EXAMPLE = {
+      'ref' => 'update-rails',
+      'sha' => '3d1468bbb339c8b59234a5bbc35dedf3d89c2043',
+      'user' => USER_PARTIAL_EXAMPLE,
+      'project' => PROJECT_PARTIAL_EXAMPLE
+    }
+
+    PULL_REQUEST_PARTIAL = {
+      'number' => 'serial number',
+      'title' => 'title',
+      'status' => 'pull request status',
+      'assignee' => USER_PARTIAL,
+      'url' => 'url to pull request data page'
+    }
+
+    PULL_REQUEST_PARAMS = PULL_REQUEST_PARTIAL.merge({
+      'body' => 'body',
+      'owner' => USER_PARTIAL,
+      'merged_at' => 'merged at date and time',
+      'closed_at' => 'closed at date and time',
+      'closed_by' => USER_PARTIAL,
+      'created_at' => 'created at date and time',
+      'updated_at' => 'updated at date and time',
+      'to_ref' => TO_REF_PARTIAL,
+      'from_ref' => FROM_REF_PARTIAL
+    })
+
+    PULL_REQUESTS_LIST_RESPONSE = {
+      'pull_requests' => [PULL_REQUEST_PARAMS],
+      'url' => 'path to pull request data'
+    }
+
+    PULL_REQUEST_PARTIAL_EXAMPLE = {
+      'number' => '11',
+      'title' => 'new feature',
+      'status' => 'open',
+      'assignee' => USER_PARTIAL_EXAMPLE,
+      'url' => '/api/v1/projects/3/pull_requests/11.json'
+    }
+
+    PULL_REQUEST_PARAMS_EXAMPLE = PULL_REQUEST_PARTIAL_EXAMPLE.merge({
+      'body' => 'new cool feature for us',
+      'owner' => USER_PARTIAL_EXAMPLE,
+      'merged_at' => '1348170705',
+      'closed_at' => '1348170705',
+      'closed_by' => USER_PARTIAL_EXAMPLE,
+      'created_at' => '1348168705',
+      'updated_at' => '1348170705',
+      'to_ref' => TO_REF_PARTIAL_EXAMPLE,
+      'from_ref' => FROM_REF_PARTIAL_EXAMPLE
+    })
+
+    PULL_REQUESTS_LIST_RESPONSE_EXAMPLE = {
+      'pull_requests' => [PULL_REQUEST_PARAMS_EXAMPLE],
+      'url' => '/api/v1/projects/3/pull_requests.json'
+    }
+
+    PULL_REQUEST_DATA_RESPONSE = {
+      'pull_request'=> PULL_REQUEST_PARAMS
+    }
+
+    PULL_REQUEST_DATA_RESPONSE_EXAMPLE = {
+      'pull_request' => PULL_REQUEST_PARAMS_EXAMPLE
+    }
+
+    PULL_REQUEST_UPDATE_EXAMPLE = {
+      'title' => 'fix security bug',
+      'body' => 'fixed at 123456',
+      'status' => 'closed',
+      'assignee_id' => 15
+    }
+
+    PULL_REQUEST_UPDATE_REQUEST = {
+      'pull_request' => PULL_REQUEST_UPDATE_EXAMPLE
+    }
+
+    PULL_REQUEST_UPDATE_RESPONSE = {
+      'pull_request' => {
+        'number' => 'pull request number (null if failed)',
+        'message' => 'success or fail message'
+      }
+    }
+
+    PULL_REQUEST_UPDATE_RESPONSE_EXAMPLE = {
+      'pull_request' => {
+        'number' => 12,
+        'message' => 'Pull request has been updated successfully'
+      }
+    }
+
+    PULL_REQUEST_CREATE_REQUEST = {
+      'pull_request' => PULL_REQUEST_UPDATE_EXAMPLE
+    }
+    PULL_REQUEST_CREATE_RESPONSE = PULL_REQUEST_UPDATE_RESPONSE
+    PULL_REQUEST_CREATE_RESPONSE_EXAMPLE = {
+      'pull_request' => {
+        'number' => 12,
+        'message' => 'Pull request has been created successfully'
+      }
+    }
+
+    COMMIT_PARTIAL = {
+      'sha' => 'commit sha',
+      'author' => {
+        'name' => 'author name',
+        'email' => 'author email'
+      },
+      'committer' => {
+        'name' => 'committer name',
+        'email' => 'committer email'
+      },
+      'message' => 'Fix all the bugs',
+      'tree' => {
+        'sha' => 'commit sha'
+      }
+    }
+
+    COMMIT_PARTIAL_EXAMPLE = {
+      'sha' => '4c2553a5a339c8b59234a5bbc35dedf3d89c2043',
+      'author' => {
+        'name' => 'abf',
+        'email' => 'abf@test.ru'
+      },
+      'committer' => {
+        'name' => 'abf',
+        'email' => 'abf@test.ru'
+      },
+      'message' => 'Fix all the bugs',
+      'tree' => {
+        'sha' => '3d1468bbb339c8b59234a5bbc35dedf3d89c2043'
+      }
+    }
+    LIST_COMMITS_PULL_REQUEST_DATA_RESPONSE = {
+      'commits' => [
+        COMMIT_PARTIAL.merge({
+          'author' => USER_PARTIAL,
+          'committer' => USER_PARTIAL,
+          'parents' => [{
+            'sha' => 'commit sha'
+          }]
+        })
+      ]
+    }
+    LIST_COMMITS_PULL_REQUEST_DATA_RESPONSE_EXAMPLE = {
+      'commits' => [
+        COMMIT_PARTIAL_EXAMPLE.merge({
+          'author' => USER_PARTIAL_EXAMPLE,
+          'committer' => USER_PARTIAL_EXAMPLE,
+          'parents' => [{
+            'sha' => '473cca87b339c8b59234a5bbc35dedf3d89c2043'
+          }]
+        })
+      ]
+    }
+
+    LIST_PULL_REQUESTS_FILES_DATA_RESPONSE = {
+      'files' => [{
+        'sha' => 'sha',
+        'filename' => 'file name',
+        'status' => 'file status',
+        'additions' => 'additional lines count',
+        'deletions' => 'deletions lines count',
+        'changes' => 'total lines changes',
+        'blob_url' => 'blob url',
+        'raw_url' => 'raw file url'
+      }]
+    }
+    LIST_PULL_REQUESTS_FILES_DATA_RESPONSE_EXAMPLE = {
+      'files' => [{
+        'sha' => '473cca87b339c8b59234a5bbc35dedf3d89c2043',
+        'filename' => 'test.log',
+        'status' => 'added',
+        'additions' => '42',
+        'deletions' => '24',
+        'changes' => '66',
+        'blob_url' => 'https =>//abf.rosalinux.ru/abf/rosa-build/blob/master/Gemfile',
+        'raw_url' => 'https =>//abf.rosalinux.ru/abf/rosa-build/raw/master/Gemfile'
+      }]
+    }
+
+    PULL_REQUEST_MERGE_REQUEST = {
+      'pull_request' => {
+        'commit_message' => 'commit message'
+      }
+    }
+    PULL_REQUEST_MERGE_REQUEST_EXAMPLE = {
+      'pull_request' => {
+        'commit_message' => 'Fix a security bug'
+      }
+    }
+    PULL_REQUEST_MERGE_RESPONSE = PULL_REQUEST_UPDATE_RESPONSE
+    PULL_REQUEST_MERGE_RESPONSE_EXAMPLE = {
+      'pull_request' => {
+        'number' => 12,
+        'message' => 'Pull request has been merged successfully'
+      }
+    }
   end
 end
 
