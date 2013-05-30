@@ -154,7 +154,6 @@ module GitHub
           "package_version" => "rosa2012.1-0.1.309-1",
           "project" => PROJECT_PARTIAL_EXAMPLE,
           "build_for_platform" => PLATFORM_PARTIAL_EXAMPLE,
-          "use_save_to_repository" => true,
           "save_to_repository" => {
             "id" => 12,
             "name" => "mr_evil/personal",
@@ -252,7 +251,6 @@ module GitHub
           "package_version" => "package version",
           "project" => PROJECT_PARTIAL,
           "build_for_platform" => PLATFORM_PARTIAL,
-          "use_save_to_repository" => "use repository for package storege on building",
           "save_to_repository" => {
             "id" => "repository for package storage id",
             "name" => "repository for package storage name",
@@ -346,7 +344,6 @@ module GitHub
         "commit_hash"=> "commit hash to build",
         "update_type"=> "one of the update types",
         "save_to_repository_id"=> "repository identifier for package storage",
-        "use_save_to_repository" => "use repository for package storege on building",
         "build_for_platform_id"=> "platform identifier of platform for build",
         "auto_publish"=> "automated publising",
         "auto_create_container" => "automated creation of container",
@@ -368,7 +365,6 @@ module GitHub
         "project_id"=> "10",
         "commit_hash"=> "751b0cad9cd1467e735d8c3334ea3cf988995fab",
         "update_type"=> "bugfix",
-        "use_save_to_repository" => true,
         "save_to_repository_id"=> 12,
         "build_for_platform_id"=> 2,
         "auto_publish"=> true,
