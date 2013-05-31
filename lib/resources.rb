@@ -210,7 +210,7 @@ module GitHub
               }
             }
           ],
-          "extra_repos" => [
+          "extra_repositories" => [
             {
               "id" => 17,
               "name" => "main",
@@ -307,7 +307,7 @@ module GitHub
               }
             }
           ],
-          "extra_repos" => [
+          "extra_repositories" => [
             {
               "id" => "extra repository id",
               "name" => "extra repository name",
@@ -350,7 +350,7 @@ module GitHub
         "include_repos"=> [
           "included repository id for each selected platform"
         ],
-        "extra_repos"=> [
+        "extra_repositories"=> [
           "extra repository id for each selected platform"
         ],
         "extra_build_lists"=> [
@@ -373,7 +373,7 @@ module GitHub
           54,
           53
         ],
-        "extra_repos"=> [
+        "extra_repositories"=> [
           56,
           55
         ],
