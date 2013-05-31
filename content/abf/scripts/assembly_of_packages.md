@@ -72,9 +72,11 @@ It contains scripts for MDV and RHEL platforms.
     # - 0 if tests passed;
     # - 1 if tests failed.
 
-    # TODO: Generate data for container:
-    # - create “$results_path/container_data.json” file;
-    # container_data.json looks as:
+    # TODO: Generate "$results_path/container_data.json"
+    # file which will be contain all information about new packages.
+    # Only packages which will be described in this file will be
+    # interpreted as "packages"!!!
+    # "container_data.json" looks as:
     # [
     #   {
     #     “fullname”:”fullname of package”,
