@@ -90,7 +90,7 @@ since
 
 <%= json(:pull_requests_list_response_example) %>
 
-## Get a single pull requests
+## Get a single pull request
 
     GET /api/v1/projects/:project_id/pull_requests/:number.json
 
@@ -231,7 +231,7 @@ number
 
 <%= json(:list_pull_requests_files_data_response_example) %>
 
-## Merge a pull request
+## Merge a single pull request
 
     PUT /api/v1/projects/:id/pull_requests/:number/merge.json
 
