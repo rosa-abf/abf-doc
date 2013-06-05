@@ -129,6 +129,17 @@ assignee
 assigned to. _NOTE: Only users with push access can set the assignee for
 pull request. The assignee is silently dropped otherwise._
 
+to_ref
+: _Required_ **String** the branch (or git ref) you want your changes pulled into.
+This should be an existing branch on the current repository.
+You cannot submit a pull request to one repo that requests a merge to a base of another repo.
+
+from_project
+: _Optional **Integer** Identifier project where your changes are implemented. Default current project.
+
+from_ref
+: _Required_ **String** the branch (or git ref) where your changes are implemented.
+
 ### Request:
 
 <%= json(:pull_request_create_request) %>
