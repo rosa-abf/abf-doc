@@ -2269,14 +2269,12 @@ module GitHub
     TO_REF_PARTIAL = {
       'ref' => 'reference',
       'sha' => 'sha',
-      'user' => USER_PARTIAL,
       'project' => PROJECT_PARTIAL
     }
 
     TO_REF_PARTIAL_EXAMPLE = {
       'ref' => 'update-version',
       'sha' => '3d1468bbb339c8b59234a5bbc35dedf3d89c2043',
-      'user' => USER_PARTIAL_EXAMPLE,
       'project' => PROJECT_PARTIAL_EXAMPLE
     }
 
