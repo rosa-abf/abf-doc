@@ -4,9 +4,9 @@ title: ISO build environment | ABF Documentation
 
 # ISO build environment
 
-* <a href="#prerequisites-and-restrictions">Prerequisites and restrictions</a>
-* <a href="#building-the-product-and-creating-the-iso-disk-image">Building the product and creating the ISO disk image</a>
-* <a href="#the-virtual-machine-and-the-build-process-details">The Virtual Machine and the build process details</a>
+* [Prerequisites and restrictions](#prerequisites-and-restrictions)
+* [Building the product and creating the ISO disk image](#building-the-product-and-creating-the-iso-disk-image)
+* [The Virtual Machine and the build process details](#the-virtual-machine-and-the-build-process-details)
 
 ## Prerequisites and restrictions
 
@@ -55,7 +55,7 @@ Enter the following information into the form:
 
 2\. The following working directories will be created by default:
 
-- `/home/vagrant/results` after finishing the build process all files from this directory are saved on a <a href="http://file-store.rosalinux.ru/">File-Store</a>, and the downloading links
+- `/home/vagrant/results` after finishing the build process all files from this directory are saved on a [File-Store](http://file-store.rosalinux.ru/), and the downloading links
 will be available on a build review page at the `Results` ABF section (recommended place for storing the build logs and ISO disk images);
 - `/home/vagrant/archives` after the build process is finished, this directory will be archived into the `/home/vagrant/results` directory (recommended place for storing secondary information which will be available in the form of single archive file after the build);
 - `/home/vagrant/iso_builder` this is tmpfs directory with the size of `30.000MB` where all your project files will be stored. It is strictly recommended to use this directory in your build script (for creating temporary files etc).

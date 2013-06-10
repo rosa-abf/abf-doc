@@ -4,10 +4,10 @@ title: Files | File Store API Documentation
 
 # Files API
 
-* <a href="#create-file">Create a File </a>
-* <a href="#find-a-file">Find a File</a>
-* <a href="#get-a-file">Get a File</a>
-* <a href="#destroy-file">Destroy File</a>
+* [Create a File](#create-file)
+* [Find a File](#find-a-file)
+* [Get a File](#get-a-file)
+* [Destroy File](#destroy-file)
 
 ## Create file
 

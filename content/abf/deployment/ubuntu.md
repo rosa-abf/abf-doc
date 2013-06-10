@@ -4,9 +4,9 @@ title: Deployment on Ubuntu | ABF Deployment Documentation
 
 # Deployment on Ubuntu
 
-* <a href="#prepare-environment">Prepare environment</a>
-* <a href="#prepare-server-to-deployment">Prepare server to deployment</a>
-* <a href="#startup-abf">Startup ABF</a>
+* [Prepare environment](#prepare-environment)
+* [Prepare server to deployment](#prepare-server-to-deployment)
+* [Startup ABF](#startup-abf)
 
 ## Prepare environment
 
@@ -65,7 +65,7 @@ The next step makes sure that we have all the required components of Ruby on Rai
 
 ### Install PostgreSQL
 
-See solution by installation: <a href="http://www.if-not-true-then-false.com/2012/install-postgresql-on-fedora-centos-red-hat-rhel">Install PostgreSQL</a>
+See solution by installation: [Install PostgreSQL](http://www.if-not-true-then-false.com/2012/install-postgresql-on-fedora-centos-red-hat-rhel)
 
 The next step updates `.bashrc` file:
 
@@ -170,7 +170,7 @@ If You have SSL certificates which not `self signed` You can add their for nginx
     /etc/ssl/abf.key
     /etc/ssl/abf.crt 
 
-Solution for creating `self signed` SSL Certificate on nginx: <a href="https://www.digitalocean.com/community/articles/how-to-create-a-ssl-certificate-on-nginx-for-centos-6">How to Create a SSL Certificate</a>. But no warranty for correct working of all system.
+Solution for creating `self signed` SSL Certificate on nginx: [How to Create a SSL Certificate](https://www.digitalocean.com/community/articles/how-to-create-a-ssl-certificate-on-nginx-for-centos-6). But no warranty for correct working of all system.
 
 Configuration files for nginx:
 

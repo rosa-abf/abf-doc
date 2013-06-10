@@ -4,7 +4,7 @@ title: Search | ABF API
 
 # Search API
 
-* <a href="#search-around-the-abf">Search around the ABF</a>
+* [Search around the ABF](#search-around-the-abf)
 
 ## Search around the ABF
 
