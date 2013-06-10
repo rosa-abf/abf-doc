@@ -1,8 +1,8 @@
 ---
-title: RosaLab ABF Documentation
+title: ABF Documentation | RosaLab Documentation
 ---
 
-# RosaLab ABF Documentation
+# ABF Documentation
 
 This describes the resources that make up the official Rosa ABF Documentation. If you have any problems or requests please contact support.
 

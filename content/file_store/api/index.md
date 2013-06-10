@@ -1,8 +1,8 @@
 ---
-title: RosaLab File Store API
+title: File Store API Documentation
 ---
 
-# RosaLab File Store API
+# File Store API Documentation
 
 This describes the resources that make up the official Rosa File Store API. If you have any problems or requests please contact support.
 

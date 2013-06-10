@@ -1,8 +1,8 @@
 ---
-title: RosaLab ABF Deployment Documentation
+title: ABF Deployment Documentation
 ---
 
-# RosaLab ABF Deployment Documentation
+# ABF Deployment Documentation
 
 This describes the resources that make up the official Rosa ABF Deployment Documentation. If you have any problems or requests please contact support.
 

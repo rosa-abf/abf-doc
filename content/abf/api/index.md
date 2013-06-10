@@ -1,8 +1,8 @@
 ---
-title: RosaLab ABF API
+title: ABF API Documentation
 ---
 
-# RosaLab ABF API
+# ABF API Documentation
 
 This describes the resources that make up the official Rosa ABF API. If you have any problems or requests please contact support.
 

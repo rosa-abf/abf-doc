@@ -1,8 +1,8 @@
 ---
-title: File Store | ABF API
+title: Files | File Store API Documentation
 ---
 
-# File Store API
+# Files API
 
 * <a href="#create-file">Create a File </a>
 * <a href="#find-a-file">Find a File</a>

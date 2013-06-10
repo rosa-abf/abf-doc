@@ -1,8 +1,8 @@
 ---
-title: RosaLab ABF Documentation - Deployment on Ubuntu
+title: Deployment on Ubuntu | ABF Deployment Documentation
 ---
 
-# RosaLab ABF Documentation - Deployment on Ubuntu
+# Deployment on Ubuntu
 
 * <a href="#prepare-environment">Prepare environment</a>
 * <a href="#prepare-server-to-deployment">Prepare server to deployment</a>

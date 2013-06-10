@@ -1,8 +1,8 @@
 ---
-title: RosaLab ABF Documentation - Publication of packages
+title: Publication of packages | ABF Package build environment
 ---
 
-# RosaLab ABF Documentation - Publication of packages
+# Publication of packages
 
 * <a href="#introduction">Introduction</a>
 * <a href="#buildsh-script">build.sh script</a>
