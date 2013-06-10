@@ -4,13 +4,13 @@ title: Product Build Lists | ABF API
 
 # Product Build Lists API
 
-* <a href="#get-a-single-product-build-list">Get a single product build list</a>
-* <a href="#list-product-build-lists">List product build lists</a>
-* <a href="#list-product-build-lists-for-a-product">List product build lists for a product</a>
-* <a href="#create-product-build-list">Create product build list</a>
-* <a href="#destroy-product-build-list">Destroy product build list</a>
-* <a href="#update-product-build-list">Update product build list</a>
-* <a href="#cancel-product-build-list">Cancel product build list</a>
+* [Get a single product build list](#get-a-single-product-build-list)
+* [List product build lists](#list-product-build-lists)
+* [List product build lists for a product](#list-product-build-lists-for-a-product)
+* [Create product build list](#create-product-build-list)
+* [Destroy product build list](#destroy-product-build-list)
+* [Update product build list](#update-product-build-list)
+* [Cancel product build list](#cancel-product-build-list)
 
 ## Get a single product build list
 
@@ -39,7 +39,7 @@ id
 
 ## List product build lists
 
-Look at <a href="#get-a-single-product-build-list">Product build list status</a>.
+Look at [Product build list status](#get-a-single-product-build-list).
 
     GET /api/v1/product_build_lists.json
 
@@ -65,7 +65,7 @@ per_page
 
 ## List product build lists for a product
 
-Look at <a href="#get-a-single-product-build-list">Product build list status</a>.
+Look at [Product build list status](#get-a-single-product-build-list).
 
     GET /api/v1/products/:product_id/product_build_lists.json
 

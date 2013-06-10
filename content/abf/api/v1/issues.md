@@ -4,11 +4,11 @@ title: Issues | ABF API
 
 # Projects API
 
-* <a href="#list-issues">List issues</a>
-* <a href="#list-issues-for-a-project">List issues for a project</a>
-* <a href="#get-a-single-issue">Get a single issue</a>
-* <a href="#create-an-issue">Create an issue</a>
-* <a href="#update-a-single-issue">Update a single issue</a>
+* [List issues](#list-issues)
+* [List issues for a project](#list-issues-for-a-project)
+* [Get a single issue](#get-a-single-issue)
+* [Create an issue](#create-an-issue)
+* [Update a single issue](#update-a-single-issue)
 
 ## List issues
 

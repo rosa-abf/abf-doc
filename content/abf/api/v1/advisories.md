@@ -4,10 +4,10 @@ title: Advisories | ABF API
 
 # Advisories API
 
-* <a href="#list-advisories">List advisories</a>
-* <a href="#get-a-single-advisory">Get a single advisory</a>
-* <a href="#create-advisory">Create advisory</a>
-* <a href="#attach-to-advisory">Attach to advisory</a>
+* [List advisories](#list-advisories)
+* [Get a single advisory](#get-a-single-advisory)
+* [Create advisory](#create-advisory)
+* [Attach to advisory](#attach-to-advisory)
 
 ## List advisories
 

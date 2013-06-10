@@ -4,15 +4,15 @@ title: Groups | ABF API
 
 # Groups API
 
-* <a href="#list-groups">List groups</a>
-* <a href="#get-a-single-group">Get a single group</a>
-* <a href="#update-a-single-group">Update a single group</a>
-* <a href="#create-group">Create group</a>
-* <a href="#destroy-group">Destroy group</a>
-* <a href="#members-of-a-single-group">Members of a single group</a>
-* <a href="#add-member-to-a-single-group">Add member to a single group</a>
-* <a href="#remove-member-from-a-single-group">Remove member from a single group</a>
-* <a href="#update-member-role-for-a-single-group">Update member role for a single group</a>
+* [List groups](#list-groups)
+* [Get a single group](#get-a-single-group)
+* [Update a single group](#update-a-single-group)
+* [Create group](#create-group)
+* [Destroy group](#destroy-group)
+* [Members of a single group](#members-of-a-single-group)
+* [Add member to a single group](#add-member-to-a-single-group)
+* [Remove member from a single group](#remove-member-from-a-single-group)
+* [Update member role for a single group](#update-member-role-for-a-single-group)
 
 ## List groups
 

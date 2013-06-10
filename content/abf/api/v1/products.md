@@ -4,10 +4,10 @@ title: Products | ABF API
 
 # Products API
 
-* <a href="#get-a-single-product">Get a single product</a>
-* <a href="#create-product">Create product</a>
-* <a href="#update-a-single-product">Update a single product</a>
-* <a href="#destroy-product">Destroy product</a>
+* [Get a single product](#get-a-single-product)
+* [Create product](#create-product)
+* [Update a single product](#update-a-single-product)
+* [Destroy product](#destroy-product)
 
 ## Get a single product
 
@@ -59,7 +59,7 @@ params:
 time_living:
 : _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
 
-<a href="#get-a-single-product">autostart_status:</a>
+[autostart_status](#get-a-single-product):
 : _Optional_ **Integer** Autostart ISO builds on a regular basis. Default value: `nil`.
 
 ### Request:
@@ -103,7 +103,7 @@ params:
 time_living:
 : _Optional_ **Integer** Maximum time for building (between 2 and 720 minutes).
 
-<a href="#get-a-single-product">autostart_status:</a>
+[autostart_status](#get-a-single-product):
 : _Optional_ **Integer** Autostart ISO builds on a regular basis.
 
 ### Request:
