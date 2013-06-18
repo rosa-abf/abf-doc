@@ -177,7 +177,7 @@ assignee
 assigned to.
 
 status
-: _Optional_ **String** - State of the pull request: `open` or `closed`.
+: _Optional_ **String** - State of the pull request: `closed` or `reopen`.
 
 ### Request:
 

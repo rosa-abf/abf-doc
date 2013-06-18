@@ -2293,50 +2293,54 @@ module GitHub
     PULL_REQUEST_PARTIAL = {
       'number' => 'serial number',
       'title' => 'title',
+      'to_ref' => TO_REF_PARTIAL,
+      'from_ref' => FROM_REF_PARTIAL,
       'status' => 'pull request status',
+      'owner' => USER_PARTIAL,
       'assignee' => USER_PARTIAL,
+      'merged_at' => 'merged at date and time',
+      'mergeable' => 'can be automatically merged',
       'url' => 'url to pull request data page'
     }
 
     PULL_REQUEST_PARAMS = PULL_REQUEST_PARTIAL.merge({
       'body' => 'body',
-      'owner' => USER_PARTIAL,
-      'merged_at' => 'merged at date and time',
       'closed_at' => 'closed at date and time',
       'closed_by' => USER_PARTIAL,
       'created_at' => 'created at date and time',
       'updated_at' => 'updated at date and time',
-      'to_ref' => TO_REF_PARTIAL,
-      'from_ref' => FROM_REF_PARTIAL
+      'merged_by' => USER_PARTIAL
     })
 
     PULL_REQUESTS_LIST_RESPONSE = {
-      'pull_requests' => [PULL_REQUEST_PARAMS],
+      'pull_requests' => [PULL_REQUEST_PARTIAL],
       'url' => 'path to pull request data'
     }
 
     PULL_REQUEST_PARTIAL_EXAMPLE = {
       'number' => '11',
       'title' => 'new feature',
+      'to_ref' => TO_REF_PARTIAL_EXAMPLE,
+      'from_ref' => FROM_REF_PARTIAL_EXAMPLE,
       'status' => 'open',
+      'owner' => USER_PARTIAL_EXAMPLE,
       'assignee' => USER_PARTIAL_EXAMPLE,
+      'merged_at' => '1348170705',
+      'mergeable' => 'true',
       'url' => '/api/v1/projects/3/pull_requests/11.json'
     }
 
     PULL_REQUEST_PARAMS_EXAMPLE = PULL_REQUEST_PARTIAL_EXAMPLE.merge({
       'body' => 'new cool feature for us',
-      'owner' => USER_PARTIAL_EXAMPLE,
-      'merged_at' => '1348170705',
       'closed_at' => '1348170705',
       'closed_by' => USER_PARTIAL_EXAMPLE,
       'created_at' => '1348168705',
       'updated_at' => '1348170705',
-      'to_ref' => TO_REF_PARTIAL_EXAMPLE,
-      'from_ref' => FROM_REF_PARTIAL_EXAMPLE
+      'merged_by' => USER_PARTIAL_EXAMPLE
     })
 
     PULL_REQUESTS_LIST_RESPONSE_EXAMPLE = {
-      'pull_requests' => [PULL_REQUEST_PARAMS_EXAMPLE],
+      'pull_requests' => [PULL_REQUEST_PARTIAL_EXAMPLE],
       'url' => '/api/v1/projects/3/pull_requests.json'
     }
 
