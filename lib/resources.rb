@@ -2393,11 +2393,13 @@ module GitHub
       'https_url' => 'commit url',
       'author' => {
         'name' => 'author name',
-        'email' => 'author email'
+        'email' => 'author email',
+        'date' => 'authored date'
       },
       'committer' => {
         'name' => 'committer name',
-        'email' => 'committer email'
+        'email' => 'committer email',
+        'date' => 'committed date'
       },
       'message' => 'Fix all the bugs',
       'tree' => {
@@ -2415,16 +2417,18 @@ module GitHub
       'https_url' => 'https://abf.rosalinux.ru/abf/rosa-build/commit/4c2553a5a339c8b59234a5bbc35dedf3d89c2043',
       'author' => {
         'name' => 'abf',
-        'email' => 'abf@test.ru'
+        'email' => 'abf@test.ru',
+        'date' => '1348168705'
       },
       'committer' => {
         'name' => 'abf',
-        'email' => 'abf@test.ru'
+        'email' => 'abf@test.ru',
+        'date' => '1348168705'
       },
       'message' => 'Fix all the bugs',
       'tree' => {
         'sha' => '4c2553a5a339c8b59234a5bbc35dedf3d89c2043',
-        'url' => 'tree url'
+        'url' => 'https://abf.rosalinux.ru/abf/rosa-build/tree/4c2553a5a339c8b59234a5bbc35dedf3d89c2043'
       },
       'parents' => [{
         'sha' => '20056fbc319722cc64cf7e718b22607693e7f0b0',
@@ -2458,8 +2462,8 @@ module GitHub
         'additions' => '42',
         'deletions' => '24',
         'changes' => '66',
-        'blob_url' => 'https =>//abf.rosalinux.ru/abf/rosa-build/blob/master/Gemfile',
-        'raw_url' => 'https =>//abf.rosalinux.ru/abf/rosa-build/raw/master/Gemfile'
+        'blob_url' => 'https://abf.rosalinux.ru/abf/rosa-build/blob/master/Gemfile',
+        'raw_url' => 'https://abf.rosalinux.ru/abf/rosa-build/raw/master/Gemfile'
       }]
     }
 
