@@ -193,7 +193,7 @@ status
 
 ## List commits on a pull request
 
-    GET /api/v1/projects/:id/pull_requests/:number.json
+    GET /api/v1/projects/:id/pull_requests/:number/commits.json
 
 ### Parameters:
 
@@ -213,7 +213,7 @@ number
 
 ## List pull requests files
 
-    GET /api/v1/projects/:id/pull_requests/:number.json
+    GET /api/v1/projects/:id/pull_requests/:number/files.json
 
 ### Parameters:
 
