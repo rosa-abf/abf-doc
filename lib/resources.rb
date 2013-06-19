@@ -2390,6 +2390,7 @@ module GitHub
 
     COMMIT_PARTIAL = {
       'sha' => 'commit sha',
+      'https_url' => 'commit url',
       'author' => {
         'name' => 'author name',
         'email' => 'author email'
@@ -2400,12 +2401,18 @@ module GitHub
       },
       'message' => 'Fix all the bugs',
       'tree' => {
-        'sha' => 'commit sha'
-      }
+        'sha' => 'commit sha',
+        'https_url' => 'tree url'
+      },
+      'parents' => [{
+        'sha' => 'commit sha',
+        'https_url' => 'tree url'
+      }]
     }
 
     COMMIT_PARTIAL_EXAMPLE = {
       'sha' => '4c2553a5a339c8b59234a5bbc35dedf3d89c2043',
+      'https_url' => 'https://abf.rosalinux.ru/abf/rosa-build/commit/4c2553a5a339c8b59234a5bbc35dedf3d89c2043',
       'author' => {
         'name' => 'abf',
         'email' => 'abf@test.ru'
@@ -2416,30 +2423,19 @@ module GitHub
       },
       'message' => 'Fix all the bugs',
       'tree' => {
-        'sha' => '3d1468bbb339c8b59234a5bbc35dedf3d89c2043'
-      }
+        'sha' => '4c2553a5a339c8b59234a5bbc35dedf3d89c2043',
+        'url' => 'tree url'
+      },
+      'parents' => [{
+        'sha' => '20056fbc319722cc64cf7e718b22607693e7f0b0',
+        'https_url' => 'https://abf.rosalinux.ru/abf/rosa-build/commit/20056fbc319722cc64cf7e718b22607693e7f0b0'
+      }]
     }
     LIST_COMMITS_PULL_REQUEST_DATA_RESPONSE = {
-      'commits' => [
-        COMMIT_PARTIAL.merge({
-          'author' => USER_PARTIAL,
-          'committer' => USER_PARTIAL,
-          'parents' => [{
-            'sha' => 'commit sha'
-          }]
-        })
-      ]
+      'commits' => [COMMIT_PARTIAL]
     }
     LIST_COMMITS_PULL_REQUEST_DATA_RESPONSE_EXAMPLE = {
-      'commits' => [
-        COMMIT_PARTIAL_EXAMPLE.merge({
-          'author' => USER_PARTIAL_EXAMPLE,
-          'committer' => USER_PARTIAL_EXAMPLE,
-          'parents' => [{
-            'sha' => '473cca87b339c8b59234a5bbc35dedf3d89c2043'
-          }]
-        })
-      ]
+      'commits' => [COMMIT_PARTIAL_EXAMPLE]
     }
 
     LIST_PULL_REQUESTS_FILES_DATA_RESPONSE = {
