@@ -2428,7 +2428,7 @@ module GitHub
       'message' => 'Fix all the bugs',
       'tree' => {
         'sha' => '4c2553a5a339c8b59234a5bbc35dedf3d89c2043',
-        'url' => 'https://abf.rosalinux.ru/abf/rosa-build/tree/4c2553a5a339c8b59234a5bbc35dedf3d89c2043'
+        'https_url' => 'https://abf.rosalinux.ru/abf/rosa-build/tree/4c2553a5a339c8b59234a5bbc35dedf3d89c2043'
       },
       'parents' => [{
         'sha' => '20056fbc319722cc64cf7e718b22607693e7f0b0',
