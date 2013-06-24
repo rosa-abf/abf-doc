@@ -2450,8 +2450,8 @@ module GitHub
         'additions' => 'additional lines count',
         'deletions' => 'deletions lines count',
         'changes' => 'total lines changes',
-        'blob_url' => 'blob url',
-        'raw_url' => 'raw file url'
+        'blob_https_url' => 'blob url',
+        'raw_https_url' => 'raw file url'
       }]
     }
     LIST_PULL_REQUESTS_FILES_DATA_RESPONSE_EXAMPLE = {
@@ -2462,8 +2462,8 @@ module GitHub
         'additions' => '42',
         'deletions' => '24',
         'changes' => '66',
-        'blob_url' => 'https://abf.rosalinux.ru/abf/rosa-build/blob/master/Gemfile',
-        'raw_url' => 'https://abf.rosalinux.ru/abf/rosa-build/raw/master/Gemfile'
+        'blob_https_url' => 'https://abf.rosalinux.ru/abf/rosa-build/blob/master/Gemfile',
+        'raw_https_url' => 'https://abf.rosalinux.ru/abf/rosa-build/raw/master/Gemfile'
       }]
     }
 
