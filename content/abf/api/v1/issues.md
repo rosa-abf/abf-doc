@@ -2,7 +2,7 @@
 title: Issues | ABF API
 ---
 
-# Projects API
+# Issues API
 
 * <a href="#list-issues">List issues</a>
 * <a href="#list-issues-for-a-project">List issues for a project</a>
