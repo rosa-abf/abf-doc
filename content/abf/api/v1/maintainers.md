@@ -4,7 +4,7 @@ title: Maintainers | ABF API
 
 # Maintainers API
 
-* <a href="#list-maintainers">List maintainers</a>
+* [List maintainers](#list-maintainers)
 
 ## List maintainers
   Parameter "url" in block "Package" is available only for new core.

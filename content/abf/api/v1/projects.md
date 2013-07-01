@@ -4,18 +4,18 @@ title: Projects | ABF API
 
 # Projects API
 
-* <a href="#list-projects">List projects</a>
-* <a href="#get-a-single-project">Get a single project</a>
-* <a href="#get-project-id">Get project id</a>
-* <a href="#get-all-references-of-project">Get all references of project</a>
-* <a href="#update-a-single-project">Update a single project</a>
-* <a href="#create-project">Create project</a>
-* <a href="#destroy-project">Destroy project</a>
-* <a href="#fork-project">Fork project</a>
-* <a href="#members-of-a-single-project">Members of a single project</a>
-* <a href="#add-member-to-a-single-project">Add member to a single project</a>
-* <a href="#remove-member-from-a-single-project">Remove member from a single project</a>
-* <a href="#update-member-role-for-a-single-project">Update member role for a single project</a>
+* [List projects](#list-projects)
+* [Get a single project](#get-a-single-project)
+* [Get project id](#get-project-id)
+* [Get all references of project](#get-all-references-of-project)
+* [Update a single project](#update-a-single-project)
+* [Create project](#create-project)
+* [Destroy project](#destroy-project)
+* [Fork project](#fork-project)
+* [Members of a single project](#members-of-a-single-project)
+* [Add member to a single project](#add-member-to-a-single-project)
+* [Remove member from a single project](#remove-member-from-a-single-project)
+* [Update member role for a single project](#update-member-role-for-a-single-project)
 
 ## List projects
 

@@ -1,22 +1,22 @@
 ---
-title: RosaLab ABF Documentation - Assembly of packages
+title: Assembly of packages | ABF Package build environment
 ---
 
-# RosaLab ABF Documentation - Assembly of packages
+# Assembly of packages
 
-* <a href="#introduction">Introduction</a>
-* <a href="#input-parameters">Input parameters</a>
-* <a href="#template-of-script">Template of script</a>
-* <a href="#return-codes">Return codes</a>
+* [Introduction](#introduction)
+* [Input parameters](#input-parameters)
+* [Template of script](#template-of-script)
+* [Return codes](#return-codes)
 
 ## Introduction
 
 Different scripts uses for each type of platform. If You would like to create new script, we recommend to review next projects:
 
-* <a href="https://abf.rosalinux.ru/abf/rhel-scripts/tree/master/build-packages">RHEL scripts</a>
-* <a href="https://abf.rosalinux.ru/abf/mdv-scripts/tree/master/build-packages">MDV scripts</a>
+* [RHEL scripts](https://abf.rosalinux.ru/abf/rhel-scripts/tree/master/build-packages)
+* [MDV scripts](https://abf.rosalinux.ru/abf/mdv-scripts/tree/master/build-packages)
 
-It contains scripts for MDV and RHEL platforms.
+It contains scripts for `MDV` and `RHEL` platforms.
 
 
 ## Input parameters:

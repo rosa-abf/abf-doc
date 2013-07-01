@@ -4,16 +4,16 @@ title: Repositories | ABF API
 
 # Repositories API
 
-* <a href="#get-a-single-repository">Get a single repository</a>
-* <a href="#projects-of-a-single-repository">Projects of a single repository</a>
-* <a href="#update-a-single-repository">Update a single repository</a>
-* <a href="#create-repository">Create repository</a>
-* <a href="#destroy-repository">Destroy repository</a>
-* <a href="#add-member-to-a-single-repository">Add member to a single repository</a>
-* <a href="#remove-member-from-a-single-repository">Remove member from a single repository</a>
-* <a href="#add-project-to-a-single-repository">Add project to a single repository</a>
-* <a href="#remove-project-from-a-single-repository">Remove project from a single repository</a>
-* <a href="#update-signatures-for-a-single-repository">Update signatures for a single repository</a>
+* [Get a single repository](#get-a-single-repository)
+* [Projects of a single repository](#projects-of-a-single-repository)
+* [Update a single repository](#update-a-single-repository)
+* [Create repository](#create-repository)
+* [Destroy repository](#destroy-repository)
+* [Add member to a single repository](#add-member-to-a-single-repository)
+* [Remove member from a single repository](#remove-member-from-a-single-repository)
+* [Add project to a single repository](#add-project-to-a-single-repository)
+* [Remove project from a single repository](#remove-project-from-a-single-repository)
+* [Update signatures for a single repository](#update-signatures-for-a-single-repository)
 
 ## Get a single repository
 

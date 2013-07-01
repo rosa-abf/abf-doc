@@ -1,23 +1,23 @@
 ---
-title: RosaLab ABF Documentation - Publication of packages
+title: Publication of packages | ABF Package build environment
 ---
 
-# RosaLab ABF Documentation - Publication of packages
+# Publication of packages
 
-* <a href="#introduction">Introduction</a>
-* <a href="#buildsh-script">build.sh script</a>
-* <a href="#rollbacksh-script">rollback.sh script</a>
-* <a href="#resignsh-script">resign.sh script</a>
-* <a href="#return-codes">Return codes</a>
+* [Introduction](#introduction)
+* [build.sh script](#buildsh-script)
+* [rollback.sh script](#rollbacksh-script)
+* [resign.sh script](#resignsh-script)
+* [Return codes](#return-codes)
 
 ## Introduction
 
 Different scripts uses for each type of platform. If You would like to create new script, we recommend to review next projects:
 
-* <a href="https://abf.rosalinux.ru/abf/rhel-scripts/tree/master/publish-packages">RHEL scripts</a>
-* <a href="https://abf.rosalinux.ru/abf/mdv-scripts/tree/master/publish-packages">MDV scripts</a>
+* [RHEL scripts](https://abf.rosalinux.ru/abf/rhel-scripts/tree/master/publish-packages)
+* [MDV scripts](https://abf.rosalinux.ru/abf/mdv-scripts/tree/master/publish-packages)
 
-It contains scripts for MDV and RHEL platforms.
+It contains scripts for `MDV` and `RHEL` platforms.
 
 ### Three scripts uses for working with repository:
 
@@ -29,7 +29,7 @@ It contains scripts for MDV and RHEL platforms.
 
 `build.sh` uses for publishing packages into repository, regenerating metadata and creating container.
 Information about container see:
-<a href="/abf/api/v1/build_lists/#create-container">Create container</a>
+[Create container](/abf/api/v1/build_lists/#create-container)
 
 
 ### Input parameters:

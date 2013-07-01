@@ -4,11 +4,11 @@ title: Users | ABF API
 
 # Users API
 
-* <a href="#get-a-single-user">Get a single user</a>
-* <a href="#get-a-current-user">Get a current user</a>
-* <a href="#update-a-current-user">Update a current user</a>
-* <a href="#get-a-notification-settings-of-a-current-user">Get a notification settings of a current user</a>
-* <a href="#update-a-notification-settings-for-a-current-user">Update a notification settings for a current user</a>
+* [Get a single user](#get-a-single-user)
+* [Get a current user](#get-a-current-user)
+* [Update a current user](#update-a-current-user)
+* [Get a notification settings of a current user](#get-a-notification-settings-of-a-current-user)
+* [Update a notification settings for a current user](#update-a-notification-settings-for-a-current-user)
 
 ## Get a single user
 

@@ -4,17 +4,17 @@ title: Platforms | ABF API
 
 # Platforms API
 
-* <a href="#get-a-single-platform">Get a single platform</a>
-* <a href="#update-a-single-platform">Update a single platform</a>
-* <a href="#members-of-a-single-platform">Members of a single platform</a>
-* <a href="#add-member-to-a-single-platform">Add member to a single platform</a>
-* <a href="#remove-member-from-a-single-platform">Remove member from a single platform</a>
-* <a href="#clone-a-single-platform">Clone a single platform</a>
-* <a href="#clear-a-single-platform">Clear a single platform</a>
-* <a href="#create-platform">Create platform</a>
-* <a href="#destroy-platform">Destroy platform</a>
-* <a href="#list-platforms">List platforms</a>
-* <a href="#list-of-platforms-for-which-you-can-create-build-list">List of platforms for which you can create build list</a>
+* [Get a single platform](#get-a-single-platform)
+* [Update a single platform](#update-a-single-platform)
+* [Members of a single platform](#members-of-a-single-platform)
+* [Add member to a single platform](#add-member-to-a-single-platform)
+* [Remove member from a single platform](#remove-member-from-a-single-platform)
+* [Clone a single platform](#clone-a-single-platform)
+* [Clear a single platform](#clear-a-single-platform)
+* [Create platform](#create-platform)
+* [Destroy platform](#destroy-platform)
+* [List platforms](#list-platforms)
+* [List of platforms for which you can create build list](#list-of-platforms-for-which-you-can-create-build-list)
 
 ## Get a single platform
 
@@ -284,8 +284,7 @@ type
 <%= json(:platform_list_response_example) %>
 
 ## List of platforms for which you can create build list.
-This data required for api
-<a href="/abf/api/v1/build_lists/#create-build-list">Сreate build list.</a>
+This data required for api [Сreate build list](/abf/api/v1/build_lists/#create-build-list).
 
     GET /api/v1/platforms/platforms_for_build.json
 

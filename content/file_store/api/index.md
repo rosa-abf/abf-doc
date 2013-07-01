@@ -1,8 +1,8 @@
 ---
-title: RosaLab File Store API
+title: File Store API Documentation
 ---
 
-# RosaLab File Store API
+# File Store API Documentation
 
 This describes the resources that make up the official Rosa File Store API. If you have any problems or requests please contact support.
 
@@ -10,11 +10,11 @@ This describes the resources that make up the official Rosa File Store API. If y
 
 All of the urls in this manual have the same tail: .json. Because the default
 
-* <a href="#schema">Schema</a>
-* <a href="#client-errors">Client Errors</a>
-* <a href="#http-verbs">HTTP Verbs</a>
-* <a href="#authentication">Authentication</a>
-* <a href="#rate-limiting">Rate Limiting</a>
+* [Schema](#schema)
+* [Client Errors](#client-errors)
+* [HTTP Verbs](#http-verbs)
+* [Authentication](#authentication)
+* [Rate Limiting](#rate-limiting)
 
 ## Schema
 

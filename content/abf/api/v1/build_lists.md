@@ -4,15 +4,15 @@ title: Build lists | ABF API
 
 # Build lists API
 
-* <a href="#get-a-single-build-list">Get a single build list</a>
-* <a href="#create-build-list">Create build list</a>
-* <a href="#cancel-build-list">Cancel build list</a>
-* <a href="#publish-build-list">Publish build list</a>
-* <a href="#create-container">Create container</a>
-* <a href="#reject-publish-build-list">Reject publish build list</a>
-* <a href="#list-build-lists">List build lists</a>
-* <a href="#list-build-lists-for-a-project">List build lists for a project</a>
-* <a href="#destroy-build-list">Destroy build list</a>
+* [Get a single build list](#get-a-single-build-list)
+* [Create build list](#create-build-list)
+* [Cancel build list](#cancel-build-list)
+* [Publish build list](#publish-build-list)
+* [Create container](#create-container)
+* [Reject publish build list](#reject-publish-build-list)
+* [List build lists](#list-build-lists)
+* [List build lists for a project](#list-build-lists-for-a-project)
+* [Destroy build list](#destroy-build-list)
 
 ## Get a single build list
   Block "Logs" is available only for new core.<br/>
@@ -57,11 +57,11 @@ update_type
 
 save_to_repository_id
 : _Required_ **integer** — Repository identifier for package storage. List of repositories can be find in api call:
-<a href="/abf/api/v1/projects/#get-a-single-project">see repositories section.</a>
+[see repositories section](/abf/api/v1/projects/#get-a-single-project).
 
 build_for_platform_id
 : _Required_ **integer** — Identifier of platform for which need to run assembly. List of platforms can be find in api call:
-<a href="/abf/api/v1/platforms/#list-of-platforms-for-which-you-can-create-build-list">list of platforms.</a>
+[list of platforms](/abf/api/v1/platforms/#list-of-platforms-for-which-you-can-create-build-list).
 
 auto_publish
 : _Required_ **boolean** — `true` to enable automatic publiction build list if the build succeeds, `false` allow manually publication. If in repository for package storage disabled publication without QA, parameter auto_publish automatically will be set to false.
@@ -265,7 +265,7 @@ filter[save_to_platform_id]
 
 ### Parameters:
 
-Look at <a href="#list-build-lists">List build lists</a>
+Look at [List build lists](#list-build-lists)
 
 ### Response:
 
