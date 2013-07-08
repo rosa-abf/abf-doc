@@ -2374,7 +2374,14 @@ module GitHub
     }
 
     PULL_REQUEST_CREATE_REQUEST = {
-      'pull_request' => PULL_REQUEST_UPDATE_EXAMPLE
+      'pull_request' => {
+        'title' => 'fix security bug',
+        'body' => 'fixed at 123456',
+        'assignee_id' => 15,
+        'to_ref' => 'master',
+        'from_project_id' => 93862,
+        'from_ref' => 'new_branch'
+      }
     }
     PULL_REQUEST_CREATE_RESPONSE = PULL_REQUEST_UPDATE_RESPONSE
     PULL_REQUEST_CREATE_RESPONSE_EXAMPLE = {

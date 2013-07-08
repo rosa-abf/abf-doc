@@ -134,7 +134,7 @@ to_ref
 This should be an existing branch on the current repository.
 You cannot submit a pull request to one repo that requests a merge to a base of another repo.
 
-from_project
+from_project_id
 : _Optional **Integer** Identifier project where your changes are implemented. Default current project.
 
 from_ref
