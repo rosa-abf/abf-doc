@@ -280,7 +280,7 @@ secret
 
 ## Add '.repo.lock' file
 
-Presence of `.repo.lock` file means that mirror is doing sync of current repository now.
+Presence of `.repo.lock` file means that mirror is currently synchronising the repository state.
 
     PUT /api/v1/repositories/:id/add_repo_lock_file.json
 
@@ -299,7 +299,7 @@ id
 
 ## Remove '.repo.lock' file
 
-Presence of `.repo.lock` file means that mirror is doing sync of current repository now.
+Presence of `.repo.lock` file means that mirror is currently synchronising the repository state.
 
     DELETE /api/v1/repositories/:id/remove_repo_lock_file.json
 
