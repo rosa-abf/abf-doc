@@ -1033,6 +1033,24 @@ module GitHub
         }
     }
 
+    REPOSITORY_ADD_REPO_LOCK_FILE_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_ADD_REPO_LOCK_FILE_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "'.repo.lock' file has been added to repository successfully"
+        }
+    }
+
+    REPOSITORY_REMOVE_REPO_LOCK_FILE_RESPONSE = REPOSITORY_UPDATE_RESPONSE
+    REPOSITORY_REMOVE_REPO_LOCK_FILE_RESPONSE_EXAMPLE = {
+      "repository"=>
+        {
+          "id"=> 56,
+          "message"=> "'.repo.lock' file has been removed from repository successfully"
+        }
+    }
+
     PRODUCT_PARTIAL = {
       'id' => 'resource id',
       'name' => 'name',

@@ -14,6 +14,8 @@ title: Repositories | ABF API
 * [Add project to a single repository](#add-project-to-a-single-repository)
 * [Remove project from a single repository](#remove-project-from-a-single-repository)
 * [Update signatures for a single repository](#update-signatures-for-a-single-repository)
+* [Add '.repo.lock' file](#add-repolock-file)
+* [Remove '.repo.lock' file](#remove-repolock-file)
 
 ## Get a single repository
 
@@ -275,3 +277,41 @@ secret
 ### Examples:
 
 <%= json(:repository_signatures_response_example) %>
+
+## Add '.repo.lock' file
+
+Presence of `.repo.lock` file means that mirror is doing sync of current repository now.
+
+    PUT /api/v1/repositories/:id/add_repo_lock_file.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository
+
+### Response:
+
+<%= json(:repository_add_repo_lock_file_response) %>
+
+### Example:
+
+<%= json(:repository_add_repo_lock_file_response_example) %>
+
+## Remove '.repo.lock' file
+
+Presence of `.repo.lock` file means that mirror is doing sync of current repository now.
+
+    DELETE /api/v1/repositories/:id/remove_repo_lock_file.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository
+
+### Response:
+
+<%= json(:repository_remove_repo_lock_file_response) %>
+
+### Example:
+
+<%= json(:repository_remove_repo_lock_file_response_example) %>
