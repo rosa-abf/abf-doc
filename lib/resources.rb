@@ -550,7 +550,6 @@ module GitHub
       "default_branch" => "git branch used by default",
       "is_package" => "true if project is package",
       "publish_i686_into_x86_64" => "true if i686 packages will be also published into x86_64 repository",
-      "average_build_time" => "average build time for this project",
       "created_at" => "created at date and time",
       "updated_at" => "updated at date and time",
       "owner" => {
@@ -570,7 +569,6 @@ module GitHub
       "default_branch" => "master",
       "is_package" => true,
       "publish_i686_into_x86_64" => false,
-      "average_build_time" => 0,
       "created_at" => 1348168705,
       "updated_at" => 1348168905,
       "owner" => {
@@ -593,6 +591,13 @@ module GitHub
 
     PROJECT_DATA_RESPONSE = {
       "project"=> PROJECT_PARAMS.merge({
+        "project_statistics" => [
+          {
+            "average_build_time"  => "average build time for this project",
+            "build_count"         => "count of builds",
+            "arch_id"             => "architecture of build lists"
+          }
+        ],
         "maintainer" => {
           "id" => "maintainer id",
           "name" => "maintainer name",
@@ -616,6 +621,18 @@ module GitHub
 
     PROJECT_DATA_RESPONSE_EXAMPLE = {
       "project" => PROJECT_PARAMS_EXAMPLE.merge({
+        "project_statistics" => [
+          {
+            "average_build_time"  => 100,
+            "build_count"         => 3,
+            "arch_id"             => 1
+          },
+          {
+            "average_build_time"  => 555,
+            "build_count"         => 7,
+            "arch_id"             => 2
+          },
+        ],
         "maintainer" => {
           "id" => 4,
           "name" => "Yaroslav Garkin",
