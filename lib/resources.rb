@@ -593,7 +593,7 @@ module GitHub
       "project"=> PROJECT_PARAMS.merge({
         "project_statistics" => [
           {
-            "average_build_time"  => "average build time for this project",
+            "average_build_time"  => "average build time for this project (sec.)",
             "build_count"         => "count of builds",
             "arch_id"             => "architecture of build lists"
           }
