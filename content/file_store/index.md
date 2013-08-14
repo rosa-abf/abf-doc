@@ -9,4 +9,4 @@ This describes the resources that make up the official Rosa File Store Documenta
 **Note: This Documentation is in a beta state. Breaking changes may occur.**
 
 * [API](/file_store/api/)
-<!-- * <a href="/file_store/deployment/">Deployment</a> -->
+* [Deployment](/file_store/deployment/)
