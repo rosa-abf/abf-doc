@@ -55,7 +55,7 @@ Once you are using RVM, installing Ruby is easy.
 
     rvm install ruby-2.0.0-p247
 
-Ruby is now installed. However, since we accessed it through a program that has a variety of Ruby versions, we need to tell the system to use 1.9.3 by default.
+Ruby is now installed. However, since we accessed it through a program that has a variety of Ruby versions, we need to tell the system to use 2.0.0 by default.
 
     rvm use ruby-2.0.0-p247 --default
 
