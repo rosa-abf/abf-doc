@@ -1,8 +1,8 @@
 ---
-title: File Store Deployment Documentation
+title: File Store Deployment | File Store Documentation
 ---
 
-# Deployment on Ubuntu/RELS/CentOS
+# Deployment
 
 * [Prepare environment](#prepare-environment)
 * [Prepare server to deployment](#prepare-server-to-deployment)
@@ -19,14 +19,7 @@ Add new user `rosa`:
 
 ### Install nesessary packages
 
-`Ubuntu`
-
-    sudo apt-get update && sudo apt-get install git-core libicu-devel gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel postgresql-devel python-devel
-
-`RELS/CentOS`
-
-    sudo yum install -y git-core libicu-devel gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel postgresql-devel python-devel
-
+    git-core libicu-devel gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel postgresql-devel python-devel
 
 ### Install RVM (for `rosa` user):
 
