@@ -733,6 +733,7 @@ module GitHub
     }
 
     PROJECT_UPDATE_EXAMPLE = {
+      "name" => "project_name",
       "description" => "description",
       "has_issues" => true,
       "has_wiki" => false,
@@ -764,8 +765,7 @@ module GitHub
     PROJECT_CREATE_REQUEST = {
       "project" => PROJECT_UPDATE_EXAMPLE.merge({
         "owner_id" => 56,
-        "owner_type" => "Group",
-        "name" => "project_name"
+        "owner_type" => "Group"
       })
     }
     PROJECT_CREATE_RESPONSE = PROJECT_UPDATE_RESPONSE
