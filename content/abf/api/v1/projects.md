@@ -100,6 +100,9 @@ id
 
 ### Input:
 
+name:
+: _Optional_ **String** project name.
+
 description:
 : _Optional_ **String** project description.
 
