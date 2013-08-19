@@ -129,7 +129,7 @@ title
 body
 : _Required_ **String**
 
-assignee
+assignee_id
 : _Optional_ **Integer** - Id for the user that this issue should be
 assigned to. _NOTE: Only users with push access can set the assignee for new
 issues. The assignee is silently dropped otherwise._
@@ -171,7 +171,7 @@ title
 body
 : _Optional_ **String**
 
-assignee
+assignee_id
 : _Optional_ **Integer** - Identifier for the user that this issue should be
 assigned to.
 
