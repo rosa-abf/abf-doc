@@ -82,6 +82,7 @@ It contains scripts for `MDV` and `RHEL` platforms.
     #     “fullname”:”fullname of package”,
     #     “sha1”:”sha1 of package”,
     #     “name”:”name of package file”,
+    #     “epoch”:”epoch of package”,
     #     “version”:”version of package”,
     #     “release”:”release of package”
     #   },
