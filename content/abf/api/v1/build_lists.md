@@ -8,6 +8,7 @@ title: Build lists | ABF API
 * [Create build list](#create-build-list)
 * [Cancel build list](#cancel-build-list)
 * [Publish build list](#publish-build-list)
+* [Publish build list into testing](#publish-build-list-into-testing)
 * [Create container](#create-container)
 * [Reject publish build list](#reject-publish-build-list)
 * [List build lists](#list-build-lists)
@@ -125,12 +126,51 @@ id
 ## Publish build list
 
 By this request you can publish build list.
-Only build list with status build complete (0), publishing error (8000) or tests failed (11000) can be published.<br/>
+Only build list with status:
+
+* build complete (0),
+* publishing error (8000),
+* tests failed (11000),
+* build has been published into testing (12000),
+* publishing error into testing (14000)
+
+can be published.<br/>
 Admin of platform/repository has access to publish build list again with status published (6000).<br/>
 Be careful: secondary publication will be able to break relationships in the repository!<br/>
 All extra build lists should be published before publishing this build list!
 
     PUT /api/v1/build_lists/:id/publish.json
+
+### Parameters:
+id
+: _Integer_ identifier of current build list
+
+### Response:
+
+<%= json(:build_list_publish_response) %>
+
+### Example:
+
+<%= json(:build_list_publish_response_example) %>
+
+&nbsp;
+
+<%= json(:build_list_publish_response_example2) %>
+
+## Publish build list into testing
+
+By this request you can publish build list into `testing` subrepository.
+Only build list with status:
+
+* build complete (0),
+* publishing error (8000),
+* tests failed (11000),
+* build has been published into testing (12000),
+* publishing error into testing (14000)
+
+can be published.<br/>
+
+    PUT /api/v1/build_lists/:id/publish_into_testing.json
 
 ### Parameters:
 id
@@ -174,7 +214,15 @@ id
 ## Reject publish build list
 
 By this request you can reject publish build list.
-Only build list with status build complete (0), publishing error (8000) or tests failed (11000) can be rejected.
+Only build list with status:
+
+* build complete (0),
+* publishing error (8000),
+* tests failed (11000),
+* build has been published into testing (12000),
+* publishing error into testing (14000)
+
+can be rejected.
 
     PUT /api/v1/build_lists/:id/reject_publish.json
 
@@ -225,7 +273,10 @@ filter[status]
     * `8000`  — publishing error;
     * `9000`  — publishing rejected;
     * `10000` — build is canceling;
-    * `11000` — tests failed.
+    * `11000` — tests failed;
+    * `12000` — build has been published into testing;
+    * `13000` — build is being published into testing;
+    * `14000` — publishing error into testing.
 
 filter[arch_id]
 : _Optional_ **integer** - identifier of the architecture.
