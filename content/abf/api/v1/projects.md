@@ -220,6 +220,9 @@ id
 id
 : _Required_ **Integer** identifier of current project.
 
+fork_name
+: _Optional_ **String** name of new project.
+
 ### Input:
 
 group_id:
@@ -227,7 +230,7 @@ group_id:
 
 ### Request:
 
-<%= json({}) %>
+<%= json({"fork_name" => 'new_name'}) %>
 
 &nbsp;
 
