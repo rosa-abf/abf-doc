@@ -54,7 +54,7 @@ id
 
 ## Packages of a single repository
 
-Available only for owner and admins of platform.
+Available only for owner and admins of main platform.
 __Only one request for each platform per 15 minutes!__
 
     GET /api/v1/repositories/:id/packages.csv
