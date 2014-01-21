@@ -6,6 +6,7 @@ title: Repositories | ABF API
 
 * [Get a single repository](#get-a-single-repository)
 * [Projects of a single repository](#projects-of-a-single-repository)
+* [Packages of a single repository](#packages-of-a-single-repository)
 * [Update a single repository](#update-a-single-repository)
 * [Create repository](#create-repository)
 * [Destroy repository](#destroy-repository)
@@ -50,6 +51,30 @@ id
 ### Example:
 
 <%= json(:repository_projects_response_example) %>
+
+## Packages of a single repository
+
+Available only for owner and admins of main platform.
+__Only one request for each platform per 15 minutes!__
+
+    GET /api/v1/repositories/:id/packages.csv
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current repository.
+
+### Response:
+
+    Project owner,Project name,Package name,Epoch,Version,Release,Maintainer uname,Maintainer email,Committer uname,Committer email
+    project_owner,project_name,package_name,epoch,version,release,maintainer_uname,maintainer_email,committer_uname,committer_email
+    ...
+
+### Example:
+
+    Project owner,Project name,Package name,Epoch,Version,Release,Maintainer uname,Maintainer email,Committer uname,Committer email
+    openmandriva,perl-Algorithm-Diff,perl-Algorithm-Diff,,1.190.200,6,ivan_aivazovsky,ivan_aivazovsky@test.com,peter_1,peter_1@test.com
+    openmandriva,perl-Net-SSLeay,perl-Net-SSLeay,,1.510.0,3,ivan_aivazovsky,ivan_aivazovsky@test.com,peter_1,peter_1@test.com
 
 ## Update a single repository
 
