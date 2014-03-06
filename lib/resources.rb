@@ -173,7 +173,7 @@ module GitHub
           "created_at" => 1349357795,
           "updated_at" => 1349358084,
           "update_type" => "bugfix",
-          "auto_publish" => true,
+          "auto_publish_status" => 'default',
           "auto_create_container" => true,
           "commit_hash" => "4edafbe69632173a1800c4d7582b60b46bc1fb55",
           "last_published_commit_hash" => "59f606578d21683bbbf4152bcdc2ebf1dd1e2e37",
@@ -268,7 +268,7 @@ module GitHub
             "name" => "build architecture name"
           },
           "update_type" => "update type",
-          "auto_publish" => "automated publising",
+          "auto_publish_status" => "automated publising status",
           "auto_create_container" => "automated creation of container",
           "commit_hash" => "last commit hash of project source",
           "last_published_commit_hash" => "last published commit hash of project source",
@@ -347,7 +347,7 @@ module GitHub
         "update_type"=> "one of the update types",
         "save_to_repository_id"=> "repository identifier for package storage",
         "build_for_platform_id"=> "platform identifier of platform for build",
-        "auto_publish"=> "automated publising",
+        "auto_publish_status"=> "automated publising status",
         "auto_create_container" => "automated creation of container",
         "include_repos"=> [
           "included repository id for each selected platform"
@@ -369,7 +369,7 @@ module GitHub
         "update_type"=> "bugfix",
         "save_to_repository_id"=> 12,
         "build_for_platform_id"=> 2,
-        "auto_publish"=> true,
+        "auto_publish_status"=> 'default',
         "auto_create_container" => true,
         "include_repos"=> [
           54,

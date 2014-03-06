@@ -64,14 +64,14 @@ build_for_platform_id
 : _Required_ **integer** — Identifier of platform for which need to run assembly. List of platforms can be find in api call:
 [list of platforms](/abf/api/v1/platforms/#list-of-platforms-for-which-you-can-create-build-list).
 
-auto_publish
-: _Required_ **boolean** — `true` to enable automatic publiction build list if the build succeeds, `false` allow manually publication. If in repository for package storage disabled publication without QA, parameter auto_publish automatically will be set to false.
-
 include_repos
 : _Required_ **array** of **integers** — Repositories to connect for building this build list. Repositories must belong to platform(build_for_platform_id) for which performed assembly. Use `extra_repositories` for connect repositories from personal platforms.
 
 arch_id
 : _Required_ **integer** — Identifier architecture for which need to run assembly.
+
+auto_publish_status
+: _Optional_ **string** — `default` to enable automatic publication build list if the build succeeds, `testing` to enable automatic publication build list into `testing` sub-repository if the build succeeds, `none` allow manually publication. If in repository for package storage disabled publication without QA, parameter auto_publish_status automatically will be set to `none`.
 
 auto_create_container
 : _Optional_ **boolean** — `true` to enable automatic creating container of build list if the build succeeds, `false` allow manually creating. Default value: `false`.
