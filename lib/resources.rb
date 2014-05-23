@@ -170,13 +170,15 @@ module GitHub
             "id" => 1,
             "name" => "x84_64"
           },
-          "created_at" => 1349357795,
-          "updated_at" => 1349358084,
-          "update_type" => "bugfix",
-          "auto_publish_status" => 'default',
+          "created_at"            => 1349357795,
+          "updated_at"            => 1349358084,
+          "update_type"           => "bugfix",
+          "auto_publish_status"   => 'default',
           "auto_create_container" => true,
-          "commit_hash" => "4edafbe69632173a1800c4d7582b60b46bc1fb55",
-          "last_published_commit_hash" => "59f606578d21683bbbf4152bcdc2ebf1dd1e2e37",
+          "use_cached_chroot"     => true,
+          "use_extra_tests"       => true,
+          "commit_hash"                 => "4edafbe69632173a1800c4d7582b60b46bc1fb55",
+          "last_published_commit_hash"  => "59f606578d21683bbbf4152bcdc2ebf1dd1e2e37",
           "priority" => 0,
           "duration" => nil,
           "advisory" => {
@@ -267,11 +269,13 @@ module GitHub
             "id" => "build architecture id",
             "name" => "build architecture name"
           },
-          "update_type" => "update type",
-          "auto_publish_status" => "automated publising status",
+          "update_type"           => "update type",
+          "auto_publish_status"   => "automated publising status",
           "auto_create_container" => "automated creation of container",
-          "commit_hash" => "last commit hash of project source",
-          "last_published_commit_hash" => "last published commit hash of project source",
+          "use_cached_chroot"     => "use cached chroot",
+          "use_extra_tests"       => "use extra tests",
+          "commit_hash"                 => "last commit hash of project source",
+          "last_published_commit_hash"  => "last published commit hash of project source",
           "priority" => "build priority",
           "duration" => "build duration in seconds",
           "created_at" => "created at date and time",
@@ -342,13 +346,15 @@ module GitHub
 
     BUILD_LIST_CREATE_PARAMETERS = {
       "build_list"=> {
-        "project_id"=> "project id",
-        "commit_hash"=> "commit hash to build",
-        "update_type"=> "one of the update types",
-        "save_to_repository_id"=> "repository identifier for package storage",
-        "build_for_platform_id"=> "platform identifier of platform for build",
-        "auto_publish_status"=> "automated publising status",
+        "project_id"            => "project id",
+        "commit_hash"           => "commit hash to build",
+        "update_type"           => "one of the update types",
+        "save_to_repository_id" => "repository identifier for package storage",
+        "build_for_platform_id" => "platform identifier of platform for build",
+        "auto_publish_status"   => "automated publising status",
         "auto_create_container" => "automated creation of container",
+        "use_cached_chroot"     => "use cached chroot",
+        "use_extra_tests"       => "use extra tests",
         "include_repos"=> [
           "included repository id for each selected platform"
         ],
@@ -364,13 +370,15 @@ module GitHub
 
     BUILD_LIST_CREATE_EXAMPLE = {
       "build_list"=> {
-        "project_id"=> "10",
-        "commit_hash"=> "751b0cad9cd1467e735d8c3334ea3cf988995fab",
-        "update_type"=> "bugfix",
-        "save_to_repository_id"=> 12,
-        "build_for_platform_id"=> 2,
-        "auto_publish_status"=> 'default',
+        "project_id"            => "10",
+        "commit_hash"           => "751b0cad9cd1467e735d8c3334ea3cf988995fab",
+        "update_type"           => "bugfix",
+        "save_to_repository_id" => 12,
+        "build_for_platform_id" => 2,
+        "auto_publish_status"   => 'default',
         "auto_create_container" => true,
+        "use_cached_chroot"     => true,
+        "use_extra_tests"       => true,
         "include_repos"=> [
           54,
           53
@@ -440,6 +448,27 @@ module GitHub
       "build_list" => {
         "id"      => nil,
         "message" => "Errors during build publishing!"
+      }
+    }
+
+    BUILD_LIST_RERUN_TESTS_RESPONSE = {
+      "build_list" => {
+        "id"      => "build list id (null if failed)",
+        "message" => "success or fail message"
+      }
+    }
+
+    BUILD_LIST_RERUN_TESTS_RESPONSE_EXAMPLE = {
+      "build_list" => {
+        "id"      => 10,
+        "message" => "Build is queued for rerun tests"
+      }
+    }
+
+    BUILD_LIST_RERUN_TESTS_RESPONSE_EXAMPLE2 = {
+      "build_list" => {
+        "id"      => nil,
+        "message" => "Errors during rerun tests!"
       }
     }
 

@@ -9,6 +9,7 @@ title: Build lists | ABF API
 * [Cancel build list](#cancel-build-list)
 * [Publish build list](#publish-build-list)
 * [Publish build list into testing](#publish-build-list-into-testing)
+* [Rerun tests](#rerun-tests)
 * [Create container](#create-container)
 * [Reject publish build list](#reject-publish-build-list)
 * [List build lists](#list-build-lists)
@@ -83,6 +84,12 @@ extra_build_lists
 : _Optional_ **array** of **integers** — Build lists with containers (`container_status` should be `6000`) to connect for building this build list.<br/>
 For main platform you can connect only build lists which have been saved into same platform. <br/>
 Only build lists with the same architecture will be connected or oriented to the both architectures (the property `publish_i686_into_x86_64` (only for `rhel`) in the settings of project is `true`).
+
+use_cached_chroot
+: _Optional_ **boolean** — `true` to use a cached chroot for building of build list. Default value: `false`.
+
+use_extra_tests
+: _Optional_ **boolean** — `true` to use a more complex testing of packages. Default value: `true`.
 
 ### Request
 
@@ -188,6 +195,29 @@ id
 
 <%= json(:build_list_publish_response_example2) %>
 
+## Rerun tests
+
+By this request you can rerun tests.
+Tests can be rerun only for build list with statuses build complete (0), tests failed (11000).
+
+    PUT /api/v1/build_lists/:id/rerun_tests.json
+
+### Parameters:
+id
+: _Integer_ identifier of current build list
+
+### Response:
+
+<%= json(:build_list_rerun_tests_response) %>
+
+### Example:
+
+<%= json(:build_list_rerun_tests_response_example) %>
+
+&nbsp;
+
+<%= json(:build_list_rerun_tests_response_example2) %>
+
 ## Create container
 
 By this request you can create container.
@@ -265,6 +295,8 @@ filter[status]
     * `4`     — project version not found;
     * `666`   — build error;
     * `2000`  — build pending;
+    * `2500`  — rerun tests;
+    * `2550`  — build is being rerun tests;
     * `3000`  — build started;
     * `4000`  — waiting for response;
     * `5000`  — build canceled;
