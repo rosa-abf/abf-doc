@@ -916,7 +916,8 @@ module GitHub
 
     REPOSITORY_UPDATE_EXAMPLE = {
       "description" => "description",
-      "publish_without_qa" => true
+      "publish_without_qa" => true,
+      "publish_builds_only_from_branch" => "platform_name"
     }
 
     REPOSITORY_DATA_RESPONSE = {
@@ -928,6 +929,7 @@ module GitHub
         "url" => "url to repository resource",
         "description" => "description",
         "publish_without_qa" => "publication without QA",
+        "publish_builds_only_from_branch" => "platform name",
         "platform" => PLATFORM_PARTIAL,
         "url" => "url to repository resource"
       }

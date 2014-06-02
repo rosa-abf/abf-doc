@@ -93,6 +93,9 @@ description:
 publish_without_qa:
 : _Optional_ **Boolean** status of publication without QA.
 
+publish_builds_only_from_branch:
+: _Optional_ **String** allows to publish builds only from branch. Only for repositories from `main` platform. Default value: `nil`.
+
 ### Request:
 
 <%= json(:repository_update_request) %>
@@ -122,6 +125,9 @@ name:
 
 publish_without_qa:
 : _Optional_ **Boolean** status of publication without QA. Default: `true`.
+
+publish_builds_only_from_branch:
+: _Optional_ **String** allows to publish builds only from branch. Only for repositories from `main` platform. Default value: `nil`.
 
 ### Request:
 
