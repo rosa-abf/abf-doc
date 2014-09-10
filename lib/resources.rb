@@ -1444,7 +1444,7 @@ module GitHub
     PLATFORM_FOR_BUILD_RESPONSE = {
       "platforms" => [PLATFORM_FOR_LIST_OR_FOR_BUILD.merge({
         "platform_type" => "platform type(only main for build task)",
-        "visibility" => "platform visibility (only open for build task)"
+        "visibility" => "platform visibility"
       })],
       "url" => "path to platforms data"
     }
