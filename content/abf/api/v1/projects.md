@@ -57,7 +57,7 @@ id
 project_name
 : _String_ project name.
 
-owner_name: 
+owner_name:
 : _String_ project owner name.
 
 ### Request examples:
@@ -124,8 +124,14 @@ has_wiki:
 maintainer_id:
 : _Optional_ **Integer** identifier of project maintainer.
 
-publish_i686_into_x86_64:
-: _Optional_ **Boolean** enable/disable publishing i686 packages into x86_64 repository (only for rhel).
+<dl>
+  <dt>publish_i686_into_x86_64:</dt>
+  <dd>
+    <em>Optional</em>
+    <strong>Boolean</strong>
+    enable/disable publishing i686 packages into x86_64 repository (only for rhel).
+  </dd>
+</dl>
 
 ### Request:
 
