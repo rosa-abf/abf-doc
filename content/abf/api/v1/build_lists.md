@@ -91,6 +91,9 @@ use_cached_chroot
 use_extra_tests
 : _Optional_ **boolean** — `true` to use a more complex testing of packages. Default value: `true`.
 
+save_buildroot
+: _Optional_ **boolean** — `true` to save a RPM buildroot if build will fail. Default value: `false`.
+
 ### Request
 
 <%= json(:build_list_create_parameters) %>

@@ -8,5 +8,6 @@ This describes the resources that make up the official Rosa ABF Deployment Docum
 
 **Note: This Documentation is in a beta state. Breaking changes may occur.**
 
+* [Deployment with Ansible](/abf/deployment/ansible/)
 * [Deployment on RELS/CentOS](/abf/deployment/rels_centos/)
 * [Deployment on Ubuntu](/abf/deployment/ubuntu/)

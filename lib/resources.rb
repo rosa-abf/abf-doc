@@ -177,6 +177,7 @@ module GitHub
           "auto_create_container" => true,
           "use_cached_chroot"     => true,
           "use_extra_tests"       => true,
+          "save_buildroot"        => false,
           "commit_hash"                 => "4edafbe69632173a1800c4d7582b60b46bc1fb55",
           "last_published_commit_hash"  => "59f606578d21683bbbf4152bcdc2ebf1dd1e2e37",
           "priority" => 0,
@@ -274,6 +275,7 @@ module GitHub
           "auto_create_container" => "automated creation of container",
           "use_cached_chroot"     => "use cached chroot",
           "use_extra_tests"       => "use extra tests",
+          "save_buildroot"        => "save RPM buildroot",
           "commit_hash"                 => "last commit hash of project source",
           "last_published_commit_hash"  => "last published commit hash of project source",
           "priority" => "build priority",
@@ -355,6 +357,7 @@ module GitHub
         "auto_create_container" => "automated creation of container",
         "use_cached_chroot"     => "use cached chroot",
         "use_extra_tests"       => "use extra tests",
+        "save_buildroot"        => "save RPM buildroot",
         "include_repos"=> [
           "included repository id for each selected platform"
         ],
@@ -379,6 +382,7 @@ module GitHub
         "auto_create_container" => true,
         "use_cached_chroot"     => true,
         "use_extra_tests"       => true,
+        "save_buildroot"        => false,
         "include_repos"=> [
           54,
           53

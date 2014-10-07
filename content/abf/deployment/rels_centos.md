@@ -36,29 +36,19 @@ After it is done installing, load RVM.
 
     source ~/.rvm/scripts/rvm
 
-In order to work, RVM has some of its own dependancies that need to be installed. You can see what these are:
+In order to work, RVM has some of its own dependancies that need to be installed.
 
     rvm requirements
-
-In the text that RVM shows you, look for this paragraph.
-Additional Dependencies:
-
-    For Ruby / Ruby HEAD (MRI, Rubinius, & REE), install the following:
-    ruby: yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison iconv-devel
-
-Go ahead and download the recommended dependancies, being careful not to use sudo. Instead, we should use rvmsudo:
-
-    rvmsudo yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison iconv-devel
 
 ### Install Ruby (for `git` and `rosa` users):
 
 Once you are using RVM, installing Ruby is easy.
 
-    rvm install ruby-1.9.3-p392 
+    rvm install ruby-2.1.3
 
-Ruby is now installed. However, since we accessed it through a program that has a variety of Ruby versions, we need to tell the system to use 1.9.3 by default.
+Ruby is now installed. However, since we accessed it through a program that has a variety of Ruby versions, we need to tell the system to use 2.1.3 by default.
 
-    rvm use ruby-1.9.3-p392 --default
+    rvm use ruby-2.1.3 --default
 
 ### Install RubyGems (for `git` and `rosa` users):
 

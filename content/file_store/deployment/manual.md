@@ -2,7 +2,7 @@
 title: File Store Deployment | File Store Documentation
 ---
 
-# Deployment
+# File Store Deployment Documentation
 
 * [Prepare environment](#prepare-environment)
 * [Prepare server to deployment](#prepare-server-to-deployment)
@@ -31,26 +31,19 @@ After it is done installing, load RVM.
 
     source ~/.rvm/scripts/rvm
 
-In order to work, RVM has some of its own dependancies that need to be installed. You can see what these are:
+In order to work, RVM has some of its own dependancies that need to be installed.
 
     rvm requirements
-
-In the text that RVM shows you, look for paragraph “Additional Dependencies”:
-
-    sudo apt-get update && sudo apt-get --no-install-recommends install bash curl git patch bzip2 build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev libgdbm-dev ncurses-dev automake libtool bison subversion pkg-config libffi-dev
-
-    rvm --skip-autoreconf pkg install iconv
-
 
 ### Install Ruby (for `rosa` user):
 
 Once you are using RVM, installing Ruby is easy.
 
-    rvm install ruby-2.0.0-p247
+    rvm install ruby-2.1.3
 
-Ruby is now installed. However, since we accessed it through a program that has a variety of Ruby versions, we need to tell the system to use 2.0.0 by default.
+Ruby is now installed. However, since we accessed it through a program that has a variety of Ruby versions, we need to tell the system to use 2.1.3 by default.
 
-    rvm use ruby-2.0.0-p247 --default
+    rvm use ruby-2.1.3 --default
 
 ### Install RubyGems (for `rosa` user):
 
