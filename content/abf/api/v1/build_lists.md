@@ -94,6 +94,12 @@ use_extra_tests
 save_buildroot
 : _Optional_ **boolean** — `true` to save a RPM buildroot if build will fail. Default value: `false`.
 
+include_testing_subrepository
+: _Optional_ **boolean** — `true` to connect `testing` subrepository for building this build list. Default value: `false`.
+
+external_nodes
+: _Optional_ **string** — `owned` to use own external ABF node, `everything` to use any external ABF node.
+
 ### Request
 
 <%= json(:build_list_create_parameters) %>

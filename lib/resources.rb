@@ -358,6 +358,8 @@ module GitHub
         "use_cached_chroot"     => "use cached chroot",
         "use_extra_tests"       => "use extra tests",
         "save_buildroot"        => "save RPM buildroot",
+        "external_nodes"        => "external nodes",
+        "include_testing_subrepository" => "include 'testing' subrepository",
         "include_repos"=> [
           "included repository id for each selected platform"
         ],
@@ -383,6 +385,8 @@ module GitHub
         "use_cached_chroot"     => true,
         "use_extra_tests"       => true,
         "save_buildroot"        => false,
+        "external_nodes"        => nil,
+        "include_testing_subrepository" => false,
         "include_repos"=> [
           54,
           53
