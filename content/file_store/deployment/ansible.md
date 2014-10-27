@@ -20,4 +20,5 @@ All command should be called from local PC.
     cd abf-ansible
     cp file-store.hosts.example file-store.hosts
     # Update "file-store.hosts" file
+    # Put your ssh public key into a roles/user/files/ssh-keys folder
     ansible-playbook -i file-store.hosts file-store.yml
