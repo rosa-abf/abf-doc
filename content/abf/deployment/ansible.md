@@ -20,4 +20,5 @@ All command should be called from local PC.
     cd abf-ansible
     cp rosa-build.hosts.example rosa-build.hosts
     # Update "rosa-build.hosts" and "rosa-build.yml" files
+    # Put your ssh public key into a roles/user/files/ssh-keys folder
     ansible-playbook -i rosa-build.hosts rosa-build.yml

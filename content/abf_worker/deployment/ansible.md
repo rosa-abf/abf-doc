@@ -20,5 +20,6 @@ All command should be called from local PC.
     cd abf-ansible
     cp abf-worker.hosts.example abf-worker.hosts
     # Update "abf-worker.hosts" file
+    # Put your ssh public key into a roles/user/files/ssh-keys folder
     # NOTE: for MDV distros you should run this command more 2 times as minimum
     ansible-playbook -i abf-worker.hosts abf-worker.yml
