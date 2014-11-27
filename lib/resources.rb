@@ -88,6 +88,20 @@ module GitHub
     # ABF constants
     #==============================================================================
 
+    USER_PARTIAL =  {
+      "id" => "user id",
+      "uname" => "user uname",
+      "name" => "user name",
+      "url" => "api user path"
+    }
+
+    USER_PARTIAL_EXAMPLE = {
+      "id" => 1,
+      "name" => "Ivan Aivazovsky",
+      "uname" => "ivan_aivazovsky",
+      "url" => "/api/v1/users/1.json"
+    }
+
     PLATFORM_PARTIAL = {
       "id" => "platform id",
       "name" => "platform name",
@@ -106,7 +120,8 @@ module GitHub
       "fullname" => "project fullname",
       "url" => "url to project data page",
       "git_url" => "path to project git",
-      "ssh_url" => "path to project git over ssh"
+      "ssh_url" => "path to project git over ssh",
+      'maintainer' => USER_PARTIAL.merge('email' => 'user email')
     }
 
     PROJECT_PARTIAL_EXAMPLE = {
@@ -115,7 +130,8 @@ module GitHub
       "fullname" => "abf/evil_tools",
       "url" => "/api/v1/projects/666.json",
       "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git",
-      "ssh_url" => "git@abf.rosalinux.ru:jaroslav_garkin/hwinfo.git"
+      "ssh_url" => "git@abf.rosalinux.ru:jaroslav_garkin/hwinfo.git",
+      'maintainer' => USER_PARTIAL_EXAMPLE.merge('email' => 'ivan.aivazovsky@email.ru ')
     }
 
     ADD_MEMBER_REQUEST = {
@@ -640,7 +656,7 @@ module GitHub
         "maintainer" => {
           "id" => "maintainer id",
           "name" => "maintainer name",
-          "type" => "maintainer type",
+          "uname" => "maintainer uname",
           "url" => "path to owner data"
         },
         "repositories" => [
@@ -675,7 +691,7 @@ module GitHub
         "maintainer" => {
           "id" => 4,
           "name" => "Yaroslav Garkin",
-          "type" => "User",
+          "uname" => "yaroslav_garkin",
           "url" => "/api/v1/users/4.json"
         },
         "repositories" => [
@@ -1943,20 +1959,6 @@ module GitHub
         }
       }
     ]
-
-    USER_PARTIAL =  {
-      "id" => "user id",
-      "uname" => "user uname",
-      "name" => "user name",
-      "url" => "api user path"
-    }
-
-    USER_PARTIAL_EXAMPLE = {
-      "id" => 1,
-      "name" => "Ivan Aivazovsky",
-      "uname" => "ivan_aivazovsky",
-      "url" => "/api/v1/users/1.json"
-    }
 
     SEARCH_REQUEST = {
       "query" => "search term",
