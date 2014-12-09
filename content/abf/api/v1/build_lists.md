@@ -337,6 +337,12 @@ filter[mass_build_id]
 filter[save_to_platform_id]
 : _Optional_ **integer** - platform id for build save.
 
+filter[build_for_platform_id]
+: _Optional_ **integer** - platform id for build.
+
+filter[save_to_repository_id]
+: _Optional_ **integer** - repository id for package storage.
+
 ### Response:
 
 <%= json(:build_list_search_response) %>
