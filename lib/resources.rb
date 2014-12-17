@@ -543,6 +543,7 @@ module GitHub
         {
           "id"=> "build list id",
           "status"=> "build list status",
+          "project_id" => "project id",
           "url"=> "build list page"
         }
       ],
@@ -554,11 +555,13 @@ module GitHub
         {
           "id"=> 25,
           "status"=> 6000,
+          "project_id" => 10,
           "url"=> "/api/v1/build_lists/25.json"
         },
         {
           "id"=> 26,
           "status"=> 6000,
+          "project_id" => 20,
           "url"=> "/api/v1/build_lists/26.json"
         }
       ],
