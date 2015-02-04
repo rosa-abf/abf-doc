@@ -12,6 +12,7 @@ title: Projects | ABF API
 * [Create project](#create-project)
 * [Destroy project](#destroy-project)
 * [Fork project](#fork-project)
+* [Alias project](#alias-project)
 * [Members of a single project](#members-of-a-single-project)
 * [Add member to a single project](#add-member-to-a-single-project)
 * [Remove member from a single project](#remove-member-from-a-single-project)
@@ -220,6 +221,39 @@ id
 ## Fork project
 
     POST /api/v1/projects/:id/fork.json
+
+### Parameters:
+
+id
+: _Required_ **Integer** identifier of current project.
+
+fork_name
+: _Optional_ **String** name of new project.
+
+### Input:
+
+group_id:
+: _Optional_ **Integer** identifier of group which will be project owner. By default (empty request) current user will be project owner.
+
+### Request:
+
+<%= json({"fork_name" => 'new_name'}) %>
+
+&nbsp;
+
+<%= json(:project_fork_request) %>
+
+### Response:
+
+<%= json(:project_fork_response) %>
+
+### Examples:
+
+<%= json(:project_fork_response_example) %>
+
+## Alias project
+
+    POST /api/v1/projects/:id/alias.json
 
 ### Parameters:
 
