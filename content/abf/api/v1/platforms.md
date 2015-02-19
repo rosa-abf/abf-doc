@@ -44,6 +44,9 @@ id
 
 ### Input:
 
+default_branch:
+: _Optional_ **String** default branch of platform
+
 description:
 : _Optional_ **String** platform description
 
@@ -169,6 +172,9 @@ description:
 name:
 : _Required_ **String** platform name
 
+default_branch:
+: _Required_ **String** default branch of platform
+
 ### Request:
 
 <%= json(:platform_clone_request) %>
@@ -211,6 +217,9 @@ id
 
 name:
 : _Required_ **String** platform name
+
+default_branch:
+: _Required_ **String** default branch of platform
 
 description:
 : _Required_ **String** platform description

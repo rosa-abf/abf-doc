@@ -105,18 +105,23 @@ module GitHub
     PLATFORM_PARTIAL = {
       "id" => "platform id",
       "name" => "platform name",
+      "visibility" => "platform visibility",
+      "platform_type" => "platform type",
       "url" => "platform data page path"
     }
 
     PLATFORM_PARTIAL_EXAMPLE = {
       "id" => 1,
       "name" => "rosa2012",
+      "visibility" => "open",
+      "platform_type" => "main",
       "url" => "/api/v1/platforms/1.json"
     }
 
     PROJECT_PARTIAL = {
       "id" => "project id",
       "name" => "project name",
+      "visibility" => "visibility (open/hidden)",
       "fullname" => "project fullname",
       "url" => "url to project data page",
       "git_url" => "path to project git",
@@ -127,6 +132,7 @@ module GitHub
     PROJECT_PARTIAL_EXAMPLE = {
       "id" => 666,
       "name" => "evil_tools",
+      "visibility" => "open",
       "fullname" => "abf/evil_tools",
       "url" => "/api/v1/projects/666.json",
       "git_url" => "https:/ivan@abf.rosalinux.ru/jaroslav_garkin/hwinfo.git",
@@ -610,7 +616,6 @@ module GitHub
     }
 
     PROJECT_PARAMS = PROJECT_PARTIAL.merge({
-      "visibility" => "visibility (open/hidden)",
       "description" => "description",
       "ancestry" => "project ancestry",
       "has_issues" => "true if issues enabled",
@@ -629,7 +634,6 @@ module GitHub
     })
 
     PROJECT_PARAMS_EXAMPLE = PROJECT_PARTIAL_EXAMPLE.merge({
-      "visibility" => "open",
       "description" => "bla-bla-bla",
       "ancestry" => nil,
       "has_issues" => true,
@@ -963,7 +967,6 @@ module GitHub
         "name" => "name",
         "created_at" => "created at date and time",
         "updated_at" => "updated at date and time",
-        "url" => "url to repository resource",
         "description" => "description",
         "publish_without_qa" => "publication without QA",
         "publish_builds_only_from_branch" => "platform name",
@@ -978,7 +981,6 @@ module GitHub
         "name" => "main",
         "created_at" => 1346762587,
         "updated_at" => 1346841731,
-        "url" => "/api/v1/repositories/30.json",
         "platform" => PLATFORM_PARTIAL_EXAMPLE,
         "url" => "/api/v1/repositories/30.json"
       }.merge(REPOSITORY_UPDATE_EXAMPLE)
@@ -1172,6 +1174,7 @@ module GitHub
         "visibility" => "platform visibility",
         "platform_type" => "platform type",
         "distrib_type" => "platform distribution type",
+        "default_branch" => "platform default branch",
         "owner" => {
           "id" => "owner id",
           "name" => "owner name",
@@ -1202,6 +1205,7 @@ module GitHub
         "visibility" => "open",
         "platform_type" => "main",
         "distrib_type" => "mdv",
+        "default_branch" => "master",
         "owner" => {
           "id" => 5,
           "name" => "Timothy Bobrov",
@@ -1226,6 +1230,7 @@ module GitHub
     }
 
     PLATFORM_OPTIONS_FOR_UPDATE = {
+      "default branch" => 'new_branch',
       "description" => "new description",
       "released" => true,
       "owner_id" => 1
@@ -1343,6 +1348,7 @@ module GitHub
     PLATFORM_CLONE_REQUEST = {
       "platform" =>
         {
+          "default_branch" => "master",
           "description" => "platform description",
           "name" => "platform name"
         }
