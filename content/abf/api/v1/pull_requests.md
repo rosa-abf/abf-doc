@@ -7,7 +7,7 @@ title: Pull Requests | ABF API
 * <a href="#list-pull-requests">List pull requests</a>
 * <a href="#list-pull-requests-for-a-project">List pull requests for a project</a>
 * <a href="#get-a-single-pull-request">Get a single pull request</a>
-* <a href="#create-an-pull-request">Create an pull request</a>
+* <a href="#create-a-pull-request">Create a pull request</a>
 * <a href="#update-a-single-pull-request">Update a single pull request</a>
 * <a href="#list-commits-on-a-pull-request">List commits on a pull request</a>
 * <a href="#list-pull-requests-files">List pull requests files</a>
@@ -110,9 +110,9 @@ number
 
 <%= json(:pull_request_data_response_example) %>
 
-## Create an pull request
+## Create a pull request
 
-Any authenticated user with read access to a project can create an pull request.
+Any authenticated user with read access to a project can create a pull request.
 
     POST /api/v1/projects/:id/pull_requests.json
 
